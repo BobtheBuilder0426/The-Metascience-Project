@@ -1,0 +1,25 @@
+# SETUP.txt — one-time answers the blank Claude Code needs to run the loop.
+# OPTIONAL fast-path: fill these in to skip the questions. If you leave a field as
+# its PASTE_... placeholder, the CC will simply ASK you for it in the Claude Code
+# chat during setup (and then save your answer back here for next time). Either works.
+#
+# Put the VALUE on the same line after the "=", e.g.:
+#     CLAUDE_SCIENCE_URL = http://localhost:8000/
+
+# 1) The URL of your Claude Science (the app that opens in a Chrome tab).
+#    Open Claude Science, copy its tab's address bar, paste it here.
+CLAUDE_SCIENCE_URL = PASTE_CLAUDE_SCIENCE_URL_HERE
+
+# 2) WHERE your Claude Science workspace folders live — the PARENT location (a folder
+#    path) on the machine where Claude Science runs, under which the CC may create ONE
+#    dedicated folder per run. The browser can't upload files directly, so each run's
+#    dedicated folder is that run's data channel with Claude Science.
+#      - Give the PARENT location only (e.g. where you keep your CS working folders).
+#      - The CC creates + connects each run's own folder AL-<name>/ under it, per question,
+#        and grants THAT folder to that run's own Claude Science project. You do NOT add
+#        anything in Science, and you do NOT make per-run folders yourself.
+#    (Your research question, any files, and a run NAME are asked per question, in chat —
+#     not here. This file holds only the one-time setup answers.)
+CS_WORKSPACES_PARENT = PASTE_CS_WORKSPACES_PARENT_PATH_HERE
+
+# (Future one-time inputs, if any, get added here as item 3, 4, ... and asked together.)

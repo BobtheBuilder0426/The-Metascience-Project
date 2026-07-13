@@ -1,0 +1,85 @@
+{
+  "task": "Propose a novel/not-yet-considered compound to treat complex-I mitochondrial disease, starting from public datasets.",
+  "date_utc": "2026-07-12",
+  "environment": {
+    "compute": "local 8-core, 4 GiB, no GPU; no remote compute available",
+    "python_env": "mito (rdkit 2026.03.4, pandas, scipy, scikit-learn, matplotlib)"
+  },
+  "steps": [
+    {
+      "n": 1,
+      "action": "Skill/connector discovery + disease ontology resolution",
+      "tools": [
+        "search_skills",
+        "mcp:genes-ontologies.search_ontology_terms"
+      ],
+      "result": "Complex I deficiency = MONDO:0100133; Leigh = MONDO:0009723; LHON = MONDO:0010788; MELAS = Orphanet:550."
+    },
+    {
+      "n": 2,
+      "action": "Open Targets target+drug landscape for the three diseases",
+      "tools": [
+        "mcp:clinical-genomics.open_targets_disease_targets",
+        "open_targets_disease_drugs"
+      ],
+      "result": "CI-deficiency: 2420 associated targets (top = NDUFS/NDUFV/NDUFA subunits + assembly factors), 0 approved drugs. Leigh/LHON drug lists = idebenone(approved LHON), vatiquinone/EPI-743, sonlicromanol, CoQ10/ubidecarenone, elamipretide, niacinamide, cysteamine, rapamycin(sirolimus/ABI-009), cyclosporine, mannitol, curcumin."
+    },
+    {
+      "n": 3,
+      "action": "Tested HIF-activation hypothesis; retrieved primary literature",
+      "tools": [
+        "web_search",
+        "fetch_article_fulltext(10.1016/j.cell.2023.12.010)",
+        "read_file"
+      ],
+      "result": "Jain 2016 (Science) + Jain 2019 (Cell Metab): 11% O2 hypoxia rescues Ndufs4-KO Leigh mouse (survival, weight, lesion reversal); HIF activation NOT sufficient; brain hyperoxia is the driver. Meisel 2024 (Cell): hypoxia + intra-complex suppressor nuo-3(G60D)/NDUFA6 rescue CI mutants by a SHARED mechanism = restoring forward electron flow at the CoQ pocket, HIF-independent, ROS-independent; residues in the ubiquinone-binding pocket required. => HIF-PH inhibitors are the WRONG node."
+    },
+    {
+      "n": 4,
+      "action": "Druggability + prior-art checks",
+      "tools": [
+        "mcp:chembl.target_search/get_mechanism",
+        "mcp:chemistry.pubchem_search_compounds"
+      ],
+      "result": "EGLN1=CHEMBL5697 (approved PHD inhibitors exist: roxadustat/daprodustat/vadadustat) but ruled out on mechanism. ChEMBL complex I targets (CHEMBL2363065 complex; CHEMBL3039 NDUFS2) annotated ONLY with INHIBITORS (rotenone CHEMBL1703, piericidin) \u2014 NO activator/PAM exists. NDUFA6=UniProt P56556; partners NDUFAB1/ACP (O14561); pocket subunits NDUFS2 O75306, NDUFS7 O75251."
+    },
+    {
+      "n": 5,
+      "action": "Clinical-trials novelty audit",
+      "tools": [
+        "mcp:clinical-trials.search_trials"
+      ],
+      "result": "Leigh: 20 trials (EPI-743, cysteamine, rapamycin/ABI-009, KH176, sonlicromanol). CI-deficiency: 3 (elamipretide Ph3). 'methylene blue' in mito disease = 0 trials. All tried agents are downstream antioxidants/electron-carriers or NAD+ refillers; none restores Q-site forward flux via allosteric modulation."
+    },
+    {
+      "n": 6,
+      "action": "In-silico lead design + physchem/CNS-MPO profiling vs tried drugs",
+      "tools": [
+        "python:rdkit",
+        "Wager CNS-MPO"
+      ],
+      "result": "Designed 6 neutral non-quinone CI-PAM candidates bearing a polar 'G60D-mimetic' H-bond arm. Profiled vs 9 reference drugs. Lead CI-PAM-1f (quinoxaline-2-carboxamide + trans-4-hydroxycyclohexyl): MW 271, cLogP 1.66, TPSA 75, QED 0.87, CNS-MPO 5.5, neutral, \u0394\u03c8m-independent, 0 Ro5 violations. MitoQ CNS-MPO 2.0, CoQ10 3.0, EPI-743 3.26 \u2014 field leaders are CNS/\u0394\u03c8m-mismatched."
+    },
+    {
+      "n": 7,
+      "action": "Generated 4 deliverable figures + wrote result/reasoning/sources.",
+      "tools": [
+        "python:matplotlib",
+        "rdkit.Draw",
+        "figure-style"
+      ],
+      "result": "fig1 mechanism, fig2 design landscape, fig3 structures, fig4 Open Targets genetics."
+    }
+  ],
+  "key_decisions": [
+    "Rejected the obvious 'HIF-PH inhibitor (roxadustat) repurposing' idea because the primary literature shows HIF activation is insufficient and can be deleterious \u2014 a common trap.",
+    "Reframed target as the enzyme's own CoQ-module/accessory-subunit interface: a complex I POSITIVE ALLOSTERIC MODULATOR ('chemical hypoxia-mimetic'), which no database compound occupies.",
+    "Selected a neutral, \u0394\u03c8m-independent, BBB-oriented chemotype specifically because the disease lowers membrane potential and is brain-predominant, where the field's TPP+/quinone agents fail."
+  ],
+  "limitations": [
+    "No experimental binding/affinity data for the proposed chemotype; CI-PAM-1f is a computational design hypothesis, not a validated binder.",
+    "No 3D docking performed (no GPU / structure-prediction compute in session); Q-module allosteric pocket location argued from cryo-EM literature, not modeled here.",
+    "CNS-MPO and Ro5 are heuristics; ADMET/tox unmeasured.",
+    "The nuo-3(G60D) proof-of-concept is genetic (C. elegans / biochemical); a small molecule reproducing that conformational effect is unprecedented and is the central risk."
+  ]
+}

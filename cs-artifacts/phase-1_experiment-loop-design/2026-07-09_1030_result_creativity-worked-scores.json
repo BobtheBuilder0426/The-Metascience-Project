@@ -1,0 +1,42 @@
+[
+  {
+    "label": "H1_textbook",
+    "hits": 2873,
+    "novelty": 0.224,
+    "plaus": 4,
+    "reason": 5,
+    "plaus_gate": 0.75,
+    "reason_gate": 1.0,
+    "creativity_index": 0.168
+  },
+  {
+    "label": "H2_derivative",
+    "hits": 13,
+    "novelty": 0.466,
+    "plaus": 4,
+    "reason": 4,
+    "plaus_gate": 0.75,
+    "reason_gate": 0.75,
+    "creativity_index": 0.262
+  },
+  {
+    "label": "H3_novel",
+    "hits": 0,
+    "novelty": 1.0,
+    "plaus": 3,
+    "reason": 2,
+    "plaus_gate": 0.5,
+    "reason_gate": 0.25,
+    "creativity_index": 0.125
+  },
+  {
+    "label": "H3plus_reasoned",
+    "hits": 0,
+    "novelty": 1.0,
+    "plaus": 3,
+    "reason": 4,
+    "plaus_gate": 0.5,
+    "reason_gate": 0.75,
+    "creativity_index": 0.375
+  }
+]

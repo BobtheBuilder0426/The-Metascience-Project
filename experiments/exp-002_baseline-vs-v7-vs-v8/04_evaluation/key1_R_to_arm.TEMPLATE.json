@@ -1,0 +1,36 @@
+{
+ "_note": "KEY-1 (operator-held) \u2014 R-code -> arm. Fill each R-code with EXACTLY one of: 'B' (baseline / blank-CS), 'L7' (v7-loop), 'L8' (v8-loop). CS has NEVER seen this. Each question's triad must contain one B, one L7, one L8 (3 arms x 3 questions = 9 answers).",
+ "_arms": {
+  "B": "baseline (blank Claude Science, no loop)",
+  "L7": "v7 agentic loop",
+  "L8": "v8 agentic loop"
+ },
+ "_fill_by_question": {
+  "Q1_metabolite_cocktail": {
+   "R3": "B_or_L7_or_L8",
+   "R8": "B_or_L7_or_L8",
+   "R9": "B_or_L7_or_L8"
+  },
+  "Q2_why_aging": {
+   "R2": "B_or_L7_or_L8",
+   "R4": "B_or_L7_or_L8",
+   "R6": "B_or_L7_or_L8"
+  },
+  "Q3_complexI_compound": {
+   "R1": "B_or_L7_or_L8",
+   "R5": "B_or_L7_or_L8",
+   "R7": "B_or_L7_or_L8"
+  }
+ },
+ "_flat_alternative": {
+  "R1": "B_or_L7_or_L8",
+  "R2": "B_or_L7_or_L8",
+  "R3": "B_or_L7_or_L8",
+  "R4": "B_or_L7_or_L8",
+  "R5": "B_or_L7_or_L8",
+  "R6": "B_or_L7_or_L8",
+  "R7": "B_or_L7_or_L8",
+  "R8": "B_or_L7_or_L8",
+  "R9": "B_or_L7_or_L8"
+ }
+}

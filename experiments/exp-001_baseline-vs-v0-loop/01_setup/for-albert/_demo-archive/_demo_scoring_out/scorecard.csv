@@ -1,0 +1,6 @@
+question_id,arm,run,weighted_composite,dim_grounding,dim_correctness,dim_completeness,dim_usefulness,dim_creativity,citation_verification_rate,n_citations,creativity_index,hallucination_flag
+Q_ERGO,B,1,1.716,2,2,1.167,2,1.22,,0,0.0549,False
+Q_ERGO,L,1,3.549,4,4,3.5,4,1.658,1.0,1,0.1646,False
+Q_ERGO,L,2,1.666,1,2,2.167,2,1.22,0.0,1,0.0549,False
+Q3,B,1,1.818,2,2,1.667,2,1.228,,0,0.0569,False
+Q3,L,1,2.452,2,3,2.5,3,1.682,,0,0.1706,False

@@ -1,0 +1,24 @@
+identifier,exists?,supports_claim?,action
+Source paper DOI 10.1016/j.xcrm.2024.101449,YES,"YES — PMID 38508141, exact title",retained
+EFO_0006941/0004980/0004995/1000653 (muscle traits),YES,YES,retained
+rs2631367-G→LBM GCST90428120 PMID38538606 β+0.0125 p3e-21,YES,YES — exact,retained
+rs2631360-G→grip GCST90565845 PMID40374629 β+0.0117 p2e-16,YES,YES — multi-trait paper,retained
+rs11242109-T→LBM GCST90428120 PMID38538606 β+0.0125 p2e-21,YES,YES — exact,retained
+BCKDHB p2e-43 mixed direction,YES,YES — mixed dir confirmed,excluded from cocktail
+GSS p6e-45 / SRM p2e-12,YES,YES — exact,retained (orthogonality-excluded)
+Ergothioneine mQTL EFO_0021163→SLC22A4,YES,YES — colocalization closed,retained
+Free-carnitine mQTL EFO_0021612,YES,did NOT colocalize (SLC22A16 only),honest caveat
+Acylcarnitine mQTL at OCTN2 SNP (palmitoyl/acetyl/hexanoyl),YES,YES — same effect allele,included
+UniProt O76082/Q9H015/P21953,YES,YES — exact substrate IDs,retained
+GTEx v8 muscle TPM (7 genes),YES,YES — exact,retained
+SLC22A5 muscle cis-eQTL = 0,YES,YES,retained
+PMID 40065099 Cpt2/FAO/Pax7-acetylation,YES,YES — abstract verbatim,retained
+PMID 38446314 ERGO lifespan/velocity,YES,YES — MALE mice (scope added),scope: male mice
+PMID 40543223 ERGO OCTN1 soleus 20mg/kg,YES,YES — abstract verbatim,retained
+PMID 29534031 / 32958033 carnitine reviews,YES,YES,retained
+Levocarnitine CHEMBL1149 phase4 oral 1985,YES,YES — exact,retained
+"NCT05009654/641, NCT02124590, NCT03907592 (carnitine)",YES — all COMPLETED,YES,retained
+NCT03180424 (carnitine older adults),YES — status UNKNOWN,partial,status: UNKNOWN
+NCT06846827 / NCT06886061 (ergothioneine),YES — COMPLETED,YES,retained
+NCT06487546 (ergothioneine kidney),YES — RECRUITING,status: RECRUITING,verified
+Null metabolites (8 handling genes) = 0 muscle rows,YES,YES — re-confirmed at depth,retained

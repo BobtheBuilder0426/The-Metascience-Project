@@ -1,0 +1,45 @@
+# Open-loop set-point drift — explicit causal model
+# (separates evolutionary-theory consequences from added physiological posits)
+
+## State variables
+# x(t)      : vector of regulated physiological variables (the "controlled variables")
+# r(t)      : reference/set-point vector the controllers act toward
+# u(t)      : controller output (corrective input), u = K * (r - x)   [negative feedback]
+# D(t)      : accumulated molecular damage (downstream, not the driver)
+# h(t)      : mortality hazard
+
+## Dynamics (proximate model)
+# (M1) dx/dt = f_dev(x, t) + u(t) + noise         # development + control + stochastic perturbation
+# (M2) u(t)  = K * (r(t) - x(t))                    # negative-feedback control law
+# (M3) dr/dt = g(t)                                 # <-- the reference itself can move
+# (M4) dD/dt = alpha * || x(t) - x_young ||         # damage accrues from operating off-youthful-state
+# (M5) h(t)  = h0 * exp( beta * || x(t) - x_young || )   # hazard rises with control error
+
+## What EVOLUTIONARY THEORY licenses (Hamilton 1966, Williams 1957, Kirkwood 1977)
+# (E1) The force of selection on age-specific survival/fertility -> 0 with age (Hamilton, VERIFIED).
+# (E2) => Alleles maintaining r(t) at the youthful value are under vanishing selection post-maturity.
+#         (a selection-pressure statement — this is ALL Hamilton strictly gives.)
+
+## ADDED PHYSIOLOGICAL POSITS (NOT entailed by Hamilton — the model's non-tautological content)
+# (P1) The reference r(t) is itself a maintained/selected quantity (M3 with g!=0 once selection lapses).
+#      -> testable posit; could be false if set-points are hard-wired chemistry, not maintained.
+# (P2) Once (E2) holds, r(t) drifts along the developmental direction: g(t) ~ continuation of f_dev.
+#      -> the "quasi-program" posit (Blagosklonny). Alternative: r could drift randomly (no direction).
+# (P3) Damage is downstream of control error (M4), not an independent forcing term.
+#      -> testable posit; competes with damage-primary theories.
+
+## The claims and their status
+# - "declining selection" (E1,E2)     : follows from evolutionary theory (derived).
+# - "reference drifts / open-loop"     : ADDED posit P1+P2 (physiological hypothesis, not derived).
+# - "developmental direction"          : ADDED posit P2 (the directional, non-random part).
+# - "damage is consequence"            : ADDED posit P3.
+# The unification claim is: P1-P3 are ONE coherent posit (a controller that loses a maintained,
+# directionally-drifting reference) that then generates C1-C7 — but P1-P3 are the hypothesis,
+# not theorems. That is the honest logical structure.
+
+## Where the generative simulation sits (Fig 2)
+# The Fig-2 simulation demonstrates SUFFICIENCY of M5 + frailty (Gamma-distributed drift rate) to
+# yield Gompertz + plateau. It ASSUMES an exponential individual hazard (M5 with linear drift), so it
+# does NOT independently *derive* the Gompertz law from first principles; the plateau is the generic
+# consequence of frailty selection, not unique to open-loop drift. Therefore C2/C3 are scored
+# "compatible/illustrated", NOT "prediction earned by simulation".

@@ -1,0 +1,152 @@
+{
+  "rubric_id": "the Metascience Project-quality-rubric-v1",
+  "version": "2.0",
+  "date": "2026-07-10",
+  "purpose": "Identical, blinded scoring of a research-question answer from either arm (baseline blank-CS vs CC-driven loop). Five dimensions, EQUAL weight 0.20 each, scored 1-5 with anchored descriptors; judges fill each field with a 1-sentence justification (G-Eval form-filling, S-007). v2 (LB-075): grounding widened to 'grounding & integrity' (citations + datasets + did-it-really-happen action check); 'correctness' renamed 'reasoning & soundness' with the proposed-test clause made CONDITIONAL; weights equalised to 0.20 each.",
+  "scale": {
+    "min": 1,
+    "max": 5,
+    "type": "ordinal-anchored"
+  },
+  "scoring_protocol": {
+    "blinding": "arm identity + tell-tale style stripped; outputs normalized to a common template before scoring (S-006).",
+    "judge_form": "for each dimension output {score:int, justification:str<=1 sentence, evidence_span:str}",
+    "panel": ">=2 judges via host.llm incl. a non-Claude judge (Codex) where available; aggregate = mean; report inter-judge agreement (S-008).",
+    "order": "randomize arm order per item to control position bias (S-008)."
+  },
+  "dimensions": [
+    {
+      "key": "grounding",
+      "name": "Grounding & integrity",
+      "weight": 0.2,
+      "question": "Is every claim, source, dataset, and claimed action real and verified — nothing fabricated, and did the analysis it reports actually happen?",
+      "anchors": {
+        "1": "Fabricated: a key claim, citation, dataset ID, or a claimed action (calculation / code-run / connector query) is made up or unverifiable.",
+        "2": "Weakly grounded: few citations or data sources; some don't support the claim, can't be verified, or claimed steps lack evidence.",
+        "3": "Partially grounded: main claims cited to real sources and mostly verifiable; datasets named; some gaps, loose links, or unlogged steps.",
+        "4": "Well grounded: claims cited to real, on-point sources; datasets / DB IDs resolve and were actually used; claimed actions check out against the trace.",
+        "5": "Rigorously grounded: every non-trivial claim traced to a verifiable on-point source; every dataset / accession resolves; every claimed calculation / query is evidenced in a real CS message — passes automatic citation- AND trace-verification."
+      },
+      "auto_signal": "THREE feeds (see auto_checks): citation_verification_rate + dataset/accession resolution + trace_verify action-check (process_trace.json steps really happened). A fabricated citation OR a fabricated action HARD-CAPS this score at 1; no citations at all caps at 2."
+    },
+    {
+      "key": "reasoning",
+      "name": "Reasoning & soundness",
+      "weight": 0.2,
+      "question": "Is the chain of thought sound, clear, and elegant — valid inferences, no scientific errors, alternatives weighed — and WHERE a test or method is proposed, is it valid?",
+      "anchors": {
+        "1": "Flawed: contains a clear scientific error, a non-sequitur, or a circular / untestable argument.",
+        "2": "Shaky: reasoning has gaps or unjustified leaps; alternatives ignored; if a test is proposed it wouldn't cleanly test the claim.",
+        "3": "Acceptable: reasoning is sound but plain; some alternatives considered; any proposed test is plausible but under-specified.",
+        "4": "Solid: correct, clearly-argued reasoning that weighs alternatives; IF a test is proposed it is valid and adequately specified with the right controls.",
+        "5": "Rigorous & elegant: a mechanistically coherent, clearly and economically argued case that considers and rules out alternatives; IF it proposes a test, the test is falsifiable and well-controlled. No test is required when the question doesn't ask for one — score on reasoning quality alone."
+      },
+      "auto_signal": "judge-only (LLM panel + the operator); no cheap automatic proxy. The proposed-test clause is CONDITIONAL: when the question asks for a hypothesis / argument rather than an experiment, score on reasoning quality alone and do NOT penalise the absence of a proposed test."
+    },
+    {
+      "key": "completeness",
+      "name": "Completeness & specificity",
+      "weight": 0.2,
+      "question": "Does the answer fully address the question with concrete specifics (named entities, assays, predictions)?",
+      "anchors": {
+        "1": "Vague / generic: no named targets, pathways, drugs, or assays; could apply to any question.",
+        "2": "Partial: addresses part of the question; mostly generic with 1-2 specifics.",
+        "3": "Adequate: addresses the whole question; some concrete named entities and a testable prediction.",
+        "4": "Thorough: all parts addressed with named targets/assays + a concrete, quantitative prediction.",
+        "5": "Comprehensive: fully specified mechanism, named candidate(s), concrete assay + falsifiable quantitative prediction + anticipated confounds."
+      },
+      "auto_signal": "entity_specificity_count (named genes/drugs/pathways/assays detected); feeds this score."
+    },
+    {
+      "key": "usefulness",
+      "name": "Usefulness & actionability",
+      "weight": 0.2,
+      "question": "Could a domain scientist act on this — is it worth a researcher's time?",
+      "anchors": {
+        "1": "Not actionable: too vague or wrong to pursue.",
+        "2": "Marginal: would need major reformulation before any lab could use it.",
+        "3": "Actionable-with-work: a researcher could turn it into a project with effort.",
+        "4": "Directly actionable: a clear next experiment a lab could start this quarter.",
+        "5": "Compelling: actionable AND addresses a question the field actually cares about; a strong grant-aim seed."
+      },
+      "auto_signal": "judge + the operator (expert relevance)."
+    },
+    {
+      "key": "creativity",
+      "name": "Creativity (novelty x plausibility)",
+      "weight": 0.2,
+      "question": "Is the core idea genuinely novel (not recombined-obvious) AND sensible?",
+      "anchors": {
+        "1": "Textbook: restates known facts; zero novelty.",
+        "2": "Derivative: obvious recombination of well-known ideas.",
+        "3": "Incremental: a modest new angle on a known idea.",
+        "4": "Novel & sensible: a non-obvious hypothesis that a domain expert would find fresh and plausible.",
+        "5": "Surprisingly brilliant: a genuinely original, non-obvious, yet mechanistically plausible hypothesis an expert wishes they'd thought of."
+      },
+      "auto_signal": "composite creativity score (creativity-metric.md): literature-distance novelty x plausibility gate; expert Likert anchors this dimension. NOTE: novelty NEVER scored without the plausibility gate (S-006, S-009)."
+    }
+  ],
+  "aggregate": {
+    "formula": "weighted_sum(dimension_score * 0.20) over 5 equally-weighted dims; weights sum to 1.0",
+    "report": [
+      "per-dimension mean + spread",
+      "weighted composite",
+      "creativity sub-score (novelty, plausibility) separately",
+      "citation_verification_rate",
+      "inter-judge agreement"
+    ],
+    "primary_endpoint": "on the combined mean(CS,the operator) composite: mean-Δ (Arm L − Arm B) across the 3 questions AND win-count k/3. n=3×1 is descriptive, not inferential (see 00_hypothesis.md / dataflow §5E)."
+  },
+  "auto_checks": {
+    "citation_verification": {
+      "steps": [
+        "extract every citation (PMID/DOI/title)",
+        "resolve via connectors (PubMed/OpenAlex) - does it exist?",
+        "fetch abstract - does the cited source actually support the claim it's attached to? (LLM entailment check)",
+        "rate = supported_citations / total_citations"
+      ],
+      "flags": [
+        "nonexistent_reference",
+        "reference_exists_but_irrelevant",
+        "claim_not_supported_by_cited_source"
+      ]
+    },
+    "entity_specificity": {
+      "detects": [
+        "gene/protein symbols",
+        "drug/compound names",
+        "pathways",
+        "assays/methods",
+        "quantitative predictions"
+      ]
+    },
+    "plausibility_redflags": {
+      "source": "seeded by the operator's calibration answer (request-to-operator.md Q-B); e.g. implausible dose, wrong-direction effect, ignores known contraindication, mechanism contradicts established biology"
+    },
+    "dataset_resolution": {
+      "steps": [
+        "extract every dataset / DB accession cited (GEO/SRA/ArrayExpress/UniProt/PDB/Ensembl/…)",
+        "resolve via connectors — does it exist?",
+        "check the answer actually used it (a result/number derived from it), not just name-dropped it",
+        "rate = used_and_resolved / total_dataset_ids"
+      ],
+      "flags": [
+        "nonexistent_dataset_id",
+        "dataset_named_but_unused"
+      ]
+    },
+    "trace_verification": {
+      "source": "trace_verify.py over process_trace.json (action-labelled)",
+      "steps": [
+        "for each claimed action (connector query / dataset pull / calculation / code-run), check its `evidence` points to a real CS message / artifact",
+        "a claimed calculation must have its number appear in a real CS message; a claimed query must have a real returned result",
+        "rate = evidenced_actions / total_claimed_actions"
+      ],
+      "flags": [
+        "claimed_action_no_evidence",
+        "result_not_reproducible_from_trace"
+      ]
+    }
+  },
+  "weights_rationale": "v2 (LB-075): EQUAL 0.20 weights across all five, by operator decision — simple, and it lifts the creative / reasoning axes the operator cares about (creativity 0.15→0.20, and reasoning is now a first-class 0.20 dimension) relative to the earlier rigor-dominant prior (grounding+correctness were 0.50). Grounding stays a hard integrity gate via its auto-caps (a fabricated citation or action caps it at 1), so equalising weight does NOT reward hallucination. Weights remain a pre-registered prior, sensitivity-checked in analysis."
+}

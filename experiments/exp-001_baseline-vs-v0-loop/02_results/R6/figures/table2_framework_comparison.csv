@@ -1,0 +1,7 @@
+Framework,Compartment,Metabolism/Energy,Heredity,Integration (three faces = ONE object?),Representative_sources
+RNA World,No (needs vesicle),Weak (cold-start),Strong (sequence),"Low: heredity first, rest added",Higgs & Lehman; Joyce & Szostak 2018
+Metabolism-first,No,Strong,Very weak,Low: no route to sequences,Vasas & Szathmary 2010
+Lipid World / GARD,Yes (assemblies),Weak,Compositional (capped),Medium: no sequence handoff,Segre 2000; Lancet 2018
+Vesicle protocell,Yes (fatty-acid),No (RNA fed in),Sequence (if supplied),Medium: energy external,Budin & Szostak 2012; Adamala 2013
+Hydrothermal / energy,Partial (pores),Strong (gradients),Weak,Medium: heredity unclear,Lane & Martin 2010; Baross 1985
+Cofactor Ratchet (this work),Yes (active coacervate),Yes (cofactor-driven),Compositional -> sequence,"HIGH: one object, three linked",White'76; Segre'00; Zwicker'17; Fraccia'15

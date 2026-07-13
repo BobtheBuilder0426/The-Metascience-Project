@@ -1,0 +1,100 @@
+{
+  "10.1016/j.cell.2022.11.001": {
+    "ok": true,
+    "title": "Hallmarks of aging: An expanding universe",
+    "journal": "Cell",
+    "year": 2023,
+    "label": "Hallmarks of aging: an expanding universe"
+  },
+  "10.1016/j.cell.2022.12.027": {
+    "ok": true,
+    "title": "Loss of epigenetic information as a cause of mammalian aging",
+    "journal": "Cell",
+    "year": 2023,
+    "label": "Loss of epigenetic information (information theory)"
+  },
+  "10.1016/j.cell.2024.01.013": {
+    "ok": true,
+    "title": "The information theory of aging has not been tested",
+    "journal": "Cell",
+    "year": 2024,
+    "label": "Information theory of aging has not been tested (Matters Arising)"
+  },
+  "10.4161/cc.5.18.3288": {
+    "ok": true,
+    "title": "Aging and Immortality: Quasi-Programmed Senescence and Its Pharmacologic Inhibition",
+    "journal": "Cell Cycle",
+    "year": 2006,
+    "label": "Blagosklonny quasi-programmed senescence"
+  },
+  "10.1038/270301a0": {
+    "ok": true,
+    "title": "Evolution of ageing",
+    "journal": "Nature",
+    "year": 1977,
+    "label": "Kirkwood disposable soma (Nature 1977)"
+  },
+  "10.1111/acel.12480": {
+    "ok": true,
+    "title": "Aging: progressive decline in fitness due to the rising deleteriome adjusted by genetic, environmental, and stochastic processes",
+    "journal": "Aging Cell",
+    "year": 2016,
+    "label": "Gladyshev deleteriome"
+  },
+  "10.1073/pnas.1618854114": {
+    "ok": true,
+    "title": "Intercellular competition and the inevitability of multicellular aging",
+    "journal": "Proceedings of the National Academy of Sciences",
+    "year": 2017,
+    "label": "Nelson & Masel intercellular competition"
+  },
+  "10.1134/S0005117912050086": {
+    "ok": true,
+    "title": "Homeostasis and health: Analysis from a standpoint of the control theory",
+    "journal": "Automation and Remote Control",
+    "year": 2012,
+    "label": "Novoseltsev/Yashin homeostasis control theory"
+  },
+  "10.1038/s41467-021-23014-1": {
+    "ok": true,
+    "title": "Longitudinal analysis of blood markers reveals progressive loss of resilience and predicts human lifespan limit",
+    "journal": "Nature Communications",
+    "year": 2021,
+    "label": "Pyrkov/Fedichev loss of resilience"
+  },
+  "10.1126/science.aah4115": {
+    "ok": true,
+    "title": "Aging increases cell-to-cell transcriptional variability upon immune stimulation",
+    "journal": "Science",
+    "year": 2017,
+    "label": "Martinez-Jimenez cell-to-cell variability"
+  },
+  "10.1038/s41467-019-12293-4": {
+    "ok": true,
+    "title": "Ageing affects DNA methylation drift and transcriptional cell-to-cell variability in mouse muscle stem cells",
+    "journal": "Nature Communications",
+    "year": 2019,
+    "label": "Hernando-Herraez methylation drift"
+  },
+  "10.1016/j.cell.2016.11.052": {
+    "ok": true,
+    "title": "In\u00a0Vivo Amelioration of Age-Associated Hallmarks by Partial Reprogramming",
+    "journal": "Cell",
+    "year": 2016,
+    "label": "Ocampo partial reprogramming"
+  },
+  "10.1038/s41586-020-2975-4": {
+    "ok": true,
+    "title": "Reprogramming to recover youthful epigenetic information and restore vision",
+    "journal": "Nature",
+    "year": 2020,
+    "label": "Lu/Sinclair reprogramming vision"
+  },
+  "10.1126/sciadv.abg6082": {
+    "ok": true,
+    "title": "Epigenetic clocks reveal a rejuvenation event during embryogenesis followed by aging",
+    "journal": "Science Advances",
+    "year": 2021,
+    "label": "Kerepesi ground zero embryogenesis"
+  }
+}

@@ -1,0 +1,29 @@
+{
+ "node": "MuSK (muscle-specific kinase) on the agrin-LRP4-MuSK-DOK7 NMJ-stabilization axis",
+ "compound": "ARGX-119 (INN: adimanebart)",
+ "compound_class": "first-in-class humanized agonist monoclonal antibody targeting the MuSK Frizzled-like domain",
+ "identifiers": {
+  "chembl": "CHEMBL6068571 (molecule_type Antibody, max_phase 2.0)",
+  "musk_target_chembl": "CHEMBL5684",
+  "musk_uniprot": "O15146",
+  "musk_ensembl": "ENSG00000030304",
+  "inn": "adimanebart",
+  "nct": [
+   "NCT05670704 (Ph1 HV, completed)",
+   "NCT06436742 (Ph1b CMS, recruiting)",
+   "NCT06441682 (Ph2a ALS, active)",
+   "NCT07287982 (Ph2 SMA, recruiting)",
+   "NCT07673601 (Ph1 HV, recruiting)"
+  ]
+ },
+ "direction": "AGONIST - activates MuSK, stabilizes NMJ, increases muscle strength (correct direction for a mimetic)",
+ "novelty_statement": "The not-yet-made connection: NMJ/MuSK stabilization as an exercise-mimetic strategy for age-related sarcopenia. PubMed: 0 hits for 'neuromuscular junction'+'exercise mimetic'+aging/sarcopenia. Every ARGX-119 trial indication is a rare neuromuscular disease (CMS/ALS/SMA); none is sarcopenia/aging.",
+ "why_over_alternatives": {
+  "vs OXPHOS/PGC-1a": "clean reversal but saturated prior art (AMPK/PPARd/sirtuins/PGC-1a excluded)",
+  "vs NT-1654 agrin fragment": "NT-1654 real but acts UPSTREAM (supplies ligand), still cleaved by neurotrypsin; ARGX-119 acts at the receptor DOWNSTREAM of the aging lesion + is Ph2 vs preclinical",
+  "vs TrkB/7,8-DHF": "76 PubMed hits TrkB+'exercise mimetic' - well-trodden, weaker novelty",
+  "vs PIEZO1/Yoda1": "bidirectional KLF15/IL-6 atrophy liability; Yoda1 only a tool compound"
+ },
+ "next_gen_note": "Forward-looking (NOT primary): novel oral small-molecule MuSK/DOK7 potentiator as next-gen extension.",
+ "t": "2026-07-11T21:04:25.038343Z"
+}

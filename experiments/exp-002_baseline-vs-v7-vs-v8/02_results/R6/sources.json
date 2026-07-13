@@ -1,0 +1,240 @@
+{
+ "_meta": {
+  "verification": "All PMIDs confirmed via PubMed get_article_metadata (title + abstract); DOIs confirmed via OpenAlex openalex_get_work. PMIDs are confirmed through PubMed rather than OpenAlex, which returns DOIs, not PMIDs."
+ },
+ "hamilton1966": {
+  "pmid": "6015424",
+  "doi": "10.1016/0022-5193(66)90184-6",
+  "cite": "Hamilton WD 1966, J Theor Biol \u2014 moulding of senescence by natural selection"
+ },
+ "williams1957": {
+  "pmid": null,
+  "doi": "10.1111/j.1558-5646.1957.tb02911.x",
+  "cite": "Williams GC 1957, Evolution \u2014 pleiotropy & senescence"
+ },
+ "kirkwood1977": {
+  "pmid": "593350",
+  "doi": "10.1038/270301a0",
+  "cite": "Kirkwood TBL 1977, Nature \u2014 disposable soma / evolution of ageing"
+ },
+ "medawar1952": {
+  "pmid": null,
+  "doi": null,
+  "cite": "Medawar PB 1952, An Unsolved Problem of Biology (Lewis, London)"
+ },
+ "carey1992": {
+  "pmid": "1411540",
+  "doi": "10.1126/science.1411540",
+  "cite": "Carey JR et al 1992, Science \u2014 slowing of mortality at older ages (medfly)"
+ },
+ "curtsinger1992": {
+  "pmid": "1411541",
+  "doi": "10.1126/science.1411541",
+  "cite": "Curtsinger JW et al 1992, Science \u2014 Drosophila mortality plateau"
+ },
+ "barbi2018": {
+  "pmid": "29954979",
+  "doi": "10.1126/science.aat3119",
+  "cite": "Barbi E et al 2018, Science \u2014 human mortality plateau"
+ },
+ "barbi_comment": {
+  "pmid": "30262471",
+  "doi": "10.1126/science.aav1200",
+  "cite": "Comment on Barbi 2018"
+ },
+ "barbi_response": {
+  "pmid": "30337380",
+  "doi": "10.1126/science.aav3229",
+  "cite": "Response to comment on Barbi 2018"
+ },
+ "gavrilov2001": {
+  "pmid": "11742523",
+  "doi": "10.1006/jtbi.2001.2430",
+  "cite": "Gavrilov & Gavrilova 2001, J Theor Biol \u2014 reliability theory of aging"
+ },
+ "ruby2018": {
+  "pmid": "29364116",
+  "doi": "10.7554/eLife.31157",
+  "cite": "Ruby JG et al 2018, eLife \u2014 naked mole-rat mortality defies Gompertz"
+ },
+ "ruby_comment": {
+  "pmid": "31287058",
+  "doi": "10.7554/eLife.45415",
+  "cite": "Comment on Ruby 2018"
+ },
+ "nmr2024": {
+  "pmid": "38773057",
+  "doi": "10.1007/s11357-024-01201-4",
+  "cite": "2024 follow-up \u2014 NMR mortality with doubled data; conclusion holds"
+ },
+ "jones2014": {
+  "pmid": "24317695",
+  "doi": "10.1038/nature12789",
+  "cite": "Jones OR et al 2014, Nature \u2014 diversity of ageing across the tree of life"
+ },
+ "abegglen2015": {
+  "pmid": "26447779",
+  "doi": "10.1001/jama.2015.13134",
+  "cite": "Abegglen LM et al 2015, JAMA \u2014 elephant TP53 & Peto's paradox"
+ },
+ "lopezotin2013": {
+  "pmid": "23746838",
+  "doi": "10.1016/j.cell.2013.05.039",
+  "cite": "L\u00f3pez-Ot\u00edn C et al 2013, Cell \u2014 hallmarks of aging"
+ },
+ "lopezotin2023": {
+  "pmid": "36599349",
+  "doi": "10.1016/j.cell.2022.11.001",
+  "cite": "L\u00f3pez-Ot\u00edn C et al 2023, Cell \u2014 hallmarks of aging: an expanding universe"
+ },
+ "kennedy2014": {
+  "pmid": "25417146",
+  "doi": "10.1016/j.cell.2014.10.039",
+  "cite": "Kennedy BK et al 2014, Cell \u2014 geroscience: linking aging to chronic disease"
+ },
+ "mccay1935": {
+  "pmid": "2520283",
+  "doi": null,
+  "cite": "McCay CM et al 1935 (J Nutr; PMID 2520283 = 1989 reprint) \u2014 caloric restriction extends life"
+ },
+ "kenyon1993": {
+  "pmid": "8247153",
+  "doi": "10.1038/366461a0",
+  "cite": "Kenyon C et al 1993, Nature \u2014 daf-2 mutants live twice as long"
+ },
+ "harrison2009": {
+  "pmid": "19587680",
+  "doi": "10.1038/nature08221",
+  "cite": "Harrison DE et al 2009, Nature \u2014 rapamycin extends lifespan (ITP)"
+ },
+ "strong2008": {
+  "pmid": "18631321",
+  "doi": "10.1111/j.1474-9726.2008.00414.x",
+  "cite": "Strong R et al 2008, Aging Cell \u2014 NDGA & aspirin extend male lifespan (ITP)"
+ },
+ "harrison2014": {
+  "pmid": "24245565",
+  "doi": "10.1111/acel.12170",
+  "cite": "Harrison DE et al 2014, Aging Cell \u2014 acarbose/17aE2/NDGA/methylene blue (ITP)"
+ },
+ "strong2016": {
+  "pmid": "27312235",
+  "doi": "10.1111/acel.12496",
+  "cite": "Strong R et al 2016, Aging Cell \u2014 17aE2/NDGA/Protandim; metformin-alone null; metformin+rapa (ITP)"
+ },
+ "miller2011_res": {
+  "pmid": "22451473",
+  "doi": "10.1093/gerona/gls070",
+  "cite": "Strong R et al 2013 (J Gerontol; publ. 2012) \u2014 resveratrol, GTE, curcumin, oxaloacetate, MCT null (ITP)"
+ },
+ "harrison2019_can": {
+  "pmid": "32990681",
+  "doi": "10.1172/jci.insight.140019",
+  "cite": "Miller RA et al 2020, JCI Insight \u2014 canagliflozin extends male lifespan (ITP)"
+ },
+ "miller2019_gly": {
+  "pmid": "30916479",
+  "doi": "10.1111/acel.12953",
+  "cite": "Miller RA et al 2019, Aging Cell \u2014 glycine extends lifespan (ITP)"
+ },
+ "nadon2017_design": {
+  "pmid": "17578509",
+  "doi": "10.1111/j.1474-9726.2007.00311.x",
+  "cite": "Miller RA et al 2007, Aging Cell \u2014 ITP study design"
+ },
+ "baker2011": {
+  "pmid": "22048312",
+  "doi": "10.1038/nature10600",
+  "cite": "Baker DJ et al 2011, Nature \u2014 clearing p16 senescent cells delays aging"
+ },
+ "baker2016": {
+  "pmid": "26840489",
+  "doi": "10.1038/nature16932",
+  "cite": "Baker DJ et al 2016, Nature \u2014 naturally-occurring p16 clearance extends lifespan"
+ },
+ "conboy2005": {
+  "pmid": "15716955",
+  "doi": "10.1038/nature03260",
+  "cite": "Conboy IM et al 2005, Nature \u2014 heterochronic parabiosis rejuvenates"
+ },
+ "horvath2013": {
+  "pmid": "24138928",
+  "doi": "10.1186/gb-2013-14-10-r115",
+  "cite": "Horvath S 2013, Genome Biol \u2014 DNA methylation age clock"
+ },
+ "lu2020": {
+  "pmid": "33268865",
+  "doi": "10.1038/s41586-020-2975-4",
+  "cite": "Lu Y et al 2020, Nature \u2014 reprogramming restores youthful vision"
+ },
+ "gill2022": {
+  "pmid": "35390271",
+  "doi": "10.7554/eLife.71624",
+  "cite": "Gill D et al 2022, eLife \u2014 transient reprogramming (maturation phase) rejuvenates"
+ },
+ "kerepesi2021": {
+  "pmid": "34172448",
+  "doi": "10.1126/sciadv.abg6082",
+  "cite": "Kerepesi C et al 2021, Sci Adv \u2014 embryonic ground-zero / rejuvenation event"
+ },
+ "ocampo2016": {
+  "pmid": "27984723",
+  "doi": "10.1016/j.cell.2016.11.052",
+  "cite": "Ocampo A et al 2016, Cell \u2014 partial reprogramming ameliorates aging"
+ },
+ "blagosklonny2006": {
+  "pmid": "17012837",
+  "doi": "10.4161/cc.5.18.3288",
+  "cite": "Blagosklonny MV 2006, Cell Cycle \u2014 hyperfunction/quasi-program (TOR)"
+ },
+ "harman1956": {
+  "pmid": "13332224",
+  "doi": "10.1093/geronj/11.3.298",
+  "cite": "Harman D 1956, J Gerontol \u2014 free radical theory of aging"
+ },
+ "yang2023": {
+  "pmid": null,
+  "doi": "10.1016/j.cell.2022.12.027",
+  "cite": "Yang JH et al 2023, Cell \u2014 loss of epigenetic information drives aging"
+ },
+ "yang2024corr": {
+  "pmid": null,
+  "doi": "10.1016/j.cell.2024.01.049",
+  "cite": "Yang JH et al 2024, Cell \u2014 author correction to Yang 2023"
+ },
+ "gladyshev2013": {
+  "pmid": null,
+  "doi": "10.1016/j.tig.2013.05.004",
+  "cite": "Gladyshev VN 2013, Trends Genet \u2014 origin of aging / imperfectness-driven damage"
+ },
+ "gems2013": {
+  "pmid": "23190075",
+  "doi": "10.1146/annurev-physiol-030212-183712",
+  "cite": "Gems D & Partridge L 2013, Annu Rev Physiol \u2014 genetics of longevity / program vs damage"
+ },
+ "pyrkov2021": {
+  "pmid": "34035236",
+  "doi": "10.1038/s41467-021-23014-1",
+  "cite": "Pyrkov TV et al 2021, Nat Commun \u2014 progressive loss of resilience predicts lifespan"
+ },
+ "cohen2018": {
+  "pmid": "29939206",
+  "doi": "10.1093/gerona/gly136",
+  "cite": "Cohen AA et al 2018, J Gerontol \u2014 physiological dysregulation as robustness/resilience measure"
+ },
+ "cohen2020": {
+  "pmid": "30746836",
+  "doi": "10.1111/acel.12925",
+  "cite": "Bhatt S / Cohen AA et al 2019, Aging Cell \u2014 conserved dysregulation signatures across primates"
+ },
+ "olde2016": {
+  "pmid": "26765499",
+  "doi": "10.1097/CCM.0000000000001564",
+  "cite": "Olde Rikkert MGM et al 2016, Crit Care Med \u2014 slowing recovery as generic risk marker (critical slowing down)"
+ },
+ "cagan2022": {
+  "pmid": "35418684",
+  "doi": "10.1038/s41586-022-04618-z",
+  "cite": "Cagan A et al 2022, Nature \u2014 somatic mutation rates scale with lifespan"
+ }
+}

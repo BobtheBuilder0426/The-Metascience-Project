@@ -1,0 +1,9 @@
+gene,exerkine_evidence,age_direction,druggability,chem_matter,structure,safety,muscle_expr,rationale,OT_SM_tractability,OT_safety_events,ChEMBL_EC50_n,muscle_TPM,composite
+APLNR,5,5,5,5,5,5,4,"Apelin: exercise-induced myokine; declines w/ age; KO worsens sarcopenia, agonism reverses it (Vinel 2018 Nat Med). Gq/Gi + beta-arrestin GPCR.","Structure with Ligand, High-Quality Ligand, Druggable Family",0,5984.0,2.63,4.9
+MSTN,4,5,1,1,3,5,3,"Myostatin: strong muscle biology but it's a LIGAND to inhibit (biologic), not SM-agonist tractable.",,0,,1.29,3.26
+ADRB2,3,2,5,3,5,1,4,beta2-agonists (clenbuterol) build muscle but severe cardiac liability (26 safety events).,"Approved Drug, Structure with Ligand, High-Quality Ligand, High-Quality Pocket, Druggable Family",26,1897.0,3.72,3.15
+GHSR,3,3,5,3,4,2,1,"Ghrelin receptor; anamorelin (cachexia) but appetite/GH axis, weak direct exercise link; muscle expr ~0.","Approved Drug, Structure with Ligand, High-Quality Ligand, Druggable Family",10,1259.0,0.0,3.05
+MC4R,2,2,5,3,4,4,1,"Melanocortin; setmelanotide exists but drives energy balance, not a myokine; not muscle.","Advanced Clinical, Structure with Ligand, High-Quality Ligand, Druggable Family",1,2081.0,0.0,2.98
+NTRK2,3,3,3,1,4,4,2,"BDNF/TrkB: exercise-induced but chiefly CNS; agonism = kinase, poor agonist chem matter.","Approved Drug, Structure with Ligand, High-Quality Ligand, Druggable Family",1,24.0,0.56,2.89
+FGFR1,2,2,4,1,5,2,4,FGF21 axis via FGFR1/KLB; agonism hard for SM; oncogenic/tox liabilities.,"Approved Drug, Structure with Ligand, High-Quality Ligand, High-Quality Pocket, Druggable Family",14,43.0,10.91,2.6699999999999995
+LEPR,2,2,2,0,4,4,1,"Leptin receptor: cytokine receptor, minimal SM agonist chemistry.",Structure with Ligand,1,0.0,0.58,2.14

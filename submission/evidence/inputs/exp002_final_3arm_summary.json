@@ -1,0 +1,59 @@
+{
+  "primary_endpoint": "\u0394(L8\u2212L7)",
+  "design": "randomized complete block (question=block, n=3), arms B/L7/L8",
+  "arm_means": {
+    "B": {
+      "cs_composite": 3.5483333333333333,
+      "cs_mean4": 3.8521666666666667,
+      "human_mean4": 2.75,
+      "combined_z": -0.45281519361965955
+    },
+    "L7": {
+      "cs_composite": 3.3970000000000002,
+      "cs_mean4": 3.99625,
+      "human_mean4": 2.6666666666666665,
+      "combined_z": -0.1992838246562794
+    },
+    "L8": {
+      "cs_composite": 3.672333333333333,
+      "cs_mean4": 4.173583333333333,
+      "human_mean4": 3.25,
+      "combined_z": 0.6520990182759436
+    }
+  },
+  "delta_L8_L7_within_question": {
+    "cs_composite": {
+      "mean": 0.2753333333333332,
+      "n_positive": 3
+    },
+    "cs_mean4": {
+      "mean": 0.1773333333333332,
+      "n_positive": 3
+    },
+    "human_mean4": {
+      "mean": 0.5833333333333334,
+      "n_positive": 3
+    },
+    "combined_z": {
+      "mean": 0.8513828429322231,
+      "n_positive": 3
+    }
+  },
+  "head_to_head_winner_arm": {
+    "Q1": {
+      "CS": "L8",
+      "Elo": "L7",
+      "Human expert": "L8"
+    },
+    "Q2": {
+      "CS": "B",
+      "Elo": "B",
+      "Human expert": "B"
+    },
+    "Q3": {
+      "CS": "L8",
+      "Elo": "B",
+      "Human expert": "L8"
+    }
+  }
+}

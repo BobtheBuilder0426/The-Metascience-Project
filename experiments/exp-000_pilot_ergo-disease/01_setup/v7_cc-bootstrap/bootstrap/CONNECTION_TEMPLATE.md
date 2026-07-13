@@ -1,0 +1,64 @@
+<!-- TEMPLATE. During PART B (BUILD HANDOFF) for a run, copy this to driver/AL-<name>/CONNECTION.md and fill every ⟨…⟩
+     from what you actually verified. This is that run's PERSISTENT BRIDGE RECORD: the run's driver (and any future
+     session) reads it to learn the CC↔CS connection WITHOUT redoing setup. Fill only with verified values — no guesses.
+     ⟨RUN⟩ = this run's id AL-<name>. -->
+
+# CONNECTION.md — the CC ↔ Claude Science bridge for run ⟨RUN⟩ (persistent record)
+**Written by:** the bootstrap session · **On:** ⟨YYYY-MM-DD HH:MM⟩ · **Run:** ⟨RUN⟩ · **Status:** ⟨VERIFIED / PARTIAL⟩
+
+## Claude Science
+- **URL:** ⟨e.g. http://localhost:8000/ — the exact tab URL where CS runs on THIS machine (same for every run)⟩
+- **Project name:** ⟨RUN⟩   (= AL-<name>; this run's OWN isolated CS project)
+- **Project id:** ⟨the proj_… id shown in the CS URL/settings, if visible; else "not shown"⟩
+- **Agent Context:** carries the safety preamble only (from `CS_PROJECT_PREAMBLE.md`, slot filled with this project +
+  this run's ONE dedicated folder `⟨RUN⟩`); no other project-specific instructions
+
+## This run's dedicated folder (the data channel — this run's OWN folder, granted to ONLY this project)
+- **Your-shell path (where the CC reads/writes):** ⟨e.g. ~\cs-workspaces\⟨RUN⟩  OR  /home/you/cs-workspaces/⟨RUN⟩⟩
+- **CS-side path (what CS sees when the folder is granted):** ⟨e.g. /home/you/cs-workspaces/⟨RUN⟩⟩
+- **Verknüpfung:** a clickable shortcut inside `driver/⟨RUN⟩/` points at this dedicated folder ⟨record the shortcut path +
+  its `recreate:` command here, so a future session can rebuild the link⟩
+- **How CS sees it:** granted via CS composer "+" → Your files → "Grant folder…" → **Read & write** (this run's own folder
+  only; folder grants are account-wide, so other runs' folders may also be visible — leave those untouched)
+- **Layout for this run:** `inputs/` (read-only starting files) · `OUTPUT/run-01/` (this run's bundle) — both at the root
+  of this dedicated folder (no sub-area; the whole folder is this run's)
+
+## The Verknüpfung (human-visible clickable shortcut to this folder)
+- **Environment (from pre-flight):** ⟨wsl / windows / macos / linux — where the bootstrap CC ran⟩
+- **Status:** ⟨CREATED / FAILED — from the make_shortcut.sh result at bootstrap⟩
+- **Shortcut kind + location:** ⟨the `shortcut_placed` value — always **inside the CC workspace folder**, never the
+  Desktop; e.g. Windows `.lnk` at `<wsl>\…\<workspace>\run01.lnk` · or a macOS Finder alias / Linux
+  `.desktop` (+ symlink) inside the workspace⟩
+- **Points at (target):** this run's dedicated folder above (native form for that environment — e.g. `<wsl>\...`
+  via `wslpath -w` for WSL)
+- **Recreate command (if the shortcut is missing/broken — run from the bootstrap folder in the CC's shell):**
+  `bash skills/bridge-shortcut/make_shortcut.sh "⟨bridge-folder shell path⟩" "⟨your workspace-root⟩" "⟨shortcut name⟩" ⟨env⟩`
+  *(This is why CONNECTION.md is kept: it is the durable memory of how to rebuild the bridge AND the clickable link.
+  The shortcut is a convenience/visibility layer — if it's gone, the bridge still works via the paths above; just
+  re-run the command to restore the clickable folder shortcut.)*
+
+## Verification (what was actually checked at bootstrap)
+- **Shell R/W:** ⟨PASS/FAIL⟩ — wrote + read back a sentinel in `inputs/_bridge_check.txt`
+- **Channel token round-trip:** ⟨PASS/FAIL⟩ — CS opened the attached folder and read back the same token
+- **Real-file check:** ⟨PASS/FAIL⟩ — CS opened ⟨channel-check filename⟩ from the attached folder and reported
+  ⟨the concrete detail it returned, e.g. "30 pages, title '…'"⟩, which matches the real file
+- **Permissions pre-granted (project scope):** code/bash exec = ⟨Always/for-project⟩ · connectors =
+  ⟨for-project⟩ · compute = ⟨for-project⟩
+
+## Other capabilities found at pre-flight (for the driver to exploit)
+- **System:** ⟨OS / machine label⟩
+- **Other AI models:** ⟨e.g. Codex CLI 0.x present at ⟨path⟩ / none found⟩ — available for cross-model checks if the loop wants them
+- **Chrome control:** ⟨PASS — own MCP tab, tabId ⟨…⟩⟩
+
+## Inputs staged for this run
+⟨list each file copied into inputs/ with size, e.g. "- paperA.pdf (5.9 MB) — digested → context/paperA.pdf.digest.md"⟩
+
+## How to resume (for THIS run's driver / any later session)
+0. **Find the folder fast:** the Verknüpfung above (a clickable shortcut located **inside `driver/⟨RUN⟩/`** — never on the
+   Desktop) opens this run's dedicated folder directly. If it's gone, run the recreate command above to restore it — then
+   continue.
+1. Open your OWN new Chrome tab to the **URL** above (never the account home, never someone else's open tab).
+2. Open project **⟨RUN⟩** (do NOT create a new project; do NOT re-attach the folder — both already exist). Do not open any
+   other `AL-*` project — those belong to other runs.
+3. Send `reply OK`, confirm `OK` back → channel live. Then run the loop (see driver/CLAUDE.md, substituting your ⟨RUN⟩).
+If the URL no longer resolves (CS moved/port changed), that is the ONE thing to ask the human — everything else is here.

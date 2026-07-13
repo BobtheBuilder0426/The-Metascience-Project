@@ -1,0 +1,50 @@
+{
+ "codes": {
+  "A1": {
+   "qid": "Q2",
+   "arm": "baseline"
+  },
+  "A2": {
+   "qid": "Q2",
+   "arm": "composed"
+  },
+  "A3": {
+   "qid": "Q3",
+   "arm": "baseline"
+  },
+  "A4": {
+   "qid": "Q3",
+   "arm": "composed"
+  }
+ },
+ "scores": {
+  "A1": {
+   "grounding": 0.55,
+   "reasoning": 0.72,
+   "completeness": 0.68,
+   "usefulness": 0.4,
+   "creativity": 0.62
+  },
+  "A2": {
+   "grounding": 0.62,
+   "reasoning": 0.72,
+   "completeness": 0.68,
+   "usefulness": 0.5,
+   "creativity": 0.55
+  },
+  "A3": {
+   "grounding": 0.15,
+   "reasoning": 0.35,
+   "completeness": 0.4,
+   "usefulness": 0.3,
+   "creativity": 0.35
+  },
+  "A4": {
+   "grounding": 0.25,
+   "reasoning": 0.45,
+   "completeness": 0.45,
+   "usefulness": 0.35,
+   "creativity": 0.55
+  }
+ }
+}

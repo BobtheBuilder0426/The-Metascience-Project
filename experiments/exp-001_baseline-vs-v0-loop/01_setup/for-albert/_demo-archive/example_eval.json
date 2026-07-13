@@ -1,0 +1,119 @@
+{
+  "experiment": "exp-001",
+  "evaluator": "the operator",
+  "generated": "2026-07-09T17:20:00+02:00",
+  "questions": {
+    "Q_ERGO": {
+      "question_id": "Q_ERGO",
+      "answers": {
+        "A": {
+          "scores": {
+            "correctness": 1,
+            "completeness": 1,
+            "usefulness": 3,
+            "creativity": 2
+          },
+          "honesty": {
+            "novel_to_you": "Yes, novel",
+            "reasoning_followable": "Partly",
+            "hallucination_flag": "No",
+            "one_line_fix": "Frame the mechanism as a hypothesis and cite the primary source, or drop the claim."
+          },
+          "redflags": [
+            "overclaim"
+          ],
+          "qualitative": "Weak: asserts a mechanism as established without support; correctness and completeness both low."
+        },
+        "B": {
+          "scores": {
+            "correctness": 2,
+            "completeness": 1,
+            "usefulness": 2,
+            "creativity": 5
+          },
+          "honesty": {
+            "novel_to_you": "No, known",
+            "reasoning_followable": "Partly",
+            "hallucination_flag": "No",
+            "one_line_fix": "antioxidants barely work in humans"
+          },
+          "redflags": [
+            "overclaim"
+          ],
+          "qualitative": ""
+        },
+        "C": {
+          "scores": {
+            "correctness": 3,
+            "completeness": 2,
+            "usefulness": 4,
+            "creativity": 2
+          },
+          "honesty": {
+            "novel_to_you": "Yes, novel",
+            "reasoning_followable": "No chain",
+            "hallucination_flag": "Maybe",
+            "one_line_fix": "no evidence for persulfidation feeding into complex II"
+          },
+          "redflags": [
+            "vague"
+          ],
+          "qualitative": ""
+        }
+      },
+      "head_to_head": {
+        "best": "C",
+        "confidence": "medium",
+        "why": "actual data presented"
+      }
+    },
+    "Q3": {
+      "question_id": "Q3",
+      "answers": {
+        "A": {
+          "scores": {
+            "correctness": 4,
+            "completeness": 1,
+            "usefulness": 2,
+            "creativity": 2
+          },
+          "honesty": {
+            "novel_to_you": "No, known",
+            "reasoning_followable": "No chain",
+            "hallucination_flag": "Maybe",
+            "one_line_fix": ""
+          },
+          "redflags": [
+            "vague"
+          ],
+          "qualitative": ""
+        },
+        "B": {
+          "scores": {
+            "correctness": 4,
+            "completeness": 4,
+            "usefulness": 1,
+            "creativity": 3
+          },
+          "honesty": {
+            "novel_to_you": "No, known",
+            "reasoning_followable": "Partly",
+            "hallucination_flag": "Yes \u2014 flag",
+            "one_line_fix": "Remove or substantiate the flagged claim; make the protocol actually actionable."
+          },
+          "redflags": [
+            "slop"
+          ],
+          "qualitative": "Solid on correctness/completeness but low usefulness; one claim is unsupported and flagged."
+        }
+      },
+      "head_to_head": {
+        "best": "A",
+        "confidence": "medium",
+        "why": ""
+      }
+    }
+  },
+  "_missing_scores": 0,
+  "_note": "Illustrative worked example, derived from a real filled evaluation from the blinded eval site (exp-001 DEMO data). All numeric scores, red-flags and honesty flags are verbatim; a few free-text comments were lightly edited to read as realistic expert feedback. Structure + fields are exactly what the submission pipeline ingests."
+}

@@ -1,0 +1,685 @@
+{
+ "codes": {
+  "R1": {
+   "question_id": "Q3",
+   "category": 3,
+   "composite": 3.51,
+   "dimensions": {
+    "grounding": 2,
+    "reasoning": 4.5,
+    "completeness": 4.75,
+    "usefulness": 4.5,
+    "creativity": 1.8
+   },
+   "creativity_detail": {
+    "creativity_index": 0.1999,
+    "novelty": 0.533,
+    "plausibility_gate": 0.75,
+    "reasoning_trace_gate": 0.5,
+    "creativity_dim_score_1to5": 1.8,
+    "hallucination_flag": false
+   },
+   "novelty": {
+    "novelty": 0.533,
+    "N_freq": 0.397,
+    "hits": 32,
+    "semantic": {
+     "value": 0.941,
+     "method": "tfidf_cosine",
+     "max_sim": 0.059,
+     "note": "model-dependent; under-discriminates on shared domain vocab (LB-018)"
+    },
+    "n_neighbours": 6,
+    "method": "0.75*retrieval_freq + 0.25*semantic_distance"
+   },
+   "n_citations": 0,
+   "citation_verification_rate": null,
+   "citation_quality": {
+    "n_primary": 0,
+    "n_review": 0,
+    "n_preprint": 0,
+    "primary_ratio": null,
+    "mean_venue_quality": null,
+    "quality_composite": null,
+    "flags": [
+     "no_citations"
+    ],
+    "_note": "no_citations \u2192 quality undefined (not perfect); grounding capped via citation stage"
+   },
+   "effective_grounding_cap": 2,
+   "integrity_cap": 5,
+   "trace": {
+    "n_steps": 10,
+    "n_verified": 0,
+    "n_unverified": 0,
+    "n_asserted": null,
+    "verified_fraction": 0.0
+   },
+   "dataset_resolution": {
+    "n_dataset_ids": 2,
+    "used_and_resolved": 2,
+    "used_and_resolved_rate": 1.0,
+    "records": [
+     {
+      "id": "PDB 7SUS",
+      "db": "PDB",
+      "exists": true,
+      "used": true
+     },
+     {
+      "id": "P35414",
+      "db": "UniProt",
+      "exists": true,
+      "used": true
+     }
+    ]
+   },
+   "inter_judge_absdiff": {
+    "grounding": 0.0,
+    "reasoning": 1.0,
+    "completeness": 1.0,
+    "usefulness": 1.0,
+    "creativity": 1.0
+   },
+   "redflags": [
+    "Docking is ligand-pose ranking, not binding-affinity prediction; a \u22129.4 kcal/mol score does not translate to Kd or IC50. Wet-lab IC50/EC50 assays are essential before claiming potency.",
+    "G-protein bias is design-inherited from CMF-019 scaffold, not experimentally validated for D10. \u03b2-arrestin coupling ratios must be measured (cAMP + \u03b2-arrestin reporter assays) to confirm bias quantitatively; if \u03b2-arrestin predominates, the safety/desensitization rationale collapses.",
+    "ADMET predictions (absorption, CNS penetration, metabolism) are algorithmic; in-vitro microsomal stability, permeability (Caco-2 or MDCK), and protein binding are necessary before in-vivo dosing.",
+    "The apelin-APJ sarcopenia reversal in mice (Vinel 2018) was demonstrated in young, overexpression/adeno models, not aged animals. Translation to aged human muscle (slower myogenesis, mitochondrial dysfunction, systemic inflammation) is not guaranteed; sarcopenia is multifactorial (inflammation, denervation, hormone loss) and a single exerkine may be necessary but not sufficient.",
+    "Muscle-anabolic efficacy has not been benchmarked; no in-vivo grip-strength, fiber cross-sectional area, or mitochondrial-function data exist for D10 or close analogs. The closest precedent is CMF-019 + APJ biology in cardiology (heart failure inotropes); muscle anabolism is a distinct endpoint.",
+    "Off-target toxicology: D10 has not been screened against a kinase or GPCR panel. The imidazo[4,5-b]pyridine core and N-methylpyrazole are low-frequency motifs; rare off-targets at high concentration are a risk until ruled out experimentally.",
+    "The proposal describes D10 as 'novel' (zero ChEMBL matches \u226470 % Tanimoto), which is true, but novelty alone does not confer safety or efficacy; de novo chemotypes require additional preclinical burden.",
+    "Synthesis has not been attempted. SA score 3.32 suggests feasibility, but the cyclopropyl-\u03b2-homoleucine tail may face coupling challenges; synthetic yields and scale-up behavior are unknown.",
+    "No measured affinity (Kd/IC50) data for D10 against APJ; docking score is a surrogate, not a measurement. Docking rank-order prediction is prone to false positives, especially for novel scaffolds.",
+    "G-protein bias is claimed to be 'inherited' from CMF-019 by scaffold similarity, but no structural mechanism is given for how specific changes (7-aza core, N-Me-pyrazole, cyclopentyl, cyclopropyl-tail) preserve or alter bias-determining properties (e.g., G\u03b1i vs \u03b2-arrestin-favoring conformations or desensitization kinetics). Bias is known to be fragile across analogs.",
+    "No in-vitro functional data (cAMP, \u03b2-arrestin recruitment assays) to confirm agonism or bias direction for D10. The agonism claim rests on docking interpretation, not pharmacology.",
+    "No ADMET data (microsomal stability, CYP inhibition, permeability, plasma protein binding, clearance). Predictions are computational; a single CYP3A4 substrate or ester hydrolysis can eliminate the compound in vivo.",
+    "Tissue penetration to muscle (blood\u2013muscle barrier, residence time, APJ occupancy in myofibers) is not modeled. D10's ability to reach and sustain APJ agonism in the target tissue is untested.",
+    "No distinction between the signaling properties of G-protein-biased agonism alone vs. the full signaling profile of the natural ligand (apelin peptide), which likely engages both G\u03b1i and \u03b2-arrestin. It is assumed (not shown) that silencing \u03b2-arrestin is beneficial.",
+    "Selectivity against off-target GPCRs is not mentioned. D10's predicted off-target activity in heart, vasculature, or central appetite/metabolic pathways is not ruled out.",
+    "The two construction bugs (regiochemistry, SMILES ring-closure) that were caught and fixed raise the question: how many errors went undetected? All SMILES were re-verified, but the incident suggests the structures carry some residual risk.",
+    "The proposal frames the outcome as a 'hypothesis,' but the framing at the top ('I propose D10... whose restoration reverses age-associated muscle loss') treats efficacy as the outcome, not the tested hypothesis. This conflates the target hypothesis (APJ agonism works) with the molecule hypothesis (D10 will work), which are distinct.",
+    "Apelin-peptide declines in *aging models* and *sedentary humans*, but the causal chain (age \u2192 apelin decline \u2192 sarcopenia) is inferred from correlation and rescue in transgenic mice, not proven in human aging. It is credible, but not ironclad; if apelin decline is a consequence, not a cause, of sarcopenia, agonism may not reverse the outcome.",
+    "The SAR series (D01\u2013D15) shows that QED/logP improve, but does not show that any of them bind to APJ or how potency varies across the series\u2014it is a *chemical* optimization, not a *biological* SAR."
+   ],
+   "citation_existence": {
+    "n": 0,
+    "n_exist": 0,
+    "exist_rate": null
+   }
+  },
+  "R2": {
+   "question_id": "Q_ERGO",
+   "category": 1,
+   "composite": 3.993,
+   "dimensions": {
+    "grounding": 3,
+    "reasoning": 5,
+    "completeness": 4.667,
+    "usefulness": 5,
+    "creativity": 2.298
+   },
+   "creativity_detail": {
+    "creativity_index": 0.3246,
+    "novelty": 0.577,
+    "plausibility_gate": 0.75,
+    "reasoning_trace_gate": 0.75,
+    "creativity_dim_score_1to5": 2.298,
+    "hallucination_flag": false
+   },
+   "novelty": {
+    "novelty": 0.577,
+    "N_freq": 0.448,
+    "hits": 16,
+    "semantic": {
+     "value": 0.961,
+     "method": "tfidf_cosine",
+     "max_sim": 0.039,
+     "note": "model-dependent; under-discriminates on shared domain vocab (LB-018)"
+    },
+    "n_neighbours": 6,
+    "method": "0.75*retrieval_freq + 0.25*semantic_distance"
+   },
+   "n_citations": 5,
+   "citation_verification_rate": 0.2,
+   "citation_quality": {
+    "n_primary": 4,
+    "n_review": 1,
+    "n_preprint": 0,
+    "primary_ratio": 0.8,
+    "mean_venue_quality": 1.0,
+    "quality_composite": 0.94,
+    "flags": []
+   },
+   "effective_grounding_cap": 3,
+   "integrity_cap": 5,
+   "trace": {
+    "n_steps": 27,
+    "n_verified": 4,
+    "n_unverified": 0,
+    "n_asserted": null,
+    "verified_fraction": 0.148
+   },
+   "dataset_resolution": {
+    "n_dataset_ids": 5,
+    "used_and_resolved": 5,
+    "used_and_resolved_rate": 1.0,
+    "records": [
+     {
+      "id": "Q9H015",
+      "db": "UniProt",
+      "exists": true,
+      "used": true
+     },
+     {
+      "id": "P25325",
+      "db": "UniProt",
+      "exists": true,
+      "used": true
+     },
+     {
+      "id": "P32929",
+      "db": "UniProt",
+      "exists": true,
+      "used": true
+     },
+     {
+      "id": "P21695",
+      "db": "UniProt",
+      "exists": true,
+      "used": true
+     },
+     {
+      "id": "Q9Y6N5",
+      "db": "UniProt",
+      "exists": true,
+      "used": true
+     }
+    ]
+   },
+   "inter_judge_absdiff": {
+    "grounding": 0.0,
+    "reasoning": 0.0,
+    "completeness": 0.667,
+    "usefulness": 0.0,
+    "creativity": 0.0
+   },
+   "redflags": [
+    "Free intramitochondrial EGT is unmeasured; the 39 \u00b5M resting figure is whole-tissue total. Whether MPST is truly saturated in situ depends on the isolated-mitochondria LC-MS arm\u2014if free mitochondrial EGT is <1 \u00b5M, MPST is not saturated and the affinity partition's 'switch' logic breaks.",
+    "SQOR is muscle-*enriched* (vs liver), not muscle-*restricted*; it ranks 3rd of 18 tissues. The claim is relative enrichment among sulfide enzymes, not that SQOR is specific to muscle\u2014this limits but does not eliminate the convergence argument.",
+    "SQOR's own persulfidation status in EGT-treated tissue is stated as 'unconfirmed.' If SQOR is itself a primary persulfidation target, it would have appeared in the published persulfidation screens and the claim that those screens 'missed' it would be false.",
+    "The coupling of SQOR with the glycerophosphate shuttle (shared CoQ sink) is a mechanistic proposal, not yet measured. The pilot's cGPDH-persulfidation and CoQ-redox arms are what test it, but if cGPDH persulfidation is independent of SQOR flux, the 'shared sink' picture dissolves.",
+    "CSE's ~0.04\u00d7 expression in muscle vs liver is a single median from GTEx and does not rule out a paracrine or endothelial contribution to muscle performance; the claim that 'CSE's role is probably systemic, not muscle-intrinsic' is an inference, not proved.",
+    "The hypothesis predicts a significant EGT \u00d7 SQOR interaction (p < 0.05) and frames equal EGT benefit with and without SQOR as falsifying. That is a strong claim; if the interaction p-value lands at 0.06 or the 95% CI of the SQOR-knockdown EGT-effect substantially overlaps zero but does not quite, the interpretation will be ambiguous. Pre-registration and a clear \u03b1 threshold are essential.",
+    "AAV9-shRNA to muscle is standard, but off-target effects and incomplete knockdown (<70% protein reduction) are routine confounds. The design requires independent shRNA validation and scramble/empty-capsid controls; the words are there, but execution risk is real.",
+    "The model is young male C57BL/6J (8\u201311 wk), matching the source mouse study for comparability. The source reported the effect in *males only* (females not tested); the female cohort is named as a 'secondary arm' but the male-female divergence in the two cited papers (Sprenger male VWR, Petrovic aged females and males in rats) is unresolved. If SQOR knockdown eliminates the EGT benefit in males but not females, or vice versa, the picture fragments.",
+    "Free-vs-total EGT concentration: the 39 \u00b5M 'resting' and 140 \u00b5M 'on diet' figures are whole-tissue *total*; free intramitochondrial EGT is unmeasured. MPST saturation is asserted for the bulk concentration, but occupancy *in situ* is the crux of the affinity-partition argument and is circularly assumed. The pilot's isolated-mitochondria LC-MS arm is explicitly designed to resolve this; without it, the ~3,000\u00d7 partition remains a necessary-but-not-sufficient condition for the hypothesis.",
+    "SQOR's own persulfidation by EGT is mentioned as 'unconfirmed'; the reasoning assumes SQOR is an EGT-responsive protein (activated by H\u2082S, cited PMID 40912653), but whether it is itself modified by the EGT-dependent persulfidation wave (as cGPDH-Cys243 is) is not established. If SQOR is not in the persulfidome, its activation by H\u2082S is the only tuning mechanism \u2014 still consistent with the hypothesis, but a narrower link than 'EGT charges SQOR.'",
+    "CSE expression near-zero in muscle (0.04\u00d7 liver) is taken as evidence for a systemic role, but this is an inference, not a measurement. A systemic H\u2082S contribution to muscle performance (via vascular smooth-muscle relaxation, e.g.) would still help endurance without SQOR's direct involvement; the pilot's pharmacological inhibition arms (I3MT-3, PAG) are designed to measure this, but the claim that 'CSE's contribution is likely systemic, not muscle-intrinsic' is assumed, not proven.",
+    "The glycerophosphate-shuttle coupling to SQOR via a shared CoQ sink is stated as a mechanistic proposal, not a retrieval. The shuttle itself (cGPDH-Cys243 persulfidation raising cytosolic NAD\u207a) is Petrovic's contribution, and H\u2082S does activate SQOR, but whether they are electrically coupled at CoQ in muscle, or whether CoQ is indeed the performance-limiting node when both are active, is untested. The pilot's CoQ-redox and cGPDH-persulfidation arms are what test coupling; the reasoning here assumes it.",
+    "MPST as a 'free-EGT-gated' flux controller: the claim that free intramitochondrial EGT gates MPST's flux (since MPST is high-affinity and presumably saturated at bulk concentrations) is a workaround for the saturation paradox, but it requires that intramitochondrial [EGT]free is lower than whole-tissue [EGT]total \u2014 a condition not yet measured. If free intramitochondrial EGT is high (e.g., because import is active on the EGT diet), MPST may not be a dose-response regulator at all, and the entire partition-based rationale collapses.",
+    "Interactions between the inhibitors and the SQOR knockdown are not pre-specified. The pilot design states that I3MT-3 and PAG should 'partially' reduce the EGT benefit, but no quantitative prediction of their magnitude is given, nor is it specified whether they interact with the SQOR-knockdown effect (i.e., whether hitting both producers together gives a synergistic block). Without explicit predictions, post-hoc interpretation of partial effects risks confirmation bias.",
+    "The 'sulfide-fuel charger for the CoQ pool' is a functional description, not a mechanism statement. It is economical and memorable, but it glosses the question of *how* EGT (a small-molecule sulfur donor) 'charges' CoQ. If the route is 'EGT \u2192 H\u2082S \u2192 SQOR-oxidized H\u2082S \u2192 CoQ reduction', that is one claim; if it is 'EGT potentiates MPST, which raises the flux of 3-MP \u2192 H\u2082S, which SQOR oxidizes faster', that is another. The reasoning does not formally separate these, so the pilot's OCR, H\u2082S quantitation, and CoQ-redox arms will each test a piece, but the integrated picture remains qualitative."
+   ],
+   "citation_existence": {
+    "n": 5,
+    "n_exist": 5,
+    "exist_rate": 1.0
+   }
+  },
+  "R3": {
+   "question_id": "Q_ERGO",
+   "category": 1,
+   "composite": 3.75,
+   "dimensions": {
+    "grounding": 2,
+    "reasoning": 5,
+    "completeness": 4.667,
+    "usefulness": 5,
+    "creativity": 2.082
+   },
+   "creativity_detail": {
+    "creativity_index": 0.2705,
+    "novelty": 0.577,
+    "plausibility_gate": 0.75,
+    "reasoning_trace_gate": 0.625,
+    "creativity_dim_score_1to5": 2.082,
+    "hallucination_flag": false
+   },
+   "novelty": {
+    "novelty": 0.577,
+    "N_freq": 0.448,
+    "hits": 16,
+    "semantic": {
+     "value": 0.964,
+     "method": "tfidf_cosine",
+     "max_sim": 0.036,
+     "note": "model-dependent; under-discriminates on shared domain vocab (LB-018)"
+    },
+    "n_neighbours": 6,
+    "method": "0.75*retrieval_freq + 0.25*semantic_distance"
+   },
+   "n_citations": 0,
+   "citation_verification_rate": null,
+   "citation_quality": {
+    "n_primary": 0,
+    "n_review": 0,
+    "n_preprint": 0,
+    "primary_ratio": null,
+    "mean_venue_quality": null,
+    "quality_composite": null,
+    "flags": [
+     "no_citations"
+    ],
+    "_note": "no_citations \u2192 quality undefined (not perfect); grounding capped via citation stage"
+   },
+   "effective_grounding_cap": 2,
+   "integrity_cap": 5,
+   "trace": {
+    "n_steps": 10,
+    "n_verified": 0,
+    "n_unverified": 0,
+    "n_asserted": null,
+    "verified_fraction": 0.0
+   },
+   "dataset_resolution": null,
+   "inter_judge_absdiff": {
+    "grounding": 0.0,
+    "reasoning": 0.0,
+    "completeness": 0.667,
+    "usefulness": 0.0,
+    "creativity": 0.0
+   },
+   "redflags": [
+    "Compartmentalization inference: The MPST (mitochondrial) and CSE (cytosolic) findings are from different experimental systems (Sprenger: mouse muscle in vivo; Petrovic: rat & worm, mixed cell culture). The hypothesis assumes both operate simultaneously in the same running mouse muscle without direct co-localization or competition data.",
+    "Quantitative coupling not shown: The claim that mitochondrial SQR activity 'keeps the NADH sink open' for the G3P shuttle assumes the two compartments are kinetically coupled at a rate that becomes rate-limiting for lactate threshold. The magnitude of this coupling in intact exercising muscle is not derived or cited.",
+    "EGT recycling vs. consumption paradox unresolved: Sprenger shows EGT is recycled by MPST (no hercynine accumulates); Petrovic shows EGT is consumed by CSE (hercynine is produced). The hypothesis does not explain how one molecule can have opposite fates in the same cell, or which route dominates in vivo. If CSE consumes EGT quickly, the MPST recycling loop may be starved of substrate.",
+    "Dose-dependent hormesis caveat is stated but not tested: The hypothesis correctly notes H\u2082S is biphasic, but the pilot does not include a high-dose arm to demonstrate the predicted inhibition at supraphysiological EGT levels. Without it, the hormesis argument is a verbal escape hatch rather than a prediction.",
+    "Lactate threshold is not measured in either source paper: Both Sprenger and Petrovic measure time-to-exhaustion and peak speed but not the specific readout (lactate vs. velocity curve, OBLA at 4 mmol\u00b7L\u207b\u00b9). The hypothesis infers a lactate-threshold shift from Petrovic's *post-hoc* observation of lower serum lactate, which is necessary but not sufficient evidence for a rightward curve shift (lactate could fall without threshold shifting, e.g., if flux dropped globally).",
+    "Enzyme KO causality test has a failure mode: If the EGT effect persists in the enzyme KO, the hypothesis is falsified \u2014 but if the effect *disappears in the KO*, the experiment confirms necessity but not sufficiency. It does not rule out off-target persulfidation of other NAD\u207a-recycling enzymes (e.g., LDH itself, which is persulfidated in Petrovic's proteome but not analyzed).",
+    "Sex/age generalization flagged but not powered: The design includes 'both sexes' but Sprenger used only young males. The hypothesis does not specify whether the lactate-threshold mechanism is age- or sex-invariant, and the pilot (n\u224812/sex) will be underpowered for sex-stratified analysis.",
+    "No measurement of muscle H\u2082S or sulfane-sulfur concentration: The design includes H\u2082S as a secondary endpoint but does not specify sampling time or compartmentalization. H\u2082S is highly labile and compartment-specific; without real-time or cryopreserved sampling, the mechanistic bridge could be missed.",
+    "Alternative mechanisms not excluded: The design tests H\u2082S/persulfidation (via KO) but does not formally exclude other EGT activities (e.g., metal chelation, NRF2 priming, AMPK activation noted in the 2026 preprint cited). The KO control isolates the enzyme but not the substrate.",
+    "Neither Sprenger nor Petrovic measured lactate threshold in the living running animal. The hypothesis's central claim\u2014that this is the operative physiological variable\u2014is inferred from lower post-exercise lactate and higher sustained work in Petrovic, but not directly confirmed. The pilot experiment is designed to close this gap, but it is currently the largest untested assumption.",
+    "The two papers disagree on EGT's chemical fate (recycled in MPST route vs. consumed in CSE route). The hypothesis assumes both can operate in the same cell compartment without specifying how. The reconciliation (both feed a common redox node) is mechanistically plausible but requires that the relative flux through MPST vs. CSE in a working muscle fiber under exercise is known\u2014it is not. A tissue/timepoint at which one dominates might not yield the predicted additive effect.",
+    "The hormesis caveat (low H\u2082S helps, high inhibits) is well-grounded in published literature but creates a dose prediction that could easily be falsified by a nonlinear or biphasic response that does not cleanly separate the endogenous (enzyme-gated) route from exogenous H\u2082S. The hypothesis asserts sharpness that may not hold in vivo.",
+    "The hypothesis credits the lactate-threshold shift entirely to the cytosolic-redox axis (G3P shuttle + NAD\u207a/NADH), but Sprenger's data suggest a mitochondrial biogenesis/vascularization component in mice (not directly measured, but not ruled out). The pilot design measures muscle NAD\u207a/NADH and cGPDH activity but does not quantify mitochondrial content or capillarity, so a biogenesis contribution could be masked.",
+    "The design uses a single enzyme-KO (MPST or muscle-specific CSE) to test necessity, but if both MPST and CSE are active in muscle, a single KO may not fully block the H\u2082S route. A conditional double-KO would be more conclusive but is not proposed. The hypothesis is therefore vulnerable to an intermediate result: EGT effect reduced but not eliminated in the single KO.",
+    "Petrovic's successes were in aged rats; Sprenger's in young mice. The hypothesis does not address whether the mechanism is age-dependent, and the pilot proposes young animals. A null or opposite result in young mice would not necessarily falsify the hypothesis (could be an age-specific phenomenon) but would limit its scope without additional data."
+   ],
+   "citation_existence": {
+    "n": 0,
+    "n_exist": 0,
+    "exist_rate": null
+   }
+  },
+  "R4": {
+   "question_id": "Q2",
+   "category": 2,
+   "composite": 2.947,
+   "dimensions": {
+    "grounding": 2,
+    "reasoning": 3,
+    "completeness": 4.25,
+    "usefulness": 4,
+    "creativity": 1.486
+   },
+   "creativity_detail": {
+    "creativity_index": 0.1215,
+    "novelty": 0.486,
+    "plausibility_gate": 0.5,
+    "reasoning_trace_gate": 0.5,
+    "creativity_dim_score_1to5": 1.486,
+    "hallucination_flag": false
+   },
+   "novelty": {
+    "novelty": 0.486,
+    "N_freq": 0.322,
+    "hits": 127,
+    "semantic": {
+     "value": 0.977,
+     "method": "tfidf_cosine",
+     "max_sim": 0.023,
+     "note": "model-dependent; under-discriminates on shared domain vocab (LB-018)"
+    },
+    "n_neighbours": 6,
+    "method": "0.75*retrieval_freq + 0.25*semantic_distance"
+   },
+   "n_citations": 33,
+   "citation_verification_rate": 0.212,
+   "citation_quality": {
+    "n_primary": 26,
+    "n_review": 4,
+    "n_preprint": 0,
+    "primary_ratio": 0.867,
+    "mean_venue_quality": 0.969,
+    "quality_composite": 0.944,
+    "flags": []
+   },
+   "effective_grounding_cap": 3,
+   "integrity_cap": 5,
+   "trace": {
+    "n_steps": 23,
+    "n_verified": 3,
+    "n_unverified": 0,
+    "n_asserted": null,
+    "verified_fraction": 0.13
+   },
+   "dataset_resolution": {
+    "n_dataset_ids": 3,
+    "used_and_resolved": 3,
+    "used_and_resolved_rate": 1.0,
+    "records": [
+     {
+      "id": "P0A9M8",
+      "db": "UniProt",
+      "exists": true,
+      "used": true
+     },
+     {
+      "id": "P0A6A3",
+      "db": "UniProt",
+      "exists": true,
+      "used": true
+     },
+     {
+      "id": "P27988",
+      "db": "UniProt",
+      "exists": true,
+      "used": true
+     }
+    ]
+   },
+   "inter_judge_absdiff": {
+    "grounding": 0.0,
+    "reasoning": 0.0,
+    "completeness": 1.0,
+    "usefulness": 0.0,
+    "creativity": 0.0
+   },
+   "redflags": [
+    "Membrane tension/pH gating of branch-point partitioning is speculative and untested \u2014 no experimental evidence cited that mineral/peptide-catalyzed acetyl-splitting responds to bilayer mechanics in a protocell context.",
+    "Energy budget acknowledged as incomplete: acetyl-thioester chemistry alone cannot support ATP synthesis; chemiosmotic gradient coupling is invoked as a supplement but not integrated into the core pathway or synchronized with the partition-ratchet mechanism.",
+    "Genome condensation is outsourced: acetyl phosphate phosphorylates monomers but does not polymerize them (Whicher et al. 2018 explicitly: 'did not polymerise either amino acids or nucleotides'). Condensation requires diamidophosphate or wet\u2013dry cycles \u2014 a second chemistry that is not contained in or synchronized with the acetyl node.",
+    "Compositional-to-sequence heredity transition (Stage 5) is asserted as 'recruited' but not mechanistically explained: why would a lineage expressing a sequence-encoded catalyst for partition control out-compete purely compositional lineages? This is the evolutionary bottleneck and it is waved through.",
+    "The 'leaving-home' problem is acknowledged but not solved: the hypothesis proposes membrane-state gating of flux rather than chemiosmotic gradient use, but does not demonstrate that gating alone closes the energy or information gap once a cell buds off the vent pore. The alternative cited (Yu et al. 2025) shows fatty acids *can* hold ATP-synthase gradients under vent conditions \u2014 which is orthogonal to this hypothesis and suggests gradient-based autonomy may be easier than partition-gating-based autonomy.",
+    "Stage 1 inference is reasonable but not established: 'that they draw on one shared pool in a protocell is a reasonable inference' \u2014 the shared pool exists on minerals, but encapsulation and concentration may not guarantee it persists as a unified control node rather than separated into compartmented branches.",
+    "Predictions #2 and #3 (auto-synchronization and heredity handoff) are plausible *if* prediction #1 is true, but they do not independently test the core mechanism.",
+    "Central mechanochemical gating claim (Stage 3\u20134) is stated as 'I propose' with no experimental precedent, structural analogy, or kinetic model. The document names it as the 'weakest link' and the 'kill criterion' but then does not construct a falsifiable intermediate (e.g., does the acetyl-CoA synthase or phosphotransacetylase ortholog have a membrane-proximal domain responsive to lipid packing or tension?). Prediction #1 is the entire experimental foundation.",
+    "Energy budget closure is deferred. The document acknowledges 'the energy budget is tight' and cites Preiner et al. (2019) that 'substrate-level phosphorylation from the acetyl-CoA pathway alone is insufficient to make ATP,' then notes this is why modern acetogens use chemiosmotic coupling. But the hypothesis claims to sidestep the 'leaving-home' pump requirement by relocating autonomy to mechanochemical self-synchronization\u2014yet the energy shortfall remains. If chemiosmotic flux is required anyway, the novelty (avoidance of a maintained gradient) is undermined.",
+    "Genome *condensation* is explicitly imported (diamidophosphate or wet\u2013dry cycling). The document states 'the node supplies activation; genome *condensation* must be imported' and treats this as a 'dependency, not a fatal gap.' But if the acetyl node does not generate the chemistry needed to polymerize its own monomers\u2014only to phosphorylate them\u2014then the self-contained derivation from one geochemical node (a core framing claim) is incomplete. This is less a falsifiable error than a honesty caveat, but it reduces the causal closure of the hypothesis.",
+    "No structural or biophysical model of how membrane tension/pH would shift the equilibrium of the acetyl branch. Modern ion channels respond to tension via gating mechanics; phosphotransacetylase is a 36 kDa homodimer (PDB 1SVA) with no obvious membrane interaction domain. The claim that a taut bilayer would bias its substrate specificity or Km lacks a plausible mechanism.",
+    "The 'fossil prediction' (fingerprints in extant biochemistry, \u00a76) conflates two different claims: (a) the acetyl/thiolase relay exists and is ancient (well-supported, independently verified), and (b) its presence means the partition-ratio-gating scenario operated early (not supported by the presence alone\u2014modern pta/ackA run an acetate-activation cycle, not a flux-partition gate). The document relies on modern Pta/AckA function to suggest plausibility but does not show that modern use of the relay resembles the hypothesized prebiotic scenario.",
+    "Prediction #1 (the crux test) is sound in design but will likely be difficult to distinguish from confound: osmolarity affects both enzyme kinetics globally and membrane properties. A measured shift in the lipid/monomer product ratio could be due to osmotic stress on catalysis rather than specific membrane-state gating of the partition. The document does not pre-specify controls (e.g., gating via non-osmotic tension, or via mutants of the branch enzymes that lack a putative mechanosensitive element) that would isolate the mechanism.",
+    "The 'handoff to sequence heredity' (Stage 5) is presented as inevitable ('Any lineage that stumbles onto a sequence...') but lacks a quantitative model of the fitness advantage. Low-fidelity compositional inheritance of *r* is asserted to be inferior to sequence-encoded *r*, but the transition is not modeled: what is the cost of transitioning from GARD-style partition control to genetically-encoded partition control, and under what conditions is it worth paying?"
+   ],
+   "citation_existence": {
+    "n": 33,
+    "n_exist": 30,
+    "exist_rate": 0.909
+   }
+  },
+  "R5": {
+   "question_id": "Q3",
+   "category": 3,
+   "composite": 3.991,
+   "dimensions": {
+    "grounding": 4,
+    "reasoning": 5,
+    "completeness": 4.5,
+    "usefulness": 4.667,
+    "creativity": 1.786
+   },
+   "creativity_detail": {
+    "creativity_index": 0.1965,
+    "novelty": 0.524,
+    "plausibility_gate": 0.75,
+    "reasoning_trace_gate": 0.5,
+    "creativity_dim_score_1to5": 1.786,
+    "hallucination_flag": false
+   },
+   "novelty": {
+    "novelty": 0.524,
+    "N_freq": 0.397,
+    "hits": 32,
+    "semantic": {
+     "value": 0.905,
+     "method": "tfidf_cosine",
+     "max_sim": 0.095,
+     "note": "model-dependent; under-discriminates on shared domain vocab (LB-018)"
+    },
+    "n_neighbours": 6,
+    "method": "0.75*retrieval_freq + 0.25*semantic_distance"
+   },
+   "n_citations": 9,
+   "citation_verification_rate": 0.667,
+   "citation_quality": {
+    "n_primary": 6,
+    "n_review": 3,
+    "n_preprint": 0,
+    "primary_ratio": 0.667,
+    "mean_venue_quality": 0.8,
+    "quality_composite": 0.8,
+    "flags": []
+   },
+   "effective_grounding_cap": 4,
+   "integrity_cap": 5,
+   "trace": {
+    "n_steps": 56,
+    "n_verified": 10,
+    "n_unverified": 0,
+    "n_asserted": null,
+    "verified_fraction": 0.179
+   },
+   "dataset_resolution": {
+    "n_dataset_ids": 6,
+    "used_and_resolved": 6,
+    "used_and_resolved_rate": 1.0,
+    "records": [
+     {
+      "id": "GSE167186",
+      "db": "GEO",
+      "exists": true,
+      "used": true
+     },
+     {
+      "id": "GSE151066",
+      "db": "GEO",
+      "exists": true,
+      "used": true
+     },
+     {
+      "id": "GSE163356",
+      "db": "GEO",
+      "exists": true,
+      "used": true
+     },
+     {
+      "id": "GSE157585",
+      "db": "GEO",
+      "exists": true,
+      "used": true
+     },
+     {
+      "id": "PDB 8S9P",
+      "db": "PDB",
+      "exists": true,
+      "used": true
+     },
+     {
+      "id": "O15146",
+      "db": "UniProt",
+      "exists": true,
+      "used": true
+     }
+    ]
+   },
+   "inter_judge_absdiff": {
+    "grounding": 0.0,
+    "reasoning": 0.0,
+    "completeness": 0.0,
+    "usefulness": 0.667,
+    "creativity": 0.667
+   },
+   "redflags": [
+    "No nonclinical efficacy data for ARGX-119 specifically in aged or sarcopenic muscle are cited. The statement 'ARGX-119 has been shown to stabilize the NMJ, increase muscle strength, and reduce fatigability in nonclinical models' names the claim but provides no PMIDs, data, or detail \u2014 this is hearsay on a critical point and should be verified or qualified as 'expected based on agonist mechanism' rather than asserted as proven.",
+    "The transcriptomic effect sizes, though statistically robust in one dataset (GSE167186), are moderate in absolute terms (MuSK +0.73 log2FC). A +0.73 fold-change is a ~64% increase in mRNA, not a 5-fold upheaval; the argument correctly frames this as part of a coherent denervation program (MYH8, CHRNA1 also up), but the compound's ability to *reverse* this in vivo remains untested.",
+    "NMJ denervation in sarcopenia is multifactorial and includes upstream motoneuron apoptosis, loss of motor-unit stability, and systemic metabolic/inflammatory changes. The document acknowledges this in the limitations section ('denervation in aging is multifactorial') but does not quantify how much of exercise's sarcopenia benefit is specifically NMJ-dependent. A MuSK agonist could stabilize remaining NMJs while other degenerative processes continue, yielding partial benefit.",
+    "The novelty claim relies on a PubMed and OpenAlex null search for 'ARGX-119 + sarcopenia' and 'MuSK agonist + exercise mimetic.' Absence of evidence is not evidence of absence. The gap is real, but competitive silence on an obvious combination (NMJ-stabilizer in a disease driven by NMJ loss) could indicate prior negative data or lack of interest rather than an overlooked opportunity.",
+    "ARGX-119's entire development program targets rare monogenic/motor-neuron diseases. Sarcopenia is a polygenic, age-dependent syndrome with a very different pathophysiology and patient heterogeneity. The safety and exposure data from ~112 healthy adults do not address tolerability, pharmacokinetics, or immune response in frail, aged patients with multiple comorbidities and polypharmacy\u2014a de-risking for efficacy signal but not a substitute for aging-cohort dosing studies.",
+    "The proposed experimental falsifier\u2014'if force does not improve at tolerated doses, or the drug's signature is orthogonal to exercise, the claim is refuted'\u2014is sound, but it requires a nonclinical experiment (aged mice) not yet described as planned or funded. The claim is therefore currently non-testable and depends on future work.",
+    "The document states that a 2026 review (PMID 41619083) on NMJ-sarcopenia strategies frames exercise as an adjunct to combine with NMJ agents, not a pharmacological mimic. This is presented as evidence of the gap, but it could instead indicate that the field has principled reasons to view pharmacological NMJ stabilization as orthogonal to (not a substitute for) exercise\u2014a contraindication not addressed here.",
+    "No mention of whether MuSK agonism has any known tachyphylaxis, tolerance, or feedback suppression of endogenous agrin production. If ARGX-119 chronically activates MuSK, does downstream signaling engage negative-feedback loops that would limit durability? This is a known problem in other receptor-agonist therapies and should be discussed.",
+    "The transcriptomic data rely heavily on GSE167186; while direction is confirmed in a second aging dataset and GTEx, formal multi-cohort meta-analysis would strengthen effect-size estimates for the NMJ axis.",
+    "Exercise's neuromuscular benefit is multifactorial (motoneuron health, synaptic strength, muscle fiber protein synthesis, mitochondrial biogenesis, angiogenesis). The hypothesis assumes NMJ stabilization is the rate-limiting step, but does not prove it quantitatively. Aged motoneurons themselves undergo atrophy and loss of excitability; upstream motor-unit degeneration may not be rescued by postsynaptic MuSK agonism alone.",
+    "The compound (ARGX-119) has been tested only in healthy adults for safety (n=112); no efficacy data in aged animals or humans exist. Pharmacokinetics in aged muscle, BBB penetration (if motoneuron soma effects are relevant), and long-term safety/tolerability in chronic treatment remain untested.",
+    "The proposed experiment (aged mice, force, NMJ imaging, transcriptomics) is well-designed but not yet performed. The exercise-mimetic claim is provisional pending experimental validation.",
+    "The scoring of MuSK as #1 node (0.754 vs. NTRK2 0.715) depends on the weighting scheme (novelty 0.30, druggability 0.25, sarcopenia_reversal 0.25, exercise_up 0.20). Reasonable weighting, but other choices (e.g., exercise_up 0.40) would reorder candidates. The weights are stated and transparent, but not justified from first principles.",
+    "ARGX-119 is a large parenteral biologic; the forward extension to a small-molecule oral agent is not yet available. Translation to clinical practice hinges on either chronic IV/SC dosing or development of a new chemical entity.",
+    "The causal chain 'neurotrypsin \u2191 in aging \u2192 agrin cleavage \u2192 denervation \u2192 sarcopenia' is established in broad outline (B\u00fctikofer 2011 for PRSS12 overexpression causing precocious denervation; CAF as a biomarker). However, quantitative evidence that lowering neurotrypsin or preventing CAF formation directly reverses sarcopenia in aged mice or humans is not cited. The pathway is real, but the dosage of its contribution to age-related sarcopenia severity is not quantified."
+   ],
+   "citation_existence": {
+    "n": 9,
+    "n_exist": 9,
+    "exist_rate": 1.0
+   }
+  },
+  "R6": {
+   "question_id": "Q2",
+   "category": 2,
+   "composite": 3.613,
+   "dimensions": {
+    "grounding": 3,
+    "reasoning": 4.333,
+    "completeness": 4.167,
+    "usefulness": 4.667,
+    "creativity": 1.896
+   },
+   "creativity_detail": {
+    "creativity_index": 0.2241,
+    "novelty": 0.478,
+    "plausibility_gate": 0.75,
+    "reasoning_trace_gate": 0.625,
+    "creativity_dim_score_1to5": 1.896,
+    "hallucination_flag": false
+   },
+   "novelty": {
+    "novelty": 0.478,
+    "N_freq": 0.322,
+    "hits": 127,
+    "semantic": {
+     "value": 0.945,
+     "method": "tfidf_cosine",
+     "max_sim": 0.055,
+     "note": "model-dependent; under-discriminates on shared domain vocab (LB-018)"
+    },
+    "n_neighbours": 6,
+    "method": "0.75*retrieval_freq + 0.25*semantic_distance"
+   },
+   "n_citations": 18,
+   "citation_verification_rate": 0.556,
+   "citation_quality": {
+    "n_primary": 15,
+    "n_review": 2,
+    "n_preprint": 1,
+    "primary_ratio": 0.833,
+    "mean_venue_quality": 1.0,
+    "quality_composite": 0.95,
+    "flags": []
+   },
+   "effective_grounding_cap": 3,
+   "integrity_cap": 5,
+   "trace": {
+    "n_steps": 17,
+    "n_verified": 0,
+    "n_unverified": 0,
+    "n_asserted": null,
+    "verified_fraction": 0.0
+   },
+   "dataset_resolution": null,
+   "inter_judge_absdiff": {
+    "grounding": 1.333,
+    "reasoning": 1.333,
+    "completeness": 0.667,
+    "usefulness": 0.667,
+    "creativity": 0.0
+   },
+   "redflags": [
+    "The handoff transition depends on a random short oligonucleotide encoding a composome-biasing function; the probability of this event is neither calculated nor measured, only asserted as plausible. This is the bottleneck for the entire hypothesis and is flagged (honestly) as the weakest link, but no quantitative bound is provided.",
+    "Figures 2 and 3 are described as original simulations ('We reproduced this'; 'We simulated') but no code is provided in the public narrative, and the GARD censoring (Figure 2b) uses only 2 catalytic matrices per repertoire size, making the counts (1\u20139) sparse. The statement 'across repertoire sizes from N = 20 to N = 200, the count of distinct attractors stayed in the single digits' is correct qualitatively (the count does not scale with N, as predicted by Vasas), but the exact numbers are not robust to sampling; this is acknowledged ('numbers are noisy') but the noise is then elided in the final presentation.",
+    "The cofactor-as-metabolic-bridge is argued by analogy to white 1976 ('molecular fossil' reasoning: adenosine is catalytically inert, therefore ancient). This inference is well-established, but it is an inference from structure, not direct evidence that the earliest catalysts *were* cofactors and not something else. If non-nucleotide catalysts (e.g., minerals, amino acids) ran the earliest metabolism before cofactors, the entire pivot collapses. The hypothesis does not guard against this or discuss how it would be falsified experimentally.",
+    "The prediction 'cofactor-driven growth' (Prediction 1) is stated as 'an active coacervate fed a nucleotide-cofactor-catalysed reaction that produces its own amphiphile/scaffold will show sustained growth-and-division cycles whose rate tracks the intra-droplet cofactor concentration.' This is syntactically circular: if a reaction produces the droplet's own material, growth will follow by definition. The prediction is only nontrivial if a specific cofactor system (ATP \u2192 phospholipid, or NAD \u2192 some scaffold) is identified and tested. The hypothesis does not do this; it invokes plausibility rather than demonstration.",
+    "The Eigen threshold calculation (Figure 4) assumes per-site error rates of ~50% are 'achievable by sloppy non-enzymatic ligation' without citing measurements of actual ligation fidelity in droplets. Fraccia et al. (2015) and Adamala & Szostak (2013) are cited for showing ligation occurs in droplets and templating inside protocells, but neither provides a quantitative fidelity measurement; the ~50% figure is an assumption about how 'sloppy' non-enzymatic ligation can be.",
+    "The compositional ceiling result (Figure 2b) reproduces a known literature finding (Vasas & Szathm\u00e1ry 2010, 2012), but the hypothesis does not explain *why* attractors do not proliferate with repertoire size. If the mechanism of the ceiling is not understood, the claim that sequence heredity becomes valuable 'at the ceiling' lacks a mechanistic justification \u2014 it is an observation that a phase transition happens there, not an explanation of why it *must* happen there.",
+    "The hypothesis does not address the problem of template-composition feedback: if a template encodes a biased composome, but the composome determines which templates are copied, how does the loop bootstrap? A template that biases composome A is useless if composome A does not have the machinery to copy templates. The handoff assumes that cofactors already copy templates non-enzymatically (Step 6 / Fraccia), but if copying is coupled to composome, the first template must land in a composome that already copies.",
+    "The simulations are acknowledged as abstract and logic-demonstrating, not molecular-realistic. The GARD census uses only 2 catalytic matrices per repertoire size N, producing noisy attractor counts (1\u20139 per condition); the authors report 'single digits' qualitatively rather than a sharp quantitative law. The handoff simulation is deliberately simplified to isolate logic, not to reproduce real nucleotide chemistry or droplet physics. If the ceiling effect is an artefact of the abstraction (e.g., the specific mutual-catalysis structure chosen), the central mechanism may not survive a more realistic model.",
+    "The first cofactor-catalysed growth reaction producing amphiphile/scaffold is not identified. The hypothesis claims it is 'prebiotically reachable' but does not name it, show a synthesis route, or present kinetic data. This is the weakest chemical link. If no prebiotically plausible cofactor reaction can be shown to produce the droplet's own material at a rate sufficient to compete with passive dissolution, the metabolism\u2013compartment coupling fails.",
+    "The transition from coacervate to membrane is presented as a late, selective upgrade, but the timescale and selectivity are not modeled. If wet\u2013dry cycling or osmotic stress \u2014 the proposed drivers \u2014 also destabilize coacervates faster than a membrane forms, the membrane may appear *before* the ratchet reaches the sequence handoff, disrupting the claimed causal order. The experimental window for the handoff (high nucleotide concentration, ordered scaffolds, active division) may be incompatible with rapid membranization.",
+    "The claim that cofactors are 'the same molecules' supplying metabolism, growth, and sequence raw material conflates two distinct roles: (i) ATP/NAD as cofactors in catalytic reactions, and (ii) free nucleotides (ATP, GTP, etc.) as substrates for ligation. The hypothesis does not clarify the partition\u2014how much of the cofactor pool is free nucleotides vs. bound to proteins/scaffolds. If most cofactors are sequestered in functional reactions, the concentration available for stochastic ligation may be too low to produce templates at a rate significant to the population's evolution.",
+    "The compositional ceiling is derived from attractor-counting in a GARD model with specific mutual-catalysis kinetics. The generality of the ceiling across different reaction networks, cofactor types, and droplet chemistries is not proven. If the ceiling is an artifact of the particular stoichiometry or kinetic parameters chosen, the 'heredity handoff' motivation evaporates: sequence heredity might not have a selective advantage at the predicted moment.",
+    "The Eigen threshold analysis (Figure 4) assumes per-site error rates for non-enzymatic ligation, but actual fidelity data for template-directed copying of short nucleotide sequences in a coacervate environment are not cited or measured. If error rates are higher than ~50% per site (which is plausible for unassisted ligation), even a 4-site template may fall below the Eigen threshold, and the ratchet has no first tooth.",
+    "The prediction that 'heritable information jumps from ~3 bits to ~27 bits' after the handoff (Figure 3 caption) is from a single simulation run shown as a proof-of-concept. The variance across runs, the sensitivity to the template-length distribution and composition-bias strength, and the robustness to alternative population structures are not reported. If the breakthrough is a rare outcome or depends sensitively on parameter tuning, the mechanism is less robust than presented.",
+    "The claim that cofactors are 'molecular fossils' of the first catalysts rests on the observation that NAD/FAD/CoA/SAM carry a 'gratuitous' adenosine. However, the adenosine moiety may have been added *later* to recruit these cofactors to RNA-dependent enzymatic pathways, not retained from an earlier nucleotide-only period. The hypothesis does not rule out an alternative: cofactors were originally protein-bound non-nucleotide catalysts, and the adenosine was a later adaptation to RNA-world enzymology.",
+    "The hypothesis predicts (Testable Prediction 3) that 'a protocol lineage will be caught in the act of trading compositional heredity for sequence heredity.' This experiment requires: (a) compositional drift to plateau, (b) spontaneous oligonucleotide ligation, (c) template-biased composition, and (d) measurement of each in real time across ~1,000+ divisions. The experimental window is narrow and the required molecular monitoring technology (sequence-templated composition feedback in a living droplet) is not yet routine. The prediction is in principle testable but technically demanding to the point of being difficult to falsify cleanly.",
+    "The hypothesis relies on nucleotide-derived cofactors being abundant and available in the prebiotic soup. Recent synthesis routes (Powner et al. 2009; Xu et al. 2020) show pathways to nucleotides, but the yields and concentrations are modest and sensitive to pH, temperature, and precursor availability. The droplet's sustained cofactor-driven growth requires a steady supply; if cofactor concentration is a limiting factor or cycling, the metabolism\u2013growth coupling may not sustain the ratchet long enough for sequence handoff to occur."
+   ],
+   "citation_existence": {
+    "n": 18,
+    "n_exist": 18,
+    "exist_rate": 1.0
+   }
+  }
+ },
+ "elo": {
+  "Q_ERGO": {
+   "ratings": {
+    "R2": 988.0,
+    "R3": 1012.0
+   },
+   "ranking": [
+    "R3",
+    "R2"
+   ],
+   "n_comparisons": 2
+  },
+  "Q2": {
+   "ratings": {
+    "R4": 976.8,
+    "R6": 1023.2
+   },
+   "ranking": [
+    "R6",
+    "R4"
+   ],
+   "n_comparisons": 2
+  },
+  "Q3": {
+   "ratings": {
+    "R1": 999.2,
+    "R5": 1000.8
+   },
+   "ranking": [
+    "R5",
+    "R1"
+   ],
+   "n_comparisons": 2
+  }
+ },
+ "questions": {
+  "Q_ERGO": {
+   "text": "Starting from the two provided publications about ergothioneine, come up with a new rationale/hypothesis of how ergothioneine makes those mice and rats run faster / increases their exercise performance. What would be your first pilot experiment to test this hypothesis?",
+   "category": 1,
+   "tight_query": "ergothioneine exercise"
+  },
+  "Q2": {
+   "text": "Generate a novel, plausible hypothesis for: How did a soup of lifeless organic molecules spontaneously organize into the first self-replicating cell?",
+   "category": 2,
+   "tight_query": "origin of life self-replication"
+  },
+  "Q3": {
+   "text": "Starting from publicly available datasets, propose a not-thought-of-yet or new compound that acts as an exercise mimetic to treat patients against age-related muscle loss and sarcopenia.",
+   "category": 3,
+   "tight_query": "exercise mimetic sarcopenia"
+  }
+ }
+}

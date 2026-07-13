@@ -1,0 +1,273 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>the Metascience Project · exp-001 · blinded evaluation</title><style>
+:root{
+  --bg:#0a0e14; --bg2:#0d1420; --panel:#0f1826; --ink:#c8e6ff; --dim:#6f8fb0;
+  --acc:#39d0d8; --acc2:#f5a623; --good:#38e08b; --warn:#ff6b6b; --line:#1c2b3f;
+  --grid:rgba(57,208,216,.05);
+}
+*{box-sizing:border-box}
+html,body{margin:0;background:var(--bg);color:var(--ink);
+  font-family:"SF Mono",ui-monospace,"Cascadia Code",Menlo,Consolas,monospace;font-size:14px;line-height:1.5}
+body{background-image:
+  linear-gradient(var(--grid) 1px,transparent 1px),
+  linear-gradient(90deg,var(--grid) 1px,transparent 1px);
+  background-size:34px 34px;}
+.wrap{max-width:1000px;margin:0 auto;padding:22px 20px 90px}
+h1{font-size:22px;letter-spacing:3px;text-transform:uppercase;color:var(--acc);margin:0 0 2px;
+  text-shadow:0 0 12px rgba(57,208,216,.4)}
+.sub{color:var(--dim);font-size:12px;letter-spacing:1px;margin-bottom:16px}
+.scan{position:fixed;inset:0;pointer-events:none;z-index:5;
+  background:repeating-linear-gradient(0deg,rgba(0,0,0,0) 0 3px,rgba(0,0,0,.06) 3px 4px)}
+.card{background:linear-gradient(180deg,var(--panel),var(--bg2));border:1px solid var(--line);
+  border-radius:10px;padding:16px 18px;margin:14px 0;box-shadow:0 0 0 1px rgba(57,208,216,.04),0 8px 30px rgba(0,0,0,.35)}
+.qbar{border-left:3px solid var(--acc2);padding:10px 14px;background:rgba(245,166,35,.06);border-radius:6px;margin:6px 0 4px}
+.qbar b{color:var(--acc2);letter-spacing:1px}
+.ansgrid{display:grid;grid-template-columns:1fr;gap:14px}
+.anshead{display:flex;align-items:center;gap:10px;border-bottom:1px dashed var(--line);padding-bottom:8px;margin-bottom:10px}
+.tag{display:inline-block;background:var(--acc);color:#04121a;font-weight:700;border-radius:6px;padding:3px 12px;
+  letter-spacing:2px;box-shadow:0 0 10px rgba(57,208,216,.5)}
+.body{background:#071019;border:1px solid var(--line);border-radius:8px;padding:12px 16px;max-height:520px;overflow:auto}
+.body h1,.body h2,.body h3{color:var(--acc);font-size:15px;letter-spacing:1px;border-bottom:1px solid var(--line);padding-bottom:3px}
+.body table{border-collapse:collapse;width:100%;margin:8px 0}
+.body th,.body td{border:1px solid var(--line);padding:5px 8px;font-size:13px}
+.body code,.body pre{background:#040a12;color:var(--good);border-radius:4px;padding:1px 5px}
+.body pre{padding:10px;overflow:auto;border:1px solid var(--line)}
+.body img{max-width:100%;border:1px solid var(--line);border-radius:6px;margin:8px 0;background:#fff}
+.figcap{color:var(--dim);font-size:12px;margin:-2px 0 10px;font-style:italic}
+.tl{margin:10px 0 2px;border-left:2px solid var(--acc);padding-left:0}
+.tl .step{position:relative;padding:7px 10px 7px 20px;border-bottom:1px dotted var(--line)}
+.tl .step:before{content:"";position:absolute;left:-6px;top:12px;width:9px;height:9px;border-radius:50%;
+  background:var(--acc);box-shadow:0 0 8px var(--acc)}
+.ph{color:var(--acc2);font-weight:700;letter-spacing:1px;font-size:12px}
+.ev{color:var(--dim);font-size:12px}
+.badge{float:right;font-size:11px;padding:1px 8px;border-radius:10px;letter-spacing:1px}
+.badge.ok{color:var(--good);border:1px solid var(--good)}
+.badge.no{color:var(--warn);border:1px solid var(--warn)}
+.formsec{margin-top:12px}
+.lbl{color:var(--acc);letter-spacing:1px;font-size:12px;text-transform:uppercase;margin:12px 0 4px}
+.catrow{display:flex;align-items:center;gap:10px;margin:6px 0;flex-wrap:wrap}
+.catname{min-width:120px;font-weight:700}
+.cathelp{color:var(--dim);font-size:12px;flex:1 1 100%}
+select,textarea,input[type=text]{background:#04101a;color:var(--ink);border:1px solid var(--line);
+  border-radius:6px;padding:6px 8px;font-family:inherit;font-size:13px}
+select:focus,textarea:focus,input:focus{outline:none;border-color:var(--acc);box-shadow:0 0 8px rgba(57,208,216,.4)}
+textarea{width:100%;min-height:70px;resize:vertical}
+.qual{border:1px solid var(--acc2);border-radius:8px;padding:10px;background:rgba(245,166,35,.05)}
+.qual .lbl{color:var(--acc2)}
+.flags label{display:block;margin:3px 0;color:var(--ink);font-size:13px}
+.hon{margin:6px 0}
+.hon .q{font-size:13px;margin-bottom:2px}
+.bar{position:fixed;bottom:0;left:0;right:0;background:linear-gradient(0deg,#050a12,rgba(5,10,18,.92));
+  border-top:1px solid var(--acc);padding:12px 20px;display:flex;gap:12px;align-items:center;z-index:10;
+  box-shadow:0 -6px 24px rgba(0,0,0,.5)}
+button{font-family:inherit;font-weight:700;letter-spacing:1px;border-radius:8px;padding:11px 18px;cursor:pointer;border:none}
+.primary{background:var(--acc);color:#04121a;box-shadow:0 0 16px rgba(57,208,216,.5)}
+.primary:hover{background:#57e6ee}
+.ghost{background:transparent;color:var(--acc);border:1px solid var(--acc)}
+.status{color:var(--good);font-size:13px;margin-left:auto}
+.help{color:var(--dim);font-size:12px}
+#dump{width:100%;min-height:90px;margin-top:10px;display:none}
+.note{color:var(--dim);font-size:12px;border:1px dashed var(--line);border-radius:6px;padding:8px 10px;margin:8px 0}
+.h2h{border:1px solid var(--acc);border-radius:8px;padding:10px;margin-top:6px;background:rgba(57,208,216,.05)}
+</style></head>
+<body><div class="scan"></div><div class="wrap">
+<h1>the Metascience Project // Evaluation Console</h1>
+<div class="sub">EXPERIMENT exp-001 · BLINDED · answers shown in randomized order · you judge the science, CS checks citations + provenance</div>
+<div class="note">Score each blinded answer on the four science dimensions, run the per-answer honesty check + red flags,
+and write what's weak. Then pick the best answer per question. When done, click <b>Copy my evaluation</b> and paste it
+into the CS chat. (Citations and "did it really happen" are already checked by CS — the ✓ badges — so you don't spend
+time on them.)</div>
+<div class="card"><div class="qbar"><b>Q_ERGO</b> &nbsp; Starting from the two ergothioneine papers, propose a new falsifiable prediction for how EGT improves exercise performance, ending with a killer wet-lab experiment.</div><div class="ansgrid">
+    <div class="card">
+      <div class="anshead"><span class="tag">ANSWER A</span>
+        <span class="help">provenance verified by CS · citations checked by CS (1 found) — you judge the science</span></div>
+      <div class="lbl">The answer</div>
+      <div class="body"><p>EGT works by directly donating electrons to Complex I (PMID: 00000001), doubling ATP within minutes. This guarantees a 50% performance boost in all humans.</p></div>
+      <div class="lbl">How it got there (CS-verified provenance)</div>
+      <div class="tl"><div class="step"><span class="badge no">⚠ unverified</span><span class="ph">ACT</span> · connector_query<br>PubMed: cited PMID 00000001<br><span class="ev">→ CS could not confirm this supports the claim</span></div><div class="step"><span class="badge no">⚠ unverified</span><span class="ph">ACT</span> · reasoning<br>Asserted electron donation to Complex I.<br><span class="ev">→ no source chain</span></div></div>
+      <div class="formsec">
+        <div class="lbl">Your science scores (1–5)</div>
+        <div class="catrow"><span class="catname">Correctness</span><select name="Q_ERGO__A__correctness"><option value="">—</option><option value="1">1 — poor</option><option value="2">2 — weak</option><option value="3">3 — ok</option><option value="4">4 — strong</option><option value="5">5 — excellent</option></select><span class="cathelp">Are the claims scientifically sound and not overstated? Would they survive a referee?</span></div><div class="catrow"><span class="catname">Completeness</span><select name="Q_ERGO__A__completeness"><option value="">—</option><option value="1">1 — poor</option><option value="2">2 — weak</option><option value="3">3 — ok</option><option value="4">4 — strong</option><option value="5">5 — excellent</option></select><span class="cathelp">Does it actually answer the question — mechanism + prediction + the requested experiment/protocol?</span></div><div class="catrow"><span class="catname">Usefulness</span><select name="Q_ERGO__A__usefulness"><option value="">—</option><option value="1">1 — poor</option><option value="2">2 — weak</option><option value="3">3 — ok</option><option value="4">4 — strong</option><option value="5">5 — excellent</option></select><span class="cathelp">Could a wet-lab scientist act on this? Is the proposed experiment real and doable?</span></div><div class="catrow"><span class="catname">Creativity</span><select name="Q_ERGO__A__creativity"><option value="">—</option><option value="1">1 — poor</option><option value="2">2 — weak</option><option value="3">3 — ok</option><option value="4">4 — strong</option><option value="5">5 — excellent</option></select><span class="cathelp">Is the idea genuinely novel and non-obvious vs what the field already knows?</span></div>
+        <div class="lbl">Creativity honesty check (this answer)</div>
+        <div class="hon"><div class="q">Is the core idea actually novel to you (a domain expert)?</div><select name="Q_ERGO__A__hon__novel_to_you"><option value="">—</option><option value="Yes, novel">Yes, novel</option><option value="Somewhat">Somewhat</option><option value="No, known">No, known</option><option value="Can&#x27;t tell">Can&#x27;t tell</option></select></div><div class="hon"><div class="q">Can you follow a clear reasoning chain from known facts to the novel claim?</div><select name="Q_ERGO__A__hon__reasoning_followable"><option value="">—</option><option value="Yes, clear">Yes, clear</option><option value="Partly">Partly</option><option value="No chain">No chain</option></select></div><div class="hon"><div class="q">Does any &#x27;novel&#x27; claim smell like confident hallucination (no real basis)?</div><select name="Q_ERGO__A__hon__hallucination_flag"><option value="">—</option><option value="No">No</option><option value="Maybe">Maybe</option><option value="Yes — flag">Yes — flag</option></select></div><div class="hon"><div class="q">If you flagged hallucination, one-line why / the fix:</div><input type="text" style="width:100%" name="Q_ERGO__A__hon__fix"></div>
+        <div class="lbl">Red flags (this answer)</div>
+        <div class="flags"><label><input type="checkbox" name="Q_ERGO__A__flag" value="vague"> Vague / hand-waving (no specifics)</label><label><input type="checkbox" name="Q_ERGO__A__flag" value="overclaim"> Overclaims certainty beyond evidence</label><label><input type="checkbox" name="Q_ERGO__A__flag" value="slop"> Generic AI-slop filler / padding</label><label><input type="checkbox" name="Q_ERGO__A__flag" value="unfalsifiable"> Prediction not actually falsifiable</label><label><input type="checkbox" name="Q_ERGO__A__flag" value="misused_ref"> A cited paper seems misused (if you happened to notice)</label><label><input type="checkbox" name="Q_ERGO__A__flag" value="offtopic"> Drifts off the question</label><label>Other: <input type="text" name="Q_ERGO__A__flag_other" style="width:60%"></label></div>
+        <div class="qual"><div class="lbl">What's weak — what would this need to become good?</div>
+          <textarea name="Q_ERGO__A__qual" placeholder="Your qualitative feedback (this is the field the operator asked for)."></textarea></div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="anshead"><span class="tag">ANSWER B</span>
+        <span class="help">provenance verified by CS · citations checked by CS (0 found) — you judge the science</span></div>
+      <div class="lbl">The answer</div>
+      <div class="body"><p>Ergothioneine is an antioxidant that protects mitochondria. It probably improves exercise by reducing oxidative stress. Athletes could take it as a supplement. More research is needed.</p></div>
+      <div class="lbl">How it got there (CS-verified provenance)</div>
+      <div class="tl"><div class="step"><span class="badge ok">CS ✓ verified</span><span class="ph">ANSWER</span> · cold_response<br>Single blank-CS response, no loop.</div></div>
+      <div class="formsec">
+        <div class="lbl">Your science scores (1–5)</div>
+        <div class="catrow"><span class="catname">Correctness</span><select name="Q_ERGO__B__correctness"><option value="">—</option><option value="1">1 — poor</option><option value="2">2 — weak</option><option value="3">3 — ok</option><option value="4">4 — strong</option><option value="5">5 — excellent</option></select><span class="cathelp">Are the claims scientifically sound and not overstated? Would they survive a referee?</span></div><div class="catrow"><span class="catname">Completeness</span><select name="Q_ERGO__B__completeness"><option value="">—</option><option value="1">1 — poor</option><option value="2">2 — weak</option><option value="3">3 — ok</option><option value="4">4 — strong</option><option value="5">5 — excellent</option></select><span class="cathelp">Does it actually answer the question — mechanism + prediction + the requested experiment/protocol?</span></div><div class="catrow"><span class="catname">Usefulness</span><select name="Q_ERGO__B__usefulness"><option value="">—</option><option value="1">1 — poor</option><option value="2">2 — weak</option><option value="3">3 — ok</option><option value="4">4 — strong</option><option value="5">5 — excellent</option></select><span class="cathelp">Could a wet-lab scientist act on this? Is the proposed experiment real and doable?</span></div><div class="catrow"><span class="catname">Creativity</span><select name="Q_ERGO__B__creativity"><option value="">—</option><option value="1">1 — poor</option><option value="2">2 — weak</option><option value="3">3 — ok</option><option value="4">4 — strong</option><option value="5">5 — excellent</option></select><span class="cathelp">Is the idea genuinely novel and non-obvious vs what the field already knows?</span></div>
+        <div class="lbl">Creativity honesty check (this answer)</div>
+        <div class="hon"><div class="q">Is the core idea actually novel to you (a domain expert)?</div><select name="Q_ERGO__B__hon__novel_to_you"><option value="">—</option><option value="Yes, novel">Yes, novel</option><option value="Somewhat">Somewhat</option><option value="No, known">No, known</option><option value="Can&#x27;t tell">Can&#x27;t tell</option></select></div><div class="hon"><div class="q">Can you follow a clear reasoning chain from known facts to the novel claim?</div><select name="Q_ERGO__B__hon__reasoning_followable"><option value="">—</option><option value="Yes, clear">Yes, clear</option><option value="Partly">Partly</option><option value="No chain">No chain</option></select></div><div class="hon"><div class="q">Does any &#x27;novel&#x27; claim smell like confident hallucination (no real basis)?</div><select name="Q_ERGO__B__hon__hallucination_flag"><option value="">—</option><option value="No">No</option><option value="Maybe">Maybe</option><option value="Yes — flag">Yes — flag</option></select></div><div class="hon"><div class="q">If you flagged hallucination, one-line why / the fix:</div><input type="text" style="width:100%" name="Q_ERGO__B__hon__fix"></div>
+        <div class="lbl">Red flags (this answer)</div>
+        <div class="flags"><label><input type="checkbox" name="Q_ERGO__B__flag" value="vague"> Vague / hand-waving (no specifics)</label><label><input type="checkbox" name="Q_ERGO__B__flag" value="overclaim"> Overclaims certainty beyond evidence</label><label><input type="checkbox" name="Q_ERGO__B__flag" value="slop"> Generic AI-slop filler / padding</label><label><input type="checkbox" name="Q_ERGO__B__flag" value="unfalsifiable"> Prediction not actually falsifiable</label><label><input type="checkbox" name="Q_ERGO__B__flag" value="misused_ref"> A cited paper seems misused (if you happened to notice)</label><label><input type="checkbox" name="Q_ERGO__B__flag" value="offtopic"> Drifts off the question</label><label>Other: <input type="text" name="Q_ERGO__B__flag_other" style="width:60%"></label></div>
+        <div class="qual"><div class="lbl">What's weak — what would this need to become good?</div>
+          <textarea name="Q_ERGO__B__qual" placeholder="Your qualitative feedback (this is the field the operator asked for)."></textarea></div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="anshead"><span class="tag">ANSWER C</span>
+        <span class="help">provenance verified by CS · citations checked by CS (2 found) — you judge the science</span></div>
+      <div class="lbl">The answer</div>
+      <div class="body"><h2>Prediction</h2>
+<p><strong>EGT improves exercise performance by activating MPST in muscle mitochondria, raising H2S-derived persulfidation of ETC components.</strong></p>
+<h3>Reasoning chain</h3>
+<ol>
+<li>EGT accumulates in trained muscle mitochondria (Sprenger 2025).</li>
+<li>EGT binds + activates MPST → local H2S/persulfides.</li>
+<li>Persulfidation boosts Complex II throughput → more ATP under load.</li>
+</ol>
+<h3>Falsifiable prediction</h3>
+<p>In <em>Mpst-KO</em> mice, EGT loading will <strong>not</strong> improve treadmill time-to-exhaustion, whereas WT will gain ≥15%.</p>
+<table>
+<thead>
+<tr>
+<th>Group</th>
+<th>Predicted Δ endurance</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>WT + EGT</td>
+<td>+15–25%</td>
+</tr>
+<tr>
+<td>Mpst-KO + EGT</td>
+<td>~0%</td>
+</tr>
+</tbody>
+</table>
+<h3>Killer experiment</h3>
+<p>8-week EGT diet vs control in WT and Mpst-KO mice; treadmill VO2max + time-to-exhaustion; muscle persulfidation blot.</p><img alt="Demo figure: predicted MPST activity increase with EGT." src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAVgAAADhCAYAAACN3q1JAAAAOnRFWHRTb2Z0d2FyZQBNYXRwbG90bGliIHZlcnNpb24zLjExLjAsIGh0dHBzOi8vbWF0cGxvdGxpYi5vcmcvlcelbwAAAAlwSFlzAAAN1wAADdcBQiibeAAAG19JREFUeJzt3Qd0VFX+wPFfEOkLsoEAATQUpbgIK0WkCyQUE+oCriAuKwoHAdelLytLL7IsLMJShEORPQgYamQFglSjlEWqEIogSq+hJPT5n9/dM/OfCQlJJvOSKd/POXOSefPm5c4k+c19v/e79wbZbDabAAA8LofnDwkAIMACgIXowQKARQiwAGARAiwAWIQACwAWIcACgEVyWnVgeJ+YmBj56quvzPc5cuSQX/3qVxIWFib169eXihUrir+8tuTeeOMNqVevnuN+YmKifPnll7J//365c+eOlC5dWqpVqyYNGjQwj0dHR8umTZue+POqVq0q7777bprt0jLzcePGSdOmTaVWrVrpfj337t2TP//5z+b7vn37ygsvvODy+O7du2X+/Pny9NNPy+TJkx97jsqbN6+ULVtWOnToIEWKFHFp0/r1680xbt68aY7dqlUrxz6efP2Bjh5sAPnuu+9k1qxZJpjqP1WBAgXk66+/lpdffllef/11uXDhgvjDa0t+K1y4sGO/tWvXmg+VsWPHmkBTvHhxOXTokAkwlStXlitXrkixYsVcnv/NN9/IypUrXbaVLFkyXe3q2bOnDB06VJo1ayZ79+5N9+vRYDl9+nSZMWOGeV3J/eMf/zCP6S35c86fP2/aqAFz3rx58vzzz5tgqm7fvi116tSRP/zhD3Lt2jUJDg6WHTt2SM2aNeXf//632ceTrz/g6UguBIahQ4facufO/dj2H3/80RYWFmarWbOm7eHDhzZ/em3Odu/ebcuVK5dt0KBBjz12/vx5W6NGjWwnT5587LH27dvbqlatmuE2ffDBB7Z8+fLZChQoYAsJCbEVKVLEdujQoXQ99+bNmzrC0takSRNbsWLFbA8ePHA8lpCQYMubN695zPk1258zefJkx7a7d+/aypYta2vYsKG5P336dLPP0aNHXX5eUlKS7ciRIym2xd3XD5uNHiykTJkyMmXKFNm1a5c5dXaWlJQkCxYskAEDBsjw4cNl3759Lo8vWrRIpk2bJkeOHJF//vOfZj/d/+HDh+b0c+bMmdK/f3/55JNPTO8puUuXLsnUqVPNqa32KuPj410eP3XqlPTu3duczmfWsGHD5NlnnzU/JznttelrL1q0qEf+IvS9nDNnjqxZs8Yce8SIESYFoe9FRrRp08akMdatW+fYtmzZMgkJCZGGDRum+fxcuXJJkyZNZM+ePeb+jRs3THoo+evMkyePVKhQIUNtQ9oIsDD0FDZnzpwuuTcNbr/5zW9kzJgxkj9/frl8+bK88sor8vnnnzv2iY2NNcFDUwxXr141OUENiG3btjU5Rw3IeqqqgbZRo0by6NEjx3P11FxPNzVg6D56Cq0/74svvnDso6e7etr7448/Zuo3pafPGzduNO3UAJOSfPnymdfpCXrKrW1u3Lixua/vrb5v9tPw9NLApzlU/dCy0+/feustCQoKStcx7t+/b34v9oCtx9S8u+Zu9fT/7t27GWoT0o+LXDD0n057NWfPnnW8Iz169DD/nBr49IKY0oD4pz/9SaKiohzBSHum33//vZQqVcoRqD766COZO3eu/PGPfzTbIiMjpUqVKiZXqjlA1adPH5P33Lx5szz11FOObe+//740b97c5Ii1d629X72okpYHDx6Y4J6c5kC1R62BRHuwzjZs2CCrVq1K9YJYZmgv05kGOed8cHq9/fbbEh4eLtevXzd50+3bt5v3dsmSJWk+V/fXvHPdunUdvz/90NOzjdmzZ5setf4eO3fuLB9//LHj9wzPoAcLBw1C9kCnp5LaO9Ug6/xPpwHz4sWL5p/cToOfPbiqSpUqOYJq8m2nT582XzXYbdmyRbp16+b4map79+7m+PYLQnp6rUFTA21atEeX0kWu3LlzO36Gcw9a6UUe3ee5554zPeWDBw963V+EBny9qLR06VJZuHChOYvQC1ep0SoAfc/0d6UfaoUKFXJUGqjy5cubD63Dhw+bs47x48eb47755ptZ9IoCBz1YOAKq5kP1CrvS7zUYbdu27bFeofbETp486bif/LTaHsy0J5t8m/YylVYs6PE1gDqz3z937lyGfzP6M1Lqwdo/PPSD4sSJEy7btYJCb9o7HDhwoHirrl27mtSAvm9p5XHtVQBaptWlSxeTDrCnCJLT4NurVy/5+eefTaDVHq87vWykjAALQ3tHWrbUsmVLxz+p5g2155S8RnbSpElSu3btTL1zoaGh5p9e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"><div class="figcap">Demo figure: predicted MPST activity increase with EGT.</div></div>
+      <div class="lbl">How it got there (CS-verified provenance)</div>
+      <div class="tl"><div class="step"><span class="badge ok">CS ✓ verified</span><span class="ph">REFRAME</span> · sharpen_question<br>Rewrote naive Q into a mechanistic falsifiable brief.<br><span class="ev">→ reframed_brief.md</span></div><div class="step"><span class="badge ok">CS ✓ verified</span><span class="ph">ACT</span> · connector_query<br>PubMed: &#x27;ergothioneine MPST skeletal muscle&#x27;<br><span class="ev">→ resolved, top hit Sprenger 2025 Cell Metab</span></div><div class="step"><span class="badge ok">CS ✓ verified</span><span class="ph">ACT</span> · connector_query<br>UniProt: MPST human entry P25325<br><span class="ev">→ confirmed 3-MST enzyme</span></div><div class="step"><span class="badge ok">CS ✓ verified</span><span class="ph">ACT</span> · reasoning<br>Linked EGT→MPST→persulfidation→Complex II.<br><span class="ev">→ chain in answer</span></div><div class="step"><span class="badge ok">CS ✓ verified</span><span class="ph">RESULT-REVIEW</span> · self_check<br>Checked prediction is falsifiable via KO.</div></div>
+      <div class="formsec">
+        <div class="lbl">Your science scores (1–5)</div>
+        <div class="catrow"><span class="catname">Correctness</span><select name="Q_ERGO__C__correctness"><option value="">—</option><option value="1">1 — poor</option><option value="2">2 — weak</option><option value="3">3 — ok</option><option value="4">4 — strong</option><option value="5">5 — excellent</option></select><span class="cathelp">Are the claims scientifically sound and not overstated? Would they survive a referee?</span></div><div class="catrow"><span class="catname">Completeness</span><select name="Q_ERGO__C__completeness"><option value="">—</option><option value="1">1 — poor</option><option value="2">2 — weak</option><option value="3">3 — ok</option><option value="4">4 — strong</option><option value="5">5 — excellent</option></select><span class="cathelp">Does it actually answer the question — mechanism + prediction + the requested experiment/protocol?</span></div><div class="catrow"><span class="catname">Usefulness</span><select name="Q_ERGO__C__usefulness"><option value="">—</option><option value="1">1 — poor</option><option value="2">2 — weak</option><option value="3">3 — ok</option><option value="4">4 — strong</option><option value="5">5 — excellent</option></select><span class="cathelp">Could a wet-lab scientist act on this? Is the proposed experiment real and doable?</span></div><div class="catrow"><span class="catname">Creativity</span><select name="Q_ERGO__C__creativity"><option value="">—</option><option value="1">1 — poor</option><option value="2">2 — weak</option><option value="3">3 — ok</option><option value="4">4 — strong</option><option value="5">5 — excellent</option></select><span class="cathelp">Is the idea genuinely novel and non-obvious vs what the field already knows?</span></div>
+        <div class="lbl">Creativity honesty check (this answer)</div>
+        <div class="hon"><div class="q">Is the core idea actually novel to you (a domain expert)?</div><select name="Q_ERGO__C__hon__novel_to_you"><option value="">—</option><option value="Yes, novel">Yes, novel</option><option value="Somewhat">Somewhat</option><option value="No, known">No, known</option><option value="Can&#x27;t tell">Can&#x27;t tell</option></select></div><div class="hon"><div class="q">Can you follow a clear reasoning chain from known facts to the novel claim?</div><select name="Q_ERGO__C__hon__reasoning_followable"><option value="">—</option><option value="Yes, clear">Yes, clear</option><option value="Partly">Partly</option><option value="No chain">No chain</option></select></div><div class="hon"><div class="q">Does any &#x27;novel&#x27; claim smell like confident hallucination (no real basis)?</div><select name="Q_ERGO__C__hon__hallucination_flag"><option value="">—</option><option value="No">No</option><option value="Maybe">Maybe</option><option value="Yes — flag">Yes — flag</option></select></div><div class="hon"><div class="q">If you flagged hallucination, one-line why / the fix:</div><input type="text" style="width:100%" name="Q_ERGO__C__hon__fix"></div>
+        <div class="lbl">Red flags (this answer)</div>
+        <div class="flags"><label><input type="checkbox" name="Q_ERGO__C__flag" value="vague"> Vague / hand-waving (no specifics)</label><label><input type="checkbox" name="Q_ERGO__C__flag" value="overclaim"> Overclaims certainty beyond evidence</label><label><input type="checkbox" name="Q_ERGO__C__flag" value="slop"> Generic AI-slop filler / padding</label><label><input type="checkbox" name="Q_ERGO__C__flag" value="unfalsifiable"> Prediction not actually falsifiable</label><label><input type="checkbox" name="Q_ERGO__C__flag" value="misused_ref"> A cited paper seems misused (if you happened to notice)</label><label><input type="checkbox" name="Q_ERGO__C__flag" value="offtopic"> Drifts off the question</label><label>Other: <input type="text" name="Q_ERGO__C__flag_other" style="width:60%"></label></div>
+        <div class="qual"><div class="lbl">What's weak — what would this need to become good?</div>
+          <textarea name="Q_ERGO__C__qual" placeholder="Your qualitative feedback (this is the field the operator asked for)."></textarea></div>
+      </div>
+    </div></div><div class="h2h"><div class="lbl">Head-to-head (this question)</div>Best answer overall: <select name="Q_ERGO__best"><option value="">—</option><option value="A">Answer A</option><option value="B">Answer B</option><option value="C">Answer C</option></select> &nbsp; Confidence: <select name="Q_ERGO__conf"><option value="">—</option><option value="low">low</option><option value="medium">medium</option><option value="high">high</option></select><div class="lbl">Why is it best?</div><textarea name="Q_ERGO__why" placeholder="What makes the winner better than the others?"></textarea></div></div><div class="card"><div class="qbar"><b>Q3</b> &nbsp; Propose a repurposing hypothesis: an approved drug acting as an exercise mimetic on mitochondrial biogenesis, with molecular rationale and a falsifiable prediction.</div><div class="ansgrid">
+    <div class="card">
+      <div class="anshead"><span class="tag">ANSWER A</span>
+        <span class="help">provenance verified by CS · citations checked by CS (0 found) — you judge the science</span></div>
+      <div class="lbl">The answer</div>
+      <div class="body"><p>Metformin might help mitochondria. It is safe and widely used. It could act as an exercise mimetic.</p></div>
+      <div class="lbl">How it got there (CS-verified provenance)</div>
+      <div class="tl"><div class="step"><span class="badge ok">CS ✓ verified</span><span class="ph">ANSWER</span> · cold_response<br>Single blank-CS response.</div></div>
+      <div class="formsec">
+        <div class="lbl">Your science scores (1–5)</div>
+        <div class="catrow"><span class="catname">Correctness</span><select name="Q3__A__correctness"><option value="">—</option><option value="1">1 — poor</option><option value="2">2 — weak</option><option value="3">3 — ok</option><option value="4">4 — strong</option><option value="5">5 — excellent</option></select><span class="cathelp">Are the claims scientifically sound and not overstated? Would they survive a referee?</span></div><div class="catrow"><span class="catname">Completeness</span><select name="Q3__A__completeness"><option value="">—</option><option value="1">1 — poor</option><option value="2">2 — weak</option><option value="3">3 — ok</option><option value="4">4 — strong</option><option value="5">5 — excellent</option></select><span class="cathelp">Does it actually answer the question — mechanism + prediction + the requested experiment/protocol?</span></div><div class="catrow"><span class="catname">Usefulness</span><select name="Q3__A__usefulness"><option value="">—</option><option value="1">1 — poor</option><option value="2">2 — weak</option><option value="3">3 — ok</option><option value="4">4 — strong</option><option value="5">5 — excellent</option></select><span class="cathelp">Could a wet-lab scientist act on this? Is the proposed experiment real and doable?</span></div><div class="catrow"><span class="catname">Creativity</span><select name="Q3__A__creativity"><option value="">—</option><option value="1">1 — poor</option><option value="2">2 — weak</option><option value="3">3 — ok</option><option value="4">4 — strong</option><option value="5">5 — excellent</option></select><span class="cathelp">Is the idea genuinely novel and non-obvious vs what the field already knows?</span></div>
+        <div class="lbl">Creativity honesty check (this answer)</div>
+        <div class="hon"><div class="q">Is the core idea actually novel to you (a domain expert)?</div><select name="Q3__A__hon__novel_to_you"><option value="">—</option><option value="Yes, novel">Yes, novel</option><option value="Somewhat">Somewhat</option><option value="No, known">No, known</option><option value="Can&#x27;t tell">Can&#x27;t tell</option></select></div><div class="hon"><div class="q">Can you follow a clear reasoning chain from known facts to the novel claim?</div><select name="Q3__A__hon__reasoning_followable"><option value="">—</option><option value="Yes, clear">Yes, clear</option><option value="Partly">Partly</option><option value="No chain">No chain</option></select></div><div class="hon"><div class="q">Does any &#x27;novel&#x27; claim smell like confident hallucination (no real basis)?</div><select name="Q3__A__hon__hallucination_flag"><option value="">—</option><option value="No">No</option><option value="Maybe">Maybe</option><option value="Yes — flag">Yes — flag</option></select></div><div class="hon"><div class="q">If you flagged hallucination, one-line why / the fix:</div><input type="text" style="width:100%" name="Q3__A__hon__fix"></div>
+        <div class="lbl">Red flags (this answer)</div>
+        <div class="flags"><label><input type="checkbox" name="Q3__A__flag" value="vague"> Vague / hand-waving (no specifics)</label><label><input type="checkbox" name="Q3__A__flag" value="overclaim"> Overclaims certainty beyond evidence</label><label><input type="checkbox" name="Q3__A__flag" value="slop"> Generic AI-slop filler / padding</label><label><input type="checkbox" name="Q3__A__flag" value="unfalsifiable"> Prediction not actually falsifiable</label><label><input type="checkbox" name="Q3__A__flag" value="misused_ref"> A cited paper seems misused (if you happened to notice)</label><label><input type="checkbox" name="Q3__A__flag" value="offtopic"> Drifts off the question</label><label>Other: <input type="text" name="Q3__A__flag_other" style="width:60%"></label></div>
+        <div class="qual"><div class="lbl">What's weak — what would this need to become good?</div>
+          <textarea name="Q3__A__qual" placeholder="Your qualitative feedback (this is the field the operator asked for)."></textarea></div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="anshead"><span class="tag">ANSWER B</span>
+        <span class="help">provenance verified by CS · citations checked by CS (1 found) — you judge the science</span></div>
+      <div class="lbl">The answer</div>
+      <div class="body"><h2>Hypothesis</h2>
+<p><strong>Empagliflozin (SGLT2i) acts as a partial exercise mimetic by inducing AMPK→PGC-1α mitochondrial biogenesis in skeletal muscle.</strong></p>
+<h3>Rationale</h3>
+<p>Caloric-loss + ketone shift → AMPK activation → PGC-1α → mito biogenesis, echoing endurance training.</p>
+<h3>Falsifiable prediction</h3>
+<p>4-week empagliflozin raises muscle citrate-synthase activity ≥20% in sedentary mice; abolished in muscle-specific <em>Pgc1a</em>-KO.</p></div>
+      <div class="lbl">How it got there (CS-verified provenance)</div>
+      <div class="tl"><div class="step"><span class="badge ok">CS ✓ verified</span><span class="ph">REFRAME</span> · sharpen_question<br>Naive Q → mechanistic repurposing brief.<br><span class="ev">→ reframed_brief.md</span></div><div class="step"><span class="badge ok">CS ✓ verified</span><span class="ph">ACT</span> · connector_query<br>Open Targets: empagliflozin → AMPK pathway<br><span class="ev">→ association found</span></div><div class="step"><span class="badge ok">CS ✓ verified</span><span class="ph">ACT</span> · reasoning<br>AMPK→PGC-1α→biogenesis chain.</div></div>
+      <div class="formsec">
+        <div class="lbl">Your science scores (1–5)</div>
+        <div class="catrow"><span class="catname">Correctness</span><select name="Q3__B__correctness"><option value="">—</option><option value="1">1 — poor</option><option value="2">2 — weak</option><option value="3">3 — ok</option><option value="4">4 — strong</option><option value="5">5 — excellent</option></select><span class="cathelp">Are the claims scientifically sound and not overstated? Would they survive a referee?</span></div><div class="catrow"><span class="catname">Completeness</span><select name="Q3__B__completeness"><option value="">—</option><option value="1">1 — poor</option><option value="2">2 — weak</option><option value="3">3 — ok</option><option value="4">4 — strong</option><option value="5">5 — excellent</option></select><span class="cathelp">Does it actually answer the question — mechanism + prediction + the requested experiment/protocol?</span></div><div class="catrow"><span class="catname">Usefulness</span><select name="Q3__B__usefulness"><option value="">—</option><option value="1">1 — poor</option><option value="2">2 — weak</option><option value="3">3 — ok</option><option value="4">4 — strong</option><option value="5">5 — excellent</option></select><span class="cathelp">Could a wet-lab scientist act on this? Is the proposed experiment real and doable?</span></div><div class="catrow"><span class="catname">Creativity</span><select name="Q3__B__creativity"><option value="">—</option><option value="1">1 — poor</option><option value="2">2 — weak</option><option value="3">3 — ok</option><option value="4">4 — strong</option><option value="5">5 — excellent</option></select><span class="cathelp">Is the idea genuinely novel and non-obvious vs what the field already knows?</span></div>
+        <div class="lbl">Creativity honesty check (this answer)</div>
+        <div class="hon"><div class="q">Is the core idea actually novel to you (a domain expert)?</div><select name="Q3__B__hon__novel_to_you"><option value="">—</option><option value="Yes, novel">Yes, novel</option><option value="Somewhat">Somewhat</option><option value="No, known">No, known</option><option value="Can&#x27;t tell">Can&#x27;t tell</option></select></div><div class="hon"><div class="q">Can you follow a clear reasoning chain from known facts to the novel claim?</div><select name="Q3__B__hon__reasoning_followable"><option value="">—</option><option value="Yes, clear">Yes, clear</option><option value="Partly">Partly</option><option value="No chain">No chain</option></select></div><div class="hon"><div class="q">Does any &#x27;novel&#x27; claim smell like confident hallucination (no real basis)?</div><select name="Q3__B__hon__hallucination_flag"><option value="">—</option><option value="No">No</option><option value="Maybe">Maybe</option><option value="Yes — flag">Yes — flag</option></select></div><div class="hon"><div class="q">If you flagged hallucination, one-line why / the fix:</div><input type="text" style="width:100%" name="Q3__B__hon__fix"></div>
+        <div class="lbl">Red flags (this answer)</div>
+        <div class="flags"><label><input type="checkbox" name="Q3__B__flag" value="vague"> Vague / hand-waving (no specifics)</label><label><input type="checkbox" name="Q3__B__flag" value="overclaim"> Overclaims certainty beyond evidence</label><label><input type="checkbox" name="Q3__B__flag" value="slop"> Generic AI-slop filler / padding</label><label><input type="checkbox" name="Q3__B__flag" value="unfalsifiable"> Prediction not actually falsifiable</label><label><input type="checkbox" name="Q3__B__flag" value="misused_ref"> A cited paper seems misused (if you happened to notice)</label><label><input type="checkbox" name="Q3__B__flag" value="offtopic"> Drifts off the question</label><label>Other: <input type="text" name="Q3__B__flag_other" style="width:60%"></label></div>
+        <div class="qual"><div class="lbl">What's weak — what would this need to become good?</div>
+          <textarea name="Q3__B__qual" placeholder="Your qualitative feedback (this is the field the operator asked for)."></textarea></div>
+      </div>
+    </div></div><div class="h2h"><div class="lbl">Head-to-head (this question)</div>Best answer overall: <select name="Q3__best"><option value="">—</option><option value="A">Answer A</option><option value="B">Answer B</option></select> &nbsp; Confidence: <select name="Q3__conf"><option value="">—</option><option value="low">low</option><option value="medium">medium</option><option value="high">high</option></select><div class="lbl">Why is it best?</div><textarea name="Q3__why" placeholder="What makes the winner better than the others?"></textarea></div></div>
+</div>
+<div class="bar">
+  <button class="primary" onclick="copyEval()">⧉ Copy my evaluation</button>
+  <button class="ghost" onclick="downloadEval()">⬇ Download (backup)</button>
+  <button class="ghost" onclick="showJSON()">show JSON</button>
+  <span id="status" class="status"></span>
+</div>
+<div class="wrap"><textarea id="dump" readonly></textarea></div>
+<script>const EXP="exp-001";
+const GEN="2026-07-09T17:20:00+02:00";
+const CATS=[{"key": "correctness", "label": "Correctness", "help": "Are the claims scientifically sound and not overstated? Would they survive a referee?"}, {"key": "completeness", "label": "Completeness", "help": "Does it actually answer the question \u2014 mechanism + prediction + the requested experiment/protocol?"}, {"key": "usefulness", "label": "Usefulness", "help": "Could a wet-lab scientist act on this? Is the proposed experiment real and doable?"}, {"key": "creativity", "label": "Creativity", "help": "Is the idea genuinely novel and non-obvious vs what the field already knows?"}];
+const HON=[{"key": "novel_to_you", "q": "Is the core idea actually novel to you (a domain expert)?", "opts": ["Yes, novel", "Somewhat", "No, known", "Can't tell"]}, {"key": "reasoning_followable", "q": "Can you follow a clear reasoning chain from known facts to the novel claim?", "opts": ["Yes, clear", "Partly", "No chain"]}, {"key": "hallucination_flag", "q": "Does any 'novel' claim smell like confident hallucination (no real basis)?", "opts": ["No", "Maybe", "Yes \u2014 flag"]}];
+const DATA=[{"id": "Q_ERGO", "disp": [{"label": "A"}, {"label": "B"}, {"label": "C"}]}, {"id": "Q3", "disp": [{"label": "A"}, {"label": "B"}]}];
+
+const KEY_ORDER = ["Q_ERGO", "Q3"];
+function collect(){
+  const out={experiment:EXP, evaluator:"the operator", generated:GEN, questions:{}};
+  let missing=0;
+  for(const q of DATA){
+    const qo={question_id:q.id, answers:{}, head_to_head:{}};
+    for(const a of q.disp){
+      const ao={scores:{}, honesty:{}, redflags:[], qualitative:""};
+      for(const c of CATS){
+        const el=document.querySelector(`[name="${q.id}__${a.label}__${c.key}"]`);
+        ao.scores[c.key]= el && el.value ? Number(el.value): null;
+        if(!el || !el.value) missing++;
+      }
+      for(const h of HON){
+        const el=document.querySelector(`[name="${q.id}__${a.label}__hon__${h.key}"]`);
+        ao.honesty[h.key]= el ? el.value : null;
+      }
+      const fix=document.querySelector(`[name="${q.id}__${a.label}__hon__fix"]`);
+      ao.honesty.one_line_fix = fix? fix.value : "";
+      document.querySelectorAll(`[name="${q.id}__${a.label}__flag"]:checked`).forEach(x=>ao.redflags.push(x.value));
+      const rfo=document.querySelector(`[name="${q.id}__${a.label}__flag_other"]`);
+      if(rfo && rfo.value) ao.redflags.push("other:"+rfo.value);
+      const ql=document.querySelector(`[name="${q.id}__${a.label}__qual"]`);
+      ao.qualitative = ql? ql.value : "";
+      qo.answers[a.label]=ao;
+    }
+    const best=document.querySelector(`[name="${q.id}__best"]`);
+    const conf=document.querySelector(`[name="${q.id}__conf"]`);
+    const why =document.querySelector(`[name="${q.id}__why"]`);
+    qo.head_to_head={best: best?best.value:"", confidence: conf?conf.value:"", why: why?why.value:""};
+    out.questions[q.id]=qo;
+  }
+  out._missing_scores=missing;
+  return out;
+}
+function payload(){ return JSON.stringify(collect(), null, 2); }
+function setStatus(m){ document.getElementById("status").textContent=m; }
+async function copyEval(){
+  const txt=payload();
+  try{ await navigator.clipboard.writeText(txt);
+       setStatus("✓ Copied — paste it into the CS chat."); }
+  catch(e){ const d=document.getElementById("dump"); d.style.display="block"; d.value=txt; d.select();
+       setStatus("Clipboard blocked — select-all in the box below and copy manually."); }
+}
+function downloadEval(){
+  const blob=new Blob([payload()],{type:"application/json"});
+  const a=document.createElement("a"); a.href=URL.createObjectURL(blob);
+  a.download=EXP+"_human-eval_FILLED.json"; document.body.appendChild(a); a.click(); a.remove();
+  setStatus("Downloaded "+EXP+"_human-eval_FILLED.json (check your Downloads). Copy-paste is more reliable.");
+}
+function showJSON(){ const d=document.getElementById("dump"); d.style.display="block"; d.value=payload(); d.select();
+  setStatus("Preview below — this is exactly what Copy sends."); }
+</script>
+</body></html>

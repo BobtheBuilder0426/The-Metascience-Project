@@ -1,0 +1,321 @@
+{
+ "grid": {
+  "i_damage": {
+   "C1_evol": [
+    "C",
+    "damage is compatible w/ declining selection but doesn't derive it"
+   ],
+   "C2_kinetics": [
+    "C",
+    "random damage gives ~linear hazard; needs add-ons for exact Gompertz"
+   ],
+   "C3_crossspecies": [
+    "C",
+    "predicts metabolic-rate scaling, but birds/bats/NMR break it"
+   ],
+   "C4_hallmarks": [
+    "C",
+    "explains genomic-instability hallmark; not epigenetic reset"
+   ],
+   "C5_interventions": [
+    "X",
+    "predicts antioxidants extend LS \u2014 ITP: 0/8 do (p=4e-4)"
+   ],
+   "C6_reset": [
+    "X",
+    "irreversible damage cannot be reset by reprogramming (Lu 2020)"
+   ],
+   "C7_placement": [
+    "E",
+    "pure stochastic-damage pole"
+   ]
+  },
+  "ii_somatic": {
+   "C1_evol": [
+    "C",
+    ""
+   ],
+   "C2_kinetics": [
+    "C",
+    "mutation load rises ~linearly"
+   ],
+   "C3_crossspecies": [
+    "C",
+    "some support (mutation-rate ~ 1/lifespan, Cagan 2022)"
+   ],
+   "C4_hallmarks": [
+    "C",
+    "explains genomic instability; not proteostasis/nutrient"
+   ],
+   "C5_interventions": [
+    "X",
+    "predicts mutagen-avoidance/repair-boost, not mTOR-lowering"
+   ],
+   "C6_reset": [
+    "X",
+    "fixed mutations not reset by reprogramming"
+   ],
+   "C7_placement": [
+    "E",
+    "stochastic-damage pole"
+   ]
+  },
+  "iii_epigen_noise": {
+   "C1_evol": [
+    "C",
+    "noise compatible but not derived from selection"
+   ],
+   "C2_kinetics": [
+    "C",
+    "noise accumulation, shape not forced"
+   ],
+   "C3_crossspecies": [
+    "C",
+    "clock rate varies; dial not derived"
+   ],
+   "C4_hallmarks": [
+    "E",
+    "epigenetic alteration central; links to others claimed"
+   ],
+   "C5_interventions": [
+    "C",
+    "reprogramming works; unclear why mTOR-lowering works, why antiox fail"
+   ],
+   "C6_reset": [
+    "P",
+    "predicts reprogramming resets age (Lu2020,Yang2023) \u2014 its strength"
+   ],
+   "C7_placement": [
+    "C",
+    "frames driver as entropy/noise = damage-like pole"
+   ]
+  },
+  "iv_hyperfunction": {
+   "C1_evol": [
+    "E",
+    "quasi-program: programs run on because selection can't stop them (Williams/Hamilton)"
+   ],
+   "C2_kinetics": [
+    "C",
+    "hyperfunction pathology accelerates; exact Gompertz not derived"
+   ],
+   "C3_crossspecies": [
+    "C",
+    "growth-rate/TOR differences plausible; dial not formalized"
+   ],
+   "C4_hallmarks": [
+    "E",
+    "many hallmarks as downstream of continued signaling"
+   ],
+   "C5_interventions": [
+    "P",
+    "predicts mTOR/growth-lowering works, antioxidants need not \u2014 matches ITP"
+   ],
+   "C6_reset": [
+    "C",
+    "reprogramming compatible but not central to theory"
+   ],
+   "C7_placement": [
+    "E",
+    "quasi-programmed pole (its home)"
+   ]
+  },
+  "v_disposable_soma": {
+   "C1_evol": [
+    "P",
+    "derives soma/germline asymmetry from resource allocation (Kirkwood)"
+   ],
+   "C2_kinetics": [
+    "C",
+    "predicts maintenance underinvestment; shape not forced"
+   ],
+   "C3_crossspecies": [
+    "P",
+    "predicts lifespan~ecological mortality/allocation (supported)"
+   ],
+   "C4_hallmarks": [
+    "C",
+    "hallmarks = under-maintained damage; co-occurrence not forced"
+   ],
+   "C5_interventions": [
+    "C",
+    "DR reallocates to maintenance; why antioxidants fail unclear"
+   ],
+   "C6_reset": [
+    "C",
+    "germline low-damage; reprogramming reset not central"
+   ],
+   "C7_placement": [
+    "E",
+    "damage-with-evolutionary-cause; between poles"
+   ]
+  },
+  "vi_openloop": {
+   "C1_evol": [
+    "P",
+    "no selected post-reproductive target => open-loop is the DIRECT consequence of Hamilton"
+   ],
+   "C2_kinetics": [
+    "E",
+    "generative model assumes the exponential hazard form, so it shows sufficiency for Gompertz+plateau, not a derivation"
+   ],
+   "C3_crossspecies": [
+    "E",
+    "the loop-closure account of the cross-species dial is consistent but not independently derived; NMR flatness fits several theories"
+   ],
+   "C4_hallmarks": [
+    "E",
+    "hallmarks = correlated readouts of ONE drifting control state (co-occurrence forced)"
+   ],
+   "C5_interventions": [
+    "P",
+    "lowering signaling re-imposes youth set-point (works); antioxidants touch byproducts not the control error (fail) \u2014 matches ITP p=4e-4"
+   ],
+   "C6_reset": [
+    "E",
+    "reprogramming rewrites regulatory state to young target; germline re-runs development => lineage young"
+   ],
+   "C7_placement": [
+    "E",
+    "quasi-programmed by derivation: deterministic trajectory, forced by clock regularity+antiox failure+reset"
+   ]
+  }
+ },
+ "rows": {
+  "i_damage": {
+   "codes": [
+    "C",
+    "C",
+    "C",
+    "C",
+    "X",
+    "X",
+    "E"
+   ],
+   "fit": -3,
+   "nP": 0,
+   "nX": 2
+  },
+  "ii_somatic": {
+   "codes": [
+    "C",
+    "C",
+    "C",
+    "C",
+    "X",
+    "X",
+    "E"
+   ],
+   "fit": -3,
+   "nP": 0,
+   "nX": 2
+  },
+  "iii_epigen_noise": {
+   "codes": [
+    "C",
+    "C",
+    "C",
+    "E",
+    "C",
+    "P",
+    "C"
+   ],
+   "fit": 2,
+   "nP": 1,
+   "nX": 0
+  },
+  "iv_hyperfunction": {
+   "codes": [
+    "E",
+    "C",
+    "C",
+    "E",
+    "P",
+    "C",
+    "E"
+   ],
+   "fit": 4,
+   "nP": 1,
+   "nX": 0
+  },
+  "v_disposable_soma": {
+   "codes": [
+    "P",
+    "C",
+    "P",
+    "C",
+    "C",
+    "C",
+    "E"
+   ],
+   "fit": 4,
+   "nP": 2,
+   "nX": 0
+  },
+  "vi_openloop": {
+   "codes": [
+    "P",
+    "E",
+    "E",
+    "E",
+    "P",
+    "E",
+    "E"
+   ],
+   "fit": 8,
+   "nP": 2,
+   "nX": 0
+  }
+ },
+ "penalty": {
+  "i_damage": 0,
+  "ii_somatic": 0,
+  "iii_epigen_noise": 1,
+  "iv_hyperfunction": 1,
+  "v_disposable_soma": 1,
+  "vi_openloop": 1
+ },
+ "kill": {
+  "i_damage": [
+   "NMR(no)",
+   "reset(X)",
+   "DRmTOR(X)",
+   "germline(part)"
+  ],
+  "ii_somatic": [
+   "reset(X)",
+   "DRmTOR(X)"
+  ],
+  "iii_epigen_noise": [
+   "DRmTOR-why(part)",
+   "antiox-why(part)"
+  ],
+  "iv_hyperfunction": [
+   "reset(part)"
+  ],
+  "v_disposable_soma": [
+   "antiox-why(part)",
+   "reset(part)"
+  ],
+  "vi_openloop": []
+ },
+ "C": [
+  "C1_evol",
+  "C2_kinetics",
+  "C3_crossspecies",
+  "C4_hallmarks",
+  "C5_interventions",
+  "C6_reset",
+  "C7_placement"
+ ],
+ "adjudicated_vi": {
+  "C1_evol": "P",
+  "C2_kinetics": "E",
+  "C3_crossspecies": "E",
+  "C4_hallmarks": "E",
+  "C5_interventions": "P",
+  "C6_reset": "E",
+  "C7_placement": "E"
+ },
+ "coding_note": "Winner coded by evidential tier: 'predicts' (P) is used only where a prediction is earned independent of the model's assumptions \u2014 C1 (direct evolutionary derivation) and C5 (the held-out ITP test, p=4e-4). C2 and C3 are 'explains' (E): the generative model assumes the Gompertz hazard form rather than deriving it, and the cross-species account is consistent but not uniquely so. C4, C6, C7 are 'explains' because their evidence is shared with rival theories and does not uniquely discriminate. Scores: P=+2, E=+1, C=0, X=-2, minus an added-assumption penalty."
+}

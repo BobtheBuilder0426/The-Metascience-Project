@@ -1,0 +1,111 @@
+{
+  "task": "Propose a novel small-molecule exercise mimetic for age-related muscle loss / sarcopenia, from public data",
+  "date": "2026-07-11",
+  "approach": "Target-based drug design: identify the best-supported exerkine target, mine known chemical matter, design novel analogs, and validate computationally (properties, docking, ADMET, novelty).",
+  "steps": [
+    {
+      "step": 1,
+      "phase": "Target identification",
+      "action": "Enumerated exerkine/muscle candidate targets and pulled evidence from Open Targets (disease associations, tractability, safety), ChEMBL (chemical matter), and GTEx (tissue expression).",
+      "key_data": {
+        "sarcopenia_EFO": "EFO_1000653",
+        "candidates": [
+          "APLNR",
+          "MSTN",
+          "GHSR",
+          "MC4R",
+          "ADRB2",
+          "NTRK2",
+          "FGFR1",
+          "LEPR"
+        ]
+      },
+      "tools": [
+        "Open Targets GraphQL",
+        "ChEMBL API",
+        "GTEx API"
+      ]
+    },
+    {
+      "step": 2,
+      "phase": "Target selection",
+      "action": "Scored 8 candidates across 7 weighted criteria (exerkine evidence, age-direction, druggability, chemical matter, structure availability, safety, muscle expression).",
+      "result": "APLNR/APJ selected (composite 4.90/5). Rationale: apelin is a bona fide exerkine that declines with age and reverses sarcopenia in mice (Vinel 2018); APJ is a structurally-characterized class A GPCR with rich agonist SAR and zero Open Targets safety events.",
+      "artifact": "fig1_target_selection.png, target_scoring.csv"
+    },
+    {
+      "step": 3,
+      "phase": "Chemical matter",
+      "action": "Mined ChEMBL target CHEMBL1628481 (4,889 potent EC50 agonist rows) and BindingDB; retrieved reference agonists CMF-019, AMG 986, BMS-986224 from PubChem; cross-validated PDB co-crystal ligands by InChIKey.",
+      "key_data": {
+        "CMF-019_CID": 73442763,
+        "docking_template": "PDB 7SUS (2.7A, agonist 8EH)"
+      }
+    },
+    {
+      "step": 4,
+      "phase": "Pharmacophore",
+      "action": "Derived a 4-feature pharmacophore from the 7SUS orthosteric pocket: anionic anchor (acid to R168/K268), aromatic core (into Y/W/F cage), aryl wing, lipophilic tail.",
+      "artifact": "pharmacophore.json"
+    },
+    {
+      "step": 5,
+      "phase": "Design",
+      "action": "Designed 15 analogs (D01-D15) by single-point modification of the CMF-019 G-protein-biased benzimidazole scaffold. D01 exactly reproduces CMF-019 (InChIKey match) as a construction control.",
+      "modifications": [
+        "7-aza benzimidazole->imidazopyridine (lower logP)",
+        "thiophene->N-methylpyrazole (remove toxicophore, add H-bond)",
+        "N1 pentyl->cyclopentyl/cyclobutyl (reduce flexibility)",
+        "leucine->cyclopropyl-beta-homoleucine tail"
+      ],
+      "note": "An initial build had a SMILES ring-closure digit collision producing macrocyclic artifacts for two analogs; detected via 2D depiction + ring-size audit and rebuilt with collision-free numbering. All 15 verified as clean azabenzimidazoles with intact acid + core."
+    },
+    {
+      "step": 6,
+      "phase": "Property triage",
+      "action": "Computed RDKit physicochemical panel + PAINS/Brenk alerts for all designs and references; hard-filtered on Lipinski/Veber/alerts/MW/logP.",
+      "artifact": "property_panel.csv, fig2_property_triage.png"
+    },
+    {
+      "step": 7,
+      "phase": "Novelty",
+      "action": "Confirmed all shortlisted designs are new chemical entities: 0 hits in PubChem (exact+2D), ChEMBL (<=70% similarity), and ZINC22 (exact). Positive control: CMF-019 correctly retrieves ChEMBL neighbors.",
+      "artifact": "novelty.json"
+    },
+    {
+      "step": 8,
+      "phase": "Docking",
+      "action": "Rigid-receptor docking with smina into 7SUS. Validated setup by redocking co-crystal ligand 8EH (crystal pose recovered at 1.36 A RMSD among top modes). Docked shortlist + references; analyzed salt-bridge and aromatic-cage contacts across all poses.",
+      "result": "D10 top score -9.4 kcal/mol (vs CMF-019 -8.3, AMG986 -8.8); D10 is the only design whose top-ranked pose satisfies the K268 salt bridge (2.96A) + 6/7 aromatic cage.",
+      "artifact": "docking_results.csv, pose_analysis.json, fig3_docking.png, fig5_binding_pose.png"
+    },
+    {
+      "step": 9,
+      "phase": "ADMET",
+      "action": "Computed 5 drug-likeness rule sets (Lipinski, Veber, Egan, Ghose, Muegge), synthetic accessibility, and absorption/BBB heuristics.",
+      "result": "D10 passes all 5 rule sets (references fail 2-4 each); SA_score 3.32 (readily synthesizable); predicted peripherally-restricted (favorable for a muscle/cardiovascular target).",
+      "artifact": "admet_panel.csv, fig6_admet.png"
+    },
+    {
+      "step": 10,
+      "phase": "Integrated selection",
+      "action": "Ranked shortlist by a transparent integrated score (drug-likeness 0.40 + docking 0.35 + pose quality 0.25).",
+      "result": "D10 selected as lead (0.834), ahead of D06 (0.659) and D13 (0.528).",
+      "artifact": "integrated_selection.csv"
+    }
+  ],
+  "final_answer": {
+    "compound": "D10",
+    "proposed_class": "G-protein-biased APJ (apelin receptor) small-molecule agonist",
+    "smiles": "Cn1cc(Cc2nc3cc(C(=O)N[C@H](CC(=O)O)CC4CC4)cnc3n2C2CCCC2)cn1",
+    "inchikey": "HBARLOFZGWXLCB-SFHVURJKSA-N",
+    "formula": "C24H30N6O3",
+    "MW": 450.54
+  },
+  "limitations": [
+    "Docking is rigid-receptor smina scoring \u2014 a triage tool, not a binding-affinity measurement; scores rank-order but do not quantitate.",
+    "No wet-lab validation: predicted agonism, functional selectivity (G-protein bias), and ADMET are computational hypotheses requiring in vitro confirmation (cAMP/beta-arrestin, calcium mobilization, microsomal stability).",
+    "G-protein bias is inferred from scaffold lineage (CMF-019), not predicted de novo.",
+    "SAR ladder demonstrates single-point rationale but potencies are not predicted \u2014 the design optimizes drug-likeness while preserving the pharmacophore, not measured EC50."
+  ]
+}

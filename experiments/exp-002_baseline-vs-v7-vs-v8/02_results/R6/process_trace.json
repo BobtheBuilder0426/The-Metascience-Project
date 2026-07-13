@@ -1,0 +1,131 @@
+{
+ "project": "AL-v8-aging",
+ "question": "Why does biological aging occur? (unifying hypothesis)",
+ "winning_hypothesis": "Aging is open-loop drift of the organism's homeostatic set-points (control error arising because selection maintains no reference for the post-reproductive body).",
+ "actions": [
+  {
+   "action": "pin_constraints",
+   "detail": "Pinned the seven-constraint set C1-C7 to primary literature via PubMed search_articles / get_article_metadata, with classic pre-DOI works resolved through OpenAlex openalex_get_work.",
+   "evidence": "37 anchor papers with PMIDs/DOIs; see sources.md and sources.json",
+   "t": 1
+  },
+  {
+   "action": "freeze_intervention_set",
+   "detail": "Froze an outcome-first intervention set from primary NIA ITP reports, defining membership by lifespan outcome (extends median: yes/no) before any mechanism was inspected.",
+   "evidence": "17 interventions, 8 positive / 9 negative, each with its primary-report PMID; interventions_frozen.json",
+   "t": 2
+  },
+  {
+   "action": "map_mechanism_direction",
+   "detail": "Assigned each compound an a-priori mechanism class from ChEMBL curated mechanism-of-action (compound_search, get_mechanism): A=attenuate anabolic/nutrient/inflammatory signaling, B=activate hormetic stress response, C=antioxidant/damage-buffer/dietary. NDGA's curated MoA (IGF1R/ERBB2) places it in the growth-signaling class A.",
+   "evidence": "MoA map for 10 druggable compounds; class assignments in interventions_frozen.json",
+   "t": 3
+  },
+  {
+   "action": "string_matched_null",
+   "detail": "Compared STRING networks of positive- vs negative-intervention protein targets (human, score>=400) to test whether the positives form a tighter network.",
+   "evidence": "positives 13 nodes/27 edges density 0.35 max-degree 8; negatives 4 nodes/4 edges density 0.67 \u2014 PPI topology does not separate winners from failures; string_compare.json",
+   "t": 4
+  },
+  {
+   "action": "convergence_held_out_test",
+   "detail": "Tested whether a-priori mechanism direction predicts lifespan outcome (Fisher exact, label permutation, leave-one-out held-out accuracy).",
+   "evidence": "signaling/hormetic 8/9 vs antioxidant/dietary 0/8; Fisher p=3.7e-4; permutation p=4e-4; LOO held-out accuracy 94.1% vs 52.9% base-rate; convergence_result.json",
+   "t": 5
+  },
+  {
+   "action": "outcome_blind_recoding",
+   "detail": "Re-assigned the A/B/C mechanism labels with a separate classifier given only ChEMBL pharmacology and the outcome withheld, then re-ran the convergence on those labels, to check the labels are not outcome-driven.",
+   "evidence": "16/17 concordance; on independent labels 8/10 vs 0/7, Fisher p=1.9e-3, held-out 88%; independent_recode.json, independent_convergence.json",
+   "t": 6
+  },
+  {
+   "action": "aspirin_robustness",
+   "detail": "Aspirin extends lifespan in the 2008 ITP cohort but shows no benefit in the 2019 cohort; tested whether the headline depends on its disputed status.",
+   "evidence": "drop-aspirin 7/8 vs 0/8 Fisher p=7e-4 held-out 94%; aspirin-as-negative 7/9 vs 0/8 Fisher p=1.9e-3 held-out 88% \u2014 all variants p<0.01; aspirin_sensitivity.json",
+   "t": 7
+  },
+  {
+   "action": "honest_exceptions",
+   "detail": "Retained metformin-alone (a nutrient-sensing class-A drug that FAILED at 0.1%) as a scored miss in class A, and footnoted methylene blue's +6% female maximum-lifespan effect (median-lifespan null).",
+   "evidence": "metformin-alone PMID 27312235; methylene blue PMID 24245565 (P=0.004 female max)",
+   "t": 8
+  },
+  {
+   "action": "generative_model",
+   "detail": "Built an open-loop-drift simulation (per-individual multiplicative hazard, Gamma-distributed drift rate) to test whether the premise is sufficient for the observed mortality kinetics.",
+   "evidence": "individual MRDT 8.0 units; Gompertz acceleration + late-life plateau recovered; one drift parameter toggles Gompertzian vs flat hazard; sim_summary.json",
+   "t": 9
+  },
+  {
+   "action": "causal_model",
+   "detail": "Wrote the derivation as an explicit control model (state x, moving reference r, input u=K(r-x), damage D, hazard h), separating the one step evolutionary theory licenses from three added physiological posits P1-P3 (maintained reference; directional drift; damage downstream).",
+   "evidence": "causal_model_spec.txt",
+   "t": 10
+  },
+  {
+   "action": "candidate_scoring",
+   "detail": "Scored six candidate currencies into a common causal template across C1-C7 (P=predicts +2, E=explains +1, C=compatible 0, X=contradicts -2, minus an added-assumption penalty) plus four hard-case kill-criteria. 'Predicts' reserved for assumption-independent predictions (C1 derivation, C5 held-out test); C2/C3 'explains' because the simulation assumes the hazard form; C4/C6/C7 'explains' (shared with rivals).",
+   "evidence": "open-loop drift fit 8 (P,E,E,E,P,E,E; 0 contradictions; 4/4 kill-criteria) vs best rival hyperfunction 4; candidate_scores.json",
+   "t": 11
+  },
+  {
+   "action": "discriminating_prediction",
+   "detail": "Steelmanned each rival's strongest reversibility prediction and identified the sharp discriminator. Information-loss (Lu 2020) predicts restoration via clock reset; hyperfunction shares input-lowering rescue (a sibling). The discriminating claim: rescue of function by restoring the regulatory input at a FIXED epigenetic clock and FIXED damage load.",
+   "evidence": "rival_prediction_table.csv",
+   "t": 12
+  },
+  {
+   "action": "pilot_design",
+   "detail": "Designed a necessity+rescue pilot in replicatively-aged human fibroblasts: reversible mTOR-lowering pulse with function measured at fixed damage load and fixed epigenetic-clock readout, to discriminate drift from both lesion and information-loss theories.",
+   "evidence": "result.md 'Falsifier and smallest pilot'; reasoning.md section 6",
+   "t": 13
+  },
+  {
+   "action": "prior_art_positioning",
+   "detail": "Positioned the hypothesis against the closest adjacent theories, verified in PubMed: mallostasis mean-reverting set-point model (PMID 38092834), Dilman neuroendocrine elevation model (PMID 381162), morphostatic-information loss (PMID 38636560); resilience/recovery-rate literature (Pyrkov 2021, Cohen 2018, Olde Rikkert 2016). 'Cybernetic theory of aging' has no clean primary PubMed anchor and is not cited.",
+   "evidence": "sources.md novelty section; reasoning.md section 5",
+   "t": 14
+  },
+  {
+   "action": "citation_verification",
+   "detail": "Confirmed every cited PMID exists and matches its claim via PubMed get_article_metadata (titles for all; abstracts for scope-critical ITP, plateau, reprogramming, resilience claims); load-bearing DOIs via OpenAlex, including Yang 2024 typed as an erratum (original article PMID 36638792).",
+   "evidence": "sources.md verification header; claim_evidence_ledger.csv",
+   "t": 15
+  }
+ ],
+ "figures": [
+  "fig1_intervention_convergence.png",
+  "fig2_generative_kinetics.png",
+  "fig3_constraint_matrix.png",
+  "fig4_mechanism_schematic.png"
+ ],
+ "deliverables": [
+  "result.md",
+  "reasoning.md",
+  "sources.md",
+  "claim_evidence_ledger.csv",
+  "process_trace.json"
+ ],
+ "supporting_files": [
+  "interventions_frozen.json",
+  "convergence_result.json",
+  "independent_recode.json",
+  "independent_convergence.json",
+  "aspirin_sensitivity.json",
+  "candidate_scores.json",
+  "sim_summary.json",
+  "string_compare.json",
+  "causal_model_spec.txt",
+  "rival_prediction_table.csv",
+  "sources.json"
+ ],
+ "honest_limitations": [
+  "C5 intervention test N=17 (small)",
+  "Mortality and cross-species constraints are sufficiency demonstrations, not fits to primary life tables (SSA table not machine-accessible)",
+  "C4 hallmarks and C7 placement are catalogs/frameworks, not independent causal tests",
+  "The discriminating prediction is decisive against lesion and information-loss theories but not hyperfunction (a sibling), and has not been experimentally run",
+  "The edge over hyperfunction is unification and the evolutionary derivation, not a new molecule"
+ ],
+ "network_access": "www.ssa.gov requested and granted, but the server blocked the default client and a browser user-agent was not spoofed; the life-table Gompertz fit was therefore not machine-run"
+}

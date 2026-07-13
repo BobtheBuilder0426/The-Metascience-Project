@@ -1,0 +1,52 @@
+{
+  "H1_textbook": {
+    "plausibility": 4,
+    "plausibility_reason": "ROS production by mitochondria is well-established; oxidative damage accumulates with age; however, the causal chain from mitochondrial dysfunction *to* ROS *to* aging requires distinguishing correlation from causation\u2014antioxidant interventions show mixed results in longevity studies.",
+    "reasoning_trace": 5,
+    "reasoning_trace_reason": "Clear logical pathway: (1) mitochondria generate ATP via electron transport chain; (2) incomplete electron transfer produces superoxide; (3) ROS damages lipids, proteins, DNA; (4) damage accumulates \u2192 cellular dysfunction \u2192 aging phenotype. Each step is mechanistically grounded and experimentally observable.",
+    "redflags": [
+      "Antioxidant trials (vitamin E, \u03b2-carotene) have not consistently extended lifespan in model organisms or humans, weakening the causal role of ROS in aging",
+      "Some ROS act as signaling molecules; excessive antioxidant scavenging can impair adaptive stress responses and may shorten lifespan",
+      "Correlation between age and mitochondrial ROS does not establish that ROS *drives* aging rather than being a marker of underlying decline",
+      "Many long-lived mutants (e.g., *daf-2* in *C. elegans*) show *reduced* metabolic rate and ROS, but some calorie-restricted organisms with increased ROS also live longer, complicating the ROS\u2013aging link"
+    ]
+  },
+  "H2_derivative": {
+    "plausibility": 4,
+    "plausibility_reason": "NAD+ decline in aging is established; NR \u2192 NAD+ conversion is biochemically sound; mitochondrial function depends on NAD+-dependent enzymes (Complex I, SIRT3, PARPs); human trial data show mixed but encouraging metabolic improvements.",
+    "reasoning_trace": 4,
+    "reasoning_trace_reason": "Clear chain: aging reduces NAD+ \u2192 impairs oxidative phosphorylation and sirtuins \u2192 mitochondrial dysfunction; NR restores NAD+ via salvage pathway \u2192 should restore function; mechanism is explicit and testable, though tissue-penetrance and dose-response remain underspecified.",
+    "redflags": [
+      "Most human NR studies show biomarker shifts (NAD+, lactate, lipids) rather than direct muscle mitochondrial function readouts (respirometry, ATP yield); surrogate endpoints do not guarantee functional improvement",
+      "Aged muscle may have impaired NR uptake or conversion (SLC12A8, NAMPT expression decline with age); restoration of substrate availability does not guarantee restoration of downstream capacity",
+      "Muscle fiber type and metabolic demand matter: slow-oxidative fibers depend heavily on NAD+-linked respiration, but fast-glycolytic fibers may show minimal response; whole-muscle conclusions risk masking heterogeneity",
+      "Publication bias toward positive trials; several null or modest-effect studies exist in mouse models and human cohorts with small n or short duration"
+    ]
+  },
+  "H3_novel": {
+    "plausibility": 3,
+    "plausibility_reason": "Circadian mitophagy regulation is real and age-sensitive, but whether timing mismatch is the PRIMARY driver of sarcopenia over capacity loss lacks direct evidence.",
+    "reasoning_trace": 2,
+    "reasoning_trace_reason": "Chain assumes misalignment exists and causes loss, then predicts chronotherapy will fix it, but omits how you'd distinguish timing-driven from capacity-driven loss or why phase-matching rescues function.",
+    "redflags": [
+      "Conflates correlation (circadian rhythms + mitophagy + aging) with causation (misalignment as rate-limiting step)",
+      "Does not specify which muscle fiber type or circadian oscillator (central, peripheral, mitochondrial) is misaligned or how to measure it",
+      "No explicit prediction of effect size or mechanism by which timed dosing outperforms equal total drug exposure",
+      "Assumes mitophagy inducer pharmacodynamics align with muscle circadian phase; drug peak may not match optimal timing window",
+      "Sarcopenia is multifactorial (protein synthesis, denervation, inflammation); burden of proof high that one timing fix reverses age-related loss"
+    ]
+  },
+  "H3plus_reasoned": {
+    "plausibility": 3,
+    "plausibility_reason": "Circadian control of mitophagy is biologically coherent (circadian rhythms govern metabolic flux broadly, PINK1/BNIP3 are known autophagy regulators), but direct Bmal1\u2192PINK1/BNIP3 rhythmicity in *muscle* is not yet established in the literature; age-flattening of this rhythm is plausible but unconfirmed.",
+    "reasoning_trace": 4,
+    "reasoning_trace_reason": "Clear chain: Bmal1 drives circadian gene expression \u2192 PINK1/BNIP3 peak in active phase \u2192 mitophagy flux rhythm \u2192 age erodes rhythm \u2192 mistiming reduces clearance \u2192 sarcopenia; prediction is falsifiable (timed vs. constant dosing \u00d7 Bmal1-KO gives a distinguishing 2\u00d72), and the Bmal1-KO control is the critical lever\u2014but the mechanism (why does Bmal1 loss specifically abolish the *timing advantage* rather than just flattening baseline?) needs explicit articulation.",
+    "redflags": [
+      "No direct evidence that PINK1/BNIP3 are Bmal1 targets in skeletal muscle (inferred from general circadian biology, not muscle-specific ChIP or RNA-seq).",
+      "Premises 1\u20132 are reasonable but rest on a limited literature; blunted vs. absent distinction in aged muscle mitophagy is not yet quantified in standard models.",
+      "Prediction hinges on a precise mechanistic assumption: that *mistiming* of a normal-amplitude rhythm drives sarcopenia more than *loss of amplitude*; alternative\u2014age reduces total flux *and* flattens rhythm, and both matter\u2014is not excluded by the logic.",
+      "Bmal1-muscle-KO control is clever but assumes Bmal1 deletion does not cause compensatory circadian rewiring in mitophagy genes via other TFs (e.g., DBP, E4BP4); off-target effects on mitochondrial mass or autophagy capacity could confound the interpretation.",
+      "No discussion of whether urolithin A's mitophagy-induction kinetics (lag time, duration, amplitude) can actually be titrated to match the endogenous circadian phase window; pharmacodynamic mismatch could sink the timed-dose experiment."
+    ]
+  }
+}

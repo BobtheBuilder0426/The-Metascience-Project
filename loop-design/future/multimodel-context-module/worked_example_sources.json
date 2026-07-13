@@ -1,0 +1,104 @@
+{
+  "topic": "ergothioneine \u2192 exercise/mitochondria/aging",
+  "retrieved": 14,
+  "kept": 10,
+  "filter": "recency + primary-bonus + topical + NOVELTY-momentum (rising-citation velocity); reviews/consolidation demoted; retraction-screened",
+  "signals_used": [
+    "recency",
+    "primary_vs_review",
+    "topical_specificity",
+    "citation_momentum(novelty proxy, S-047/S-049)"
+  ],
+  "sources": [
+    {
+      "doi": "10.1016/j.cmet.2025.01.024",
+      "title": "Ergothioneine controls mitochondrial function and exercise performance via direct activation of MPST",
+      "year": 2025,
+      "venue": "Cell Metabolism",
+      "type": "primary",
+      "q": 0.969,
+      "momentum": 1.0
+    },
+    {
+      "doi": "10.1016/j.cmet.2024.12.008",
+      "title": "Ergothioneine improves healthspan of aged animals by enhancing cGPDH activity through CSE-dependent persulfidation",
+      "year": 2025,
+      "venue": "Cell Metabolism",
+      "type": "primary",
+      "q": 0.969,
+      "momentum": 1.0
+    },
+    {
+      "doi": "10.1111/jnc.70168",
+      "title": "Ergothioneine Treatment Ameliorates the Pathological Phenotypes of Parkinson's Disease Models",
+      "year": 2025,
+      "venue": "Journal of Neurochemistry",
+      "type": "primary",
+      "q": 0.886,
+      "momentum": 0.45
+    },
+    {
+      "doi": "10.1016/j.heares.2024.109004",
+      "title": "L-Ergothioneine slows the progression of age-related hearing loss in CBA/CaJ mice",
+      "year": 2024,
+      "venue": "Hearing Research",
+      "type": "primary",
+      "q": 0.818,
+      "momentum": 0.2
+    },
+    {
+      "doi": "10.1101/2024.04.10.588849",
+      "title": "Ergothioneine boosts mitochondrial respiration and exercise performance via direct activation of MPST",
+      "year": 2024,
+      "venue": "bioRxiv (Cold Spring Harbor Laboratory)",
+      "type": "primary",
+      "q": 0.81,
+      "momentum": 0.15
+    },
+    {
+      "doi": "10.1186/s12917-023-03584-6",
+      "title": "Molecular docking and experimental validation of the effect of ergothioneine on heat shock protein-70 following endurance exercise by Arabian stallions",
+      "year": 2023,
+      "venue": "BMC Veterinary Research",
+      "type": "primary",
+      "q": 0.779,
+      "momentum": 0.15
+    },
+    {
+      "doi": "10.3390/antiox13040394",
+      "title": "Progress in Understanding Oxidative Stress, Aging, and Aging-Related Diseases",
+      "year": 2024,
+      "venue": "Antioxidants",
+      "type": "primary",
+      "q": 0.618,
+      "momentum": 1.0
+    },
+    {
+      "doi": "10.3389/fcell.2024.1347286",
+      "title": "Effects of reactive oxygen species and mitochondrial dysfunction on reproductive aging",
+      "year": 2024,
+      "venue": "Frontiers in Cell and Developmental Biology",
+      "type": "primary",
+      "q": 0.618,
+      "momentum": 1.0
+    },
+    {
+      "doi": "10.3389/fphys.2022.834597",
+      "title": "Ergothioneine Improves Aerobic Performance Without Any Negative Effect on Early Muscle Recovery Signaling in Response to Acute Exercise",
+      "year": 2022,
+      "venue": "Frontiers in Physiology",
+      "type": "review",
+      "q": 0.568,
+      "momentum": 0.287
+    },
+    {
+      "doi": "10.1002/1873-3468.14299",
+      "title": "Decline of ergothioneine in frailty and cognition impairment",
+      "year": 2022,
+      "venue": "FEBS Letters",
+      "type": "review",
+      "q": 0.568,
+      "momentum": 0.287
+    }
+  ]
+}

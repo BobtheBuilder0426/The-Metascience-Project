@@ -1,0 +1,79 @@
+{
+ "causal_chain_aging": [
+  {
+   "step": "Aging raises motoneuron neurotrypsin (PRSS12) activity",
+   "evidence": "PMID 21885656; PRSS12 assoc. with muscle mass/strength/CAF PMID 36609795"
+  },
+  {
+   "step": "Neurotrypsin cleaves synaptic agrin -> C-terminal agrin fragment (CAF)",
+   "evidence": "PMID 20980386 (agrin cleavage regulates NMJ); CAF is the cleavage product"
+  },
+  {
+   "step": "Loss of intact agrin collapses agrin->LRP4->MuSK signaling",
+   "evidence": "agrin/LRP4/MuSK ternary complex PDB 8S9P, PMID 37252960"
+  },
+  {
+   "step": "MuSK signaling loss destabilizes the postsynapse -> AChR cluster fragmentation, denervation",
+   "evidence": "PMID 21885656 'precocious sarcopenia'; PMID 27588166 failed reinnervation"
+  },
+  {
+   "step": "Denervation/reinnervation program dominates aged muscle transcriptome",
+   "evidence": "MY OWN DATA GSE167186: MYH8 +3.85 (FDR 9e-6), CHRNA1 +1.51, MUSK +0.73 up in sarcopenic vs young"
+  },
+  {
+   "step": "CAF rises in serum of sarcopenia patients (human translation + biomarker)",
+   "evidence": "PMID 22433628; reference values PMID 38845597"
+  }
+ ],
+ "why_argx119_reverses_it": "ARGX-119 is a bivalent agonist antibody that binds the MuSK Frizzled-like domain and drives MuSK dimerization/autophosphorylation INDEPENDENT of agrin. It therefore acts DOWNSTREAM of the aging lesion (neurotrypsin-mediated agrin loss): where the disease removes the ligand, ARGX-119 activates the receptor directly, reconstituting postsynaptic NMJ signaling. In vivo it stabilizes the NMJ, increases muscle strength, and reduces fatigability (PMID 42153453, 39292800). This is mechanistically superior to supplying agrin (NT-1654), which remains a neurotrypsin substrate.",
+ "why_it_is_an_exercise_mimetic": "Endurance/resistance training engages and preserves the same agrin->MuSK stabilization arm: AGRN is UP in trained human muscle (+0.60, p=6e-3, my data GSE151066) and 2-year exercise preserves NMJ integrity in older adults (PMID 36708273). Exercise's NMJ-protective benefit is precisely the arm that fails in aging. ARGX-119 reproduces the endpoint of that arm pharmacologically (a stable, well-innervated postsynapse) without requiring the training stimulus \u2014 the definition of an exercise mimetic, applied to the neuromuscular (not metabolic) benefit of exercise.",
+ "signature_reversal_summary": {
+  "axis": "NMJ / neuromuscular stabilization",
+  "aging_direction": "denervation/reinnervation program UP (compensatory, failing): MYH8 +3.85, CHRNA1 +1.51, MUSK +0.73",
+  "exercise_direction": "pro-stability agrin arm sustained: AGRN +0.60; NMJ preserved with training",
+  "mimetic_action": "restore agrin->MuSK postsynaptic signaling (ARGX-119 agonism) to convert failing compensation into stable innervation"
+ },
+ "falsifiable_plan": [
+  {
+   "experiment": "E1 \u2014 Aged-mouse efficacy",
+   "design": "22-24mo C57BL/6 mice, ARGX-119 vs isotype IgG (IV, dose-ranged from FIH PK), 8-12 wk.",
+   "primary_readout": "in vivo muscle force (plantarflexor tetanic torque) + grip strength.",
+   "success": "significant force/strength gain vs isotype.",
+   "falsifier": "no force improvement at tolerated doses REFUTES the mimetic claim."
+  },
+  {
+   "experiment": "E2 \u2014 NMJ morphology & innervation",
+   "design": "Same cohorts; NMJ confocal (\u03b1-bungarotoxin + neurofilament/SV2).",
+   "primary_readout": "fragmentation index, % fully innervated endplates, endplate area.",
+   "success": "reduced fragmentation, higher innervation vs isotype.",
+   "falsifier": "unchanged NMJ morphology REFUTES the on-target NMJ mechanism."
+  },
+  {
+   "experiment": "E3 \u2014 Molecular target engagement",
+   "design": "Muscle lysates; phospho-MuSK / phospho-DOK7, AChR clustering.",
+   "primary_readout": "pMuSK increase; CAF (serum) decrease.",
+   "success": "elevated pMuSK + lower CAF with treatment.",
+   "falsifier": "no pMuSK change = drug not engaging target in aged muscle."
+  },
+  {
+   "experiment": "E4 \u2014 Exercise-mimicry test (head-to-head)",
+   "design": "4 arms: sedentary+isotype, sedentary+ARGX-119, exercise+isotype, exercise+ARGX-119.",
+   "primary_readout": "overlap of ARGX-119 vs exercise NMJ/denervation transcriptomic signature (MYH8/CHRNA1/MUSK/AGRN).",
+   "success": "ARGX-119 alone reproduces the NMJ arm of the exercise signature; non-additive with exercise (shared mechanism).",
+   "falsifier": "ARGX-119 signature orthogonal to exercise = not an exercise mimetic on this axis."
+  },
+  {
+   "experiment": "E5 \u2014 Human biomarker bridge",
+   "design": "Leverage ongoing ARGX-119 trials: measure serum CAF + strength/fatigue in dosed subjects.",
+   "primary_readout": "CAF reduction; strength/fatigue improvement.",
+   "success": "CAF falls with dose, tracks strength \u2014 human proof of NMJ stabilization.",
+   "falsifier": "CAF/strength unchanged in humans despite target engagement."
+  }
+ ],
+ "key_risks": [
+  "Antibody (biologic): parenteral dosing, not oral \u2014 motivates the next-gen small-molecule MuSK/DOK7 potentiator (feasibility shown by PMID 39024975).",
+  "MuSK over-activation could theoretically disturb NMJ homeostasis \u2014 dose-finding required; FIH shows wide tolerated range.",
+  "Denervation in aging is multifactorial (motoneuron loss upstream); NMJ stabilization may be necessary-but-not-sufficient \u2014 E4 tests contribution."
+ ],
+ "t": "2026-07-11T21:12:20.259025Z"
+}

@@ -1,0 +1,585 @@
+{
+  "rows": [
+    {
+      "question": "Propose a novel, testable hypothesis for pharmacologically inducing mitophagy to slow skeletal-muscle aging, name a candidate and the assay.",
+      "dimensions": {
+        "grounding": 2,
+        "reasoning": 2,
+        "completeness": 1.667,
+        "usefulness": 2,
+        "creativity": 1.21
+      },
+      "weighted_composite": 1.775,
+      "grounding_cap": 2,
+      "integrity_cap": 5,
+      "integrity_reasons": [],
+      "overclaim_count": 0,
+      "overclaim_cap": 5,
+      "effective_grounding_cap": 2,
+      "dataset_resolution": null,
+      "trace_verification": null,
+      "specificity_signal": 2,
+      "creativity_detail": {
+        "creativity_index": 0.0526,
+        "novelty": 0.421,
+        "plausibility_gate": 0.5,
+        "reasoning_trace_gate": 0.25,
+        "creativity_dim_score_1to5": 1.21,
+        "hallucination_flag": false
+      },
+      "citation_verification_rate": null,
+      "n_citations": 0,
+      "entity_counts": {
+        "genes": 0,
+        "assays": 0,
+        "quant_predictions": 0,
+        "pathways": 1,
+        "drugs": 0,
+        "total": 1
+      },
+      "redflags": [
+        "no derivable reasoning chain",
+        "no derivable reasoning chain"
+      ],
+      "inter_judge_absdiff": {
+        "grounding": 1.333,
+        "reasoning": 1.333,
+        "completeness": 0.667,
+        "usefulness": 1.333,
+        "creativity": 0.667
+      },
+      "_novelty": {
+        "novelty": 0.421,
+        "N_freq": 0.228,
+        "hits": 2420,
+        "semantic": {
+          "value": 1.0,
+          "method": "tfidf_cosine",
+          "max_sim": 0.0,
+          "note": "model-dependent; under-discriminates on shared domain vocab (LB-018)"
+        },
+        "n_neighbours": 3,
+        "method": "0.75*retrieval_freq + 0.25*semantic_distance"
+      },
+      "citation_quality": {
+        "n_citations": 0,
+        "n_primary": 0,
+        "n_review": 0,
+        "n_preprint": 0,
+        "n_other": 0,
+        "n_retracted": 0,
+        "primary_ratio": null,
+        "mean_venue_quality": null,
+        "usage": 0.0,
+        "quality_composite": 1.0,
+        "flags": [
+          "no_citations"
+        ]
+      },
+      "_citation_quality_detail": {
+        "n_citations": 0,
+        "n_primary": 0,
+        "n_review": 0,
+        "n_preprint": 0,
+        "n_other": 0,
+        "n_retracted": 0,
+        "primary_ratio": null,
+        "mean_venue_quality": null,
+        "usage": 0.0,
+        "quality_composite": 1.0,
+        "flags": [
+          "no_citations"
+        ],
+        "per_citation": []
+      },
+      "question_id": "Q1",
+      "arm": "B",
+      "run": 1,
+      "category": null,
+      "code": null
+    },
+    {
+      "question": "Propose a novel, testable hypothesis for pharmacologically inducing mitophagy to slow skeletal-muscle aging, name a candidate and the assay.",
+      "dimensions": {
+        "grounding": 2,
+        "reasoning": 2,
+        "completeness": 1.667,
+        "usefulness": 2,
+        "creativity": 1.21
+      },
+      "weighted_composite": 1.775,
+      "grounding_cap": 2,
+      "integrity_cap": 5,
+      "integrity_reasons": [],
+      "overclaim_count": 0,
+      "overclaim_cap": 5,
+      "effective_grounding_cap": 2,
+      "dataset_resolution": null,
+      "trace_verification": null,
+      "specificity_signal": 2,
+      "creativity_detail": {
+        "creativity_index": 0.0526,
+        "novelty": 0.421,
+        "plausibility_gate": 0.5,
+        "reasoning_trace_gate": 0.25,
+        "creativity_dim_score_1to5": 1.21,
+        "hallucination_flag": false
+      },
+      "citation_verification_rate": null,
+      "n_citations": 0,
+      "entity_counts": {
+        "genes": 0,
+        "assays": 0,
+        "quant_predictions": 0,
+        "pathways": 1,
+        "drugs": 0,
+        "total": 1
+      },
+      "redflags": [
+        "no derivable reasoning chain",
+        "no derivable reasoning chain"
+      ],
+      "inter_judge_absdiff": {
+        "grounding": 1.333,
+        "reasoning": 1.333,
+        "completeness": 0.667,
+        "usefulness": 1.333,
+        "creativity": 0.667
+      },
+      "_novelty": {
+        "novelty": 0.421,
+        "N_freq": 0.228,
+        "hits": 2420,
+        "semantic": {
+          "value": 1.0,
+          "method": "tfidf_cosine",
+          "max_sim": 0.0,
+          "note": "model-dependent; under-discriminates on shared domain vocab (LB-018)"
+        },
+        "n_neighbours": 3,
+        "method": "0.75*retrieval_freq + 0.25*semantic_distance"
+      },
+      "citation_quality": {
+        "n_citations": 0,
+        "n_primary": 0,
+        "n_review": 0,
+        "n_preprint": 0,
+        "n_other": 0,
+        "n_retracted": 0,
+        "primary_ratio": null,
+        "mean_venue_quality": null,
+        "usage": 0.0,
+        "quality_composite": 1.0,
+        "flags": [
+          "no_citations"
+        ]
+      },
+      "_citation_quality_detail": {
+        "n_citations": 0,
+        "n_primary": 0,
+        "n_review": 0,
+        "n_preprint": 0,
+        "n_other": 0,
+        "n_retracted": 0,
+        "primary_ratio": null,
+        "mean_venue_quality": null,
+        "usage": 0.0,
+        "quality_composite": 1.0,
+        "flags": [
+          "no_citations"
+        ],
+        "per_citation": []
+      },
+      "question_id": "Q1",
+      "arm": "B",
+      "run": 2,
+      "category": null,
+      "code": null
+    },
+    {
+      "question": "Propose a novel, testable hypothesis for pharmacologically inducing mitophagy to slow skeletal-muscle aging, name a candidate and the assay.",
+      "dimensions": {
+        "grounding": 3,
+        "reasoning": 3,
+        "completeness": 3.5,
+        "usefulness": 3,
+        "creativity": 1.947
+      },
+      "weighted_composite": 2.889,
+      "grounding_cap": 5,
+      "integrity_cap": 5,
+      "integrity_reasons": [],
+      "overclaim_count": 0,
+      "overclaim_cap": 5,
+      "effective_grounding_cap": 5,
+      "dataset_resolution": null,
+      "trace_verification": null,
+      "specificity_signal": 5,
+      "creativity_detail": {
+        "creativity_index": 0.2368,
+        "novelty": 0.421,
+        "plausibility_gate": 0.75,
+        "reasoning_trace_gate": 0.75,
+        "creativity_dim_score_1to5": 1.947,
+        "hallucination_flag": false
+      },
+      "citation_verification_rate": 1.0,
+      "n_citations": 2,
+      "entity_counts": {
+        "genes": 7,
+        "assays": 3,
+        "quant_predictions": 1,
+        "pathways": 3,
+        "drugs": 1,
+        "total": 15
+      },
+      "redflags": [],
+      "inter_judge_absdiff": {
+        "grounding": 1.333,
+        "reasoning": 1.333,
+        "completeness": 1.333,
+        "usefulness": 1.333,
+        "creativity": 1.333
+      },
+      "_novelty": {
+        "novelty": 0.421,
+        "N_freq": 0.228,
+        "hits": 2420,
+        "semantic": {
+          "value": 1.0,
+          "method": "tfidf_cosine",
+          "max_sim": 0.0,
+          "note": "model-dependent; under-discriminates on shared domain vocab (LB-018)"
+        },
+        "n_neighbours": 3,
+        "method": "0.75*retrieval_freq + 0.25*semantic_distance"
+      },
+      "citation_quality": {
+        "n_citations": 2,
+        "n_primary": 0,
+        "n_review": 2,
+        "n_preprint": 0,
+        "n_other": 0,
+        "n_retracted": 0,
+        "primary_ratio": 0.0,
+        "mean_venue_quality": 1.0,
+        "usage": 0.133,
+        "quality_composite": 0.7,
+        "flags": [
+          "mostly_reviews_few_primary"
+        ]
+      },
+      "_citation_quality_detail": {
+        "n_citations": 2,
+        "n_primary": 0,
+        "n_review": 2,
+        "n_preprint": 0,
+        "n_other": 0,
+        "n_retracted": 0,
+        "primary_ratio": 0.0,
+        "mean_venue_quality": 1.0,
+        "usage": 0.133,
+        "quality_composite": 0.7,
+        "flags": [
+          "mostly_reviews_few_primary"
+        ],
+        "per_citation": [
+          {
+            "citation": {
+              "kind": "pmid",
+              "value": "31133716",
+              "raw": "PMID: 31133716"
+            },
+            "venue": "Aging Cell",
+            "type": "review",
+            "retracted": false,
+            "venue_quality": 1.0,
+            "year": 2023
+          },
+          {
+            "citation": {
+              "kind": "pmid",
+              "value": "28215842",
+              "raw": "PMID: 28215842"
+            },
+            "venue": "Aging Cell",
+            "type": "review",
+            "retracted": false,
+            "venue_quality": 1.0,
+            "year": 2022
+          }
+        ]
+      },
+      "question_id": "Q1",
+      "arm": "L",
+      "run": 1,
+      "category": null,
+      "code": null
+    },
+    {
+      "question": "Propose a novel, testable hypothesis for pharmacologically inducing mitophagy to slow skeletal-muscle aging, name a candidate and the assay.",
+      "dimensions": {
+        "grounding": 3,
+        "reasoning": 3,
+        "completeness": 3.5,
+        "usefulness": 3,
+        "creativity": 1.632
+      },
+      "weighted_composite": 2.826,
+      "grounding_cap": 5,
+      "integrity_cap": 5,
+      "integrity_reasons": [],
+      "overclaim_count": 0,
+      "overclaim_cap": 5,
+      "effective_grounding_cap": 5,
+      "dataset_resolution": null,
+      "trace_verification": null,
+      "specificity_signal": 5,
+      "creativity_detail": {
+        "creativity_index": 0.1579,
+        "novelty": 0.421,
+        "plausibility_gate": 0.5,
+        "reasoning_trace_gate": 0.75,
+        "creativity_dim_score_1to5": 1.632,
+        "hallucination_flag": false
+      },
+      "citation_verification_rate": 1.0,
+      "n_citations": 1,
+      "entity_counts": {
+        "genes": 6,
+        "assays": 3,
+        "quant_predictions": 2,
+        "pathways": 2,
+        "drugs": 0,
+        "total": 13
+      },
+      "redflags": [],
+      "inter_judge_absdiff": {
+        "grounding": 1.333,
+        "reasoning": 1.333,
+        "completeness": 1.333,
+        "usefulness": 1.333,
+        "creativity": 1.333
+      },
+      "_novelty": {
+        "novelty": 0.421,
+        "N_freq": 0.228,
+        "hits": 2420,
+        "semantic": {
+          "value": 1.0,
+          "method": "tfidf_cosine",
+          "max_sim": 0.0,
+          "note": "model-dependent; under-discriminates on shared domain vocab (LB-018)"
+        },
+        "n_neighbours": 3,
+        "method": "0.75*retrieval_freq + 0.25*semantic_distance"
+      },
+      "citation_quality": {
+        "n_citations": 1,
+        "n_primary": 1,
+        "n_review": 0,
+        "n_preprint": 0,
+        "n_other": 0,
+        "n_retracted": 0,
+        "primary_ratio": 1.0,
+        "mean_venue_quality": 1.0,
+        "usage": 0.077,
+        "quality_composite": 1.0,
+        "flags": []
+      },
+      "_citation_quality_detail": {
+        "n_citations": 1,
+        "n_primary": 1,
+        "n_review": 0,
+        "n_preprint": 0,
+        "n_other": 0,
+        "n_retracted": 0,
+        "primary_ratio": 1.0,
+        "mean_venue_quality": 1.0,
+        "usage": 0.077,
+        "quality_composite": 1.0,
+        "flags": [],
+        "per_citation": [
+          {
+            "citation": {
+              "kind": "pmid",
+              "value": "22560223",
+              "raw": "PMID: 22560223"
+            },
+            "venue": "Nature Aging",
+            "type": "primary",
+            "retracted": false,
+            "venue_quality": 1.0,
+            "year": 2024
+          }
+        ]
+      },
+      "question_id": "Q1",
+      "arm": "L",
+      "run": 2,
+      "category": null,
+      "code": null
+    },
+    {
+      "question": "Propose a novel, testable hypothesis for pharmacologically inducing mitophagy to slow skeletal-muscle aging, name a candidate and the assay.",
+      "dimensions": {
+        "grounding": 1,
+        "reasoning": 2,
+        "completeness": 1.667,
+        "usefulness": 2,
+        "creativity": 1.21
+      },
+      "weighted_composite": 1.575,
+      "grounding_cap": 1,
+      "integrity_cap": 5,
+      "integrity_reasons": [],
+      "overclaim_count": 0,
+      "overclaim_cap": 5,
+      "effective_grounding_cap": 1,
+      "dataset_resolution": null,
+      "trace_verification": null,
+      "specificity_signal": 2,
+      "creativity_detail": {
+        "creativity_index": 0.0526,
+        "novelty": 0.421,
+        "plausibility_gate": 0.5,
+        "reasoning_trace_gate": 0.25,
+        "creativity_dim_score_1to5": 1.21,
+        "hallucination_flag": false
+      },
+      "citation_verification_rate": 0.0,
+      "n_citations": 2,
+      "entity_counts": {
+        "genes": 1,
+        "assays": 0,
+        "quant_predictions": 0,
+        "pathways": 0,
+        "drugs": 0,
+        "total": 1
+      },
+      "redflags": [
+        "no derivable reasoning chain",
+        "no derivable reasoning chain"
+      ],
+      "inter_judge_absdiff": {
+        "grounding": 1.333,
+        "reasoning": 1.333,
+        "completeness": 0.667,
+        "usefulness": 1.333,
+        "creativity": 0.667
+      },
+      "_novelty": {
+        "novelty": 0.421,
+        "N_freq": 0.228,
+        "hits": 2420,
+        "semantic": {
+          "value": 1.0,
+          "method": "tfidf_cosine",
+          "max_sim": 0.0,
+          "note": "model-dependent; under-discriminates on shared domain vocab (LB-018)"
+        },
+        "n_neighbours": 3,
+        "method": "0.75*retrieval_freq + 0.25*semantic_distance"
+      },
+      "citation_quality": {
+        "n_citations": 2,
+        "n_primary": 1,
+        "n_review": 0,
+        "n_preprint": 0,
+        "n_other": 0,
+        "n_retracted": 0,
+        "primary_ratio": 1.0,
+        "mean_venue_quality": 1.0,
+        "usage": 1.0,
+        "quality_composite": 1.0,
+        "flags": []
+      },
+      "_citation_quality_detail": {
+        "n_citations": 2,
+        "n_primary": 1,
+        "n_review": 0,
+        "n_preprint": 0,
+        "n_other": 0,
+        "n_retracted": 0,
+        "primary_ratio": 1.0,
+        "mean_venue_quality": 1.0,
+        "usage": 1.0,
+        "quality_composite": 1.0,
+        "flags": [],
+        "per_citation": [
+          {
+            "citation": {
+              "kind": "pmid",
+              "value": "00000001",
+              "raw": "PMID: 00000001"
+            },
+            "venue": null,
+            "type": null,
+            "retracted": false,
+            "venue_quality": null,
+            "year": null
+          },
+          {
+            "citation": {
+              "kind": "doi",
+              "value": "10.1234/fake.novel",
+              "raw": "10.1234/fake.novel"
+            },
+            "venue": "Cell Metabolism",
+            "type": "primary",
+            "retracted": false,
+            "venue_quality": 1.0,
+            "year": 2022
+          }
+        ]
+      },
+      "question_id": "Q1",
+      "arm": "L",
+      "run": 3,
+      "category": null,
+      "code": null
+    }
+  ],
+  "elo": {
+    "Q1": {
+      "ratings": {
+        "B#1": 958.3,
+        "B#2": 957.8,
+        "L#1": 1083.4,
+        "L#2": 1043.0,
+        "L#3": 957.5
+      },
+      "ranking": [
+        "L#1",
+        "L#2",
+        "B#1",
+        "B#2",
+        "L#3"
+      ],
+      "n_comparisons": 20
+    }
+  },
+  "summary": {
+    "Q1": {
+      "B": {
+        "mean_composite": 1.775,
+        "spread": 0.0,
+        "n": 2
+      },
+      "L": {
+        "mean_composite": 2.43,
+        "spread": 0.605,
+        "n": 3
+      },
+      "delta_L_minus_B": 0.655
+    }
+  },
+  "weights": {
+    "grounding": 0.2,
+    "reasoning": 0.2,
+    "completeness": 0.2,
+    "usefulness": 0.2,
+    "creativity": 0.2
+  },
+  "n_answers": 5
+}

@@ -1,0 +1,6 @@
+dimension,CS_Baseline,CS_v7-loop,CS_v8-loop,Human_Baseline,Human_v7-loop,Human_v8-loop
+grounding,2.333,1.0,1.667,,,
+reasoning,4.222,4.389,4.611,3.0,2.667,3.667
+completeness,4.889,4.944,5.0,3.0,3.0,3.333
+usefulness,3.778,4.111,4.111,2.0,2.333,2.667
+creativity,2.52,2.541,2.972,3.0,2.667,3.333

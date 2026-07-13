@@ -1,0 +1,75 @@
+{
+ "compound": {
+  "name": "ARGX-119",
+  "inn": "adimanebart",
+  "chembl_id": "CHEMBL6068571",
+  "molecule_type": "Antibody (humanized agonist monoclonal, IgG1)",
+  "max_phase": 2.0,
+  "structure_type": "NONE (biologic; no small-molecule SMILES/InChI)",
+  "synonyms": [
+   "ARGX-119",
+   "Argx 119",
+   "adimanebart",
+   "3b2g2m1-hlgg1 laladelk"
+  ],
+  "mechanism": "Bivalent agonist antibody binds the MuSK Frizzled-like (Fz/CRD) domain, driving MuSK dimerization and trans-autophosphorylation independent of agrin \u2014 reconstitutes the postsynaptic arm of NMJ signaling downstream of the agrin/LRP4 ligand step.",
+  "direction": "AGONIST (activates MuSK)",
+  "developer": "argenx"
+ },
+ "target": {
+  "symbol": "MUSK",
+  "name": "muscle-associated receptor tyrosine kinase",
+  "uniprot": "O15146",
+  "ensembl": "ENSG00000030304",
+  "chembl_target": "CHEMBL5684",
+  "tractability_enabled": [
+   "SM: High-Quality Ligand",
+   "SM: Druggable Family",
+   "AB: UniProt loc high conf",
+   "AB: UniProt SigP or TMHMM",
+   "PR: Small Molecule Binder"
+  ],
+  "safety_liabilities_open_targets": 0,
+  "ot_disease_landscape_top": [
+   "Congenital myasthenic syndromes 0.791",
+   "fetal akinesia deformation seq 0.741",
+   "CMS9 0.693",
+   "postsynaptic CMS 0.387"
+  ],
+  "ot_sarcopenia_or_aging_association": "ABSENT \u2014 sarcopenia / age-related muscle loss do not appear in MuSK's Open Targets disease associations (1417 diseases)",
+  "gtex_muscle_tpm": "MuSK expressed in skeletal muscle; strongly enriched at the NMJ postsynapse"
+ },
+ "pathway": {
+  "axis": "agrin -> LRP4 -> MuSK -> DOK7 (+ rapsyn -> AChR clustering)",
+  "partners": {
+   "AGRN": "O00468",
+   "LRP4": "O75096",
+   "MUSK": "O15146",
+   "DOK7": "Q18PE1"
+  },
+  "af_models": {
+   "O15146": "AF-O15146-F1 pLDDT 76.4",
+   "O00468": "AF-O00468-F1 pLDDT 68.8",
+   "O75096": "AF-O75096-F1 pLDDT 77.1",
+   "Q18PE1": "AF-Q18PE1-F1 pLDDT 64.3"
+  },
+  "structure": {
+   "pdb": "8S9P",
+   "desc": "1:1:1 agrin/LRP4/MuSK complex, cryo-EM 3.8 A, 527 kDa",
+   "pmid": "37252960",
+   "doi": "10.1073/pnas.2300453120"
+  }
+ },
+ "exposure_safety": {
+  "fih_pmid": "42153453",
+  "fih_doi": "10.1002/jcph.70208",
+  "n_participants": 112,
+  "routes_doses": "single ascending IV 0.005-15 mg/kg; SC 5 mg/kg; weekly multiple ascending IV 0.3-5 mg/kg",
+  "tolerability": "well tolerated with a favorable safety profile in healthy adults",
+  "pk": "nonlinear PK / target-mediated drug disposition; Cmax mean 0.1-343 ug/mL; ~6-fold AUC increase",
+  "immunogenicity": "anti-drug antibodies comparable to placebo (16.0% vs 16.7% incidence); no impact on PK or safety",
+  "black_box_warning": false,
+  "withdrawn": false
+ },
+ "t": "2026-07-11T21:06:53.997589Z"
+}

@@ -1,0 +1,27 @@
+{
+ "primary_endpoint": "ex-vivo EDL specific force (kN/m^2), aged mice, cocktail vs vehicle",
+ "assumptions": {
+  "old_mean_kNm2": 220,
+  "SD_kNm2": 30,
+  "young_mean_kNm2": 280,
+  "young_old_gap": 60,
+  "target_effect": "close >=50% of gap = +30 kN/m2",
+  "cohen_d": 1.0,
+  "alpha": 0.05,
+  "test": "two-sided two-sample t"
+ },
+ "n_per_group": {
+  "power_0.80": 17,
+  "power_0.90": 23
+ },
+ "adjustments": {
+  "cage_ICC": 0.05,
+  "mice_per_cage": 4,
+  "design_effect": 1.15,
+  "attrition": 0.1,
+  "adjusted_n_per_group": 22
+ },
+ "multiplicity": "Primary: cocktail vs vehicle at alpha=0.05. Secondary family: 2 constituent drop-outs, Holm-adjusted, gated behind a positive primary. Scramble / 1C-MIM / exercise are context arms, also gated.",
+ "sex": "both sexes; analyzed with sex as a stratification covariate (not separately powered unless a sex interaction is pre-declared)",
+ "caveat": "SD from published mouse EDL specific-force ranges (Brooks & Faulkner; Lynch et al.); the true SD is confirmed in Stage-1/pilot and the calc re-run before registration."
+}

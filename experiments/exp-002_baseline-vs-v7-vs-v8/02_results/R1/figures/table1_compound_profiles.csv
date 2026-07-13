@@ -1,0 +1,16 @@
+name,MW,cLogP,TPSA,HBD,HBA,RotB,ArRings,QED,charge,perm_cation,dpsi_independent,BBB_heuristic,Ro5_violations,group,smiles,CNS_MPO,redox_quinone_chromanol
+Idebenone (approved LHON),338.4,3.46,72.8,1,5,12,0,0.436,0,False,True,True,0,reference,CC1=C(C(=O)C(=C(C1=O)OC)OC)CCCCCCCCCCO,4.87,True
+CoQ10,863.4,17.85,52.6,0,4,31,0,0.051,0,False,True,False,2,reference,CC1=C(C(=O)C(=C(C1=O)OC)OC)C/C=C(C)/CC/C=C(C)/CC/C=C(C)/CC/C=C(C)/CC/C=C(C)/CC/C=C(C)/CC/C=C(C)/CC/C=C(C)/CC/C=C(C)/CCC=C(C)C,3.0,True
+"MitoQ (TPP+, Δψm-dep)",583.7,7.46,52.6,0,4,16,3,0.1,1,True,False,False,2,reference,CC1=C(C(=O)C(=C(C1=O)OC)OC)CCCCCCCCCC[P+](C2=CC=CC=C2)(C3=CC=CC=C3)C4=CC=CC=C4,2.0,True
+EPI-743/vatiquinone,440.7,7.52,54.4,1,3,12,0,0.252,0,False,True,False,1,reference,CC1=C(C(=O)C(=C(C1=O)C)CC[C@@](C)(CCC=C(C)CCC=C(C)CCC=C(C)C)O)C,3.26,True
+Sonlicromanol,332.4,2.27,70.6,3,4,2,1,0.777,0,False,True,True,0,reference,CC1=C(C2=C(CCC(O2)(C)C(=O)NC3CCCNC3)C(=C1O)C)C,5.03,False
+Methylene blue,284.4,2.5,19.1,0,3,1,1,0.505,1,True,False,False,0,reference,CN(C)c1ccc2nc3ccc(=[N+](C)C)cc3sc2c1,3.75,False
+Nicotinamide riboside (NR+),255.2,-2.32,116.9,4,5,3,1,0.453,1,True,False,False,0,reference,C1=CC(=C[N+](=C1)C2C(C(C(O2)CO)O)O)C(=O)N,3.1,False
+Niacinamide,122.1,0.18,56.0,1,2,1,1,0.577,0,False,True,False,0,reference,NC(=O)c1cccnc1,5.83,False
+Rotenone (Q-site INHIBITOR),394.4,3.7,63.2,0,6,3,2,0.74,0,False,True,True,0,reference,CC(=C)C1Cc2c(O1)ccc3c2OC4COc5cc(OC)c(OC)cc5C4C3=O,4.55,True
+CI-PAM-1a,347.3,3.96,68.0,1,4,4,4,0.607,0,False,True,True,0,candidate,O=C(NCc1cccnc1)c1ccc2oc(-c3ccc(F)cc3)nc2c1,4.37,False
+CI-PAM-1b,281.3,1.95,78.0,3,3,4,3,0.684,0,False,True,True,0,candidate,O=C(NCCO)c1ccc2[nH]c(-c3ccccc3)nc2c1,5.17,False
+CI-PAM-1c,242.3,3.23,44.9,2,1,2,2,0.834,0,False,True,True,0,candidate,O=C(NC1CCCCC1)c1cc2ccccc2[nH]1,4.77,False
+CI-PAM-1d,336.4,4.21,57.4,0,5,5,3,0.698,0,False,True,True,0,candidate,c1ccc(-c2nnc(-c3ccc(OCC4CCOCC4)cc3)o2)cc1,4.39,False
+CI-PAM-1e,342.3,5.02,42.0,1,2,3,3,0.726,0,False,True,False,1,candidate,O=C(Nc1ccncc1)c1ccc(-c2ccc(C(F)(F)F)cc2)cc1,3.83,False
+CI-PAM-1f,271.3,1.66,75.1,2,4,2,2,0.871,0,False,True,True,0,candidate,O=C(NC1CCC(O)CC1)c1cnc2ccccc2n1,5.5,False

@@ -1,0 +1,82 @@
+{
+  "task": "Starting from publicly available datasets, propose a not-thought-of-yet or new compound to treat complex-I mitochondrial diseases.",
+  "method": {
+    "approach": "Quantitative candidate-node ranking (genetic-modifier evidence -> pharmacology) cross-checked against patient/model dysregulation, tractability, and tissue access; then a five-rung causal ladder from screen signal to a specific compound; a tissue-access/exposure gate; and a documented novelty search. Scoring rubric and rules fixed before compound identity was examined, to prevent retrofitting.",
+    "composite_score": "score = causal_support(0-3) x directional_concordance(0-2) x tractability(0-2) x tissue_access(0-2); nulls and discordant nodes retained and reported.",
+    "five_rung_causal_ladder": [
+      "1 Genetic operation (exact perturbation/model/environment/endpoint)",
+      "2 Disease-state evidence in patient material and direction",
+      "3 Drug direction reproduces the protective operation",
+      "4 Target engagement at achievable exposure",
+      "5 Disease-relevant functional rescue (not proliferation alone)"
+    ],
+    "tissue_access_rule": "expression in a tissue != access to the vulnerable cell type != adequate free drug exposure; verify the exact tissue coverage of any expression resource before a tissue claim.",
+    "novelty_protocol": "Reframe to 'no prior proposal found under the documented search'; search standardized chemical identity + structural analogs, mechanism terms, disease synonyms, across ClinicalTrials.gov, ChEMBL, Drugs@FDA, PubMed, OpenAlex, bioRxiv/medRxiv, and patents (Google Patents/Justia/USPTO via web search).",
+    "compute_note": "Lightweight: processed/summary-level public data and literature-reported effect sizes rather than heavy raw reprocessing.",
+    "connector_gaps": "No DepMap connector (used published CRISPR modifier screens + Open Targets tractability). No LINCS/Connectivity-Map connector (signature-reversal used only as optional confirmation; ChEMBL directional bioactivity as the drug-direction check)."
+  },
+  "actions": [
+    {"t": "2026-07-12T15:21Z", "action": "setup", "detail": "Created OUTPUT/run-01/presentation/{,figures}; fixed the scoring rubric, causal ladder, tissue-access rule and novelty protocol before examining any node identity.", "ids": []},
+    {"t": "2026-07-12T15:39Z", "action": "disease_id_resolution", "detail": "Resolved disease ontology IDs via Open Targets/MONDO for the three principal Complex I diseases.", "ids": ["MONDO_0100133 mitochondrial complex I deficiency", "MONDO_0009723 Leigh syndrome", "MONDO_0010788 LHON"]},
+    {"t": "2026-07-12T15:39Z", "action": "prior_art_enumeration", "detail": "Enumerated the intervention landscape from ClinicalTrials.gov across Leigh/LHON/MELAS/CI-deficiency/mitochondrial disease.", "ids": ["counts: Leigh 11, LHON 34, MELAS 33, CI-deficiency 1, mito-disease 605", "interventions: Placebo 28, KH176 6, idebenone/GS010/vatiquinone 5/5/4, rAAV2-ND4 4, KL1333 3, NR/MitoQ/EPI-743 2 each, sirolimus/bezafibrate/elamipretide 1 each"]},
+    {"t": "2026-07-12T15:39Z", "action": "literature_retrieval", "detail": "Retrieved and read the genome-wide genetic-modifier compendium of mitochondrial dysfunction; extracted the verbatim GPX4 synthetic-sick/lethal statement and the ferroptosis (ferrostatin-1/alpha-tocopherol rescue, not zVAD) death mode; retrieved the respiratory-chain hypoxia-protection screen.", "ids": ["PMID 31730859 (To et al., Cell 2019; PMC7053407; 191 modifiers)", "PMID 26917594 (Jain et al., Science 2016)", "PMID 29290465 (Ingold et al., Cell 2017; GPX4 needs Se+GSH)"]},
+    {"t": "2026-07-12T15:39Z", "action": "node_scoring", "detail": "Scored a candidate node universe (ferroptosis-defence axis + established mito-disease modifiers) on the frozen composite; retained nulls/discordant; the substrate-hardening (membrane-PUFA) node ranked top, GPX4-activation scored 0 (undruggable direction), SLC7A11 scored 0 (tissue-inaccessible), the ISR axis flagged discordant.", "ids": ["see node_ranking"]},
+    {"t": "2026-07-12T15:39Z", "action": "tissue_access_analysis", "detail": "Queried GTEx v8 median TPM for the defence-axis genes in affected tissues; confirmed GTEx has no optic-nerve/retina tissue, so the RGC claim rests on iPSC-RGC/primary-retina data.", "ids": ["GPX4: cortex 235, putamen 188, substantia nigra 225, tibial nerve 294, muscle 197, heart-LV 118 TPM", "SLC7A11: nerve 0.20, muscle 0.05, heart 0.05 TPM"]},
+    {"t": "2026-07-12T15:39Z", "action": "patient_model_datasets", "detail": "Located patient/model omics datasets for disease-state and penetrance evidence (verified organism/cell type/contrast at fetch).", "ids": ["GSE103619 MT-ND4 LHON iPSC-RGC (PMID 29366807)", "GSE152915 iPSC OXPHOS neurons (PMID 33771987)", "GSE208530 Leigh mouse + Ndufs4-KO iPSC (n=45)", "GSE144914 LHON penetrance / no bioenergetic compensation (PMID 32687992)", "PXD009743 NDUFS1 CI-deficiency proteomics", "PXD022860 Ndufs4-/- mouse brain proteomics"]},
+    {"t": "2026-07-12T15:39Z", "action": "disease_cell_evidence", "detail": "Retrieved the rat-retina rotenone model showing partial Complex I inhibition causes oxidative damage in retinal ganglion cells (LHON-relevant, but oxidative damage != ferroptosis).", "ids": ["PMID 16959493 (Beretta et al., Neurobiol Dis 2006)"]},
+    {"t": "2026-07-12T15:39Z", "action": "mechanism_evidence", "detail": "Established the kinetic-isotope-effect basis: bis-allylic H-abstraction is rate-limiting in PUFA autoxidation; deuteration slows it and a sub-stoichiometric D-PUFA fraction suffices (threshold effect).", "ids": ["PMID 30851224 (Firsov et al., FEBS J 2019)", "PMID 25578654 (Andreyev et al., Free Radic Biol Med 2015)"]},
+    {"t": "2026-07-12T15:39Z", "action": "target_engagement_evidence", "detail": "Established in-vivo target engagement in the correct tissue: bis-allylic deuterated DHA incorporates into brain phospholipids and resists peroxidation in vivo, and reaches neural retina/RPE with oral dosing.", "ids": ["PMID 40408349 (JACS 2025, rat brain)", "PMID 35870486 (Exp Eye Res 2022, retina/RPE)"]},
+    {"t": "2026-07-12T15:39Z", "action": "cross_disease_evidence", "detail": "Collected functional-rescue evidence for deuterated PUFAs in adjacent lipid-peroxidation diseases (the compound class's efficacy signal), plus human oral bioavailability of the clinical-stage exemplar.", "ids": ["PMID 25499576 (Friedreich ataxia)", "PMID 33308320 (alpha-synuclein Parkinson rats)", "PMID 35257475 (D-DHA, AMD-like retinal degeneration)", "PMID 32871154 (RT001 human PK/incorporation)"]},
+    {"t": "2026-07-12T15:39Z", "action": "compound_identity", "detail": "Resolved compound identity and comparators.", "ids": ["Docosahexaenoic acid / doconexent parent: ChEMBL CHEMBL367149 (max phase 3)", "linoleic acid parent PubChem CID 5280450 (InChIKey OYHQOLUKZRVURQ-HZJYTTRNSA-N); ethyl linoleate CID 5282184", "comparator vatiquinone ChEMBL CHEMBL1812161"]},
+    {"t": "2026-07-12T15:49Z", "action": "figure_generation", "detail": "Generated four figures (node-ranking with per-component scores; GTEx tissue-access heatmap; five-rung causal ladder with honest per-rung grades; prior-art differentiation matrix).", "ids": ["fig1_node_ranking.png", "fig2_tissue_access.png", "fig3_causal_ladder.png", "fig4_prior_art_matrix.png"]},
+    {"t": "2026-07-12T16:18Z", "action": "citation_verification", "detail": "Verified every cited identifier by live lookup (22 PMIDs against title/journal/DOI; GEO series against organism/cell type/n; PRIDE against disease; ChEMBL IDs). Corrected two author attributions and confirmed the idebenone ~50%/NQO1 statement verbatim in its source abstract.", "ids": ["idebenone ~50%/NQO1 cofactor-dependence: PMID 38272025 (verbatim)", "LEROS efficacy: PMID 38428428"]},
+    {"t": "2026-07-12T16:18Z", "action": "novelty_search", "detail": "Ran the documented novelty search across registries and patents/preprints (see novelty).", "ids": ["see novelty"]}
+  ],
+  "node_ranking": {
+    "formula": "score = causal(0-3) x direction(0-2) x tractability(0-2) x tissue_access(0-2); nulls/discordant retained. Scores are qualitative judgments over a literature-and-data-informed candidate shortlist, not an exhaustive enumeration of the eligible universe.",
+    "nodes": [
+      {"node": "Lipid-peroxidation substrate (membrane PUFA) hardened by bis-allylic deuteration", "causal": 3, "direction": 2, "tractability": 2, "tissue_access": 2, "score": 24, "note": "GPX4 top synthetic-lethal in the modifier screen; ferroptotic death mode; substrate-hardening is cofactor-independent (kinetic isotope effect); in-vivo brain protection shown. NB: the winning row is an inferred substrate intervention, not a node measured in the screen."},
+      {"node": "Hypoxia/HIF activation (PHD inhibition)", "causal": 3, "direction": 2, "tractability": 2, "tissue_access": 1, "score": 12, "note": "Strong causal (genome-wide screen); PHD inhibitors approved; but chronic-hypoxia systemic risk and active prior art (not novel)."},
+      {"node": "mTORC1 inhibition (rapamycin)", "causal": 2, "direction": 2, "tractability": 2, "tissue_access": 1, "score": 8, "note": "Rapamycin extends Ndufs4 survival; approved; active prior art (sirolimus in trials) - not novel."},
+      {"node": "FSP1/AIFM2 activation (+ vitamin-K arm)", "causal": 2, "direction": 2, "tractability": 1, "tissue_access": 1, "score": 4, "note": "GSH-independent ferroptosis suppressor; NAD(P)H-powered (partly CI-compromised); activators nascent."},
+      {"node": "ACSL4 inhibition (lower PUFA-PL incorporation)", "causal": 2, "direction": 2, "tractability": 1, "tissue_access": 1, "score": 4, "note": "ACSL4 loss protects; inhibitors exist; low brain ACSL4, broad lipid roles -> tox risk."},
+      {"node": "NAD+ repletion (precursors)", "causal": 1, "direction": 1, "tractability": 2, "tissue_access": 2, "score": 4, "note": "Correlative; precursors approved/OTC; active prior art and weak CI-specific causal support."},
+      {"node": "G6PD / pentose-phosphate NADPH-supply activation", "causal": 2, "direction": 1, "tractability": 1, "tissue_access": 1, "score": 2, "note": "The Complex-I-specific arm feeding lipid-peroxidation defence; activators early; NADPH also ETC-limited."},
+      {"node": "OMA1-DELE1-HRI integrated stress response modulation", "causal": 2, "direction": 1, "tractability": 1, "tissue_access": 1, "score": 2, "note": "Direction discordant across models (protective in cardiomyopathy vs ISRIB-benefit reports); flagged, not built on."},
+      {"node": "GPX4 pharmacological activation", "causal": 3, "direction": 2, "tractability": 0, "tissue_access": 2, "score": 0, "note": "Strongest hit and correct direction, but no drug-like activator exists (selenoprotein) -> tractability 0."},
+      {"node": "SLC7A11 / system xc- activation", "causal": 1, "direction": 1, "tractability": 0, "tissue_access": 0, "score": 0, "note": "Cystine import for GSH; near-absent in affected post-mitotic tissue -> tissue_access 0."}
+    ]
+  },
+  "decision": {
+    "selected_compound": "Deuterated docosahexaenoic acid (D-DHA): bis-allylic C-D DHA, oral ethyl ester; clinical-stage class exemplar RT001 (bis-allylic 11,11-D2-linoleic acid ethyl ester).",
+    "mechanism": "Substrate-level, cofactor-independent suppression of membrane lipid peroxidation via the deuterium kinetic isotope effect at the rate-limiting bis-allylic H-abstraction step; blocks ferroptotic death downstream of Complex I failure.",
+    "direction": "Reduce peroxidizable PUFA substrate (not activate an enzyme, not add a regenerable antioxidant).",
+    "framing": "A repurposing proposal: the mechanism and compound class are established/patented prior art; the contribution is the specific indication + the data-grounded repurposing rationale.",
+    "causal_ladder_grades": {"rung1_screen_names_axis": "PARTIAL", "rung2_patient_cells": "UNRESOLVED", "rung3_drug_direction": "MECHANISTIC ANALOGY", "rung4_target_engagement": "PASSED", "rung5_functional_rescue_in_CI_disease": "UNTESTED"},
+    "indication_scope": "LHON (MT-ND1/4/6), Leigh syndrome (NDUFS4 & related nuclear), plausibly Complex-I-predominant MELAS; DHA-rich post-mitotic tissue (retina/optic nerve, CNS, then heart/muscle). Not expected to rescue purely bioenergetic crises or fixed lesions.",
+    "winning_score": 24,
+    "runner_up": "Hypoxia/HIF activation (12; active prior art)",
+    "weakest_link": "Rung 5 is UNTESTED in a Complex I model (functional rescue is cross-disease only); the pilot addresses exactly this."
+  },
+  "novelty": {
+    "conclusion": "No prior proposal of D-DHA for Complex I disease found under the documented search. Mechanism and compound class are prior art; the specific indication and the data-grounded repurposing rationale are not.",
+    "mechanistic_novelty": "LOW, not claimed - isotope-reinforced PUFAs protecting mitochondria is established (PMID 25578654; review PMID 32113652).",
+    "patent_novelty": "LOW - class patented: US10052299B2 (deuterated-PUFA derivatives for oxidative-stress disorders, specification invokes cardiolipin's role in Complex I), US10154983 (bis-allylic D-PUFA method-of-use in a named neuromuscular disease), US10730821 (D-DHA synthesis). A 'mitochondrial disease' genus claim plausibly reads on this use.",
+    "indication_and_rationale_novelty": "THE CONTRIBUTION - no deuterated PUFA proposed, trialled, or patented by name for LHON, Leigh, or primary Complex I deficiency.",
+    "registry_results": {
+      "clinicaltrials_gov": "0 for deuterated/RT001/PUFA x (Leigh/LHON/CI-deficiency); all D-PUFA trials are other indications (FRDA NCT02445794, INAD NCT03570931, ALS NCT04762589, PSP NCT04937530)",
+      "pubmed": "0 for deuterated fatty acid x (Leigh/Leber/complex I)",
+      "openalex": "0 for deuterated DHA x Leber optic neuropathy (broader queries return generic ferroptosis reviews)",
+      "chembl": "no D-DHA/RT001 mitochondrial-disease indication registered",
+      "patents": "Mechanism + 'mitochondrial disease' genus claimed (US10052299B2 etc.); no claim naming LHON/Leigh/CI-deficiency for a D-PUFA; the in-force LHON patents are AAV gene therapy (US11352645 family, Wuhan Neurophth)",
+      "preprints_analogs": "bioRxiv/medRxiv + structural-analog terms: no D-PUFA-for-Complex-I proposal; D-DHA analogs are AMD/neurodegeneration"
+    }
+  },
+  "figures": [
+    {"file": "figures/fig1_node_ranking.png", "desc": "Candidate-node ranking on the composite score with the four component judgments shown; nulls/discordant retained."},
+    {"file": "figures/fig2_tissue_access.png", "desc": "GTEx v8 expression of ferroptosis-defence genes across affected tissues; SLC7A11 tissue-limited."},
+    {"file": "figures/fig3_causal_ladder.png", "desc": "Five-rung causal ladder for D-DHA in Complex I disease, each rung graded honestly (PASSED/PARTIAL/UNRESOLVED/ANALOGY/UNTESTED)."},
+    {"file": "figures/fig4_prior_art_matrix.png", "desc": "Prior-art differentiation across mechanistic properties, with the 'untried in Complex I disease' column and a prior-art footnote."}
+  ],
+  "deliverables": ["result.md", "reasoning.md", "sources.md", "process_trace.json", "figures/fig1_node_ranking.png", "figures/fig2_tissue_access.png", "figures/fig3_causal_ladder.png", "figures/fig4_prior_art_matrix.png"]
+}

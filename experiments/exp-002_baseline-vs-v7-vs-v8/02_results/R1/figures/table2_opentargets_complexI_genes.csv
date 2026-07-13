@@ -1,0 +1,21 @@
+gene,score,module
+NDUFS1,0.835,N-module (NADH/FMN)
+NDUFS4,0.832,N-module (NADH/FMN)
+NDUFS2,0.819,Q-module core (CoQ pocket)
+NDUFV1,0.81,N-module (NADH/FMN)
+FOXRED1,0.809,Assembly factor
+NUBPL,0.806,Assembly factor
+NDUFS7,0.795,Q-module core (CoQ pocket)
+NDUFS8,0.791,Q-module core (CoQ pocket)
+NDUFA1,0.787,Other accessory / membrane
+MTFMT,0.782,Assembly factor
+NDUFAF5,0.77,Assembly factor
+NDUFS6,0.77,N-module (NADH/FMN)
+NDUFB3,0.77,Other accessory / membrane
+NDUFAF3,0.769,Assembly factor
+NDUFAF2,0.768,Assembly factor
+NDUFA12,0.763,N-module (NADH/FMN)
+NDUFAF8,0.758,Assembly factor
+TMEM126B,0.756,Assembly factor
+NDUFV2,0.755,N-module (NADH/FMN)
+NDUFAF1,0.753,Assembly factor

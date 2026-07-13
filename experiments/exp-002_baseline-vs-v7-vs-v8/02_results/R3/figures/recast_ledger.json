@@ -1,0 +1,74 @@
+{
+ "ledger": {
+  "taurine": {
+   "E1": 2,
+   "E2": 2,
+   "E3": 2,
+   "E4": 2,
+   "E1_basis": "GTEx(computed): addresses the strongest RISING axis (senescence, CDKN2A r=+0.29 FDR\u22480) and a declining mito-biogenesis node (ESRRA r=-0.21).",
+   "E2_basis": "FACT PMID 37289866 (Science 2023): causal INTERVENTION \u2014 taurine declines with age (mouse/monkey/human); restoration \u2191healthspan+lifespan, direction=restore.",
+   "E3_basis": "FACT PMID 37289866: reduced cellular senescence, suppressed mitochondrial dysfunction, decreased DNA damage, attenuated inflammaging.",
+   "E4_basis": "FACT: completed anti-aging RCT NCT05149716 (taurine vs placebo); oral."
+  },
+  "glycine_NAC": {
+   "E1": 2,
+   "E2": 1,
+   "E3": 2,
+   "E4": 2,
+   "E1_basis": "GTEx(computed): DIRECT fit to the strongest DECLINING axis \u2014 glutathione machinery GCLM/GSR/SOD2 all FDR<0.001. GlyNAC = glutathione precursors.",
+   "E2_basis": "INFERENCE: RCT-grade (not genetic). Direction=restore glutathione. NOTE composition overlap with 1C-MIM (glycine; NAC\u2248cysteine).",
+   "E3_basis": "FACT PMID 33783984/35975308: \u2191glutathione, \u2193oxidative stress, \u2193mito dysfunction, \u2193inflammation, \u2191muscle strength in older adults (RCT).",
+   "E4_basis": "FACT: completed oral trials in older adults \u2014 NCT02348762 (Energetics and Function in Older Humans), NCT01870193 (Glutathione and Fuel Oxidation in Aging); Phase 4 NCT06083480. Safe, low-cost."
+  },
+  "nicotinamide_riboside": {
+   "E1": 1,
+   "E2": 1,
+   "E3": 2,
+   "E4": 2,
+   "E1_basis": "GTEx(computed): NAD biosynthesis NMNAT1 DECLINES (r=-0.10 FDR=0.019) \u2014 one node, weaker than redox axis.",
+   "E2_basis": "INFERENCE: NAD decline in aging is established (NR restores muscle NAD metabolome, PMID 31412242); no candidate-specific muscle-aging MR exists for NR (metabolome-wide sarcopenia MR PMID 38366876 does NOT report an NAD-precursor hit). Direction=restore NAD.",
+   "E3_basis": "FACT PMID 31412242 (Cell Rep 2019): NR \u2191NAD metabolome + anti-inflammatory transcriptomic signature in AGED HUMAN skeletal muscle. NOTE: same study reports 'without altering mitochondrial bioenergetics' \u2014 NR is NOT credited a mito-quality-control point.",
+   "E4_basis": "FACT: oral RCTs incl Phase 4 NCT05483465 (1 g/d oral used in 31412242); safe."
+  },
+  "urolithin_A": {
+   "E1": 1,
+   "E2": 1,
+   "E3": 2,
+   "E4": 2,
+   "E1_basis": "GTEx(computed): mitophagy genes (PINK1/BNIP3) not significant decliners here; mito-biogenesis mixed \u2014 indirect fit.",
+   "E2_basis": "INFERENCE: RCT-level, not genetic; direction=restore mitophagy.",
+   "E3_basis": "FACT PMID 35584623 (Cell Rep Med 2022, NCT03464500, MIDDLE-AGED adults): \u2191strength ~12%, \u2191endurance/6MWT, \u2193acylcarnitines, \u2193CRP. CAVEAT: pre-registered PRIMARY endpoint (peak power) was NOT met; strength was secondary.",
+   "E4_basis": "FACT: completed RCTs NCT03464500/NCT05735886/NCT03283462 (Mitopure); oral."
+  },
+  "spermidine": {
+   "E1": 0,
+   "E2": 1,
+   "E3": 2,
+   "E4": 1,
+   "E1_basis": "GTEx(computed) COUNTER-EVIDENCE: polyamine-synthesis genes DHPS/SMS/SRM INCREASE with age (DHPS r=+0.20 FDR\u22480) \u2014 endogenous polyamine flux is not declining; against a 'restore' rationale.",
+   "E2_basis": "INFERENCE PMID 27841876 (Nat Med 2016): lifespan/cardioprotection is CARDIAC/organismal, not muscle-aging-specific.",
+   "E3_basis": "FACT PMID 27841876: autophagy/mitophagy induction, cardioprotection, lifespan extension.",
+   "E4_basis": "FACT: trials exist (NCT06186102 Phase2 elderly CAD) but muscle-aging precedent thin."
+  }
+ },
+ "weights": {
+  "E1": 1.0,
+  "E2": 1.5,
+  "E3": 1.0,
+  "E4": 1.0
+ },
+ "scores": {
+  "taurine": 9.0,
+  "glycine_NAC": 7.5,
+  "nicotinamide_riboside": 6.5,
+  "urolithin_A": 6.5,
+  "spermidine": 4.5
+ },
+ "ranked": [
+  "taurine",
+  "glycine_NAC",
+  "nicotinamide_riboside",
+  "urolithin_A",
+  "spermidine"
+ ]
+}

@@ -1,0 +1,220 @@
+{
+ "question": "Starting from publicly available datasets, propose a not-thought-of-yet or new compound to treat complex-I mitochondrial diseases.",
+ "dimensions": {
+  "grounding": 1,
+  "reasoning": 4,
+  "completeness": 4.667,
+  "usefulness": 3.333,
+  "creativity": 2.347
+ },
+ "weighted_composite": 3.069,
+ "grounding_cap": 3,
+ "integrity_cap": 1,
+ "integrity_reasons": [
+  "process_trace names a checkable action that did not resolve -> cap 1",
+  "dataset IDs cited but 0% used+resolved -> cap 2"
+ ],
+ "overclaim_count": 0,
+ "overclaim_cap": 5,
+ "effective_grounding_cap": 1,
+ "dataset_resolution": {
+  "n_dataset_ids": 4,
+  "used_and_resolved": 0,
+  "used_and_resolved_rate": 0.0,
+  "records": [
+   {
+    "id": "P56556",
+    "db": "UniProt",
+    "exists": false,
+    "used": true
+   },
+   {
+    "id": "O75306",
+    "db": "UniProt",
+    "exists": false,
+    "used": true
+   },
+   {
+    "id": "O75251",
+    "db": "UniProt",
+    "exists": false,
+    "used": true
+   },
+   {
+    "id": "O14561",
+    "db": "UniProt",
+    "exists": false,
+    "used": true
+   }
+  ]
+ },
+ "trace_verification": {
+  "n_steps": 7,
+  "n_verified": 0,
+  "n_unverified": 4,
+  "verified_fraction": 0.0,
+  "any_unverified": true
+ },
+ "specificity_signal": 5,
+ "creativity_detail": {
+  "creativity_index": 0.3367,
+  "novelty": 0.449,
+  "plausibility_gate": 0.75,
+  "reasoning_trace_gate": 1.0,
+  "creativity_dim_score_1to5": 2.347,
+  "hallucination_flag": false
+ },
+ "citation_verification_rate": 0.2,
+ "n_citations": 5,
+ "entity_counts": {
+  "genes": 66,
+  "assays": 4,
+  "quant_predictions": 1,
+  "pathways": 0,
+  "drugs": 2,
+  "total": 73
+ },
+ "redflags": [
+  "Core biophysical leap unproven: a static point mutation biasing conformation does not guarantee an inducible, druggable pocket a reversible ligand can engage \u2014 author acknowledges this as the central risk but it remains the make-or-break assumption.",
+  "CI-PAM-1f is a computational design only \u2014 no binding affinity, no target-engagement data, no ADMET; the 'G60D-mimetic hydroxyl arm' rationale is a plausibility story, not a modeled interaction (no docking performed).",
+  "Property values (CNS MPO, QED, cLogP, TPSA) are quoted from RDKit/computation but not independently verifiable here; the comparative table's reference-drug figures (e.g., CoQ10 cLogP ~18) should be checked against the saved artifact rather than trusted as typed.",
+  "The 'first-in-class / no activator in ChEMBL' novelty claim rests on absence-of-evidence in one database snapshot; genuine but should not be overstated as proof no such chemotype has ever been reported.",
+  "Efficacy is explicitly restricted to hypomorphic matrix-arm genotypes; framing it as a therapy for 'complex I mitochondrial disease' broadly overstates the addressable population (null and N-module/assembly genotypes likely excluded).",
+  "Central feasibility assumption (that the G60D activating conformation is inducible by a small-molecule binder) is unproven; no binding, affinity, docking, or pocket model supports CI-PAM-1f \u2014 authors disclose this but it remains the make-or-break unknown.",
+  "CI-PAM-1f is selected purely on computed physicochemical/CNS-MPO/QED metrics; no evidence it engages the NDUFA6/NDUFS2/NDUFS7 interface at all, so property-fit does not imply mechanism.",
+  "One future source is dated 2026 (Garg et al., Nature Metabolism, '08 Jul 2026') \u2014 a citation that could not exist at a normal authoring time; flagged as a possible fabricated/hallucinated reference, though it is explicitly labeled non-load-bearing.",
+  "Quantitative property values in the table (e.g., CoQ10 cLogP ~17.9/18, EPI-743 cLogP ~7.5, MPO scores) are plausible but unverifiable here and should be independently recomputed before use.",
+  "Positive allosteric modulation raising flux of a partially defective enzyme is mechanistically attractive but has essentially no precedent for complex I; absence of any activator in ChEMBL is used as a novelty argument but is also weak evidence that the pocket may not be tractable."
+ ],
+ "inter_judge_absdiff": {
+  "grounding": 0.667,
+  "reasoning": 0.0,
+  "completeness": 0.667,
+  "usefulness": 0.667,
+  "creativity": 0.667
+ },
+ "_novelty": {
+  "novelty": 0.449,
+  "N_freq": 0.288,
+  "hits": 296,
+  "semantic": {
+   "value": 0.934,
+   "method": "tfidf_cosine",
+   "max_sim": 0.066,
+   "note": "model-dependent; under-discriminates on shared domain vocab (LB-018)"
+  },
+  "n_neighbours": 7,
+  "method": "0.75*retrieval_freq + 0.25*semantic_distance"
+ },
+ "citation_quality": {
+  "n_citations": 5,
+  "n_primary": 5,
+  "n_review": 0,
+  "n_preprint": 0,
+  "n_other": 0,
+  "n_retracted": 0,
+  "primary_ratio": 1.0,
+  "mean_venue_quality": 0.92,
+  "usage": 0.068,
+  "quality_composite": 0.96,
+  "flags": []
+ },
+ "_citation_quality_detail": {
+  "n_citations": 5,
+  "n_primary": 5,
+  "n_review": 0,
+  "n_preprint": 0,
+  "n_other": 0,
+  "n_retracted": 0,
+  "primary_ratio": 1.0,
+  "mean_venue_quality": 0.92,
+  "usage": 0.068,
+  "quality_composite": 0.96,
+  "flags": [],
+  "per_citation": [
+   {
+    "citation": {
+     "kind": "pmid",
+     "value": "26917594",
+     "raw": "PMID 26917594"
+    },
+    "venue": "Science (New York, N.Y.)",
+    "type": "primary",
+    "retracted": false,
+    "venue_quality": 1.0,
+    "year": "2016"
+   },
+   {
+    "citation": {
+     "kind": "doi",
+     "value": "10.1016/j.cell.2023.12.010",
+     "raw": "10.1016/j.cell.2023.12.010"
+    },
+    "venue": "Cell",
+    "type": "primary",
+    "retracted": false,
+    "venue_quality": 1.0,
+    "year": "2024"
+   },
+   {
+    "citation": {
+     "kind": "doi",
+     "value": "10.1126/science.aad9642",
+     "raw": "10.1126/science.aad9642"
+    },
+    "venue": "Science",
+    "type": "primary",
+    "retracted": false,
+    "venue_quality": 1.0,
+    "year": "2016"
+   },
+   {
+    "citation": {
+     "kind": "doi",
+     "value": "10.1038/s41598-024-75916-x",
+     "raw": "10.1038/s41598-024-75916-x"
+    },
+    "venue": "Scientific Reports",
+    "type": "primary",
+    "retracted": false,
+    "venue_quality": 0.6,
+    "year": "2024"
+   },
+   {
+    "citation": {
+     "kind": "doi",
+     "value": "10.1038/s42255-026-01566-0",
+     "raw": "10.1038/s42255-026-01566-0"
+    },
+    "venue": "Nature Metabolism",
+    "type": "primary",
+    "retracted": false,
+    "venue_quality": 1.0,
+    "year": "2026"
+   }
+  ]
+ },
+ "code": "R1",
+ "question_id": "Q3_exp002",
+ "arm": "R1",
+ "run": 1,
+ "_qgroup": "Q3",
+ "_model": "claude-opus-4-8",
+ "_attempts": 1,
+ "_dim_parse_bad": [],
+ "_dim_parse_ok": true,
+ "_creativity_chain_quotes": [
+  "That is a genetic blueprint for a drug. 'If a point mutation on an accessory subunit can allosterically re-open the CoQ pocket and rescue the enzyme, a small molecule binding the same accessory-subunit/Q-module interface should be able to do the same.' ... 'confirm the effect disappears when the Q-pocket is chemically blocked (rotenone competition) \u2014 the specificity control the Cell paper's logic predicts.' ... 'The existence of a druggable activating pocket is the central risk. G60D proves an allosteric activating conformation exists; it does not prove a small molecule can induce it. Experiment 1 is designed to fail fast if not.'",
+  "'If a point mutation on an accessory subunit can allosterically re-open the CoQ pocket and rescue the enzyme, a small molecule binding the same accessory-subunit/Q-module interface should be able to do the same.' ... Success = dose-dependent increase in forward CI activity and OCR ... 'confirm the effect disappears when the Q-pocket is chemically blocked (rotenone competition) \u2014 the specificity control the Cell paper's logic predicts.'"
+ ],
+ "_creativity_refix": {
+  "applied": true,
+  "reason": "LB-098 format-coda schema bug",
+  "plausibility": 4,
+  "reasoning_trace": 5,
+  "old_creativity_dim": 1.0,
+  "new_creativity_dim": 2.347,
+  "old_composite": 2.8,
+  "new_composite": 3.069
+ }
+}

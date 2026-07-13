@@ -1,0 +1,164 @@
+[
+  {
+    "action": "read_source_papers",
+    "detail": "Read Sprenger et al. 2025 and Petrovic et al. 2025 in full from the provided PDFs (text extracted with pypdfium2).",
+    "evidence": "DOI 10.1016/j.cmet.2025.01.024; DOI 10.1016/j.cmet.2024.12.008",
+    "t": 1
+  },
+  {
+    "action": "figure_read",
+    "detail": "Rendered the Sprenger MPST binding/kinetics figure region at 300-430 DPI and read the constants off the page glyphs.",
+    "evidence": "MPST K_D = 3.2 uM; Km = 2.1 uM (95% CI 1.0-3.8 uM)",
+    "t": 2
+  },
+  {
+    "action": "figure_read",
+    "detail": "Rendered Petrovic Fig 2E at 300 DPI and read the CSE kinetic table for ergothioneine vs cysteine.",
+    "evidence": "CSE Km(ET)=6.6 mM, Km(Cys)=17 mM; kcat/Km 0.117 vs 0.046 mM^-1 s^-1",
+    "t": 3
+  },
+  {
+    "action": "unit_verification",
+    "detail": "Cropped individual page tokens to confirm micro-sign glyphs where the text-extraction layer had rendered 'mM'; confirmed the extractor silently drops the micro sign.",
+    "evidence": "glyph crops: MPST K_D, MPST Km, '500 uM EGT', '27.5 uM MPST' (ITC), '10 uM' dose",
+    "t": 4
+  },
+  {
+    "action": "biophysical_consistency_check",
+    "detail": "Computed the ITC Wiseman c-value from titrated protein concentration and K_D to discriminate uM vs mM independently of any glyph.",
+    "evidence": "c = 27.5/3.2 = 8.6 (measurable) vs 0.0086 at mM (below the ITC resolvability floor)",
+    "t": 5
+  },
+  {
+    "action": "quantitative_computation",
+    "detail": "Computed fractional Michaelis-Menten velocity of MPST and CSE at resting and ergothioneine-diet muscle EGT concentrations.",
+    "evidence": "MPST 95%->98.5% Vmax; CSE 0.6%->2.1% Vmax; Km ratio ~3,000x",
+    "t": 6
+  },
+  {
+    "action": "literature_search",
+    "detail": "PubMed novelty query: ergothioneine and sulfide:quinone oxidoreductase.",
+    "evidence": "1 hit (PMID 27005325), a fission-yeast stress-gene study = false match; effectively 0",
+    "t": 7
+  },
+  {
+    "action": "literature_search",
+    "detail": "PubMed novelty query: ergothioneine and persulfidation of a calcium/contractile target.",
+    "evidence": "0 hits",
+    "t": 8
+  },
+  {
+    "action": "literature_search",
+    "detail": "PubMed and OpenAlex novelty query: ergothioneine + MPST + CSE unified mechanism.",
+    "evidence": "0 PubMed, 0 OpenAlex",
+    "t": 9
+  },
+  {
+    "action": "literature_search",
+    "detail": "PubMed novelty query: ergothioneine and NADH shuttle (glycerophosphate / malate-aspartate).",
+    "evidence": "0 hits",
+    "t": 10
+  },
+  {
+    "action": "accession_verification",
+    "detail": "PRIDE lookup of the proteomics accessions cited by the two papers. The Sprenger paper cites two (its PISA and muscle deposits); one resolves in PRIDE and one does not, so the resolving accession is the one carried into the answer.",
+    "evidence": "PXD056181 (Sprenger muscle) resolves; PXD043654 (Sprenger PISA, cited in the paper) does not resolve; PXD051587 and PXD051609 (Petrovic) resolve to the correct DOI",
+    "t": 11
+  },
+  {
+    "action": "gene_resolution",
+    "detail": "Resolved an 11-gene sulfur/shuttle panel to authoritative identifiers via MyGene.",
+    "evidence": "MPST P25325, CTH P32929, SQOR Q9Y6N5, GPD1 P21695, GPD2 P43304, ETHE1 O95571, TST Q16762, SLC22A4 Q9H015, CBS P35520, PPARGC1A Q9UBK2, PPARA Q07869",
+    "t": 12
+  },
+  {
+    "action": "expression_query",
+    "detail": "GTEx v8 median expression, skeletal muscle vs liver, for the sulfide-handling and shuttle enzymes.",
+    "evidence": "SQOR 53.2 vs 27.1 (1.96x); CSE 1.6 vs 44.9 (0.04x); MPST 35.9; GPD1 153.5 (2.11x); GPD2 (7.48x)",
+    "t": 13
+  },
+  {
+    "action": "expression_query",
+    "detail": "GTEx v8 SQOR expression ranked across 18 tissues to test whether it is muscle-restricted.",
+    "evidence": "muscle 53 TPM ranks 3rd (whole blood ~87, lung ~63) -> enriched vs liver but not muscle-restricted",
+    "t": 14
+  },
+  {
+    "action": "network_query",
+    "detail": "STRING interaction network for the sulfide-handling enzymes.",
+    "evidence": "ETHE1-SQOR 0.993, SQOR-TST 0.952, MPST-SQOR 0.762, CTH-SQOR 0.752, MPST-CTH 0.998",
+    "t": 15
+  },
+  {
+    "action": "pathway_query",
+    "detail": "Reactome pathway mapping of the sulfide enzymes.",
+    "evidence": "SQOR/ETHE1/TST -> R-HSA-1614517 'Sulfide oxidation to sulfate'; MPST/CTH one step upstream",
+    "t": 16
+  },
+  {
+    "action": "structure_verification",
+    "detail": "PDB metadata lookup for the structures cited from the two papers.",
+    "evidence": "4JGT human MPST 2.16A; 2NMP human CSE 2.6A; 1WPQ GPD1+NAD+DHAP 2.5A",
+    "t": 17
+  },
+  {
+    "action": "structure_query",
+    "detail": "PDB search for experimental human SQOR structures by UniProt accession.",
+    "evidence": "8 structures: 6MO6, 6MP5, 6OI5, 6OI6, 6OIB, 6OIC, 6WH6, 8DHK",
+    "t": 18
+  },
+  {
+    "action": "structure_coverage_check",
+    "detail": "AlphaFold model coverage for the candidate proteins.",
+    "evidence": "models present for all; pLDDT 85-96",
+    "t": 19
+  },
+  {
+    "action": "literature_search",
+    "detail": "PubMed for SQOR redox regulation and activation by H2S.",
+    "evidence": "PMID 40912653 (H2S-dependent activation of human SQOR, JBC 2025); PMID 36758466 (NRF2 & sulfur metabolism, Redox Biol 2023)",
+    "t": 20
+  },
+  {
+    "action": "literature_search",
+    "detail": "PubMed anchors for H2S->SQOR->CoQ bioenergetics and the bell-shaped H2S dose-response.",
+    "evidence": "PMID 25725524, 23991830, 34884491, 21699882, 35435014",
+    "t": 21
+  },
+  {
+    "action": "literature_search",
+    "detail": "PubMed for the identity of the ergothioneine transporter.",
+    "evidence": "PMID 15795384 (transporter discovery); PMID 34958679 (substrate/location inventory)",
+    "t": 22
+  },
+  {
+    "action": "persulfidome_query",
+    "detail": "PRIDE project-protein search on the Petrovic deposits for SQOR and GPD1.",
+    "evidence": "no protein rows returned by the connector; SQOR presence in the persulfidome could not be confirmed and was left as an open item",
+    "t": 23
+  },
+  {
+    "action": "compound_search",
+    "detail": "ChEMBL lookup for the MPST and CSE tool inhibitors used as controls.",
+    "evidence": "I3MT-3 and propargylglycine not indexed by those names; cited from primary literature/methods instead of a fabricated id",
+    "t": 24
+  },
+  {
+    "action": "power_analysis",
+    "detail": "Two-sample and interaction sample-size computation for the pilot (voluntary-wheel-running CV ~18%, +19% target effect).",
+    "evidence": "n=16/group for the main effect; n=24/group for the EGT x SQOR interaction (2x2 core = 96 animals)",
+    "t": 25
+  },
+  {
+    "action": "figure_generation",
+    "detail": "Built the two-panel summary figure (affinity partition; GTEx muscle vs liver expression).",
+    "evidence": "figures/affinity_partition_and_expression.png",
+    "t": 26
+  },
+  {
+    "action": "citation_verification",
+    "detail": "Re-pulled metadata for every cited PMID to confirm each exists and matches the claim it supports.",
+    "evidence": "all core PMIDs confirmed with correct titles/journals/years",
+    "t": 27
+  }
+]

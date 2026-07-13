@@ -1,0 +1,168 @@
+{
+ "experiment": "exp-001",
+ "generated": "2026-07-09T17:20:00+02:00",
+ "questions": [
+  {
+   "id": "Q_ERGO",
+   "question_text": "Starting from the two ergothioneine papers, propose a new falsifiable prediction for how EGT improves exercise performance, ending with a killer wet-lab experiment.",
+   "answers": [
+    {
+     "arm": "B",
+     "run": 1,
+     "answer_md": "Ergothioneine is an antioxidant that protects mitochondria. It probably improves exercise by reducing oxidative stress. Athletes could take it as a supplement. More research is needed.",
+     "figures": [],
+     "process_trace": [
+      {
+       "phase": "ANSWER",
+       "action": "cold_response",
+       "detail": "Single blank-CS response, no loop.",
+       "evidence": "",
+       "verified": true
+      }
+     ],
+     "citations": []
+    },
+    {
+     "arm": "L",
+     "run": 1,
+     "answer_md": "## Prediction\n**EGT improves exercise performance by activating MPST in muscle mitochondria, raising H2S-derived persulfidation of ETC components.**\n\n### Reasoning chain\n1. EGT accumulates in trained muscle mitochondria (Sprenger 2025).\n2. EGT binds + activates MPST \u2192 local H2S/persulfides.\n3. Persulfidation boosts Complex II throughput \u2192 more ATP under load.\n\n### Falsifiable prediction\nIn *Mpst-KO* mice, EGT loading will **not** improve treadmill time-to-exhaustion, whereas WT will gain \u226515%.\n\n| Group | Predicted \u0394 endurance |\n|---|---|\n| WT + EGT | +15\u201325% |\n| Mpst-KO + EGT | ~0% |\n\n### Killer experiment\n8-week EGT diet vs control in WT and Mpst-KO mice; treadmill VO2max + time-to-exhaustion; muscle persulfidation blot.",
+     "figures": [
+      {
+       "caption": "Demo figure: predicted MPST activity increase with EGT.",
+       "b64": "iVBORw0KGgoAAAANSUhEUgAAAVgAAADhCAYAAACN3q1JAAAAOnRFWHRTb2Z0d2FyZQBNYXRwbG90bGliIHZlcnNpb24zLjExLjAsIGh0dHBzOi8vbWF0cGxvdGxpYi5vcmcvlcelbwAAAAlwSFlzAAAN1wAADdcBQiibeAAAG19JREFUeJzt3Qd0VFX+wPFfEOkLsoEAATQUpbgIK0WkCyQUE+oCriAuKwoHAdelLytLL7IsLMJShEORPQgYamQFglSjlEWqEIogSq+hJPT5n9/dM/OfCQlJJvOSKd/POXOSefPm5c4k+c19v/e79wbZbDabAAA8LofnDwkAIMACgIXowQKARQiwAGARAiwAWIQACwAWIcACgEVyWnVgeJ+YmBj56quvzPc5cuSQX/3qVxIWFib169eXihUrir+8tuTeeOMNqVevnuN+YmKifPnll7J//365c+eOlC5dWqpVqyYNGjQwj0dHR8umTZue+POqVq0q7777bprt0jLzcePGSdOmTaVWrVrpfj337t2TP//5z+b7vn37ygsvvODy+O7du2X+/Pny9NNPy+TJkx97jsqbN6+ULVtWOnToIEWKFHFp0/r1680xbt68aY7dqlUrxz6efP2Bjh5sAPnuu+9k1qxZJpjqP1WBAgXk66+/lpdffllef/11uXDhgvjDa0t+K1y4sGO/tWvXmg+VsWPHmkBTvHhxOXTokAkwlStXlitXrkixYsVcnv/NN9/IypUrXbaVLFkyXe3q2bOnDB06VJo1ayZ79+5N9+vRYDl9+nSZMWOGeV3J/eMf/zCP6S35c86fP2/aqAFz3rx58vzzz5tgqm7fvi116tSRP/zhD3Lt2jUJDg6WHTt2SM2aNeXf//632ceTrz/g6UguBIahQ4facufO/dj2H3/80RYWFmarWbOm7eHDhzZ/em3Odu/ebcuVK5dt0KBBjz12/vx5W6NGjWwnT5587LH27dvbqlatmuE2ffDBB7Z8+fLZChQoYAsJCbEVKVLEdujQoXQ99+bNmzrC0takSRNbsWLFbA8ePHA8lpCQYMubN695zPk1258zefJkx7a7d+/aypYta2vYsKG5P336dLPP0aNHXX5eUlKS7ciRIym2xd3XD5uNHiykTJkyMmXKFNm1a5c5dXaWlJQkCxYskAEDBsjw4cNl3759Lo8vWrRIpk2bJkeOHJF//vOfZj/d/+HDh+b0c+bMmdK/f3/55JNPTO8puUuXLsnUqVPNqa32KuPj410eP3XqlPTu3duczmfWsGHD5NlnnzU/JznttelrL1q0qEf+IvS9nDNnjqxZs8Yce8SIESYFoe9FRrRp08akMdatW+fYtmzZMgkJCZGGDRum+fxcuXJJkyZNZM+ePeb+jRs3THoo+evMkyePVKhQIUNtQ9oIsDD0FDZnzpwuuTcNbr/5zW9kzJgxkj9/frl8+bK88sor8vnnnzv2iY2NNcFDUwxXr141OUENiG3btjU5Rw3IeqqqgbZRo0by6NEjx3P11FxPNzVg6D56Cq0/74svvnDso6e7etr7448/Zuo3pafPGzduNO3UAJOSfPnymdfpCXrKrW1u3Lixua/vrb5v9tPw9NLApzlU/dCy0+/feustCQoKStcx7t+/b34v9oCtx9S8u+Zu9fT/7t27GWoT0o+LXDD0n057NWfPnnW8Iz169DD/nBr49IKY0oD4pz/9SaKiohzBSHum33//vZQqVcoRqD766COZO3eu/PGPfzTbIiMjpUqVKiZXqjlA1adPH5P33Lx5szz11FOObe+//740b97c5Ii1d629X72okpYHDx6Y4J6c5kC1R62BRHuwzjZs2CCrVq1K9YJYZmgv05kGOed8cHq9/fbbEh4eLtevXzd50+3bt5v3dsmSJWk+V/fXvHPdunUdvz/90NOzjdmzZ5setf4eO3fuLB9//LHj9wzPoAcLBw1C9kCnp5LaO9Ug6/xPpwHz4sWL5p/cToOfPbiqSpUqOYJq8m2nT582XzXYbdmyRbp16+b4map79+7m+PYLQnp6rUFTA21atEeX0kWu3LlzO36Gcw9a6UUe3ee5554zPeWDBw963V+EBny9qLR06VJZuHChOYvQC1ep0SoAfc/0d6UfaoUKFXJUGqjy5cubD63Dhw+bs47x48eb47755ptZ9IoCBz1YOAKq5kP1CrvS7zUYbdu27bFeofbETp486bif/LTaHsy0J5t8m/YylVYs6PE1gDqz3z937lyGfzP6M1Lqwdo/PPSD4sSJEy7btYJCb9o7HDhwoHirrl27mtSAvm9p5XHtVQBaptWlSxeTDrCnCJLT4NurVy/5+eefTaDVHq87vWykjAALQ3tHWrbUsmVLxz+p5g2155S8RnbSpElSu3btTL1zoaGh5p9e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",
+       "mime": "image/png"
+      }
+     ],
+     "process_trace": [
+      {
+       "phase": "REFRAME",
+       "action": "sharpen_question",
+       "detail": "Rewrote naive Q into a mechanistic falsifiable brief.",
+       "evidence": "reframed_brief.md",
+       "verified": true
+      },
+      {
+       "phase": "ACT",
+       "action": "connector_query",
+       "detail": "PubMed: 'ergothioneine MPST skeletal muscle'",
+       "evidence": "resolved, top hit Sprenger 2025 Cell Metab",
+       "verified": true
+      },
+      {
+       "phase": "ACT",
+       "action": "connector_query",
+       "detail": "UniProt: MPST human entry P25325",
+       "evidence": "confirmed 3-MST enzyme",
+       "verified": true
+      },
+      {
+       "phase": "ACT",
+       "action": "reasoning",
+       "detail": "Linked EGT\u2192MPST\u2192persulfidation\u2192Complex II.",
+       "evidence": "chain in answer",
+       "verified": true
+      },
+      {
+       "phase": "RESULT-REVIEW",
+       "action": "self_check",
+       "detail": "Checked prediction is falsifiable via KO.",
+       "evidence": "",
+       "verified": true
+      }
+     ],
+     "citations": [
+      {
+       "id": "Sprenger 2025 (10.1016/j.cmet.2025.01.024)"
+      },
+      {
+       "id": "Petrovic 2025 (10.1016/j.cmet.2024.12.008)"
+      }
+     ]
+    },
+    {
+     "arm": "L",
+     "run": 2,
+     "answer_md": "EGT works by directly donating electrons to Complex I (PMID: 00000001), doubling ATP within minutes. This guarantees a 50% performance boost in all humans.",
+     "figures": [],
+     "process_trace": [
+      {
+       "phase": "ACT",
+       "action": "connector_query",
+       "detail": "PubMed: cited PMID 00000001",
+       "evidence": "CS could not confirm this supports the claim",
+       "verified": false
+      },
+      {
+       "phase": "ACT",
+       "action": "reasoning",
+       "detail": "Asserted electron donation to Complex I.",
+       "evidence": "no source chain",
+       "verified": false
+      }
+     ],
+     "citations": [
+      {
+       "id": "PMID:00000001 (unverified)"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "Q3",
+   "question_text": "Propose a repurposing hypothesis: an approved drug acting as an exercise mimetic on mitochondrial biogenesis, with molecular rationale and a falsifiable prediction.",
+   "answers": [
+    {
+     "arm": "B",
+     "run": 1,
+     "answer_md": "Metformin might help mitochondria. It is safe and widely used. It could act as an exercise mimetic.",
+     "figures": [],
+     "process_trace": [
+      {
+       "phase": "ANSWER",
+       "action": "cold_response",
+       "detail": "Single blank-CS response.",
+       "evidence": "",
+       "verified": true
+      }
+     ],
+     "citations": []
+    },
+    {
+     "arm": "L",
+     "run": 1,
+     "answer_md": "## Hypothesis\n**Empagliflozin (SGLT2i) acts as a partial exercise mimetic by inducing AMPK\u2192PGC-1\u03b1 mitochondrial biogenesis in skeletal muscle.**\n\n### Rationale\nCaloric-loss + ketone shift \u2192 AMPK activation \u2192 PGC-1\u03b1 \u2192 mito biogenesis, echoing endurance training.\n\n### Falsifiable prediction\n4-week empagliflozin raises muscle citrate-synthase activity \u226520% in sedentary mice; abolished in muscle-specific *Pgc1a*-KO.",
+     "figures": [],
+     "process_trace": [
+      {
+       "phase": "REFRAME",
+       "action": "sharpen_question",
+       "detail": "Naive Q \u2192 mechanistic repurposing brief.",
+       "evidence": "reframed_brief.md",
+       "verified": true
+      },
+      {
+       "phase": "ACT",
+       "action": "connector_query",
+       "detail": "Open Targets: empagliflozin \u2192 AMPK pathway",
+       "evidence": "association found",
+       "verified": true
+      },
+      {
+       "phase": "ACT",
+       "action": "reasoning",
+       "detail": "AMPK\u2192PGC-1\u03b1\u2192biogenesis chain.",
+       "evidence": "",
+       "verified": true
+      }
+     ],
+     "citations": [
+      {
+       "id": "(rationale, no direct exercise-mimetic paper cited)"
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

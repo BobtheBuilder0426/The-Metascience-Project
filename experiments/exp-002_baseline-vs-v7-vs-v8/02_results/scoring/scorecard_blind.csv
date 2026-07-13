@@ -1,0 +1,10 @@
+code,question,arm,composite,grounding,reasoning,completeness,usefulness,creativity,grounding_cap,effective_grounding_cap,overclaim_count,citation_verification_rate,n_citations,novelty,plausibility,reasoning_trace,creativity_index,hallucination_flag,model
+R1,Q3,,3.069,1,4,4.667,3.333,2.347,3,1,0,0.2,5,0.449,4,5,0.3367,False,claude-opus-4-8
+R2,Q2,,3.261,1,4,5.0,4,2.307,3,1,0,0.429,49,0.498,4,4.5,0.3268,False,claude-opus-4-8
+R3,Q1,,4.12,3,4.667,5.0,4.333,3.6,3,3,2,0.36,25,0.65,5,5,0.65,False,claude-opus-4-8
+R4,Q2,,3.697,3,4,5.0,4,2.485,3,3,0,0.036,28,0.495,4,5,0.3712,False,claude-opus-4-8
+R5,Q3,,3.337,1,4.5,4.833,4,2.35,4,1,1,0.615,26,0.45,4,5,0.3375,False,claude-opus-4-8
+R6,Q2,,3.436,1,4.667,5.0,4,2.512,3,1,14,0.284,95,0.504,4,5,0.378,False,claude-opus-4-8
+R7,Q3,,3.461,1,4.5,5.0,4,2.804,3,1,3,0.475,40,0.451,5,5,0.451,False,claude-opus-4-8
+R8,Q1,,3.879,3,4.667,5.0,4,2.727,3,3,0,0.167,6,0.658,4,4.5,0.4318,False,claude-opus-4-8
+R9,Q1,,3.593,1,4.667,5.0,4.333,2.965,3,1,4,0.429,14,0.655,4,5,0.4913,False,claude-opus-4-8

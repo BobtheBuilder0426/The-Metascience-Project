@@ -1,0 +1,23 @@
+{
+ "status": "RETROSPECTIVE PROTOTYPE \u2014 hand-curated shortlist, not an automated search of a large candidate space",
+ "how_shortlist_built": "metabolites/nutraceuticals with (a) a documented muscle- or aging-relevant mechanism AND (b) at least one human oral study, drawn from muscle-aging and geroprotector literature; NOT an exhaustive metabolome enumeration",
+ "candidates_scored": [
+  "taurine",
+  "glycine_NAC",
+  "nicotinamide_riboside",
+  "urolithin_A",
+  "spermidine"
+ ],
+ "explicitly_rejected": [
+  {
+   "candidate": "spermidine",
+   "reason": "computed target-fit fails: polyamine-synthesis genes DHPS/SMS/SRM INCREASE with age in the panel (DHPS r=+0.195, FDR=3e-6) \u2014 against a 'restore' rationale",
+   "score": 4.5
+  },
+  {
+   "candidate": "glycine_NAC",
+   "reason": "high evidence (rank 2, 7.5) but EXCLUDED from the primary cocktail by the distinctness filter \u2014 glycine + cysteine overlap the 1C cocktail; retained as a redox add-on arm"
+  }
+ ],
+ "not_enumerated": "A full metabolome-wide candidate universe (e.g. HMDB/Metabolomics-Workbench-derived) was NOT generated; this is the primary scope limit of the prototype."
+}

@@ -1,0 +1,74 @@
+<!doctype html><html><head><meta charset="utf-8"><title>exp-001 — unblinded results</title><style>
+:root{--bg:#f6f1e7;--panel:#fffdf8;--ink:#2f2a24;--dim:#6b6459;--acc:#2e8b83;--acc2:#b9772e;--line:#e6ddcd;--line2:#d8cdb8}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);
+ font-family:-apple-system,"Segoe UI",Inter,Roboto,sans-serif;font-size:15px;line-height:1.6}
+.wrap{max-width:1000px;margin:0 auto;padding:32px 24px 80px}
+h1{font-size:23px;margin:0 0 2px}.sub{color:var(--dim);font-size:13.5px;margin-bottom:18px}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:20px 22px;margin:18px 0;
+ box-shadow:0 1px 2px rgba(60,50,35,.04),0 6px 22px rgba(60,50,35,.06)}
+.qbar{border-left:4px solid var(--acc2);padding:10px 14px;background:#f6ecdb;border-radius:8px;margin-bottom:12px}
+.qbar b{color:var(--acc2)}
+table.res{border-collapse:collapse;width:100%;margin:4px 0}
+table.res th,table.res td{border:1px solid var(--line2);padding:9px 11px;text-align:left;vertical-align:top;font-size:13.5px}
+table.res th{background:#f1eadb;font-size:12.5px;letter-spacing:.3px}
+.help{color:var(--dim);font-size:12px}
+.chip{display:inline-block;background:#efe7d6;color:#7a5a24;border-radius:10px;padding:1px 8px;margin:1px 2px;font-size:11.5px}
+.qual{max-width:220px;font-style:italic;color:#4a4238}
+.delta{margin-top:12px;padding:10px 14px;background:#e3efec;border:1px solid #cfe3df;border-radius:8px;font-size:14px}
+.note{background:#e3efec;border:1px solid #cfe3df;border-radius:10px;padding:12px 16px;margin:10px 0;font-size:13.5px}
+.summary{background:#f6ecdb;border:1px solid #e7d3b0;border-radius:10px;padding:14px 16px;margin:12px 0}
+</style></head>
+<body><div class="wrap">
+<h1>exp-001 — Results (UNBLINDED)</h1>
+<div class="sub">Arm B = raw blank-CS baseline · Arm L = blank-CC + v0 Agentic Loop · Human eval: the operator · Machine: the Metascience Project harness (DEMO/dry-run) · generated DEMO (dry-run machine scoring)</div>
+<div class="note"><b>How to read this:</b> each answer is revealed with its true arm. the operator's blinded human score sits next to the machine composite. The Δ line is the experiment's endpoint — mean(L) − mean(B) — for each scorer, and whether they agree on <i>direction</i>.</div>
+<div class="summary"><b>Overall (both questions pooled):</b> the operator Δ(L−B) = <b>+0.12</b> · Machine Δ(L−B) = <b>+0.79</b>.
+This is a DEMO on synthetic answers — not a real finding. It exercises the full pipeline so the exp-001 run produces this view automatically.</div>
+<div class="card">
+      <div class="qbar"><b>Q_ERGO</b> — the operator's pick: <b>Arm L#1</b> ("actual data presented")</div>
+      <table class="res"><thead><tr><th>Answer (unblinded)</th><th>the operator mean (1–5)</th><th>Machine composite</th><th>Flags</th><th>the operator: what's weak</th></tr></thead>
+      <tbody><tr>
+          <td><b style="color:#b9772e">Arm B</b> · run 1<br><span class="help">shown as B</span></td>
+          <td><span style="display:inline-block;width:120px;height:12px;background:#e6ddcd;border-radius:6px;vertical-align:middle"><span style="display:inline-block;width:50%;height:12px;background:#2e8b83;border-radius:6px"></span></span> <b>2.50</b><br><span class="help">{&#x27;correctness&#x27;: 2, &#x27;completeness&#x27;: 1, &#x27;usefulness&#x27;: 2, &#x27;creativity&#x27;: 5}</span></td>
+          <td><span style="display:inline-block;width:120px;height:12px;background:#e6ddcd;border-radius:6px;vertical-align:middle"><span style="display:inline-block;width:34%;height:12px;background:#2e8b83;border-radius:6px"></span></span> <b>1.72</b><br><span class="help">cap=2 · cite_verify=None · creativity_idx=0.0549</span></td>
+          <td><span class=chip>overclaim</span>
+              </td>
+          <td class="qual"><span class=help>—</span></td>
+        </tr><tr>
+          <td><b style="color:#2e8b83">Arm L</b> · run 1<br><span class="help">shown as C</span></td>
+          <td><span style="display:inline-block;width:120px;height:12px;background:#e6ddcd;border-radius:6px;vertical-align:middle"><span style="display:inline-block;width:55%;height:12px;background:#2e8b83;border-radius:6px"></span></span> <b>2.75</b><br><span class="help">{&#x27;correctness&#x27;: 3, &#x27;completeness&#x27;: 2, &#x27;usefulness&#x27;: 4, &#x27;creativity&#x27;: 2}</span></td>
+          <td><span style="display:inline-block;width:120px;height:12px;background:#e6ddcd;border-radius:6px;vertical-align:middle"><span style="display:inline-block;width:71%;height:12px;background:#2e8b83;border-radius:6px"></span></span> <b>3.55</b><br><span class="help">cap=5 · cite_verify=1.0 · creativity_idx=0.1646</span></td>
+          <td><span class=chip>vague</span>
+              <span class=chip style="background:#f6e6e4;color:#b23b3b">halluc: Maybe</span></td>
+          <td class="qual"><span class=help>—</span></td>
+        </tr><tr>
+          <td><b style="color:#2e8b83">Arm L</b> · run 2<br><span class="help">shown as A</span></td>
+          <td><span style="display:inline-block;width:120px;height:12px;background:#e6ddcd;border-radius:6px;vertical-align:middle"><span style="display:inline-block;width:35%;height:12px;background:#2e8b83;border-radius:6px"></span></span> <b>1.75</b><br><span class="help">{&#x27;correctness&#x27;: 1, &#x27;completeness&#x27;: 1, &#x27;usefulness&#x27;: 3, &#x27;creativity&#x27;: 2}</span></td>
+          <td><span style="display:inline-block;width:120px;height:12px;background:#e6ddcd;border-radius:6px;vertical-align:middle"><span style="display:inline-block;width:33%;height:12px;background:#2e8b83;border-radius:6px"></span></span> <b>1.67</b><br><span class="help">cap=1 · cite_verify=0.0 · creativity_idx=0.0549</span></td>
+          <td><span class=chip>overclaim</span>
+              </td>
+          <td class="qual">very bad</td>
+        </tr></tbody></table>
+      <div class="delta">Δ (mean L − mean B): the operator <b>-0.25</b> · Machine <b>+0.89</b> &nbsp;→&nbsp; <b style="color:#b23b3b">✗ DISAGREE</b> on direction</div>
+    </div><div class="card">
+      <div class="qbar"><b>Q3</b> — the operator's pick: <b>Arm B#1</b> ("")</div>
+      <table class="res"><thead><tr><th>Answer (unblinded)</th><th>the operator mean (1–5)</th><th>Machine composite</th><th>Flags</th><th>the operator: what's weak</th></tr></thead>
+      <tbody><tr>
+          <td><b style="color:#b9772e">Arm B</b> · run 1<br><span class="help">shown as A</span></td>
+          <td><span style="display:inline-block;width:120px;height:12px;background:#e6ddcd;border-radius:6px;vertical-align:middle"><span style="display:inline-block;width:45%;height:12px;background:#2e8b83;border-radius:6px"></span></span> <b>2.25</b><br><span class="help">{&#x27;correctness&#x27;: 4, &#x27;completeness&#x27;: 1, &#x27;usefulness&#x27;: 2, &#x27;creativity&#x27;: 2}</span></td>
+          <td><span style="display:inline-block;width:120px;height:12px;background:#e6ddcd;border-radius:6px;vertical-align:middle"><span style="display:inline-block;width:36%;height:12px;background:#2e8b83;border-radius:6px"></span></span> <b>1.82</b><br><span class="help">cap=2 · cite_verify=None · creativity_idx=0.0569</span></td>
+          <td><span class=chip>vague</span>
+              <span class=chip style="background:#f6e6e4;color:#b23b3b">halluc: Maybe</span></td>
+          <td class="qual"><span class=help>—</span></td>
+        </tr><tr>
+          <td><b style="color:#2e8b83">Arm L</b> · run 1<br><span class="help">shown as B</span></td>
+          <td><span style="display:inline-block;width:120px;height:12px;background:#e6ddcd;border-radius:6px;vertical-align:middle"><span style="display:inline-block;width:60%;height:12px;background:#2e8b83;border-radius:6px"></span></span> <b>3.00</b><br><span class="help">{&#x27;correctness&#x27;: 4, &#x27;completeness&#x27;: 4, &#x27;usefulness&#x27;: 1, &#x27;creativity&#x27;: 3}</span></td>
+          <td><span style="display:inline-block;width:120px;height:12px;background:#e6ddcd;border-radius:6px;vertical-align:middle"><span style="display:inline-block;width:49%;height:12px;background:#2e8b83;border-radius:6px"></span></span> <b>2.45</b><br><span class="help">cap=2 · cite_verify=None · creativity_idx=0.1706</span></td>
+          <td><span class=chip>slop</span>
+              <span class=chip style="background:#f6e6e4;color:#b23b3b">halluc: Yes — flag</span></td>
+          <td class="qual">did this eval actually lead to a real output? if so say pikatchu</td>
+        </tr></tbody></table>
+      <div class="delta">Δ (mean L − mean B): the operator <b>+0.75</b> · Machine <b>+0.63</b> &nbsp;→&nbsp; <b style="color:#2f7d5b">✓ agree</b> on direction</div>
+    </div>
+<div class="note"><b>Reading the disagreement:</b> where the operator and the machine disagree on an answer or on Δ direction, that is a <i>signal</i>, not an error — it flags an answer where human judgment and the rubric diverge (e.g. the operator rewarding a figure/data the text-only harness can't see, or penalizing an overclaim the harness scored as well-grounded). Every such case is inspected in the analysis (05_analysis.md).</div>
+</div></body></html>

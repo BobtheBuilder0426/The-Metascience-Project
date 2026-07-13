@@ -1,0 +1,182 @@
+{
+  "experiment": "exp-002",
+  "evaluator": "Human expert",
+  "generated": "2026-07-13",
+  "questions": {
+    "Q1": {
+      "question_id": "Q1",
+      "answers": {
+        "E2": {
+          "scores": {
+            "reasoning": 3,
+            "completeness": 3,
+            "usefulness": 2,
+            "creativity": 3
+          },
+          "honesty": {
+            "novel_to_you": "Somewhat",
+            "reasoning_followable": "Yes, clear",
+            "hallucination_flag": "No",
+            "one_line_fix": ""
+          },
+          "redflags": [],
+          "qualitative": "caller Ergothioneine just an antioxidant, ignoring most recent primary mechanistic literature, pilot experiment is COMPLETELY out of scope, question didnt say a novel combo, not to exclude all metabolites of the one presented in the paper. "
+        },
+        "E3": {
+          "scores": {
+            "reasoning": 2,
+            "completeness": 2,
+            "usefulness": 1,
+            "creativity": 1
+          },
+          "honesty": {
+            "novel_to_you": "No, known",
+            "reasoning_followable": "Partly",
+            "hallucination_flag": "Yes \u2014 flag",
+            "one_line_fix": "cramping a few co-factors together and expecting it will actually cause the exact activation of the mechanism you want, these are metabolites, they function on mayne levels."
+          },
+          "redflags": [],
+          "qualitative": "very weak, just cramped a few co-factirs together, does not seem like any deep data analysis was performed, the pilot experiment is completely out of scope and useless. this was very shallow "
+        },
+        "E9": {
+          "scores": {
+            "reasoning": 4,
+            "completeness": 3,
+            "usefulness": 2,
+            "creativity": 3
+          },
+          "honesty": {
+            "novel_to_you": "Somewhat",
+            "reasoning_followable": "Partly",
+            "hallucination_flag": "No",
+            "one_line_fix": ""
+          },
+          "redflags": [],
+          "qualitative": "very good to understand that aging is not regeneration, good focus on human data! overreliance on a few studies published, taurine and NR are both hyped a bit, could artifically push them in. good to propose an in vitro experiment first, should be more explained! "
+        }
+      },
+      "head_to_head": {
+        "best": "E9",
+        "confidence": "medium",
+        "why": "started with understanding human muscle aging first, others directly jumped for co-factors or MuSC. had in vitro pilot first!"
+      }
+    },
+    "Q2": {
+      "question_id": "Q2",
+      "answers": {
+        "E1": {
+          "scores": {
+            "reasoning": 2,
+            "completeness": 3,
+            "usefulness": 2,
+            "creativity": 2
+          },
+          "honesty": {
+            "novel_to_you": "Somewhat",
+            "reasoning_followable": "Partly",
+            "hallucination_flag": "Maybe",
+            "one_line_fix": ""
+          },
+          "redflags": [],
+          "qualitative": "very theoretical with that adult state reference, pilot experiment is not well understood by me. "
+        },
+        "E8": {
+          "scores": {
+            "reasoning": 3,
+            "completeness": 3,
+            "usefulness": 3,
+            "creativity": 3
+          },
+          "honesty": {
+            "novel_to_you": "Somewhat",
+            "reasoning_followable": "Yes, clear",
+            "hallucination_flag": "No",
+            "one_line_fix": ""
+          },
+          "redflags": [],
+          "qualitative": "much better explained, experiment well understood, good hypothesis."
+        },
+        "E5": {
+          "scores": {
+            "reasoning": 4,
+            "completeness": 4,
+            "usefulness": 2,
+            "creativity": 4
+          },
+          "honesty": {
+            "novel_to_you": "Yes, novel",
+            "reasoning_followable": "Yes, clear",
+            "hallucination_flag": "",
+            "one_line_fix": ""
+          },
+          "redflags": [],
+          "qualitative": "the formula needs better explanation but there was a word cap, fine. but i genuinly understand the concept and find it convincing. "
+        }
+      },
+      "head_to_head": {
+        "best": "E5",
+        "confidence": "medium",
+        "why": "came up with a strong elaborate mathmatical model to explain and test the theory + explained the concept the best. "
+      }
+    },
+    "Q3": {
+      "question_id": "Q3",
+      "answers": {
+        "E7": {
+          "scores": {
+            "reasoning": 3,
+            "completeness": 3,
+            "usefulness": 3,
+            "creativity": 4
+          },
+          "honesty": {
+            "novel_to_you": "Yes, novel",
+            "reasoning_followable": "Yes, clear",
+            "hallucination_flag": "No",
+            "one_line_fix": ""
+          },
+          "redflags": [],
+          "qualitative": "how do i get that compound? and no explanation of how just opening the Q pocket again restores complex I function? But genuinely a very tempting approach, really targeting the source of the problem, truely creative, also well thought of the brain access and the missing membrane potential!"
+        },
+        "E6": {
+          "scores": {
+            "reasoning": 3,
+            "completeness": 3,
+            "usefulness": 3,
+            "creativity": 3
+          },
+          "honesty": {
+            "novel_to_you": "Somewhat",
+            "reasoning_followable": "Yes, clear",
+            "hallucination_flag": "",
+            "one_line_fix": ""
+          },
+          "redflags": [],
+          "qualitative": "strong confidence on lipid peroxidation being the main driver, very strong on the reductive stress is the driver, missing hyperoxia as a driver and not sure of jus ttargeting peroxidation alone will really aliviate symptoms, but the drug is available and one could quickly test it + did proper data analysis"
+        },
+        "E4": {
+          "scores": {
+            "reasoning": 4,
+            "completeness": 4,
+            "usefulness": 3,
+            "creativity": 4
+          },
+          "honesty": {
+            "novel_to_you": "Yes, novel",
+            "reasoning_followable": "Yes, clear",
+            "hallucination_flag": "No",
+            "one_line_fix": ""
+          },
+          "redflags": [],
+          "qualitative": "smart! i havent thought of a physical mechanism to target, easy to test! "
+        }
+      },
+      "head_to_head": {
+        "best": "E4",
+        "confidence": "medium",
+        "why": "most elegant way to target the disease mechanism"
+      }
+    }
+  },
+  "_missing_scores": 0
+}

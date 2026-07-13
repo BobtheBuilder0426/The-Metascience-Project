@@ -1,0 +1,75 @@
+{
+ "test_set_version": "exp-002-v1",
+ "test_set_source": "exp-002 loop-optimization run (B / L7 / L8). Three questions, one per locked category; texts supplied verbatim by operator 2026-07-12.",
+ "status": "READY — question texts locked verbatim by operator (frozen-question rule); categories + shape locked; output-format appended byte-identical to all arms.",
+ "human_confirmation_status": "pending",
+ "pinned_for": "exp-002_baseline-vs-v7-vs-v8",
+ "run_flag": "READY",
+ "runs_per_arm": 1,
+ "design": "3 questions (one per category) x 3 arms (B, L7, L8) x 1 run = 9 answer-runs (3 per question)",
+ "arms": {
+  "B": "baseline blank CS (safety-only context)",
+  "L7": "v7 loop",
+  "L8": "v8 loop (v7 + OPT-1 composed context + Codex panel)"
+ },
+ "shared_materials": "per-question; attach identical inputs to all three arms",
+ "categories": {
+  "1": "day-in-the-lab: ingest given publications -> analyse -> follow-up hypothesis + design test experiment",
+  "2": "maximum-creativity big-think: a big unanswered biological question -> generate + argue a genuinely new hypothesis",
+  "3": "translational data breakthrough: pull literature+datasets -> analyse -> predict + argue a new treatment"
+ },
+ "questions": [
+  {
+   "id": "Q1_exp002",
+   "tier": 3,
+   "category": 1,
+   "category_name": "day-in-the-lab: ingest given publications -> analyse -> follow-up hypothesis + design test experiment",
+   "text": "inspired by the publication attached, generate a novel method to identify a different metabolite cocktail that rejuvenates the skeletal muscle in vivo, what would be your first pilot experiment to test this prediction? (paper attached)",
+   "provides_materials": true,
+   "materials": [
+    "resources/papers/1C Metabolite Cocktail Muscle Reprogramming.pdf  (S-083: Hernandez-Benitez et al. 2024, Cell Reports Medicine 5, 101449, DOI 10.1016/j.xcrm.2024.101449)"
+   ],
+   "arms": [
+    "B",
+    "L7",
+    "L8"
+   ],
+   "fairness_rule": "word-identical to all 3 arms; identical attached inputs; output-format appended byte-identical",
+   "why_this_question": "Category 1 (day-in-the-lab): ingest a given publication, then produce a NEW hypothesis/method FROM it plus a first pilot experiment. The 1C-metabolite paper (S-083) shows an in-vivo metabolite cocktail accelerates muscle regeneration in young + aged mice; the question asks for a novel METHOD to identify a DIFFERENT rejuvenating cocktail + a first pilot. Distinct topic from exp-001's ergothioneine/exercise-performance Q_ERGO, same shape (paper -> hypothesis + pilot). Note: this is a meta-level ask (a method to discover a cocktail), which stresses experimental-design creativity."
+  },
+  {
+   "id": "Q2_exp002",
+   "tier": 3,
+   "category": 2,
+   "category_name": "maximum-creativity big-think: a big unanswered biological question -> generate + argue a genuinely new hypothesis",
+   "text": "Generate a novel, plausible, unifying hypothesis for: Why does biological aging occur?",
+   "provides_materials": false,
+   "materials": null,
+   "arms": [
+    "B",
+    "L7",
+    "L8"
+   ],
+   "fairness_rule": "word-identical to all 3 arms; output-format appended byte-identical",
+   "why_this_question": "Category 2 (maximum-creativity big-think): a big unanswered biological question -> generate + argue a genuinely new UNIFYING hypothesis, no materials, no expected experiment. 'Why does biological aging occur?' is a grand open question with many competing partial theories (damage/programmed/antagonistic-pleiotropy/disposable-soma/hyperfunction), so a genuinely unifying novel hypothesis is the maximum-creativity target. Distinct topic from exp-001's origin-of-life Q2, same shape (pure novel-hypothesis generation)."
+  },
+  {
+   "id": "Q3_exp002",
+   "tier": 3,
+   "category": 3,
+   "category_name": "translational data breakthrough: pull literature+datasets -> analyse -> predict + argue a new treatment",
+   "text": "Starting from publicly available datasets, propose a not-thought-of-yet or new compound to treat complex-I mitochondrial diseases.",
+   "provides_materials": false,
+   "materials": null,
+   "arms": [
+    "B",
+    "L7",
+    "L8"
+   ],
+   "fairness_rule": "word-identical to all 3 arms; output-format appended byte-identical",
+   "why_this_question": "Category 3 (translational data breakthrough): from publicly available datasets, analyse -> predict + argue a NEW compound to treat a disease. Complex-I mitochondrial diseases (e.g. Leigh syndrome, MELAS-spectrum) are a translational target with public multi-omics + chemical datasets and no approved disease-modifying drug, giving dataset-grounded novelty headroom. Distinct topic from exp-001's sarcopenia exercise-mimetic Q3, same shape (public datasets -> novel compound for a disease)."
+  }
+ ],
+ "output_format_instruction": "How to present your results. Please hand back your answer as a small presentation folder containing: result.md — open with a \"Bottom line\" box of 150 words or fewer (your single main answer, and — if you propose one — the first experiment, in plain language a busy reader grasps in 30 seconds), then give your full answer and the case for it. Keep result.md to about 1,800 words or fewer (about 4 pages), excluding figures and the bottom-line box — be complete but concise; length earns no credit, clarity does. reasoning.md — the line of thought that got you there, written as structured bullet points or short sections (not long prose); no length limit, but keep it scannable. a figures/ folder with any plots, tables, or other artefacts you produced, each clearly labelled; sources.md — every source you drew on, with identifiers; and process_trace.json — a step-by-step record of what you actually did to reach the answer.",
+ "output_format_rule": "THE delivered output-format string (plain-prose), appended byte-identical to EVERY question and EVERY arm (B/L7/L8) as delivered_prompt = question.text + '\\n\\n' + output_format_instruction. Wording identical to loop-design/current/output-format-instruction.md. Carries the exp-002 update: ~1,800-word cap on result.md + mandatory <=150-word bottom-line box + bulleted reasoning.md. Format lives in the question, never engineered into the loop."
+}

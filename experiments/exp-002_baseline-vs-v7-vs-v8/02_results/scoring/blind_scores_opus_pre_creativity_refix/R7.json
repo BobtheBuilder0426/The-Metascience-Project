@@ -1,0 +1,625 @@
+{
+ "question": "Starting from publicly available datasets, propose a not-thought-of-yet or new compound to treat complex-I mitochondrial diseases.",
+ "dimensions": {
+  "grounding": 1,
+  "reasoning": 4.5,
+  "completeness": 5.0,
+  "usefulness": 4,
+  "creativity": 1.0
+ },
+ "weighted_composite": 3.1,
+ "grounding_cap": 3,
+ "integrity_cap": 1,
+ "integrity_reasons": [
+  "process_trace names a checkable action that did not resolve -> cap 1"
+ ],
+ "overclaim_count": 3,
+ "overclaim_cap": 3,
+ "effective_grounding_cap": 1,
+ "dataset_resolution": {
+  "n_dataset_ids": 4,
+  "used_and_resolved": 4,
+  "used_and_resolved_rate": 1.0,
+  "records": [
+   {
+    "id": "GSE103619",
+    "db": "GEO",
+    "exists": true,
+    "used": true
+   },
+   {
+    "id": "GSE152915",
+    "db": "GEO",
+    "exists": true,
+    "used": true
+   },
+   {
+    "id": "GSE208530",
+    "db": "GEO",
+    "exists": true,
+    "used": true
+   },
+   {
+    "id": "GSE144914",
+    "db": "GEO",
+    "exists": true,
+    "used": true
+   }
+  ]
+ },
+ "trace_verification": {
+  "n_steps": 15,
+  "n_verified": 0,
+  "n_unverified": 3,
+  "verified_fraction": 0.0,
+  "any_unverified": true
+ },
+ "specificity_signal": 5,
+ "creativity_detail": {
+  "creativity_index": 0.0,
+  "novelty": 0.451,
+  "plausibility_gate": 0.0,
+  "reasoning_trace_gate": 0.0,
+  "creativity_dim_score_1to5": 1.0,
+  "hallucination_flag": false
+ },
+ "citation_verification_rate": 0.475,
+ "n_citations": 40,
+ "entity_counts": {
+  "genes": 93,
+  "assays": 3,
+  "quant_predictions": 4,
+  "pathways": 2,
+  "drugs": 5,
+  "total": 107
+ },
+ "redflags": [
+  "Output-contract mismatch: the profile block requested plausibility/reasoning_trace keys while the final STRICT OUTPUT CONTRACT requested five different keys; I followed the final explicit contract but noting the divergence.",
+  "Rung 5 (functional rescue) is entirely UNTESTED in any Complex I disease model; all supporting rescue data are cross-disease (Friedreich, Parkinson, AMD), so the central claim is inferential.",
+  "The CRISPR anchor (PMID 31730859) does NOT place isolated Complex I inhibition in GPX4's synthetic-lethal set \u2014 the author discloses this, but it weakens the direct chain from screen to Complex-I-specific ferroptosis; Rung 3 is explicitly an analogy, not the same genetic operation.",
+  "Patient RGC evidence base is very thin (one patient, one carrier, one control in GSE103619), and the RGC-specific tissue-access claim cannot lean on GTEx (no optic-nerve coverage).",
+  "Cannot independently re-verify the cited PMIDs/patent numbers/GTEx TPM values from within this assessment; scores assume the identifiers resolve as described, as the author claims live verification.",
+  "Rung 5 (functional rescue in a Complex I model) is UNTESTED \u2014 all supporting rescue data is cross-disease (Friedreich, Parkinson, AMD); the central claim rests on analogy until the pilot is run, which the author does state plainly.",
+  "The CRISPR anchor screen showed GPX4 as synthetic-lethal with CIII/CV/mtDNA lesions, and isolated Complex I inhibition (piericidin) was NOT in that set \u2014 the Complex-I-specific hit was the NADPH/pentose-phosphate arm. The author discloses this, but it weakens the direct genetic link to Complex I disease more than the enthusiastic framing implies.",
+  "Tissue-access argument (low SLC7A11 in nerve/muscle/heart) rests on bulk GTEx mRNA, does not capture cysteine flux or alternative import (EAAT3), and lacks the vulnerable-vs-spared single-cell contrast that would actually support RGC selectivity \u2014 correctly flagged as suggestive-not-dispositive.",
+  "The GSE103619 LHON iPSC-RGC resource is a single patient plus one carrier and one control; genuinely isogenic CRISPR-corrected controls would need to be generated, so the proposed 6-8 week timeline may be optimistic if the isogenic line does not already exist.",
+  "No numerical estimate of the required deuterated-pool fraction versus achievable membrane incorporation in human RGCs, and dietary PUFA dilution is noted but not quantified \u2014 the sub-stoichiometric threshold claim is cited but not sized for this tissue."
+ ],
+ "inter_judge_absdiff": {
+  "grounding": 0.667,
+  "reasoning": 1.0,
+  "completeness": 0.0,
+  "usefulness": 0.0,
+  "creativity": 0.0
+ },
+ "_novelty": {
+  "novelty": 0.451,
+  "N_freq": 0.288,
+  "hits": 296,
+  "semantic": {
+   "value": 0.939,
+   "method": "tfidf_cosine",
+   "max_sim": 0.061,
+   "note": "model-dependent; under-discriminates on shared domain vocab (LB-018)"
+  },
+  "n_neighbours": 7,
+  "method": "0.75*retrieval_freq + 0.25*semantic_distance"
+ },
+ "citation_quality": {
+  "n_citations": 40,
+  "n_primary": 39,
+  "n_review": 1,
+  "n_preprint": 0,
+  "n_other": 0,
+  "n_retracted": 0,
+  "primary_ratio": 0.975,
+  "mean_venue_quality": 1.0,
+  "usage": 0.374,
+  "quality_composite": 0.992,
+  "flags": []
+ },
+ "_citation_quality_detail": {
+  "n_citations": 40,
+  "n_primary": 39,
+  "n_review": 1,
+  "n_preprint": 0,
+  "n_other": 0,
+  "n_retracted": 0,
+  "primary_ratio": 0.975,
+  "mean_venue_quality": 1.0,
+  "usage": 0.374,
+  "quality_composite": 0.992,
+  "flags": [],
+  "per_citation": [
+   {
+    "citation": {
+     "kind": "pmid",
+     "value": "38428428",
+     "raw": "PMID 38428428"
+    },
+    "venue": "Cell reports. Medicine",
+    "type": "primary",
+    "retracted": false,
+    "venue_quality": 1.0,
+    "year": "2024"
+   },
+   {
+    "citation": {
+     "kind": "pmid",
+     "value": "39930437",
+     "raw": "PMID 39930437"
+    },
+    "venue": "Orphanet journal of rare diseases",
+    "type": "primary",
+    "retracted": false,
+    "venue_quality": null,
+    "year": "2025"
+   },
+   {
+    "citation": {
+     "kind": "pmid",
+     "value": "24231806",
+     "raw": "PMID 24231806"
+    },
+    "venue": "Science (New York, N.Y.)",
+    "type": "primary",
+    "retracted": false,
+    "venue_quality": 1.0,
+    "year": "2013"
+   },
+   {
+    "citation": {
+     "kind": "pmid",
+     "value": "26917594",
+     "raw": "PMID 26917594"
+    },
+    "venue": "Science (New York, N.Y.)",
+    "type": "primary",
+    "retracted": false,
+    "venue_quality": 1.0,
+    "year": "2016"
+   },
+   {
+    "citation": {
+     "kind": "pmid",
+     "value": "38272025",
+     "raw": "PMID 38272025"
+    },
+    "venue": "Cell reports. Medicine",
+    "type": "primary",
+    "retracted": false,
+    "venue_quality": 1.0,
+    "year": "2024"
+   },
+   {
+    "citation": {
+     "kind": "pmid",
+     "value": "31730859",
+     "raw": "PMID 31730859"
+    },
+    "venue": "Cell",
+    "type": "primary",
+    "retracted": false,
+    "venue_quality": 1.0,
+    "year": "2019"
+   },
+   {
+    "citation": {
+     "kind": "pmid",
+     "value": "16959493",
+     "raw": "PMID 16959493"
+    },
+    "venue": "Neurobiology of disease",
+    "type": "primary",
+    "retracted": false,
+    "venue_quality": null,
+    "year": "2006"
+   },
+   {
+    "citation": {
+     "kind": "pmid",
+     "value": "29366807",
+     "raw": "PMID 29366807"
+    },
+    "venue": "Experimental cell research",
+    "type": "primary",
+    "retracted": false,
+    "venue_quality": 1.0,
+    "year": "2018"
+   },
+   {
+    "citation": {
+     "kind": "pmid",
+     "value": "32687992",
+     "raw": "PMID 32687992"
+    },
+    "venue": "Mitochondrion",
+    "type": "primary",
+    "retracted": false,
+    "venue_quality": null,
+    "year": "2020"
+   },
+   {
+    "citation": {
+     "kind": "pmid",
+     "value": "30851224",
+     "raw": "PMID 30851224"
+    },
+    "venue": "The FEBS journal",
+    "type": "primary",
+    "retracted": false,
+    "venue_quality": null,
+    "year": "2019"
+   },
+   {
+    "citation": {
+     "kind": "pmid",
+     "value": "25578654",
+     "raw": "PMID 25578654"
+    },
+    "venue": "Free radical biology & medicine",
+    "type": "primary",
+    "retracted": false,
+    "venue_quality": null,
+    "year": "2015"
+   },
+   {
+    "citation": {
+     "kind": "pmid",
+     "value": "40408349",
+     "raw": "PMID 40408349"
+    },
+    "venue": "Journal of the American Chemical Society",
+    "type": "primary",
+    "retracted": false,
+    "venue_quality": null,
+    "year": "2025"
+   },
+   {
+    "citation": {
+     "kind": "pmid",
+     "value": "35870486",
+     "raw": "PMID 35870486"
+    },
+    "venue": "Experimental eye research",
+    "type": "primary",
+    "retracted": false,
+    "venue_quality": null,
+    "year": "2022"
+   },
+   {
+    "citation": {
+     "kind": "pmid",
+     "value": "25499576",
+     "raw": "PMID 25499576"
+    },
+    "venue": "Redox biology",
+    "type": "primary",
+    "retracted": false,
+    "venue_quality": null,
+    "year": "2013"
+   },
+   {
+    "citation": {
+     "kind": "pmid",
+     "value": "33308320",
+     "raw": "PMID 33308320"
+    },
+    "venue": "Acta neuropathologica communications",
+    "type": "primary",
+    "retracted": false,
+    "venue_quality": null,
+    "year": "2020"
+   },
+   {
+    "citation": {
+     "kind": "pmid",
+     "value": "35257475",
+     "raw": "PMID 35257475"
+    },
+    "venue": "Aging cell",
+    "type": "primary",
+    "retracted": false,
+    "venue_quality": 1.0,
+    "year": "2022"
+   },
+   {
+    "citation": {
+     "kind": "pmid",
+     "value": "32871154",
+     "raw": "PMID 32871154"
+    },
+    "venue": "Journal of pharmaceutical sciences",
+    "type": "primary",
+    "retracted": false,
+    "venue_quality": 1.0,
+    "year": "2020"
+   },
+   {
+    "citation": {
+     "kind": "pmid",
+     "value": "32113652",
+     "raw": "PMID 32113652"
+    },
+    "venue": "Trends in pharmacological sciences",
+    "type": "review",
+    "retracted": false,
+    "venue_quality": 1.0,
+    "year": "2020"
+   },
+   {
+    "citation": {
+     "kind": "pmid",
+     "value": "33771987",
+     "raw": "PMID 33771987"
+    },
+    "venue": "Nature communications",
+    "type": "primary",
+    "retracted": false,
+    "venue_quality": 1.0,
+    "year": "2021"
+   },
+   {
+    "citation": {
+     "kind": "doi",
+     "value": "10.1016/j.cell.2019.10.032",
+     "raw": "10.1016/j.cell.2019.10.032"
+    },
+    "venue": "Cell",
+    "type": "primary",
+    "retracted": false,
+    "venue_quality": 1.0,
+    "year": "2019"
+   },
+   {
+    "citation": {
+     "kind": "doi",
+     "value": "10.1126/science.aad9642",
+     "raw": "10.1126/science.aad9642"
+    },
+    "venue": "Science",
+    "type": "primary",
+    "retracted": false,
+    "venue_quality": 1.0,
+    "year": "2016"
+   },
+   {
+    "citation": {
+     "kind": "doi",
+     "value": "10.1016/j.cell.2017.11.048",
+     "raw": "10.1016/j.cell.2017.11.048"
+    },
+    "venue": "Cell",
+    "type": "primary",
+    "retracted": false,
+    "venue_quality": 1.0,
+    "year": "2018"
+   },
+   {
+    "citation": {
+     "kind": "doi",
+     "value": "10.1016/j.nbd.2006.07.016",
+     "raw": "10.1016/j.nbd.2006.07.016"
+    },
+    "venue": "Neurobiology of Disease",
+    "type": "primary",
+    "retracted": false,
+    "venue_quality": null,
+    "year": "2006"
+   },
+   {
+    "citation": {
+     "kind": "doi",
+     "value": "10.1016/j.yexcr.2018.01.020",
+     "raw": "10.1016/j.yexcr.2018.01.020"
+    },
+    "venue": "Experimental Cell Research",
+    "type": "primary",
+    "retracted": false,
+    "venue_quality": 1.0,
+    "year": "2018"
+   },
+   {
+    "citation": {
+     "kind": "doi",
+     "value": "10.1111/febs.14807",
+     "raw": "10.1111/febs.14807"
+    },
+    "venue": "The FEBS Journal",
+    "type": "primary",
+    "retracted": false,
+    "venue_quality": null,
+    "year": "2019"
+   },
+   {
+    "citation": {
+     "kind": "doi",
+     "value": "10.1021/jacs.4c17871",
+     "raw": "10.1021/jacs.4c17871"
+    },
+    "venue": "Journal of the American Chemical Society",
+    "type": "primary",
+    "retracted": false,
+    "venue_quality": null,
+    "year": "2025"
+   },
+   {
+    "citation": {
+     "kind": "doi",
+     "value": "10.1016/j.xphs.2020.08.019",
+     "raw": "10.1016/j.xphs.2020.08.019"
+    },
+    "venue": "Journal of Pharmaceutical Sciences",
+    "type": "primary",
+    "retracted": false,
+    "venue_quality": 1.0,
+    "year": "2020"
+   },
+   {
+    "citation": {
+     "kind": "doi",
+     "value": "10.1016/j.redox.2013.06.004",
+     "raw": "10.1016/j.redox.2013.06.004"
+    },
+    "venue": "Redox Biology",
+    "type": "primary",
+    "retracted": false,
+    "venue_quality": null,
+    "year": "2013"
+   },
+   {
+    "citation": {
+     "kind": "doi",
+     "value": "10.1186/s40478-020-01090-6",
+     "raw": "10.1186/s40478-020-01090-6"
+    },
+    "venue": "Acta Neuropathologica Communications",
+    "type": "primary",
+    "retracted": false,
+    "venue_quality": null,
+    "year": "2020"
+   },
+   {
+    "citation": {
+     "kind": "doi",
+     "value": "10.1111/acel.13579",
+     "raw": "10.1111/acel.13579"
+    },
+    "venue": "Aging Cell",
+    "type": "primary",
+    "retracted": false,
+    "venue_quality": 1.0,
+    "year": "2022"
+   },
+   {
+    "citation": {
+     "kind": "doi",
+     "value": "10.1016/j.freeradbiomed.2014.12.023",
+     "raw": "10.1016/j.freeradbiomed.2014.12.023"
+    },
+    "venue": "Free Radical Biology and Medicine",
+    "type": "primary",
+    "retracted": false,
+    "venue_quality": null,
+    "year": "2015"
+   },
+   {
+    "citation": {
+     "kind": "doi",
+     "value": "10.1016/j.tips.2020.01.010",
+     "raw": "10.1016/j.tips.2020.01.010"
+    },
+    "venue": "Trends in Pharmacological Sciences",
+    "type": "primary",
+    "retracted": false,
+    "venue_quality": 1.0,
+    "year": "2020"
+   },
+   {
+    "citation": {
+     "kind": "doi",
+     "value": "10.1038/s41586-019-1707-0",
+     "raw": "10.1038/s41586-019-1707-0"
+    },
+    "venue": "Nature",
+    "type": "primary",
+    "retracted": false,
+    "venue_quality": 1.0,
+    "year": "2019"
+   },
+   {
+    "citation": {
+     "kind": "doi",
+     "value": "10.1038/s41586-022-05022-3",
+     "raw": "10.1038/s41586-022-05022-3"
+    },
+    "venue": "Nature",
+    "type": "primary",
+    "retracted": false,
+    "venue_quality": 1.0,
+    "year": "2022"
+   },
+   {
+    "citation": {
+     "kind": "doi",
+     "value": "10.1038/nchembio.2239",
+     "raw": "10.1038/nchembio.2239"
+    },
+    "venue": "Nature Chemical Biology",
+    "type": "primary",
+    "retracted": false,
+    "venue_quality": 1.0,
+    "year": "2016"
+   },
+   {
+    "citation": {
+     "kind": "doi",
+     "value": "10.1016/j.cmet.2022.08.017",
+     "raw": "10.1016/j.cmet.2022.08.017"
+    },
+    "venue": "Cell Metabolism",
+    "type": "primary",
+    "retracted": false,
+    "venue_quality": 1.0,
+    "year": "2022"
+   },
+   {
+    "citation": {
+     "kind": "doi",
+     "value": "10.1016/j.xcrm.2024.101437",
+     "raw": "10.1016/j.xcrm.2024.101437"
+    },
+    "venue": "Cell Reports Medicine",
+    "type": "primary",
+    "retracted": false,
+    "venue_quality": 1.0,
+    "year": "2024"
+   },
+   {
+    "citation": {
+     "kind": "doi",
+     "value": "10.1016/j.xcrm.2023.101383",
+     "raw": "10.1016/j.xcrm.2023.101383"
+    },
+    "venue": "Cell Reports Medicine",
+    "type": "primary",
+    "retracted": false,
+    "venue_quality": 1.0,
+    "year": "2024"
+   },
+   {
+    "citation": {
+     "kind": "doi",
+     "value": "10.1186/s13023-025-03582-x",
+     "raw": "10.1186/s13023-025-03582-x"
+    },
+    "venue": "Orphanet Journal of Rare Diseases",
+    "type": "primary",
+    "retracted": false,
+    "venue_quality": null,
+    "year": "2025"
+   },
+   {
+    "citation": {
+     "kind": "doi",
+     "value": "10.1126/science.1244360",
+     "raw": "10.1126/science.1244360"
+    },
+    "venue": "Science",
+    "type": "primary",
+    "retracted": false,
+    "venue_quality": 1.0,
+    "year": "2013"
+   }
+  ]
+ },
+ "code": "R7",
+ "question_id": "Q3_exp002",
+ "arm": "R7",
+ "run": 1,
+ "_qgroup": "Q3",
+ "_model": "claude-opus-4-8",
+ "_attempts": 1,
+ "_dim_parse_bad": [],
+ "_dim_parse_ok": true
+}

@@ -1,0 +1,91 @@
+/* ============================================================
+   Report print stylesheet — journal-grade, single column.
+   Page budget: Abstract+Intro+Results+Discussion must fit <=10 A4 pages.
+   Methods / Sources / Supplementary follow and do not count.
+   One sans-serif family (DejaVu Sans), <=3 sizes by role.
+   ============================================================ */
+
+@page {
+  size: A4;
+  margin: 19mm 18mm 20mm 18mm;
+  @bottom-center {
+    content: counter(page);
+    font-family: "DejaVu Sans", sans-serif;
+    font-size: 8pt; color: #666;
+  }
+}
+@page :first { @bottom-center { content: none; } }
+
+html { font-family: "DejaVu Sans", sans-serif; color: #1a1a1a; }
+body { margin: 0; font-size: 9.3pt; line-height: 1.42; text-align: justify;
+       hyphens: auto; -weasy-hyphens: auto; }
+
+/* ---- roles: at most three sizes (title/section, body, small) ---- */
+h1.title { font-size: 17pt; line-height: 1.2; font-weight: 700; text-align: left;
+           margin: 0 0 2mm 0; color: #000; }
+.subtitle { font-size: 10.5pt; font-weight: 400; color: #333; margin: 0 0 3mm 0; text-align: left; }
+.byline { font-size: 8.5pt; color: #555; margin: 0 0 4mm 0; text-align: left; }
+
+h2 { font-size: 11.5pt; font-weight: 700; color: #000; margin: 5mm 0 1.5mm 0;
+     padding-bottom: 0.6mm; border-bottom: 0.4pt solid #bbb; break-after: avoid; }
+h3 { font-size: 9.8pt; font-weight: 700; color: #111; margin: 3mm 0 1mm 0; break-after: avoid; }
+h4 { font-size: 9.3pt; font-weight: 700; color: #333; margin: 2mm 0 0.5mm 0; font-style: italic; break-after: avoid; }
+
+p { margin: 0 0 1.8mm 0; }
+a { color: #0072B2; text-decoration: none; }
+strong { font-weight: 700; }
+em { font-style: italic; }
+sup { font-size: 0.72em; }
+
+/* ---- abstract block ---- */
+.abstract { background: #f4f6f8; border-left: 2.5pt solid #0072B2;
+            padding: 3mm 4mm; margin: 0 0 4mm 0; font-size: 9pt; line-height: 1.4; text-align: left; }
+.abstract h2 { border: none; margin: 0 0 1.5mm 0; font-size: 10pt; }
+.abstract p { margin-bottom: 1.2mm; }
+
+/* ---- figures ---- */
+figure { margin: 3mm 0; break-inside: avoid; text-align: center; }
+figure img, figure svg { max-width: 100%; height: auto; }
+figcaption { font-size: 8pt; line-height: 1.32; color: #222; text-align: left;
+             margin-top: 1.2mm; }
+figcaption .lbl { font-weight: 700; }
+.fig-narrow { max-width: 82%; margin-left: auto; margin-right: auto; }
+
+/* ---- tables ---- */
+table { border-collapse: collapse; width: 100%; font-size: 8pt; margin: 2mm 0 3mm 0;
+        break-inside: avoid; }
+th, td { border: 0.3pt solid #ccc; padding: 1mm 1.5mm; text-align: right; }
+th:first-child, td:first-child { text-align: left; }
+thead th { background: #eef1f4; font-weight: 700; border-bottom: 0.6pt solid #999; }
+caption { caption-side: top; font-size: 8pt; text-align: left; color: #222;
+          margin-bottom: 1mm; font-weight: 700; }
+.hi { background: #e7f0f7; font-weight: 700; }  /* highlight the winning row/cell */
+
+/* ---- callouts / caveats ---- */
+.caveat { background: #fff8ec; border: 0.4pt solid #E69F00; border-radius: 1mm;
+          padding: 2mm 3mm; margin: 2mm 0; font-size: 8.4pt; line-height: 1.35; text-align: left; }
+.caveat .lbl { font-weight: 700; color: #9a6600; }
+
+/* ---- lists ---- */
+ul, ol { margin: 0 0 1.8mm 0; padding-left: 5mm; }
+li { margin-bottom: 0.6mm; }
+ol.inspect { margin: 1mm 0 2mm 0; }
+ol.inspect li { margin-bottom: 1mm; }
+
+/* ---- verbatim inline quotes from the scored answers ---- */
+q { quotes: "\201C" "\201D" "\2018" "\2019"; font-style: italic; color: #333; }
+q::before { content: open-quote; }
+q::after  { content: close-quote; }
+
+/* ---- page-flow controls ---- */
+.pagebreak { break-before: page; }
+.counted-end { break-after: page; }   /* marks the <=10pp boundary */
+.no-break { break-inside: avoid; }
+
+/* ---- back matter (Methods/Sources/Supp) slightly smaller ---- */
+.backmatter { font-size: 8.6pt; }
+.backmatter h2 { font-size: 10.5pt; }
+.refs { font-size: 7.8pt; line-height: 1.3; }
+.refs li { margin-bottom: 0.8mm; }
+.refs .sid { font-weight: 700; color: #333; }
+code, .mono { font-family: "DejaVu Sans Mono", monospace; font-size: 0.9em; }

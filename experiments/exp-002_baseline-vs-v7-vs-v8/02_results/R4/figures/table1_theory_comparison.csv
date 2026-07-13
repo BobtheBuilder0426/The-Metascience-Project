@@ -1,0 +1,8 @@
+Existing theory,Its core claim,Question it leaves open,How Reference-Decay unifies / extends it
+Damage / wear-and-tear,Aging = accumulation of molecular damage,"Why is damage not repaired when repair capacity exists (embryo, germline)?","Damage is one input; the failure is the loop defending a drifting reference, so it is not corrected"
+Antagonistic pleiotropy / hyperfunction,Programs good early are harmful late,Why do the SAME programs persist unchanged?,Directional reference drift (b>0) is the hyperfunction term; the loop cannot sense it is now maladaptive
+Disposable soma,Limited resource → under-invest in somatic maintenance,Why does investment fail even when resources abundant?,Soma lacks an external reference to invest toward; germline keeps one
+Information theory (epigenetic),Loss of epigenetic information → aging,"What functional quantity is lost, and why is loss directional?",Names the lost quantity precisely: the calibration of set-points to the true optimum (observability)
+Loss of resilience / CSD,"Recovery slows, variance rises near a tipping point",What mechanism causes the basin to flatten?,Controller gain built from the drifting substrate → gain decays as references decorrelate
+Deleteriome,Sum of deleterious age-changes reduces fitness,Which changes are causal vs bystander?,Causal subset = changes to stored references; bystanders = changes the loop can still correct
+Intercellular competition (inevitability),Cell competition → either cancer or senescence,Is decline truly unavoidable?,Competition needs a fitness reference; drift of that reference is the deeper unobservable

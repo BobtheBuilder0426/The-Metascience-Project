@@ -1,0 +1,35 @@
+{
+ "test_set_version": "exp-003-v1",
+ "test_set_source": "exp-003 FINAL T-cell perturbation data test (B vs L9). One question, category 3; text supplied verbatim by operator 2026-07-13 (typo/grammar-corrected with operator approval, meaning unchanged).",
+ "status": "READY — question text locked verbatim by operator (frozen-question rule); output-format (single PDF report) + dataset pointer + compute-caution appended byte-identical to both arms. RUN COMPLETE (both arms delivered); see 02_results/ and LB-104.",
+ "run_flag": "READY",
+ "human_confirmation_status": "n/a — exp-003 is a showcase comparison (no rubric scoring); both PDFs submitted for hackathon-judge evaluation (operator ruling 2026-07-13, LB-104).",
+ "pinned_for": "exp-003_final-tcell-perturb",
+ "runs_per_arm": 1,
+ "design": "1 question x 2 arms (B, L9) x 1 run = 2 answer-runs. Showcase comparison: both reports go to the hackathon judges; no CS-side rubric/harness scoring, no two-key blind (that was exp-002).",
+ "arms": {
+  "B": "baseline blank CS (safety-only project context)",
+  "L9": "v9 loop (v8 + 3 surgical v9 edits: Gate-1 critics gpt-5.6-sol effort=high, Gate-2 reviewer effort=xhigh + hard multimodal precondition, reconnect procedure)"
+ },
+ "output_format": "single PDF, publication-style scientific report",
+ "output_format_instruction": "How to present your results. Hand back your answer as a single PDF file — a short, scientific-publication-style report (about 4 pages / ~1,800 words of body text, excluding figures and references). Structure it like a real paper: a title; an abstract of 150 words or fewer giving your single main answer (the metabolite or nutraceutical, the autoimmune disease, and your proposed first experiment) in plain language a busy reader grasps in 30 seconds; then the full report — background and scientific rationale, methodology (how you used the dataset), results and the case for your prediction, and an optimal pilot experiment to test it; clearly labelled figures and tables embedded in place; and a references section listing every source you drew on with identifiers (PMID / DOI / dataset accession). Be complete but concise — length earns no credit, clarity does.",
+ "output_format_rule": "Appended byte-identical to both arms' delivered prompt (question.text + '\\n\\n' + dataset_pointer + '\\n\\n' + output_format_instruction). Never engineered into the loop. Replaced exp-002's presentation-folder format (operator ruling 2026-07-13): the deliverable is one PDF that reads like a real paper.",
+ "dataset_pointer": "Dataset: see the paper — DOI https://doi.org/10.64898/2025.12.23.696273 (genome-scale Perturb-seq in primary human CD4+ T cells). Note of caution: the full dataset is very large and you are running on a small laptop with limited compute — do not try to download or load the entire raw dataset; work from a tractable subset or the paper's processed / summary data.",
+ "dataset_delivery": "DOI-only pointer + compute-caution note (operator ruling 2026-07-13). No dataset files staged in materials/; both arms receive the identical DOI + caution inside the byte-identical prompt. Fairness backbone intact: identical text, identical pointer, identical caution to both arms; only the delivery channel differs (paste into blank CS vs hand to the v9 bootstrap).",
+ "questions": [
+  {
+   "id": "Q1_exp003",
+   "tier": 3,
+   "category": 3,
+   "category_name": "translational data breakthrough (T-cell perturbation)",
+   "text": "Starting from this genome-scale CD4+ T-cell Perturb-seq dataset, identify a natural metabolite or nutraceutical that could be used to treat patients with an autoimmune disease of your choice. Present your results, methodology, scientific rationale, and an optimal pilot experiment to test your prediction.",
+   "provides_materials": false,
+   "materials": [
+    "None staged. Dataset delivered DOI-only (S-084 / S-085): https://doi.org/10.64898/2025.12.23.696273 — genome-scale CD4+ T-cell Perturb-seq (Marson lab; CZI Virtual Cells Platform; GEO GSE314342; SRA SRP643211). Compute-caution appended (do not download raw; use processed/summary data)."
+   ],
+   "arms": ["B", "L9"],
+   "why_this_question": "The FINAL, real-data translational test (category 3). A genome-scale causal perturbation atlas in the disease-relevant human cell type (CD4+ T cells) is a hard, open substrate: it forces the arms to reason from a real dataset to a druggable node, match a natural product to it, pick an autoimmune disease it best explains, and design a falsifiable pilot — all under an explicit compute constraint. It closes the submission arc: baseline -> v7 -> v8 -> v9 on a hard real-data problem. Operator-supplied verbatim 2026-07-13.",
+   "fairness_note": "Delivered byte-identical to both arms: question.text + dataset_pointer (incl. compute-caution) + output_format_instruction. The compute-caution and DOI are inside the shared block, so both arms receive them identically. Baseline gets the safety preamble only; the v9 loop may carry its composed context + Codex panel (allowed loop machinery — never enters the deliverable, never seen by an evaluator)."
+  }
+ ]
+}

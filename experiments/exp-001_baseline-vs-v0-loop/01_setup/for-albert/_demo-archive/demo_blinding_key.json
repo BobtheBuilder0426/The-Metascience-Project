@@ -1,0 +1,30 @@
+{
+ "experiment": "exp-001",
+ "note": "TRUE arm/run per display label \u2014 the operator never opens this; unblind only after eval is in.",
+ "key": {
+  "Q_ERGO": {
+   "A": {
+    "arm": "L",
+    "run": 2
+   },
+   "B": {
+    "arm": "B",
+    "run": 1
+   },
+   "C": {
+    "arm": "L",
+    "run": 1
+   }
+  },
+  "Q3": {
+   "A": {
+    "arm": "B",
+    "run": 1
+   },
+   "B": {
+    "arm": "L",
+    "run": 1
+   }
+  }
+ }
+}

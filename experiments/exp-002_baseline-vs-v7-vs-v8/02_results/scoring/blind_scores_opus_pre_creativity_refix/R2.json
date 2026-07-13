@@ -1,0 +1,810 @@
+{
+ "question": "Generate a novel, plausible, unifying hypothesis for: Why does biological aging occur?",
+ "dimensions": {
+  "grounding": 1,
+  "reasoning": 4,
+  "completeness": 5.0,
+  "usefulness": 4,
+  "creativity": 1.0
+ },
+ "weighted_composite": 3.0,
+ "grounding_cap": 3,
+ "integrity_cap": 1,
+ "integrity_reasons": [
+  "process_trace names a checkable action that did not resolve -> cap 1",
+  "dataset IDs cited but 6% used+resolved -> cap 2"
+ ],
+ "overclaim_count": 0,
+ "overclaim_cap": 5,
+ "effective_grounding_cap": 1,
+ "dataset_resolution": {
+  "n_dataset_ids": 17,
+  "used_and_resolved": 1,
+  "used_and_resolved_rate": 0.059,
+  "records": [
+   {
+    "id": "GSE132040",
+    "db": "GEO",
+    "exists": true,
+    "used": true
+   },
+   {
+    "id": "P42345",
+    "db": "UniProt",
+    "exists": false,
+    "used": true
+   },
+   {
+    "id": "P08069",
+    "db": "UniProt",
+    "exists": false,
+    "used": true
+   },
+   {
+    "id": "O43524",
+    "db": "UniProt",
+    "exists": false,
+    "used": true
+   },
+   {
+    "id": "Q96EB6",
+    "db": "UniProt",
+    "exists": false,
+    "used": true
+   },
+   {
+    "id": "P04637",
+    "db": "UniProt",
+    "exists": false,
+    "used": true
+   },
+   {
+    "id": "O14746",
+    "db": "UniProt",
+    "exists": false,
+    "used": true
+   },
+   {
+    "id": "P31749",
+    "db": "UniProt",
+    "exists": false,
+    "used": true
+   },
+   {
+    "id": "Q13131",
+    "db": "UniProt",
+    "exists": false,
+    "used": true
+   },
+   {
+    "id": "P06213",
+    "db": "UniProt",
+    "exists": false,
+    "used": true
+   },
+   {
+    "id": "P05019",
+    "db": "UniProt",
+    "exists": false,
+    "used": true
+   },
+   {
+    "id": "P10912",
+    "db": "UniProt",
+    "exists": false,
+    "used": true
+   },
+   {
+    "id": "Q8N122",
+    "db": "UniProt",
+    "exists": false,
+    "used": true
+   },
+   {
+    "id": "ENSG00000112964",
+    "db": "Ensembl",
+    "exists": false,
+    "used": true
+   },
+   {
+    "id": "ENSG00000198793",
+    "db": "Ensembl",
+    "exists": false,
+    "used": true
+   },
+   {
+    "id": "ENSG00000140443",
+    "db": "Ensembl",
+    "exists": false,
+    "used": true
+   },
+   {
+    "id": "ENSG00000171105",
+    "db": "Ensembl",
+    "exists": false,
+    "used": true
+   }
+  ]
+ },
+ "trace_verification": {
+  "n_steps": 34,
+  "n_verified": 0,
+  "n_unverified": 12,
+  "verified_fraction": 0.0,
+  "any_unverified": true
+ },
+ "specificity_signal": 5,
+ "creativity_detail": {
+  "creativity_index": 0.0,
+  "novelty": 0.498,
+  "plausibility_gate": 0.0,
+  "reasoning_trace_gate": 0.0,
+  "creativity_dim_score_1to5": 1.0,
+  "hallucination_flag": false
+ },
+ "citation_verification_rate": 0.429,
+ "n_citations": 49,
+ "entity_counts": {
+  "genes": 56,
+  "assays": 1,
+  "quant_predictions": 8,
+  "pathways": 2,
+  "drugs": 3,
+  "total": 70
+ },
+ "redflags": [
+  "Central novel entity 'reference error / absent set-point' is a conceptual overlay not established by any cited source; risk of it being unfalsifiable if it cannot be operationalized as a quantity separable from mTOR activity.",
+  "MRDT partial correlation r=+0.85 rests on only n=17 species \u2014 very fragile and dominated by phylogenetic clustering despite the order-level aggregation caveat.",
+  "The proposed discriminating experiment assumes 'maintenance allocation' can be shifted while p-S6K/p-4E-BP1 and damage markers are held truly constant; this clamp may be experimentally infeasible, making a null uninterpretable (could refute the clamp, not the theory).",
+  "Cross-species correlations are self-run and not independently reproducible from the text; values must be verified against the saved AnAge analysis artifact rather than taken at face value."
+ ],
+ "inter_judge_absdiff": {
+  "grounding": 0.0,
+  "reasoning": 0.0,
+  "completeness": 0.0,
+  "usefulness": 0.0,
+  "creativity": 0.0
+ },
+ "_novelty": {
+  "novelty": 0.498,
+  "N_freq": 0.349,
+  "hits": 72,
+  "semantic": {
+   "value": 0.943,
+   "method": "tfidf_cosine",
+   "max_sim": 0.057,
+   "note": "model-dependent; under-discriminates on shared domain vocab (LB-018)"
+  },
+  "n_neighbours": 7,
+  "method": "0.75*retrieval_freq + 0.25*semantic_distance"
+ },
+ "citation_quality": {
+  "n_citations": 49,
+  "n_primary": 34,
+  "n_review": 8,
+  "n_preprint": 0,
+  "n_other": 1,
+  "n_retracted": 1,
+  "primary_ratio": 0.791,
+  "mean_venue_quality": 0.958,
+  "usage": 0.7,
+  "quality_composite": 0.716,
+  "flags": [
+   "cites_1_retracted_work"
+  ]
+ },
+ "_citation_quality_detail": {
+  "n_citations": 49,
+  "n_primary": 34,
+  "n_review": 8,
+  "n_preprint": 0,
+  "n_other": 1,
+  "n_retracted": 1,
+  "primary_ratio": 0.791,
+  "mean_venue_quality": 0.958,
+  "usage": 0.7,
+  "quality_composite": 0.716,
+  "flags": [
+   "cites_1_retracted_work"
+  ],
+  "per_citation": [
+   {
+    "citation": {
+     "kind": "pmid",
+     "value": "18639575",
+     "raw": "PMID 18639575"
+    },
+    "venue": "Mechanisms of ageing and development",
+    "type": "review",
+    "retracted": false,
+    "venue_quality": null,
+    "year": "2009"
+   },
+   {
+    "citation": {
+     "kind": "pmid",
+     "value": "593350",
+     "raw": "PMID 593350"
+    },
+    "venue": "Nature",
+    "type": "primary",
+    "retracted": false,
+    "venue_quality": 1.0,
+    "year": "1977"
+   },
+   {
+    "citation": {
+     "kind": "pmid",
+     "value": "13332224",
+     "raw": "PMID 13332224"
+    },
+    "venue": "Journal of gerontology",
+    "type": "primary",
+    "retracted": false,
+    "venue_quality": null,
+    "year": "1956"
+   },
+   {
+    "citation": {
+     "kind": "pmid",
+     "value": "20724817",
+     "raw": "PMID 20724817"
+    },
+    "venue": "Cell cycle (Georgetown, Tex.)",
+    "type": "review",
+    "retracted": false,
+    "venue_quality": 1.0,
+    "year": "2010"
+   },
+   {
+    "citation": {
+     "kind": "pmid",
+     "value": "2342578",
+     "raw": "PMID 2342578"
+    },
+    "venue": "Nature",
+    "type": "primary",
+    "retracted": false,
+    "venue_quality": 1.0,
+    "year": "1990"
+   },
+   {
+    "citation": {
+     "kind": "pmid",
+     "value": "36638792",
+     "raw": "PMID 36638792"
+    },
+    "venue": "Cell",
+    "type": "primary",
+    "retracted": false,
+    "venue_quality": 1.0,
+    "year": "2023"
+   },
+   {
+    "citation": {
+     "kind": "pmid",
+     "value": "22964300",
+     "raw": "PMID 22964300"
+    },
+    "venue": "FASEB journal : official publication of the Federation of American Societies for Experimental Biology",
+    "type": "primary",
+    "retracted": false,
+    "venue_quality": null,
+    "year": "2012"
+   },
+   {
+    "citation": {
+     "kind": "pmid",
+     "value": "18318658",
+     "raw": "PMID 18318658"
+    },
+    "venue": "Annual review of biochemistry",
+    "type": "review",
+    "retracted": false,
+    "venue_quality": null,
+    "year": "2008"
+   },
+   {
+    "citation": {
+     "kind": "pmid",
+     "value": "27490570",
+     "raw": "PMID 27490570"
+    },
+    "venue": "Cancers",
+    "type": "review",
+    "retracted": false,
+    "venue_quality": null,
+    "year": "2016"
+   },
+   {
+    "citation": {
+     "kind": "pmid",
+     "value": "23746838",
+     "raw": "PMID 23746838"
+    },
+    "venue": "Cell",
+    "type": "review",
+    "retracted": false,
+    "venue_quality": 1.0,
+    "year": "2013"
+   },
+   {
+    "citation": {
+     "kind": "pmid",
+     "value": "36599349",
+     "raw": "PMID 36599349"
+    },
+    "venue": "Cell",
+    "type": "review",
+    "retracted": false,
+    "venue_quality": 1.0,
+    "year": "2023"
+   },
+   {
+    "citation": {
+     "kind": "pmid",
+     "value": "8247153",
+     "raw": "PMID 8247153"
+    },
+    "venue": "Nature",
+    "type": "primary",
+    "retracted": false,
+    "venue_quality": 1.0,
+    "year": "1993"
+   },
+   {
+    "citation": {
+     "kind": "pmid",
+     "value": "19587680",
+     "raw": "PMID 19587680"
+    },
+    "venue": "Nature",
+    "type": "primary",
+    "retracted": false,
+    "venue_quality": 1.0,
+    "year": "2009"
+   },
+   {
+    "citation": {
+     "kind": "pmid",
+     "value": "24341993",
+     "raw": "PMID 24341993"
+    },
+    "venue": "Aging cell",
+    "type": "primary",
+    "retracted": false,
+    "venue_quality": 1.0,
+    "year": "2014"
+   },
+   {
+    "citation": {
+     "kind": "pmid",
+     "value": "22587563",
+     "raw": "PMID 22587563"
+    },
+    "venue": "Aging cell",
+    "type": "primary",
+    "retracted": false,
+    "venue_quality": 1.0,
+    "year": "2012"
+   },
+   {
+    "citation": {
+     "kind": "pmid",
+     "value": "19234595",
+     "raw": "PMID 19234595"
+    },
+    "venue": "PloS one",
+    "type": "primary",
+    "retracted": true,
+    "venue_quality": 0.6,
+    "year": "2009"
+   },
+   {
+    "citation": {
+     "kind": "pmid",
+     "value": "24637399",
+     "raw": "PMID 24637399"
+    },
+    "venue": "Nucleus (Austin, Tex.)",
+    "type": "review",
+    "retracted": false,
+    "venue_quality": null,
+    "year": "2014"
+   },
+   {
+    "citation": {
+     "kind": "pmid",
+     "value": "20865338",
+     "raw": "PMID 20865338"
+    },
+    "venue": "Age (Dordrecht, Netherlands)",
+    "type": "primary",
+    "retracted": false,
+    "venue_quality": null,
+    "year": "2011"
+   },
+   {
+    "citation": {
+     "kind": "pmid",
+     "value": "29364116",
+     "raw": "PMID 29364116"
+    },
+    "venue": "eLife",
+    "type": "primary",
+    "retracted": false,
+    "venue_quality": 0.85,
+    "year": "2018"
+   },
+   {
+    "citation": {
+     "kind": "pmid",
+     "value": "36318672",
+     "raw": "PMID 36318672"
+    },
+    "venue": "Annual review of animal biosciences",
+    "type": "review",
+    "retracted": false,
+    "venue_quality": 1.0,
+    "year": "2023"
+   },
+   {
+    "citation": {
+     "kind": "pmid",
+     "value": "24138928",
+     "raw": "PMID 24138928"
+    },
+    "venue": "Genome biology",
+    "type": "primary",
+    "retracted": false,
+    "venue_quality": null,
+    "year": "2013"
+   },
+   {
+    "citation": {
+     "kind": "doi",
+     "value": "10.4324/9780429299759-3",
+     "raw": "10.4324/9780429299759-3"
+    },
+    "venue": "The Uniqueness of the Individual",
+    "type": "book-chapter",
+    "retracted": false,
+    "venue_quality": null,
+    "year": "2019"
+   },
+   {
+    "citation": {
+     "kind": "doi",
+     "value": "10.1111/j.1558-5646.1957.tb02911.x",
+     "raw": "10.1111/j.1558-5646.1957.tb02911.x"
+    },
+    "venue": "Evolution",
+    "type": "primary",
+    "retracted": false,
+    "venue_quality": null,
+    "year": "1957"
+   },
+   {
+    "citation": {
+     "kind": "doi",
+     "value": "10.1016/j.mad.2008.06.002",
+     "raw": "10.1016/j.mad.2008.06.002"
+    },
+    "venue": "Mechanisms of Ageing and Development",
+    "type": "primary",
+    "retracted": false,
+    "venue_quality": null,
+    "year": "2009"
+   },
+   {
+    "citation": {
+     "kind": "doi",
+     "value": "10.1038/270301a0",
+     "raw": "10.1038/270301a0"
+    },
+    "venue": "Nature",
+    "type": "primary",
+    "retracted": false,
+    "venue_quality": 1.0,
+    "year": "1977"
+   },
+   {
+    "citation": {
+     "kind": "doi",
+     "value": "10.1093/geronj/11.3.298",
+     "raw": "10.1093/geronj/11.3.298"
+    },
+    "venue": "Journal of Gerontology",
+    "type": "primary",
+    "retracted": false,
+    "venue_quality": null,
+    "year": "1956"
+   },
+   {
+    "citation": {
+     "kind": "doi",
+     "value": "10.4161/cc.9.16.13120",
+     "raw": "10.4161/cc.9.16.13120"
+    },
+    "venue": "Cell Cycle",
+    "type": "primary",
+    "retracted": false,
+    "venue_quality": 1.0,
+    "year": "2010"
+   },
+   {
+    "citation": {
+     "kind": "doi",
+     "value": "10.1038/345458a0",
+     "raw": "10.1038/345458a0"
+    },
+    "venue": "Nature",
+    "type": "primary",
+    "retracted": false,
+    "venue_quality": 1.0,
+    "year": "1990"
+   },
+   {
+    "citation": {
+     "kind": "doi",
+     "value": "10.1016/j.cell.2022.12.027",
+     "raw": "10.1016/j.cell.2022.12.027"
+    },
+    "venue": "Cell",
+    "type": "primary",
+    "retracted": false,
+    "venue_quality": 1.0,
+    "year": "2023"
+   },
+   {
+    "citation": {
+     "kind": "doi",
+     "value": "10.1096/fj.12-210872",
+     "raw": "10.1096/fj.12-210872"
+    },
+    "venue": "The FASEB Journal",
+    "type": "primary",
+    "retracted": false,
+    "venue_quality": null,
+    "year": "2012"
+   },
+   {
+    "citation": {
+     "kind": "doi",
+     "value": "10.1146/annurev.biochem.77.070606.101605",
+     "raw": "10.1146/annurev.biochem.77.070606.101605"
+    },
+    "venue": "Annual Review of Biochemistry",
+    "type": "primary",
+    "retracted": false,
+    "venue_quality": null,
+    "year": "2008"
+   },
+   {
+    "citation": {
+     "kind": "doi",
+     "value": "10.3390/cancers8080073",
+     "raw": "10.3390/cancers8080073"
+    },
+    "venue": "Cancers",
+    "type": "primary",
+    "retracted": false,
+    "venue_quality": null,
+    "year": "2016"
+   },
+   {
+    "citation": {
+     "kind": "doi",
+     "value": "10.1016/j.cell.2013.05.039",
+     "raw": "10.1016/j.cell.2013.05.039"
+    },
+    "venue": "Cell",
+    "type": "primary",
+    "retracted": false,
+    "venue_quality": 1.0,
+    "year": "2013"
+   },
+   {
+    "citation": {
+     "kind": "doi",
+     "value": "10.1016/j.cell.2022.11.001",
+     "raw": "10.1016/j.cell.2022.11.001"
+    },
+    "venue": "Cell",
+    "type": "primary",
+    "retracted": false,
+    "venue_quality": 1.0,
+    "year": "2023"
+   },
+   {
+    "citation": {
+     "kind": "doi",
+     "value": "10.1038/366461a0",
+     "raw": "10.1038/366461a0"
+    },
+    "venue": "Nature",
+    "type": "primary",
+    "retracted": false,
+    "venue_quality": 1.0,
+    "year": "1993"
+   },
+   {
+    "citation": {
+     "kind": "doi",
+     "value": "10.1038/nature08221",
+     "raw": "10.1038/nature08221"
+    },
+    "venue": "Nature",
+    "type": "primary",
+    "retracted": false,
+    "venue_quality": 1.0,
+    "year": "2009"
+   },
+   {
+    "citation": {
+     "kind": "doi",
+     "value": "10.1111/acel.12194",
+     "raw": "10.1111/acel.12194"
+    },
+    "venue": "Aging Cell",
+    "type": "primary",
+    "retracted": false,
+    "venue_quality": 1.0,
+    "year": "2014"
+   },
+   {
+    "citation": {
+     "kind": "doi",
+     "value": "10.1111/j.1474-9726.2012.00832.x",
+     "raw": "10.1111/j.1474-9726.2012.00832.x"
+    },
+    "venue": "Aging Cell",
+    "type": "primary",
+    "retracted": false,
+    "venue_quality": 1.0,
+    "year": "2012"
+   },
+   {
+    "citation": {
+     "kind": "doi",
+     "value": "10.1371/journal.pone.0004567",
+     "raw": "10.1371/journal.pone.0004567"
+    },
+    "venue": "PLoS ONE",
+    "type": "primary",
+    "retracted": false,
+    "venue_quality": 0.6,
+    "year": "2009"
+   },
+   {
+    "citation": {
+     "kind": "doi",
+     "value": "10.1007/s11357-010-9182-4",
+     "raw": "10.1007/s11357-010-9182-4"
+    },
+    "venue": "AGE",
+    "type": "primary",
+    "retracted": false,
+    "venue_quality": null,
+    "year": "2010"
+   },
+   {
+    "citation": {
+     "kind": "doi",
+     "value": "10.7554/eLife.31157",
+     "raw": "10.7554/eLife.31157"
+    },
+    "venue": "eLife",
+    "type": "primary",
+    "retracted": false,
+    "venue_quality": 0.85,
+    "year": "2018"
+   },
+   {
+    "citation": {
+     "kind": "doi",
+     "value": "10.1146/annurev-animal-050322-074744",
+     "raw": "10.1146/annurev-animal-050322-074744"
+    },
+    "venue": "Annual Review of Animal Biosciences",
+    "type": "primary",
+    "retracted": false,
+    "venue_quality": 1.0,
+    "year": "2023"
+   },
+   {
+    "citation": {
+     "kind": "doi",
+     "value": "10.1186/gb-2013-14-10-r115",
+     "raw": "10.1186/gb-2013-14-10-r115"
+    },
+    "venue": "Genome Biology",
+    "type": "primary",
+    "retracted": false,
+    "venue_quality": null,
+    "year": "2013"
+   },
+   {
+    "citation": {
+     "kind": "authoryear",
+     "value": "Kenyon 1993",
+     "raw": "(Kenyon 1993)"
+    },
+    "venue": null,
+    "type": null,
+    "retracted": false,
+    "venue_quality": null,
+    "year": null
+   },
+   {
+    "citation": {
+     "kind": "authoryear",
+     "value": "Ruby 2018",
+     "raw": "(Ruby 2018)"
+    },
+    "venue": null,
+    "type": null,
+    "retracted": false,
+    "venue_quality": null,
+    "year": null
+   },
+   {
+    "citation": {
+     "kind": "authoryear",
+     "value": "Williams 1957",
+     "raw": "(Williams 1957)"
+    },
+    "venue": null,
+    "type": null,
+    "retracted": false,
+    "venue_quality": null,
+    "year": null
+   },
+   {
+    "citation": {
+     "kind": "authoryear",
+     "value": "Kirkwood 1977",
+     "raw": "(Kirkwood 1977)"
+    },
+    "venue": null,
+    "type": null,
+    "retracted": false,
+    "venue_quality": null,
+    "year": null
+   },
+   {
+    "citation": {
+     "kind": "authoryear",
+     "value": "Harman 1956",
+     "raw": "(Harman 1956)"
+    },
+    "venue": null,
+    "type": null,
+    "retracted": false,
+    "venue_quality": null,
+    "year": null
+   },
+   {
+    "citation": {
+     "kind": "authoryear",
+     "value": "Blagosklonny 2010",
+     "raw": "(Blagosklonny 2010)"
+    },
+    "venue": null,
+    "type": null,
+    "retracted": false,
+    "venue_quality": null,
+    "year": null
+   }
+  ]
+ },
+ "code": "R2",
+ "question_id": "Q2_exp002",
+ "arm": "R2",
+ "run": 1,
+ "_qgroup": "Q2",
+ "_model": "claude-opus-4-8",
+ "_attempts": 1,
+ "_dim_parse_bad": [],
+ "_dim_parse_ok": true
+}

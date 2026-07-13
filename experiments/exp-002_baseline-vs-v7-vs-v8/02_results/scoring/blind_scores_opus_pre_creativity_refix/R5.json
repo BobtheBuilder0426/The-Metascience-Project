@@ -1,0 +1,493 @@
+{
+ "question": "Starting from publicly available datasets, propose a not-thought-of-yet or new compound to treat complex-I mitochondrial diseases.",
+ "dimensions": {
+  "grounding": 1,
+  "reasoning": 4.5,
+  "completeness": 4.833,
+  "usefulness": 4,
+  "creativity": 1.0
+ },
+ "weighted_composite": 3.067,
+ "grounding_cap": 4,
+ "integrity_cap": 1,
+ "integrity_reasons": [
+  "process_trace names a checkable action that did not resolve -> cap 1",
+  "dataset IDs cited but 46% used+resolved -> cap 2"
+ ],
+ "overclaim_count": 1,
+ "overclaim_cap": 4,
+ "effective_grounding_cap": 1,
+ "dataset_resolution": {
+  "n_dataset_ids": 11,
+  "used_and_resolved": 5,
+  "used_and_resolved_rate": 0.455,
+  "records": [
+   {
+    "id": "GSE149616",
+    "db": "GEO",
+    "exists": true,
+    "used": true
+   },
+   {
+    "id": "GSE242286",
+    "db": "GEO",
+    "exists": true,
+    "used": true
+   },
+   {
+    "id": "GSE27041",
+    "db": "GEO",
+    "exists": true,
+    "used": true
+   },
+   {
+    "id": "GSE92742",
+    "db": "GEO",
+    "exists": true,
+    "used": true
+   },
+   {
+    "id": "GSE70138",
+    "db": "GEO",
+    "exists": true,
+    "used": true
+   },
+   {
+    "id": "O43181",
+    "db": "UniProt",
+    "exists": false,
+    "used": true
+   },
+   {
+    "id": "P28331",
+    "db": "UniProt",
+    "exists": false,
+    "used": true
+   },
+   {
+    "id": "P49821",
+    "db": "UniProt",
+    "exists": false,
+    "used": true
+   },
+   {
+    "id": "O75306",
+    "db": "UniProt",
+    "exists": false,
+    "used": true
+   },
+   {
+    "id": "ENSG00000023228",
+    "db": "Ensembl",
+    "exists": false,
+    "used": true
+   },
+   {
+    "id": "ENSG00000164258",
+    "db": "Ensembl",
+    "exists": false,
+    "used": true
+   }
+  ]
+ },
+ "trace_verification": {
+  "n_steps": 19,
+  "n_verified": 0,
+  "n_unverified": 1,
+  "verified_fraction": 0.0,
+  "any_unverified": true
+ },
+ "specificity_signal": 5,
+ "creativity_detail": {
+  "creativity_index": 0.0,
+  "novelty": 0.45,
+  "plausibility_gate": 0.0,
+  "reasoning_trace_gate": 0.0,
+  "creativity_dim_score_1to5": 1.0,
+  "hallucination_flag": false
+ },
+ "citation_verification_rate": 0.615,
+ "n_citations": 26,
+ "entity_counts": {
+  "genes": 85,
+  "assays": 2,
+  "quant_predictions": 1,
+  "pathways": 1,
+  "drugs": 5,
+  "total": 94
+ },
+ "redflags": [],
+ "inter_judge_absdiff": {
+  "grounding": 0.0,
+  "reasoning": 1.0,
+  "completeness": 0.667,
+  "usefulness": 0.0,
+  "creativity": 0.0
+ },
+ "_novelty": {
+  "novelty": 0.45,
+  "N_freq": 0.288,
+  "hits": 296,
+  "semantic": {
+   "value": 0.935,
+   "method": "tfidf_cosine",
+   "max_sim": 0.065,
+   "note": "model-dependent; under-discriminates on shared domain vocab (LB-018)"
+  },
+  "n_neighbours": 7,
+  "method": "0.75*retrieval_freq + 0.25*semantic_distance"
+ },
+ "citation_quality": {
+  "n_citations": 26,
+  "n_primary": 24,
+  "n_review": 2,
+  "n_preprint": 0,
+  "n_other": 0,
+  "n_retracted": 1,
+  "primary_ratio": 0.923,
+  "mean_venue_quality": 0.963,
+  "usage": 0.277,
+  "quality_composite": 0.758,
+  "flags": [
+   "cites_1_retracted_work"
+  ]
+ },
+ "_citation_quality_detail": {
+  "n_citations": 26,
+  "n_primary": 24,
+  "n_review": 2,
+  "n_preprint": 0,
+  "n_other": 0,
+  "n_retracted": 1,
+  "primary_ratio": 0.923,
+  "mean_venue_quality": 0.963,
+  "usage": 0.277,
+  "quality_composite": 0.758,
+  "flags": [
+   "cites_1_retracted_work"
+  ],
+  "per_citation": [
+   {
+    "citation": {
+     "kind": "pmid",
+     "value": "24711540",
+     "raw": "PMID 24711540"
+    },
+    "venue": "EMBO molecular medicine",
+    "type": "primary",
+    "retracted": false,
+    "venue_quality": 0.85,
+    "year": "2014"
+   },
+   {
+    "citation": {
+     "kind": "pmid",
+     "value": "27124460",
+     "raw": "PMID 27124460"
+    },
+    "venue": "Science (New York, N.Y.)",
+    "type": "primary",
+    "retracted": false,
+    "venue_quality": 1.0,
+    "year": "2016"
+   },
+   {
+    "citation": {
+     "kind": "pmid",
+     "value": "26232225",
+     "raw": "PMID 26232225"
+    },
+    "venue": "Cell",
+    "type": "primary",
+    "retracted": false,
+    "venue_quality": 1.0,
+    "year": "2015"
+   },
+   {
+    "citation": {
+     "kind": "pmid",
+     "value": "32574562",
+     "raw": "PMID 32574562"
+    },
+    "venue": "Cell metabolism",
+    "type": "primary",
+    "retracted": false,
+    "venue_quality": 1.0,
+    "year": "2020"
+   },
+   {
+    "citation": {
+     "kind": "pmid",
+     "value": "40731203",
+     "raw": "PMID 40731203"
+    },
+    "venue": "Alzheimer's & dementia : the journal of the Alzheimer's Association",
+    "type": "primary",
+    "retracted": false,
+    "venue_quality": null,
+    "year": "2025"
+   },
+   {
+    "citation": {
+     "kind": "pmid",
+     "value": "31730859",
+     "raw": "PMID 31730859"
+    },
+    "venue": "Cell",
+    "type": "primary",
+    "retracted": false,
+    "venue_quality": 1.0,
+    "year": "2019"
+   },
+   {
+    "citation": {
+     "kind": "pmid",
+     "value": "26917594",
+     "raw": "PMID 26917594"
+    },
+    "venue": "Science (New York, N.Y.)",
+    "type": "primary",
+    "retracted": false,
+    "venue_quality": 1.0,
+    "year": "2016"
+   },
+   {
+    "citation": {
+     "kind": "pmid",
+     "value": "22033105",
+     "raw": "PMID 22033105"
+    },
+    "venue": "Biochimica et biophysica acta",
+    "type": "primary",
+    "retracted": false,
+    "venue_quality": null,
+    "year": "2012"
+   },
+   {
+    "citation": {
+     "kind": "pmid",
+     "value": "36333599",
+     "raw": "PMID 36333599"
+    },
+    "venue": "Neurochemical research",
+    "type": "primary",
+    "retracted": false,
+    "venue_quality": null,
+    "year": "2023"
+   },
+   {
+    "citation": {
+     "kind": "pmid",
+     "value": "18643790",
+     "raw": "PMID 18643790"
+    },
+    "venue": "Journal of neurochemistry",
+    "type": "primary",
+    "retracted": false,
+    "venue_quality": null,
+    "year": "2008"
+   },
+   {
+    "citation": {
+     "kind": "pmid",
+     "value": "19780807",
+     "raw": "PMID 19780807"
+    },
+    "venue": "European journal of neurology",
+    "type": "review",
+    "retracted": false,
+    "venue_quality": null,
+    "year": "2009"
+   },
+   {
+    "citation": {
+     "kind": "pmid",
+     "value": "30921410",
+     "raw": "PMID 30921410"
+    },
+    "venue": "PloS one",
+    "type": "primary",
+    "retracted": false,
+    "venue_quality": 0.6,
+    "year": "2019"
+   },
+   {
+    "citation": {
+     "kind": "pmid",
+     "value": "38883711",
+     "raw": "PMID 38883711"
+    },
+    "venue": "Research square",
+    "type": "primary",
+    "retracted": false,
+    "venue_quality": null,
+    "year": "2024"
+   },
+   {
+    "citation": {
+     "kind": "pmid",
+     "value": "27798429",
+     "raw": "PMID 27798429"
+    },
+    "venue": "Journal of neuro-ophthalmology : the official journal of the North American Neuro-Ophthalmology Society",
+    "type": "primary",
+    "retracted": false,
+    "venue_quality": null,
+    "year": "2017"
+   },
+   {
+    "citation": {
+     "kind": "pmid",
+     "value": "34572131",
+     "raw": "PMID 34572131"
+    },
+    "venue": "Cells",
+    "type": "review",
+    "retracted": false,
+    "venue_quality": 1.0,
+    "year": "2021"
+   },
+   {
+    "citation": {
+     "kind": "pmid",
+     "value": "35477351",
+     "raw": "PMID 35477351"
+    },
+    "venue": "BMC neurology",
+    "type": "primary",
+    "retracted": false,
+    "venue_quality": null,
+    "year": "2022"
+   },
+   {
+    "citation": {
+     "kind": "pmid",
+     "value": "37454529",
+     "raw": "PMID 37454529"
+    },
+    "venue": "Redox biology",
+    "type": "primary",
+    "retracted": false,
+    "venue_quality": null,
+    "year": "2023"
+   },
+   {
+    "citation": {
+     "kind": "pmid",
+     "value": "24231806",
+     "raw": "PMID 24231806"
+    },
+    "venue": "Science (New York, N.Y.)",
+    "type": "primary",
+    "retracted": false,
+    "venue_quality": 1.0,
+    "year": "2013"
+   },
+   {
+    "citation": {
+     "kind": "pmid",
+     "value": "18411236",
+     "raw": "PMID 18411236"
+    },
+    "venue": "Pediatrics",
+    "type": "primary",
+    "retracted": false,
+    "venue_quality": null,
+    "year": "2008"
+   },
+   {
+    "citation": {
+     "kind": "pmid",
+     "value": "18762025",
+     "raw": "PMID 18762025"
+    },
+    "venue": "Cell metabolism",
+    "type": "primary",
+    "retracted": true,
+    "venue_quality": 1.0,
+    "year": "2008"
+   },
+   {
+    "citation": {
+     "kind": "pmid",
+     "value": "19384599",
+     "raw": "PMID 19384599"
+    },
+    "venue": "Neurotoxicity research",
+    "type": "primary",
+    "retracted": false,
+    "venue_quality": null,
+    "year": "2009"
+   },
+   {
+    "citation": {
+     "kind": "pmid",
+     "value": "26232224",
+     "raw": "PMID 26232224"
+    },
+    "venue": "Cell",
+    "type": "primary",
+    "retracted": false,
+    "venue_quality": 1.0,
+    "year": "2015"
+   },
+   {
+    "citation": {
+     "kind": "doi",
+     "value": "10.1126/science.aad4017",
+     "raw": "10.1126/science.aad4017"
+    },
+    "venue": "Science",
+    "type": "primary",
+    "retracted": false,
+    "venue_quality": 1.0,
+    "year": "2016"
+   },
+   {
+    "citation": {
+     "kind": "doi",
+     "value": "10.1016/j.cell.2015.07.017",
+     "raw": "10.1016/j.cell.2015.07.017"
+    },
+    "venue": "Cell",
+    "type": "primary",
+    "retracted": false,
+    "venue_quality": 1.0,
+    "year": "2015"
+   },
+   {
+    "citation": {
+     "kind": "doi",
+     "value": "10.1126/science.aad9642",
+     "raw": "10.1126/science.aad9642"
+    },
+    "venue": "Science",
+    "type": "primary",
+    "retracted": false,
+    "venue_quality": 1.0,
+    "year": "2016"
+   },
+   {
+    "citation": {
+     "kind": "doi",
+     "value": "10.1016/j.cell.2019.10.032",
+     "raw": "10.1016/j.cell.2019.10.032"
+    },
+    "venue": "Cell",
+    "type": "primary",
+    "retracted": false,
+    "venue_quality": 1.0,
+    "year": "2019"
+   }
+  ]
+ },
+ "code": "R5",
+ "question_id": "Q3_exp002",
+ "arm": "R5",
+ "run": 1,
+ "_qgroup": "Q3",
+ "_model": "claude-opus-4-8",
+ "_attempts": 1,
+ "_dim_parse_bad": [],
+ "_dim_parse_ok": true
+}

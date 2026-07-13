@@ -1,0 +1,113 @@
+{
+  "question": "Propose a not-thought-of-yet or new compound to treat complex-I mitochondrial diseases, from public data.",
+  "run": "run-01",
+  "steps": [
+    {
+      "step": "disease term",
+      "tool": "genes-ontologies.search_ontology_terms",
+      "result": "MONDO:0100133"
+    },
+    {
+      "step": "associated targets",
+      "tool": "clinical-genomics.open_targets_disease_targets",
+      "result": "2420 targets; top NDUFS1/S4/S2/V1/FOXRED1/NUBPL; drugAndClinicalCandidates count = 0"
+    },
+    {
+      "step": "target biology",
+      "tool": "genes-ontologies.get_uniprot_entries+map_reactome_pathways",
+      "result": "NDUFS4=O43181; Reactome R-HSA-611105, R-HSA-6799198 (v97)"
+    },
+    {
+      "step": "tissue",
+      "tool": "expression.gtex_expression_summary",
+      "result": "NDUFS4 high in muscle, cultured fibroblasts (115.8 TPM), nerve, artery"
+    },
+    {
+      "step": "lesion spectrum",
+      "tool": "variants.clinvar_variants+mitochondrial_variants",
+      "result": "P/LP (excl. conflicting): NDUFV1 68, NDUFS1 50, NDUFS4 47, ACAD9 184, NDUFAF5 118, FOXRED1 62, NUBPL 20; mtDNA MT-ND5 1711 (release 2026-06-06)"
+    },
+    {
+      "step": "landscape sweep",
+      "tool": "pubmed.search_articles x16",
+      "result": "verified PMIDs for idebenone/vatiquinone/elamipretide/sonlicromanol/MitoQ/NR/rapamycin/DCA/bezafibrate/MB/hypoxia"
+    },
+    {
+      "step": "mechanism papers",
+      "tool": "pubmed.get_article_metadata",
+      "result": "Titov LbNOX 27124460; Sullivan 26232225; Birsoy 26232224; hypoxia 26917594; modifier compendium 31730859"
+    },
+    {
+      "step": "GEO signature search",
+      "tool": "omics-archives.geo_search_series",
+      "result": "GSE149616, GSE242286, GSE27041, GSE208530 selected"
+    },
+    {
+      "step": "L1000/CMap reversal",
+      "tool": "urllib->api.clue.io",
+      "result": "NOT-RUN: CLUE.io proxy-blocked 403 + GSE92742/70138 ~40GB infeasible in available RAM; no connectivity scores fabricated"
+    },
+    {
+      "step": "signature build",
+      "tool": "python DE (CPM+Welch+BH)",
+      "result": "466 direction-concordant genes across 2 labs; Spearman rho=0.294; 77% concordance; NDI1 rescue arm changes only 4 genes (matches PMID 32574562 'rescues lifespan not ataxia')"
+    },
+    {
+      "step": "node id",
+      "tool": "python marker-set scan",
+      "result": "anchor = down AKR1B1/B10/E1 (reactive-aldehyde detox loss); ACSL4/6 down read as compensatory (ACSL4 pro-ferroptotic); node = lipid peroxidation / reductive stress"
+    },
+    {
+      "step": "triangulation",
+      "tool": "cross-source",
+      "result": "3 lines: (1) signature detox-loss, (2) GPX4 synthetic-lethal To2019 31730859, (3) patient fibroblast Nrf2/selenoprotein 22033105"
+    },
+    {
+      "step": "chemistry",
+      "tool": "chemistry.pubchem+chembl",
+      "result": "edaravone CID 4021 CHEMBL290916 InChIKey QELUYTUMUWHWMC-UHFFFAOYSA-N; drug-like size + low logP + approved CNS drug; phase 4 approved 2017"
+    },
+    {
+      "step": "novelty negative-search",
+      "tool": "pubmed.search_articles",
+      "result": "edaravone x 'complex I deficiency'=0, x Ndufs4=0, x Leigh=1 (that 1 is MELAS SLE mgmt, not primary CI)"
+    },
+    {
+      "step": "safety",
+      "tool": "chemistry.pubchem_get_safety+chembl",
+      "result": "edaravone mild irritant only; deferiprone black-box agranulocytosis"
+    },
+    {
+      "step": "clinvar P/LP tally",
+      "tool": "variants.clinvar_variants (record-level tally)",
+      "result": "tallied P/LP directly from variant records, excluding 'Conflicting classifications of pathogenicity'; NDUFV1 68, NDUFS1 50, NDUFS4 47, ACAD9 184, NDUFAF5 118, FOXRED1 62, NUBPL 20"
+    },
+    {
+      "step": "citation verification",
+      "tool": "pubmed.get_article_metadata",
+      "result": "confirmed each PMID supports its exact sentence; corrected PMID 18643790 (astrocytes/apoptotic, not neuronal ferroptosis) and PMID 40731203 title (Alzheimer's-like signatures, Alz & Dementia 2025)"
+    },
+    {
+      "step": "vatiquinone counter-evidence",
+      "tool": "pubmed.get_article_metadata",
+      "result": "PMID 38883711 (preprint): vatiquinone rescued RSL3 cell assay but FAILED to improve survival in Ndufs4 Leigh mouse in vivo; reshapes first experiment to require in-vivo tier"
+    },
+    {
+      "step": "author verification for figure",
+      "tool": "pubmed.get_article_metadata",
+      "result": "confirmed first authors To T-L (Cell 2019, 31730859) and Sullivan L B (Cell 2015, 26232225) for figure attribution"
+    }
+  ],
+  "not_run": [
+    "LINCS L1000 / CLUE.io connectivity (blocked + infeasible in available RAM)"
+  ],
+  "figures": [
+    "figures/fig1_signature_discovery.png",
+    "figures/fig2_bbb_physchem.png",
+    "figures/fig3_evidence_chain.png"
+  ],
+  "tables": [
+    "robust_CI_signature.csv",
+    "candidate_physchem.csv"
+  ]
+}

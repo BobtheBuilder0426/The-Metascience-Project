@@ -1,0 +1,201 @@
+{
+ "question": "Starting from publicly available datasets, propose a not-thought-of-yet or new compound to treat complex-I mitochondrial diseases.",
+ "dimensions": {
+  "grounding": 1,
+  "reasoning": 4,
+  "completeness": 4.667,
+  "usefulness": 3.333,
+  "creativity": 1.0
+ },
+ "weighted_composite": 2.8,
+ "grounding_cap": 3,
+ "integrity_cap": 1,
+ "integrity_reasons": [
+  "process_trace names a checkable action that did not resolve -> cap 1",
+  "dataset IDs cited but 0% used+resolved -> cap 2"
+ ],
+ "overclaim_count": 0,
+ "overclaim_cap": 5,
+ "effective_grounding_cap": 1,
+ "dataset_resolution": {
+  "n_dataset_ids": 4,
+  "used_and_resolved": 0,
+  "used_and_resolved_rate": 0.0,
+  "records": [
+   {
+    "id": "P56556",
+    "db": "UniProt",
+    "exists": false,
+    "used": true
+   },
+   {
+    "id": "O75306",
+    "db": "UniProt",
+    "exists": false,
+    "used": true
+   },
+   {
+    "id": "O75251",
+    "db": "UniProt",
+    "exists": false,
+    "used": true
+   },
+   {
+    "id": "O14561",
+    "db": "UniProt",
+    "exists": false,
+    "used": true
+   }
+  ]
+ },
+ "trace_verification": {
+  "n_steps": 7,
+  "n_verified": 0,
+  "n_unverified": 4,
+  "verified_fraction": 0.0,
+  "any_unverified": true
+ },
+ "specificity_signal": 5,
+ "creativity_detail": {
+  "creativity_index": 0.0,
+  "novelty": 0.449,
+  "plausibility_gate": 0.0,
+  "reasoning_trace_gate": 0.0,
+  "creativity_dim_score_1to5": 1.0,
+  "hallucination_flag": false
+ },
+ "citation_verification_rate": 0.2,
+ "n_citations": 5,
+ "entity_counts": {
+  "genes": 66,
+  "assays": 4,
+  "quant_predictions": 1,
+  "pathways": 0,
+  "drugs": 2,
+  "total": 73
+ },
+ "redflags": [
+  "Molecule design is decoupled from mechanism: CI-PAM-1f is selected on physicochemical/CNS-MPO/QED criteria with no binding model, docking, or structural rationale tying it to the NDUFA6/Q-module interface; the 'G60D-mimetic hydroxyl arm' is asserted, not demonstrated.",
+  "Central biological risk acknowledged but unresolved: G60D proves an activating conformation exists, not that a small-molecule-inducible pocket exists -- the whole PAM premise could be undruggable.",
+  "One cited supporting reference (Garg et al., Nature Metabolism) carries a 2026 publication date, which cannot be a real prior publication; author flags it as non-load-bearing, but it should not be presented as an existing source.",
+  "cLogP values quoted for reference drugs (CoQ10 ~18, listed as 17.9) are estimates whose scale suggests calculated not measured values; minor, does not affect the argument.",
+  "Applicability is narrower than the framing implies -- only hypomorphic matrix-arm genotypes are expected to respond, so 'first drug for complex I disease' overstates the addressable population (author does note this in limitations)."
+ ],
+ "inter_judge_absdiff": {
+  "grounding": 0.667,
+  "reasoning": 0.0,
+  "completeness": 0.667,
+  "usefulness": 0.667,
+  "creativity": 0.667
+ },
+ "_novelty": {
+  "novelty": 0.449,
+  "N_freq": 0.288,
+  "hits": 296,
+  "semantic": {
+   "value": 0.934,
+   "method": "tfidf_cosine",
+   "max_sim": 0.066,
+   "note": "model-dependent; under-discriminates on shared domain vocab (LB-018)"
+  },
+  "n_neighbours": 7,
+  "method": "0.75*retrieval_freq + 0.25*semantic_distance"
+ },
+ "citation_quality": {
+  "n_citations": 5,
+  "n_primary": 5,
+  "n_review": 0,
+  "n_preprint": 0,
+  "n_other": 0,
+  "n_retracted": 0,
+  "primary_ratio": 1.0,
+  "mean_venue_quality": 0.92,
+  "usage": 0.068,
+  "quality_composite": 0.96,
+  "flags": []
+ },
+ "_citation_quality_detail": {
+  "n_citations": 5,
+  "n_primary": 5,
+  "n_review": 0,
+  "n_preprint": 0,
+  "n_other": 0,
+  "n_retracted": 0,
+  "primary_ratio": 1.0,
+  "mean_venue_quality": 0.92,
+  "usage": 0.068,
+  "quality_composite": 0.96,
+  "flags": [],
+  "per_citation": [
+   {
+    "citation": {
+     "kind": "pmid",
+     "value": "26917594",
+     "raw": "PMID 26917594"
+    },
+    "venue": "Science (New York, N.Y.)",
+    "type": "primary",
+    "retracted": false,
+    "venue_quality": 1.0,
+    "year": "2016"
+   },
+   {
+    "citation": {
+     "kind": "doi",
+     "value": "10.1016/j.cell.2023.12.010",
+     "raw": "10.1016/j.cell.2023.12.010"
+    },
+    "venue": "Cell",
+    "type": "primary",
+    "retracted": false,
+    "venue_quality": 1.0,
+    "year": "2024"
+   },
+   {
+    "citation": {
+     "kind": "doi",
+     "value": "10.1126/science.aad9642",
+     "raw": "10.1126/science.aad9642"
+    },
+    "venue": "Science",
+    "type": "primary",
+    "retracted": false,
+    "venue_quality": 1.0,
+    "year": "2016"
+   },
+   {
+    "citation": {
+     "kind": "doi",
+     "value": "10.1038/s41598-024-75916-x",
+     "raw": "10.1038/s41598-024-75916-x"
+    },
+    "venue": "Scientific Reports",
+    "type": "primary",
+    "retracted": false,
+    "venue_quality": 0.6,
+    "year": "2024"
+   },
+   {
+    "citation": {
+     "kind": "doi",
+     "value": "10.1038/s42255-026-01566-0",
+     "raw": "10.1038/s42255-026-01566-0"
+    },
+    "venue": "Nature Metabolism",
+    "type": "primary",
+    "retracted": false,
+    "venue_quality": 1.0,
+    "year": "2026"
+   }
+  ]
+ },
+ "code": "R1",
+ "question_id": "Q3_exp002",
+ "arm": "R1",
+ "run": 1,
+ "_qgroup": "Q3",
+ "_model": "claude-opus-4-8",
+ "_attempts": 1,
+ "_dim_parse_bad": [],
+ "_dim_parse_ok": true
+}

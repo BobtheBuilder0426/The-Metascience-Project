@@ -1,0 +1,10 @@
+question,arm,R,CS_composite,CS_mean4,Human_mean4,Combined_raw4
+Q1,Baseline,R8,3.879,4.098,1.5,2.799
+Q1,v7-loop,R9,3.593,4.241,2.75,3.496
+Q1,v8-loop,R3,4.12,4.4,3.0,3.7
+Q2,Baseline,R4,3.697,3.871,3.5,3.686
+Q2,v7-loop,R2,3.261,3.827,2.25,3.038
+Q2,v8-loop,R6,3.436,4.045,3.0,3.522
+Q3,Baseline,R1,3.069,3.587,3.25,3.418
+Q3,v7-loop,R5,3.337,3.921,3.0,3.46
+Q3,v8-loop,R7,3.461,4.076,3.75,3.913

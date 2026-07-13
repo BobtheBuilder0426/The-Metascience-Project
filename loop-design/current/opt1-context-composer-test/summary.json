@@ -1,0 +1,76 @@
+{
+ "per_dim": {
+  "grounding": {
+   "baseline": 0.35,
+   "composed": 0.435,
+   "delta": 0.085
+  },
+  "reasoning": {
+   "baseline": 0.535,
+   "composed": 0.585,
+   "delta": 0.05
+  },
+  "completeness": {
+   "baseline": 0.54,
+   "composed": 0.565,
+   "delta": 0.025
+  },
+  "usefulness": {
+   "baseline": 0.35,
+   "composed": 0.425,
+   "delta": 0.075
+  },
+  "creativity": {
+   "baseline": 0.485,
+   "composed": 0.55,
+   "delta": 0.065
+  }
+ },
+ "rows": [
+  {
+   "code": "A1",
+   "qid": "Q2",
+   "arm": "baseline",
+   "grounding": 0.55,
+   "reasoning": 0.72,
+   "completeness": 0.68,
+   "usefulness": 0.4,
+   "creativity": 0.62
+  },
+  {
+   "code": "A2",
+   "qid": "Q2",
+   "arm": "composed",
+   "grounding": 0.62,
+   "reasoning": 0.72,
+   "completeness": 0.68,
+   "usefulness": 0.5,
+   "creativity": 0.55
+  },
+  {
+   "code": "A3",
+   "qid": "Q3",
+   "arm": "baseline",
+   "grounding": 0.15,
+   "reasoning": 0.35,
+   "completeness": 0.4,
+   "usefulness": 0.3,
+   "creativity": 0.35
+  },
+  {
+   "code": "A4",
+   "qid": "Q3",
+   "arm": "composed",
+   "grounding": 0.25,
+   "reasoning": 0.45,
+   "completeness": 0.45,
+   "usefulness": 0.35,
+   "creativity": 0.55
+  }
+ ],
+ "overall": {
+  "baseline": 0.452,
+  "composed": 0.512,
+  "delta": 0.06
+ }
+}

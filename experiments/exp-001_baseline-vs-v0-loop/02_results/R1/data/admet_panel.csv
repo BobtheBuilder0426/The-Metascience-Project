@@ -1,0 +1,8 @@
+name,MW,logP,TPSA,HBD,HBA,RotB,Fsp3,Lipinski_viol,Veber,Egan,Ghose,Muegge,oral_abs,BBB,SA_score,QED
+D10 (LEAD),450.5,3.24,114.9,2,7,9,0.54,0,True,True,True,True,high,unlikely,3.32,0.517
+D06,452.6,3.49,114.9,2,7,9,0.54,0,True,True,True,True,high,unlikely,3.28,0.514
+D13,438.5,3.1,114.9,2,7,9,0.52,0,True,True,True,True,high,unlikely,3.28,0.53
+D12,439.5,3.74,123.1,2,7,9,0.52,0,True,True,True,True,high,unlikely,3.41,0.52
+CMF-019 (ref),455.6,5.67,84.2,2,5,11,0.48,1,False,True,False,False,low,unlikely,3.13,0.39
+AMG 986 (ref),523.6,3.69,134.0,1,10,9,0.32,1,True,False,False,True,high,unlikely,3.95,0.348
+BMS-986224 (ref),498.9,3.99,132.6,2,9,9,0.25,0,True,False,False,True,high,unlikely,3.04,0.351

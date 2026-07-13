@@ -1,0 +1,156 @@
+{
+ "method": "ReCAST - Rejuvenation by Causal And Signature-reversal Targeting",
+ "stages": [
+  {
+   "stage": "S1 target",
+   "action": "GTEx skeletal muscle aged->young uninjured axis (curated 56-gene panel)",
+   "computed": true,
+   "detail": "803 RNA-seq donors; verified TPM<->metadata alignment via XIST/RPS4Y1 (543/543 called-male matched label; 260 labelled-female left uncalled by strict two-marker gate; zero discordance among called); excluded 87 (82 pathology-flagged for fibrosis/atrophy/inflammation/necrosis + 5 QC-only RIN<6; of which 80 pathology-only, 5 QC-only, 2 both); n=716 kept; partial corr vs age (decade brackets -> midpoints, continuous) adj sex/RIN/ischemic time; BH-FDR; 95% CI via Fisher z.",
+   "key_results": {
+    "CDKN2A": "+0.291 (95% CI +0.222..+0.357, FDR=1.3e-13)",
+    "GCLM": "-0.145",
+    "GSR": "-0.145",
+    "SOD2": "-0.142",
+    "NMNAT1": "-0.104 (FDR=0.019)",
+    "ESRRA": "-0.214",
+    "DHPS": "+0.195 (FDR=3e-6)",
+    "SMS": "+0.147",
+    "SRM": "+0.092"
+   }
+  },
+  {
+   "stage": "S2 causal prior",
+   "action": "signed causal / MR evidence (tiered; direction/risk prior only)",
+   "retrieved": true,
+   "sources": [
+    "PMID 37289866 (taurine causal intervention)",
+    "PMID 38366876 (metabolome-wide MR)",
+    "PMID 39285470",
+    "PMID 38995073"
+   ],
+   "gwas_instruments": {
+    "grip_strength EFO_0006941": 850,
+    "appendicular_lean_mass EFO_0004980": 1740,
+    "sarcopenia EFO_1000653": 13
+   },
+   "note": "candidate-specific MR largely absent for non-taurine members -> scored as penalized uncertainty (E2=1), not fabricated; de-novo MR not run; PMID 38366876 names no NAD-precursor hit, so not used for NR direction"
+  },
+  {
+   "stage": "S3 mechanism",
+   "action": "qualitative literature hallmark-reversal score per candidate",
+   "retrieved": true,
+   "sources": [
+    "PMID 37289866",
+    "PMID 31412242",
+    "PMID 35584623",
+    "PMID 33783984",
+    "PMID 35975308",
+    "PMID 27841876"
+   ]
+  },
+  {
+   "stage": "S4 combination",
+   "action": "hallmark set-cover (expert-coded matrix) + distinctness filter",
+   "computed": true,
+   "selected": "Taurine + Nicotinamide Riboside",
+   "coverage": "3/4 (senescence, mito-quality, NAD)",
+   "residual_gap": "redox/glutathione",
+   "optional_third": "Urolithin A",
+   "held_out": "GlyNAC (best redox agent; shares glycine+cysteine with 1C cocktail) -> redox add-on arm"
+  },
+  {
+   "stage": "S5 deliverability",
+   "action": "oral human-trial precedent (ADMET/exposure deferred to Stage 1)",
+   "retrieved": true,
+   "ncts": {
+    "taurine": ["NCT05149716"],
+    "NR": ["NCT05483465"],
+    "urolithin_A": ["NCT03464500", "NCT05735886", "NCT03283462"],
+    "GlyNAC": ["NCT02348762", "NCT01870193"]
+   }
+  },
+  {
+   "stage": "benchmark",
+   "action": "consistency-check re-nomination (not blinded/held-out)",
+   "computed": true,
+   "result": "consistency check on a small labelled set: taurine/UroA/NR recovered (3/3, each scored from its own literature), spermidine excluded (fails computed target-fit). Shows the rubric is internally coherent and can reject a data-contradicted agent - it is not a blinded held-out validation, and no differential-abundance or source-method baseline was run."
+  }
+ ],
+ "final_ranking": {
+  "taurine": 9.0,
+  "glycine_NAC": 7.5,
+  "nicotinamide_riboside": 6.5,
+  "urolithin_A": 6.5,
+  "spermidine": 4.5
+ },
+ "predicted_cocktail": {
+  "primary": ["Taurine", "Nicotinamide Riboside"],
+  "optional_third": "Urolithin A",
+  "redox_add_on": "GlyNAC"
+ },
+ "labels": {
+  "computed": "my own analysis (GTEx axis, scoring, benchmark, set-cover)",
+  "retrieved": "PMIDs, NCTs, GWAS counts, dataset identity",
+  "proposed": "scoring rubric/weights, distinctness filter, pilot protocol"
+ },
+ "status": "RETROSPECTIVE PROOF-OF-CONCEPT instantiation of the ReCAST method - not a prospectively frozen/blinded discovery run. No hashed protocol or coded ledger was created prospectively; blinding / held-out-recovery / sensitivity / specificity are NOT claimed.",
+ "execution_vs_specification": {
+  "S1": "EXECUTED: curated 56-gene panel in GTEx (n=716). SPEC: transcriptome-wide, deconvolved, replicated signature with injury/cytostasis controls.",
+  "S2": "EXECUTED: tiered literature causal prior (taurine intervention + metabolome-wide MR as direction prior). SPEC: candidate-specific signed genetics per metabolite. De-novo MR NOT run.",
+  "S3": "EXECUTED: qualitative literature reversal score. SPEC: quantitative perturbation-signature reversal with specificity tests.",
+  "S4": "EXECUTED: expert-coded hallmark matrix + set-cover + distinctness filter. SPEC: Reactome/KEGG/STRING network set-cover with redundancy metric.",
+  "S5": "EXECUTED: oral human-trial precedent. SPEC: ADMET / formulation / aged-muscle exposure + target-engagement.",
+  "benchmark": "EXECUTED: small-set consistency check (3 positives from own literature, 1 negative). SPEC: blinded held-out validation vs differential-abundance and source-method baselines."
+ },
+ "gtex_sample_flow": {
+  "start": 803,
+  "pathology_only": 80,
+  "qc_only": 5,
+  "both": 2,
+  "total_excluded": 87,
+  "kept": 716,
+  "age_encoding": "GTEx decade brackets -> midpoints (continuous)",
+  "alignment": "expression sex-call matched label for 543/543 called-male; 260 labelled-female left uncalled by strict two-marker gate; zero discordance among called"
+ },
+ "power_calculation": {
+  "primary_endpoint": "ex-vivo EDL specific force (kN/m^2), aged mice, cocktail vs vehicle",
+  "assumptions": {
+   "old_mean_kNm2": 220,
+   "SD_kNm2": 30,
+   "young_mean_kNm2": 280,
+   "young_old_gap": 60,
+   "target_effect": "close >=50% of gap = +30 kN/m2",
+   "cohen_d": 1.0,
+   "alpha": 0.05,
+   "test": "two-sided two-sample t"
+  },
+  "n_per_group": {
+   "power_0.80": 17,
+   "power_0.90": 23
+  },
+  "adjustments": {
+   "cage_ICC": 0.05,
+   "mice_per_cage": 4,
+   "design_effect": 1.15,
+   "attrition": 0.1,
+   "adjusted_n_per_group": 22
+  },
+  "multiplicity": "Primary: cocktail vs vehicle at alpha=0.05. Secondary family: 2 constituent drop-outs, Holm-adjusted, gated behind a positive primary. Scramble / 1C-MIM / exercise are context arms, also gated.",
+  "sex": "both sexes; analyzed with sex as a stratification covariate (not separately powered unless a sex interaction is pre-declared)",
+  "caveat": "SD from published mouse EDL specific-force ranges (Brooks & Faulkner; Lynch et al.); the true SD is confirmed in Stage-1/pilot and the calc re-run before registration."
+ },
+ "candidate_universe": {
+  "status": "RETROSPECTIVE PROTOTYPE - hand-curated shortlist, not an automated search of a large candidate space",
+  "how_shortlist_built": "metabolites/nutraceuticals with (a) a documented muscle- or aging-relevant mechanism AND (b) at least one human oral study, drawn from muscle-aging and geroprotector literature; NOT an exhaustive metabolome enumeration",
+  "candidates_scored": ["taurine", "glycine_NAC", "nicotinamide_riboside", "urolithin_A", "spermidine"],
+  "explicitly_rejected": [
+   {"candidate": "spermidine", "reason": "computed target-fit fails: polyamine-synthesis genes DHPS/SMS/SRM INCREASE with age in the panel (DHPS r=+0.195, FDR=3e-6) - against a 'restore' rationale", "score": 4.5},
+   {"candidate": "glycine_NAC", "reason": "high evidence (rank 2, 7.5) but EXCLUDED from the primary cocktail by the distinctness filter - glycine + cysteine overlap the 1C cocktail; retained as a redox add-on arm"}
+  ],
+  "not_enumerated": "A full metabolome-wide candidate universe (e.g. HMDB / Metabolomics-Workbench-derived) was NOT generated; this is the primary scope limit of the prototype."
+ },
+ "figures": {
+  "fig1": "curated 56-gene panel, partial-r vs age with 95% CI, CVD-safe (blue=decline / orange=increase), hatched=confound, sci-notation FDR",
+  "fig2": "A: evidence scores + weighted total + dedicated gate-status column (blue pass / orange excl); B: hallmark coverage, selected pair flagged, distinctness triangle"
+ }
+}

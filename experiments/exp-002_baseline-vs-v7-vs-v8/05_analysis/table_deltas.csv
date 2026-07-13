@@ -1,0 +1,13 @@
+metric,contrast,mean_delta,n_positive,per_question
+CS composite,L8−L7,0.275,3,Q1:+0.53;Q2:+0.17;Q3:+0.12
+CS composite,L8−B,0.124,2,Q1:+0.24;Q2:-0.26;Q3:+0.39
+CS composite,L7−B,-0.151,1,Q1:-0.29;Q2:-0.44;Q3:+0.27
+CS mean-4,L8−L7,0.177,3,Q1:+0.16;Q2:+0.22;Q3:+0.16
+CS mean-4,L8−B,0.321,3,Q1:+0.30;Q2:+0.17;Q3:+0.49
+CS mean-4,L7−B,0.144,2,Q1:+0.14;Q2:-0.04;Q3:+0.33
+the operator mean-4,L8−L7,0.583,3,Q1:+0.25;Q2:+0.75;Q3:+0.75
+the operator mean-4,L8−B,0.5,2,Q1:+1.50;Q2:-0.50;Q3:+0.50
+the operator mean-4,L7−B,-0.083,1,Q1:+1.25;Q2:-1.25;Q3:-0.25
+Combined,L8−L7,0.38,3,Q1:+0.20;Q2:+0.48;Q3:+0.45
+Combined,L8−B,0.411,2,Q1:+0.90;Q2:-0.16;Q3:+0.49
+Combined,L7−B,0.03,2,Q1:+0.70;Q2:-0.65;Q3:+0.04

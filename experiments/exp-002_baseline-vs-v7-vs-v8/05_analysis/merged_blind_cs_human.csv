@@ -1,0 +1,10 @@
+R,E,Q,cs_composite,cs_mean4,human_mean4,cs_grounding,cs_reasoning,cs_completeness,cs_usefulness,cs_creativity,human_reasoning,human_completeness,human_usefulness,human_creativity,human_hall,human_novel
+R3,E9,Q1,4.12,4.4,3.0,3,4.667,5.0,4.333,3.6,4,3,2,3,No,Somewhat
+R8,E3,Q1,3.879,4.098,1.5,3,4.667,5.0,4,2.727,2,2,1,1,Yes — flag,"No, known"
+R9,E2,Q1,3.593,4.241,2.75,1,4.667,5.0,4.333,2.965,3,3,2,3,No,Somewhat
+R2,E1,Q2,3.261,3.827,2.25,1,4,5.0,4,2.307,2,3,2,2,Maybe,Somewhat
+R4,E5,Q2,3.697,3.871,3.5,3,4,5.0,4,2.485,4,4,2,4,,"Yes, novel"
+R6,E8,Q2,3.436,4.045,3.0,1,4.667,5.0,4,2.512,3,3,3,3,No,Somewhat
+R1,E7,Q3,3.069,3.587,3.25,1,4,4.667,3.333,2.347,3,3,3,4,No,"Yes, novel"
+R5,E6,Q3,3.337,3.921,3.0,1,4.5,4.833,4,2.35,3,3,3,3,,Somewhat
+R7,E4,Q3,3.461,4.076,3.75,1,4.5,5.0,4,2.804,4,4,3,4,No,"Yes, novel"

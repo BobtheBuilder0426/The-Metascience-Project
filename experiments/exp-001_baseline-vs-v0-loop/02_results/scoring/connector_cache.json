@@ -1,0 +1,802 @@
+{
+ "pmid_meta": {
+  "10760281": {
+   "pmid": "10760281",
+   "title": "Compositional genomes: prebiotic information transfer in mutually catalytic noncovalent assemblies.",
+   "abstract": "Mutually catalytic sets of simple organic molecules have been suggested to be capable of self-replication and rudimentary chemical evolution. Previous models for the behavior of such sets have analyzed the global properties of short biopolymer ensembles by using graph theory and a mean field approach. In parallel, experimental studies with the autocatalytic formation of amphiphilic assemblies (e.g., lipid vesicles or micelles) demonstrated self-replication properties resembling those of living cells. Combining these approaches, we analyze here the kinetic behavior of small heterogeneous assemblies of spontaneously aggregating molecules, of the type that could form readily under prebiotic conditions. A statistical formalism for mutual rate enhancement is used to numerically simulate the detailed chemical kinetics within such assemblies. We demonstrate that a straightforward set of assumptions about kinetically enhanced recruitment of simple amphiphilic molecules, as well as about the spontaneous growth and splitting of assemblies, results in a complex population behavior. The assemblies manifest a significant degree of homeostasis, resembling the previously predicted quasi-stationary states of biopolymer ensembles (Dyson, F. J. (1982) J. Mol. Evol. 18, 344-350). Such emergent catalysis-driven, compositionally biased entities may be viewed as having rudimentary \"compositional genomes.\" Our analysis addresses the question of how mutually catalytic metabolic networks, devoid of sequence-based biopolymers, could exhibit transfer of chemical information and might undergo selection and evolution. This computed behavior may constitute a demonstration of natural selection in populations of molecules without genetic apparatus, suggesting a pathway from random molecular assemblies to a minimal protocell.",
+   "journal": "Proceedings of the National Academy of Sciences of the United States of America",
+   "year": "2000",
+   "doi": "10.1073/pnas.97.8.4112",
+   "article_types": [
+    "Journal Article",
+    "Research Support, Non-U.S. Gov't"
+   ]
+  },
+  "14601926": {
+   "pmid": "14601926",
+   "title": "A research proposal on the origin of life.",
+   "abstract": "This paper describes some experiments the author would have liked to carry out if he had started earlier in the origin-of-life field. The proposal is preceded by a hypothetical outline of the main events in the origin of life. According to this outline, the emergence of life amounts to the transition between two kinds of chemistry: 1) cosmic chemistry, which is beginning to be understood and most likely provided the building blocks with which life was first constructed; and 2) biochemistry, the well-known set of enzyme-catalyzed metabolic reactions that support all living organisms today and must have supported the universal common ancestor, or LUCA, from which all known forms of life are derived. The pathway leading from one to the other of those two chemistries may be divided into three stages, defined as the pre-RNA, RNA, and protein-DNA stages. A brief summary of the events that may have occurred in these three stages and of the possible underlying mechanisms is given. It is emphasized that these events were chemical in nature and, especially, that they must have prefigured present-day biochemical processes. Protometabolism and metabolism, it is argued, must have been congruent. With congruence as the underlying working hypothesis, three problems open to experimental investigation are considered: 1) the involvement of peptides and other multimers as catalysts of early biogenic chemistry; 2) the participation of thioesters in primitive energy transactions; and 3) the influence of amino acids on the molecular selection of RNA molecules.",
+   "journal": "Origins of life and evolution of the biosphere : the journal of the International Society for the Study of the Origin of Life",
+   "year": "2003",
+   "doi": "10.1023/a:1025760311436",
+   "article_types": [
+    "Journal Article"
+   ]
+  },
+  "15353806": {
+   "pmid": "15353806",
+   "title": "The emergence of competition between model protocells.",
+   "abstract": "The transition from independent molecular entities to cellular structures with integrated behaviors was a crucial aspect of the origin of life. We show that simple physical principles can mediate a coordinated interaction between genome and compartment boundary, independent of any genomic functions beyond self-replication. RNA, encapsulated in fatty acid vesicles, exerts an osmotic pressure on the vesicle membrane that drives the uptake of additional membrane components, leading to membrane growth at the expense of relaxed vesicles, which shrink. Thus, more efficient RNA replication could cause faster cell growth, leading to the emergence of Darwinian evolution at the cellular level.",
+   "journal": "Science (New York, N.Y.)",
+   "year": "2004",
+   "doi": "10.1126/science.1100757",
+   "article_types": [
+    "Journal Article",
+    "Research Support, Non-U.S. Gov't",
+    "Research Support, U.S. Gov't, Non-P.H.S.",
+    "Research Support, U.S. Gov't, P.H.S."
+   ]
+  },
+  "17008219": {
+   "pmid": "17008219",
+   "title": "From volcanic origins of chemoautotrophic life to Bacteria, Archaea and Eukarya.",
+   "abstract": "The theory of a chemoautotrophic origin of life in a volcanic iron-sulphur world postulates a pioneer organism at sites of reducing volcanic exhalations. The pioneer organism is characterized by a composite structure with an inorganic substructure and an organic superstructure. Within the surfaces of the inorganic substructure iron, cobalt, nickel and other transition metal centres with sulphido, carbonyl and other ligands were catalytically active and promoted the growth of the organic superstructure through carbon fixation, driven by the reducing potential of the volcanic exhalations. This pioneer metabolism was reproductive by an autocatalytic feedback mechanism. Some organic products served as ligands for activating catalytic metal centres whence they arose. The unitary structure-function relationship of the pioneer organism later gave rise to two major strands of evolution: cellularization and emergence of the genetic machinery. This early phase of evolution ended with segregation of the domains Bacteria, Archaea and Eukarya from a rapidly evolving population of pre-cells. Thus, life started with an initial, direct, deterministic chemical mechanism of evolution giving rise to a later, indirect, stochastic, genetic mechanism of evolution and the upward evolution of life by increase of complexity is grounded ultimately in the synthetic redox chemistry of the pioneer organism.",
+   "journal": "Philosophical transactions of the Royal Society of London. Series B, Biological sciences",
+   "year": "2006",
+   "doi": "10.1098/rstb.2006.1904",
+   "article_types": [
+    "Journal Article",
+    "Research Support, Non-U.S. Gov't"
+   ]
+  },
+  "19323552": {
+   "pmid": "19323552",
+   "title": "Coupled growth and division of model protocell membranes.",
+   "abstract": "The generation of synthetic forms of cellular life requires solutions to the problem of how biological processes such as cyclic growth and division could emerge from purely physical and chemical systems. Small unilamellar fatty acid vesicles grow when fed with fatty acid micelles and can be forced to divide by extrusion, but this artificial division process results in significant loss of protocell contents during each division cycle. Here we describe a simple and efficient pathway for model protocell membrane growth and division. The growth of large multilamellar fatty acid vesicles fed with fatty acid micelles, in a solution where solute permeation across the membranes is slow, results in the transformation of initially spherical vesicles into long thread-like vesicles, a process driven by the transient imbalance between surface area and volume growth. Modest shear forces are then sufficient to cause the thread-like vesicles to divide into multiple daughter vesicles without loss of internal contents. In an environment of gentle shear, protocell growth and division are thus coupled processes. We show that model protocells can proceed through multiple cycles of reproduction. Encapsulated RNA molecules, representing a primitive genome, are distributed to the daughter vesicles. Our observations bring us closer to the laboratory synthesis of a complete protocell consisting of a self-replicating genome and a self-replicating membrane compartment. In addition, the robustness and simplicity of this pathway suggests that similar processes might have occurred under the prebiotic conditions of the early Earth.",
+   "journal": "Journal of the American Chemical Society",
+   "year": "2009",
+   "doi": "10.1021/ja900919c",
+   "article_types": [
+    "Journal Article",
+    "Research Support, Non-U.S. Gov't",
+    "Research Support, U.S. Gov't, Non-P.H.S."
+   ]
+  },
+  "19444213": {
+   "pmid": "19444213",
+   "title": "Synthesis of activated pyrimidine ribonucleotides in prebiotically plausible conditions.",
+   "abstract": "At some stage in the origin of life, an informational polymer must have arisen by purely chemical means. According to one version of the 'RNA world' hypothesis this polymer was RNA, but attempts to provide experimental support for this have failed. In particular, although there has been some success demonstrating that 'activated' ribonucleotides can polymerize to form RNA, it is far from obvious how such ribonucleotides could have formed from their constituent parts (ribose and nucleobases). Ribose is difficult to form selectively, and the addition of nucleobases to ribose is inefficient in the case of purines and does not occur at all in the case of the canonical pyrimidines. Here we show that activated pyrimidine ribonucleotides can be formed in a short sequence that bypasses free ribose and the nucleobases, and instead proceeds through arabinose amino-oxazoline and anhydronucleoside intermediates. The starting materials for the synthesis-cyanamide, cyanoacetylene, glycolaldehyde, glyceraldehyde and inorganic phosphate-are plausible prebiotic feedstock molecules, and the conditions of the synthesis are consistent with potential early-Earth geochemical models. Although inorganic phosphate is only incorporated into the nucleotides at a late stage of the sequence, its presence from the start is essential as it controls three reactions in the earlier stages by acting as a general acid/base catalyst, a nucleophilic catalyst, a pH buffer and a chemical buffer. For prebiotic reaction sequences, our results highlight the importance of working with mixed chemical systems in which reactants for a particular reaction step can also control other steps.",
+   "journal": "Nature",
+   "year": "2009",
+   "doi": "10.1038/nature08013",
+   "article_types": [
+    "Journal Article",
+    "Research Support, Non-U.S. Gov't"
+   ]
+  },
+  "20080693": {
+   "pmid": "20080693",
+   "title": "Lack of evolvability in self-sustaining autocatalytic networks constraints metabolism-first scenarios for the origin of life.",
+   "abstract": "A basic property of life is its capacity to experience Darwinian evolution. The replicator concept is at the core of genetics-first theories of the origin of life, which suggest that self-replicating oligonucleotides or their similar ancestors may have been the first \"living\" systems and may have led to the evolution of an RNA world. But problems with the nonenzymatic synthesis of biopolymers and the origin of template replication have spurred the alternative metabolism-first scenario, where self-reproducing and evolving proto-metabolic networks are assumed to have predated self-replicating genes. Recent theoretical work shows that \"compositional genomes\" (i.e., the counts of different molecular species in an assembly) are able to propagate compositional information and can provide a setup on which natural selection acts. Accordingly, if we stick to the notion of replicator as an entity that passes on its structure largely intact in successive replications, those macromolecular aggregates could be dubbed \"ensemble replicators\" (composomes) and quite different from the more familiar genes and memes. In sharp contrast with template-dependent replication dynamics, we demonstrate here that replication of compositional information is so inaccurate that fitter compositional genomes cannot be maintained by selection and, therefore, the system lacks evolvability (i.e., it cannot substantially depart from the asymptotic steady-state solution already built-in in the dynamical equations). We conclude that this fundamental limitation of ensemble replicators cautions against metabolism-first theories of the origin of life, although ancient metabolic systems could have provided a stable habitat within which polymer replicators later evolved.",
+   "journal": "Proceedings of the National Academy of Sciences of the United States of America",
+   "year": "2010",
+   "doi": "10.1073/pnas.0912628107",
+   "article_types": [
+    "Journal Article",
+    "Research Support, Non-U.S. Gov't"
+   ]
+  },
+  "23991830": {
+   "pmid": "23991830",
+   "title": "Regulation of mitochondrial bioenergetic function by hydrogen sulfide. Part I. Biochemical and physiological mechanisms.",
+   "abstract": "Until recently, hydrogen sulfide (H2 S) was exclusively viewed a toxic gas and an environmental hazard, with its toxicity primarily attributed to the inhibition of mitochondrial Complex IV, resulting in a shutdown of mitochondrial electron transport and cellular ATP generation. Work over the last decade established multiple biological regulatory roles of H2 S, as an endogenous gaseous transmitter. H2 S is produced by cystathionine &#x3b3;-lyase (CSE), cystathionine &#x3b2;-synthase (CBS) and 3-mercaptopyruvate sulfurtransferase (3-MST). In striking contrast to its inhibitory effect on Complex IV, recent studies showed that at lower concentrations, H2 S serves as a stimulator of electron transport in mammalian cells, by acting as a mitochondrial electron donor. Endogenous H2 S, produced by mitochondrially localized 3-MST, supports basal, physiological cellular bioenergetic functions; the activity of this metabolic support declines with physiological aging. In specialized conditions (calcium overload in vascular smooth muscle, colon cancer cells), CSE and CBS can also associate with the mitochondria; H2 S produced by these enzymes, serves as an endogenous stimulator of cellular bioenergetics. The current article overviews the biochemical mechanisms underlying the stimulatory and inhibitory effects of H2 S on mitochondrial function and cellular bioenergetics and discusses the implication of these processes for normal cellular physiology. The relevance of H2 S biology is also discussed in the context of colonic epithelial cell physiology: colonocytes are exposed to high levels of sulfide produced by enteric bacteria, and serve as a metabolic barrier to limit their entry into the mammalian host, while, at the same time, utilizing it as a metabolic 'fuel'.",
+   "journal": "British journal of pharmacology",
+   "year": "2014",
+   "doi": "10.1111/bph.12369",
+   "article_types": [
+    "Journal Article",
+    "Research Support, N.I.H., Extramural",
+    "Research Support, Non-U.S. Gov't",
+    "Review"
+   ]
+  },
+  "24520420": {
+   "pmid": "24520420",
+   "title": "Injection of a soluble fragment of neural agrin (NT-1654) considerably improves the muscle pathology caused by the disassembly of the neuromuscular junction.",
+   "abstract": "Treatment of neuromuscular diseases is still an unsolved problem. Evidence over the last years strongly indicates the involvement of malformation and dysfunction of neuromuscular junctions in the development of such medical conditions. Stabilization of NMJs thus seems to be a promising approach to attenuate the disease progression of muscle wasting diseases. An important pathway for the formation and maintenance of NMJs is the agrin/Lrp4/MuSK pathway. Here we demonstrate that the agrin biologic NT-1654 is capable of activating the agrin/Lrp4/MuSK system in vivo, leading to an almost full reversal of the sarcopenia-like phenotype in neurotrypsin-overexpressing (SARCO) mice. We also show that injection of NT-1654 accelerates muscle re-innervation after nerve crush. This report demonstrates that a systemically administered agrin fragment has the potential to counteract the symptoms of neuromuscular disorders.",
+   "journal": "PloS one",
+   "year": "2014",
+   "doi": "10.1371/journal.pone.0088739",
+   "article_types": [
+    "Journal Article",
+    "Research Support, Non-U.S. Gov't"
+   ]
+  },
+  "25725524": {
+   "pmid": "25725524",
+   "title": "Oxidation of H2S in mammalian cells and mitochondria.",
+   "abstract": "Hydrogen sulfide (H2S) is the third gasotransmitter described in mammals. These gasotransmitters (H2S, CO, and NO) are small molecules able to diffuse freely across membranes and thus susceptible to reach easily intracellular targets, one of which is the respiratory enzyme cytochrome oxidase subject to complete inhibition by low micromolar concentrations of these gases. However in contrast to NO or CO, H2S can be metabolized by a sulfide quinone reductase feeding the mitochondrial respiratory chain with the hydrogen atoms of sulfide. Sulfide is thus a two-sided molecule: substrate or poison according to the concentration. The aim of this chapter is to present a mean to monitor sulfide oxidation by isolated mitochondria or cells and to summarize how the properties of this amazing couple (mitochondria and sulfide) translate into practical and conceptual consequences.",
+   "journal": "Methods in enzymology",
+   "year": "2015",
+   "doi": "10.1016/bs.mie.2014.11.042",
+   "article_types": [
+    "Journal Article",
+    "Research Support, Non-U.S. Gov't"
+   ]
+  },
+  "26841066": {
+   "pmid": "26841066",
+   "title": "The Origin of Life in Alkaline Hydrothermal Vents.",
+   "abstract": "Over the last 70 years, prebiotic chemists have been very successful in synthesizing the molecules of life, from amino acids to nucleotides. Yet there is strikingly little resemblance between much of this chemistry and the metabolic pathways of cells, in terms of substrates, catalysts, and synthetic pathways. In contrast, alkaline hydrothermal vents offer conditions similar to those harnessed by modern autotrophs, but there has been limited experimental evidence that such conditions could drive prebiotic chemistry. In the Hadean, in the absence of oxygen, alkaline vents are proposed to have acted as electrochemical flow reactors, in which alkaline fluids saturated in H2 mixed with relatively acidic ocean waters rich in CO2, through a labyrinth of interconnected micropores with thin inorganic walls containing catalytic Fe(Ni)S minerals. The difference in pH across these thin barriers produced natural proton gradients with equivalent magnitude and polarity to the proton-motive force required for carbon fixation in extant bacteria and archaea. How such gradients could have powered carbon reduction or energy flux before the advent of organic protocells with genes and proteins is unknown. Work over the last decade suggests several possible hypotheses that are currently being tested in laboratory experiments, field observations, and phylogenetic reconstructions of ancestral metabolism. We analyze the perplexing differences in carbon and energy metabolism in methanogenic archaea and acetogenic bacteria to propose a possible ancestral mechanism of CO2 reduction in alkaline hydrothermal vents. Based on this mechanism, we show that the evolution of active ion pumping could have driven the deep divergence of bacteria and archaea.",
+   "journal": "Astrobiology",
+   "year": "2016",
+   "doi": "10.1089/ast.2015.1406",
+   "article_types": [
+    "Journal Article",
+    "Research Support, Non-U.S. Gov't",
+    "Review"
+   ]
+  },
+  "26870889": {
+   "pmid": "26870889",
+   "title": "Neuromuscular junction degeneration in muscle wasting.",
+   "abstract": "Denervation is a hallmark of age-related and other types of muscle wasting. This review focuses on recent insights and current viewpoints regarding the mechanisms and clinical relevance of maintaining the neuromuscular junction to counteract muscle wasting resulting from aging or neural disease/damage.\n\nActivity-dependent regulation of autophagy, the agrin-muscle specific kinase-Lrp4 signaling axis, and sympathetic modulation are principal mechanisms involved in stabilizing the neuromuscular junction. These findings are derived from several animal models and were largely confirmed by human gene expression analysis as well as insights from rare neuromuscular diseases such as amyotrophic lateral sclerosis and congenital myasthenic syndromes. Based on these insights, agrin-derived fragments are currently being evaluated as biomarkers for age-related muscle wasting. Tuning of autophagy, of the agrin pathway, and of sympathetic input are being studied as clinical treatment of muscle wasting disorders.\n\nBasic research has revealed that maintenance of neuromuscular junctions and a few signaling pathways are important in the context of age-dependent and other forms of muscle wasting. These findings have recently started to enter clinical practice, but further research needs to substantiate and refine our knowledge.",
+   "journal": "Current opinion in clinical nutrition and metabolic care",
+   "year": "2016",
+   "doi": "10.1097/mco.0000000000000267",
+   "article_types": [
+    "Journal Article",
+    "Research Support, N.I.H., Extramural",
+    "Research Support, Non-U.S. Gov't",
+    "Review"
+   ]
+  },
+  "27562259": {
+   "pmid": "27562259",
+   "title": "The physiology and habitat of the last universal common ancestor.",
+   "abstract": "The concept of a last universal common ancestor of all cells (LUCA, or the progenote) is central to the study of early evolution and life's origin, yet information about how and where LUCA lived is lacking. We investigated all clusters and phylogenetic trees for 6.1 million protein coding genes from sequenced prokaryotic genomes in order to reconstruct the microbial ecology of LUCA. Among 286,514 protein clusters, we identified 355 protein families (&#x223c;0.1%) that trace to LUCA by phylogenetic criteria. Because these proteins are not universally distributed, they can shed light on LUCA's physiology. Their functions, properties and prosthetic groups depict LUCA as anaerobic, CO2-fixing, H2-dependent with a Wood-Ljungdahl pathway, N2-fixing and thermophilic. LUCA's biochemistry was replete with FeS clusters and radical reaction mechanisms. Its cofactors reveal dependence upon transition metals, flavins, S-adenosyl methionine, coenzyme A, ferredoxin, molybdopterin, corrins and selenium. Its genetic code required nucleoside modifications and S-adenosyl methionine-dependent methylations. The 355 phylogenies identify clostridia and methanogens, whose modern lifestyles resemble that of LUCA, as basal among their respective domains. LUCA inhabited a geochemically active environment rich in H2, CO2 and iron. The data support the theory of an autotrophic origin of life involving the Wood-Ljungdahl pathway in a hydrothermal setting.",
+   "journal": "Nature microbiology",
+   "year": "2016",
+   "doi": "10.1038/nmicrobiol.2016.116",
+   "article_types": [
+    "Journal Article"
+   ]
+  },
+  "28825343": {
+   "pmid": "28825343",
+   "title": "Agrin-LRP4-MuSK signaling as a therapeutic target for myasthenia gravis and other neuromuscular disorders.",
+   "abstract": "Signal transduction at the neuromuscular junction (NMJ) is compromised in a diverse array of diseases including myasthenia gravis, Lambert-Eaton myasthenic syndrome, Isaacs' syndrome, congenital myasthenic syndromes, Fukuyama-type congenital muscular dystrophy, amyotrophic lateral sclerosis, and sarcopenia. Except for sarcopenia, all are orphan diseases. In addition, the NMJ signal transduction is impaired by tetanus, botulinum, curare, &#x3b1;-bungarotoxin, conotoxins, organophosphate, sarin, VX, and soman to name a few. Areas covered: This review covers the agrin-LRP4-MuSK signaling pathway, which drives clustering of acetylcholine receptors (AChRs) and ensures efficient signal transduction at the NMJ. We also address diseases caused by autoantibodies against the NMJ molecules and by germline mutations in genes encoding the NMJ molecules. Expert opinion: Representative small compounds to treat the defective NMJ signal transduction are cholinesterase inhibitors, which exert their effects by increasing the amount of acetylcholine at the synaptic space. Another possible therapeutic strategy to enhance the NMJ signal transduction is to increase the number of AChRs, but no currently available drug has this functionality.",
+   "journal": "Expert opinion on therapeutic targets",
+   "year": "2017",
+   "doi": "10.1080/14728222.2017.1369960",
+   "article_types": [
+    "Journal Article",
+    "Review",
+    "Research Support, Non-U.S. Gov't"
+   ]
+  },
+  "29061892": {
+   "pmid": "29061892",
+   "title": "The origin of heredity in protocells.",
+   "abstract": "Here we develop a computational model that examines one of the first major biological innovations-the origin of heredity in simple protocells. The model assumes that the earliest protocells were autotrophic, producing organic matter from COand HCarbon fixation was facilitated by geologically sustained proton gradients across fatty acid membranes, via iron-sulfur nanocrystals lodged within the membranes. Thermodynamic models suggest that organics formed this way should include amino acids and fatty acids. We assume that fatty acids partition to the membrane. Some hydrophobic amino acids chelate FeS nanocrystals, producing three positive feedbacks: (i) an increase in catalytic surface area; (ii) partitioning of FeS nanocrystals to the membrane; and (iii) a proton-motive active site for carbon fixing that mimics the enzyme Ech. These positive feedbacks enable the fastest-growing protocells to dominate the early ecosystem through a simple form of heredity. We propose that as new organics are produced inside the protocells, the localized high-energy environment is more likely to form ribonucleotides, linking RNA replication to its ability to drive protocell growth from the beginning. Our novel conceptualization sets out conditions under which protocell heredity and competition could arise, and points to where crucial experimental work is required.This article is part of the themed issue 'Process and pattern in innovations from cells to societies'.",
+   "journal": "Philosophical transactions of the Royal Society of London. Series B, Biological sciences",
+   "year": "2017",
+   "doi": "10.1098/rstb.2016.0419",
+   "article_types": [
+    "Journal Article"
+   ]
+  },
+  "29359747": {
+   "pmid": "29359747",
+   "title": "Phosphorylation, oligomerization and self-assembly in water under potential prebiotic conditions.",
+   "abstract": "Prebiotic phosphorylation of (pre)biological substrates under aqueous conditions is a critical step in the origins of life. Previous investigations have had limited success and/or require unique environments that are incompatible with subsequent generation of the corresponding oligomers or higher-order structures. Here, we demonstrate that diamidophosphate (DAP)-a plausible prebiotic agent produced from trimetaphosphate-efficiently (amido)phosphorylates a wide variety of (pre)biological building blocks (nucleosides/tides, amino acids and lipid precursors) under aqueous (solution/paste) conditions, without the need for a condensing agent. Significantly, higher-order structures (oligonucleotides, peptides and liposomes) are formed under the same phosphorylation reaction conditions. This plausible prebiotic phosphorylation process under similar reaction conditions could enable the systems chemistry of the three classes of (pre)biologically relevant molecules and their oligomers, in a single-pot aqueous environment.",
+   "journal": "Nature chemistry",
+   "year": "2017",
+   "doi": "10.1038/nchem.2878",
+   "article_types": [
+    "Journal Article",
+    "Research Support, Non-U.S. Gov't"
+   ]
+  },
+  "29502283": {
+   "pmid": "29502283",
+   "title": "Acetyl Phosphate as a Primordial Energy Currency at the Origin of Life.",
+   "abstract": "Metabolism is primed through the formation of thioesters via acetyl CoA and the phosphorylation of substrates by ATP. Prebiotic equivalents such as methyl thioacetate and acetyl phosphate have been proposed to catalyse analogous reactions at the origin of life, but their propensity to hydrolyse challenges this view. Here we show that acetyl phosphate (AcP) can be synthesised in water within minutes from thioacetate (but not methyl thioacetate) under ambient conditions. AcP is stable over hours, depending on temperature, pH and cation content, giving it an ideal poise between stability and reactivity. We show that AcP can phosphorylate nucleotide precursors such as ribose to ribose-5-phosphate and adenosine to adenosine monophosphate, at modest (~2%) yield in water, and at a range of pH. AcP can also phosphorylate ADP to ATP in water over several hours at 50&#xa0;&#xb0;C. But AcP did not promote polymerization of either glycine or AMP. The amino group of glycine was preferentially acetylated by AcP, especially at alkaline pH, hindering the formation of polypeptides. AMP formed small stacks of up to 7 monomers, but these did not polymerise in the presence of AcP in aqueous solution. We conclude that AcP can phosphorylate biologically meaningful substrates in a manner analogous to ATP, promoting the origins of metabolism, but is unlikely to have driven polymerization of macromolecules such as polypeptides or RNA in free solution. This is consistent with the idea that a period of monomer (cofactor) catalysis preceded the emergence of polymeric enzymes or ribozymes at the origin of life.",
+   "journal": "Origins of life and evolution of the biosphere : the journal of the International Society for the Study of the Origin of Life",
+   "year": "2018",
+   "doi": "10.1007/s11084-018-9555-8",
+   "article_types": [
+    "Journal Article"
+   ]
+  },
+  "31641438": {
+   "pmid": "31641438",
+   "title": "Catalysts, autocatalysis and the origin of metabolism.",
+   "abstract": "If life on Earth started out in geochemical environments like hydrothermal vents, then it started out from gasses like CO, Nand H. Anaerobic autotrophs still live from these gasses today, and they still inhabit the Earth's crust. In the search for connections between abiotic processes in ancient geological systems and biotic processes in biological systems, it becomes evident that chemical activation (catalysis) of these gasses and a constant source of energy are key. The H-COredox reaction provides a constant source of energy and anabolic inputs, because the equilibrium lies on the side of reduced carbon compounds. Identifying geochemical catalysts that activate these gasses en route to nitrogenous organic compounds and small autocatalytic networks will be an important step towards understanding prebiotic chemistry that operates only on the basis of chemical energy, without input from solar radiation. So, if life arose in the dark depths of hydrothermal vents, then understanding reactions and catalysts that operate under such conditions is crucial for understanding origins.",
+   "journal": "Interface focus",
+   "year": "2019",
+   "doi": "10.1098/rsfs.2019.0072",
+   "article_types": [
+    "Journal Article",
+    "Review"
+   ]
+  },
+  "31980607": {
+   "pmid": "31980607",
+   "title": "Transcriptomic profiling of skeletal muscle adaptations to exercise and inactivity.",
+   "abstract": "The molecular mechanisms underlying the response to exercise and inactivity are not fully understood. We propose an innovative approach to profile the skeletal muscle transcriptome to exercise and inactivity using 66 published datasets. Data collected from human studies of aerobic and resistance exercise, including acute and chronic exercise training, were integrated using meta-analysis methods (www.metamex.eu). Here we use gene ontology and pathway analyses to reveal selective pathways activated by inactivity, aerobic versus resistance and acute versus chronic exercise training. We identify NR4A3 as one of the most exercise- and inactivity-responsive genes, and establish a role for this nuclear receptor in mediating the metabolic responses to exercise-like stimuli in vitro. The meta-analysis (MetaMEx) also highlights the differential response to exercise in individuals with metabolic impairments. MetaMEx provides the most extensive dataset of skeletal muscle transcriptional responses to different modes of exercise and an online interface to readily interrogate the database.",
+   "journal": "Nature communications",
+   "year": "2020",
+   "doi": "10.1038/s41467-019-13869-w",
+   "article_types": [
+    "Journal Article",
+    "Meta-Analysis",
+    "Research Support, Non-U.S. Gov't"
+   ]
+  },
+  "3323479": {
+   "pmid": "3323479",
+   "title": "Self-splicing RNA and an RNA enzyme in Tetrahymena.",
+   "abstract": "The RNA molecules transcribed from many eukaryotic genes are interrupted by intervening sequences, which are removed by a process called RNA splicing. One structurally related group of intervening sequences, the group I intervening sequences, are found in a variety of microorganisms. Some of these, including the group I intervening sequence from the ribosomal RNA precursor of Tetrahymena thermophila, have been shown to mediate their own splicing in an RNA-catalyzed reaction. Following its excision from the ribosomal RNA precursor, the Tetrahymena intervening sequence acts as an enzyme, cutting and rejoining RNA substrates.",
+   "journal": "The Journal of protozoology",
+   "year": "1987",
+   "doi": "10.1111/j.1550-7408.1987.tb03204.x",
+   "article_types": [
+    "Journal Article",
+    "Research Support, Non-U.S. Gov't",
+    "Research Support, U.S. Gov't, P.H.S.",
+    "Review"
+   ]
+  },
+  "36194581": {
+   "pmid": "36194581",
+   "title": "A prebiotic basis for ATP as the universal energy currency.",
+   "abstract": "ATP is universally conserved as the principal energy currency in cells, driving metabolism through phosphorylation and condensation reactions. Such deep conservation suggests that ATP arose at an early stage of biochemical evolution. Yet purine synthesis requires 6 phosphorylation steps linked to ATP hydrolysis. This autocatalytic requirement for ATP to synthesize ATP implies the need for an earlier prebiotic ATP equivalent, which could drive protometabolism before purine synthesis. Why this early phosphorylating agent was replaced, and specifically with ATP rather than other nucleoside triphosphates, remains a mystery. Here, we show that the deep conservation of ATP might reflect its prebiotic chemistry in relation to another universally conserved intermediate, acetyl phosphate (AcP), which bridges between thioester and phosphate metabolism by linking acetyl CoA to the substrate-level phosphorylation of ADP. We confirm earlier results showing that AcP can phosphorylate ADP to ATP at nearly 20% yield in water in the presence of Fe3+ ions. We then show that Fe3+ and AcP are surprisingly favoured. A wide range of prebiotically relevant ions and minerals failed to catalyse ADP phosphorylation. From a panel of prebiotic phosphorylating agents, only AcP, and to a lesser extent carbamoyl phosphate, showed any significant phosphorylating potential. Critically, AcP did not phosphorylate any other nucleoside diphosphate. We use these data, reaction kinetics, and molecular dynamic simulations to infer a possible mechanism. Our findings might suggest that the reason ATP is universally conserved across life is that its formation is chemically favoured in aqueous solution under mild prebiotic conditions.",
+   "journal": "PLoS biology",
+   "year": "2022",
+   "doi": "10.1371/journal.pbio.3001437",
+   "article_types": [
+    "Journal Article",
+    "Research Support, Non-U.S. Gov't"
+   ]
+  },
+  "36516485": {
+   "pmid": "36516485",
+   "title": "Single nuclei profiling identifies cell specific markers of skeletal muscle aging, frailty, and senescence.",
+   "abstract": "Aging is accompanied by a loss of muscle mass and function, termed sarcopenia, which causes numerous morbidities and economic burdens in human populations. Mechanisms implicated in age-related sarcopenia or frailty include inflammation, muscle stem cell depletion, mitochondrial dysfunction, and loss of motor neurons, but whether there are key drivers of sarcopenia are not yet known. To gain deeper insights into age-related muscle loss, we performed transcriptome profiling on lower limb muscle biopsies from 72 young, elderly, and frail human subjects using bulk RNA-seq (= 72) and single-nuclei RNA-seq (= 17). This combined approach revealed changes in gene expression that occur with age and frailty in multiple cell types comprising mature skeletal muscle. Notably, we found increased expression of the genesand, and decreased expression of the gene, in aged muscle. We validated several key genes changes in fixed human muscle tissue using digital spatial profiling. We also identified a small population of nuclei that express, present only in aged samples, consistent with p21-driven senescence in this subpopulation. Overall, our findings identify unique cellular subpopulations in aged and sarcopenic skeletal muscle, which will facilitate the development of new therapeutic strategies to combat age-related frailty.",
+   "journal": "Aging",
+   "year": "2022",
+   "doi": "10.18632/aging.204435",
+   "article_types": [
+    "Journal Article",
+    "Research Support, N.I.H., Extramural",
+    "Research Support, Non-U.S. Gov't"
+   ]
+  },
+  "39024975": {
+   "pmid": "39024975",
+   "title": "A class of chemical compounds enhances clustering of muscle nicotinic acetylcholine receptor in cultured myogenic cells.",
+   "abstract": "Neuromuscular signal transmission is affected in various diseases including myasthenia gravis, congenital myasthenic syndromes, and sarcopenia. We used an ATF2-luciferase system to monitor the phosphorylation of MuSK in HEK293&#xa0;cells introduced with MUSK and LRP4 cDNAs to find novel chemical compounds that enhanced agrin-mediated acetylcholine receptor (AChR) clustering. Four compounds with similar chemical structures carrying benzene rings and heterocyclic rings increased the luciferase activities 8- to 30-folds, and two of them showed continuously graded dose dependence. The effects were higher than that of disulfiram, a clinically available aldehyde dehydrogenase inhibitor, which we identified to be the most competent preapproved drug to enhance ATF2-luciferase activity in the same assay system. In C2C12 myotubes, all the compounds increased the area, intensity, length, and number of AChR clusters. Three of the four compounds increased the phosphorylation of MuSK, but not of Dok7, JNK. ERK, or p38. Monitoring cell toxicity using the neurite elongation of NSC34 neuronal cells as a surrogate marker showed that all the compounds had no effects on the neurite elongation up to 1&#xa0;&#x3bc;M. Extensive docking simulation and binding structure prediction of the four compounds with all available human proteins using AutoDock Vina and DiffDock showed that the four compounds were unlikely to directly bind to MuSK or Dok7, and the exact target remained unknown. The identified compounds are expected to serve as a seed to develop a novel therapeutic agent to treat defective NMJ signal transmission.",
+   "journal": "Biochemical and biophysical research communications",
+   "year": "2024",
+   "doi": "10.1016/j.bbrc.2024.150400",
+   "article_types": [
+    "Journal Article",
+    "Research Support, Non-U.S. Gov't"
+   ]
+  },
+  "39236304": {
+   "pmid": "39236304",
+   "title": "Neuromuscular impairment at different stages of human sarcopenia.",
+   "abstract": "Degeneration of the motoneuron and neuromuscular junction (NMJ) and loss of motor units (MUs) contribute to age-related muscle wasting and weakness associated with sarcopenia. However, these features have not been comprehensively investigated in humans. This study aimed to compare neuromuscular system integrity and function at different stages of sarcopenia, with a particular focus on NMJ stability and MU properties.\n\nWe recruited 42 young individuals (Y) (aged 25.98&#xa0;&#xb1;&#xa0;4.6&#xa0;years; 57% females) and 88 older individuals (aged 75.9&#xa0;&#xb1;&#xa0;4.7&#xa0;years; 55% females). The older group underwent a sarcopenia screening according to the revised guidelines of the European Working Group on Sarcopenia in Older People 2. In all groups, knee extensor muscle force was evaluated by isometric dynamometry, muscle morphology by ultrasound and MU potential properties by intramuscular electromyography (iEMG). MU number estimate (iMUNE) and blood samples were obtained. Muscle biopsies were collected in a subgroup of 16 Y and 52 older participants.\n\nThirty-nine older individuals were non-sarcopenic (NS), 31 pre-sarcopenic (PS) and 18 sarcopenic (S). A gradual decrease in quadriceps force, cross-sectional area and appendicular lean mass was observed across the different stages of sarcopenia (for all P&#xa0;<&#xa0;0.0001). Handgrip force and the Short Physical Performance Battery score also showed a diminishing trend. iEMG analyses revealed elevated near fibre segment jitter in NS, PS and S compared with Y (Y vs. NS and S: P&#xa0;<&#xa0;0.0001; Y vs. PS: P&#xa0;=&#xa0;0.0169), suggestive of age-related impaired NMJ transmission. Increased C-terminal agrin fragment (P&#xa0;<&#xa0;0.0001) and altered caveolin 3 protein expression were consistent with age-related NMJ instability in all the older groups. The iMUNE was lower in all older groups (P&#xa0;<&#xa0;0.0001), confirming age-related loss of MUs. An age-related increase in MU potential complexity was also observed. These observations were accompanied by increased muscle denervation and axonal damage, evinced by the increase in neural cell adhesion molecule-positive fibres (Y vs. NS: P&#xa0;<&#xa0;0.0001; Y vs. S: P&#xa0;=&#xa0;0.02) and the increase in serum concentration of neurofilament light chain (P&#xa0;<&#xa0;0.0001), respectively. Notably, most of these MU and NMJ parameters did not differ when comparing older individuals with or without sarcopenia.\n\nAlterations in MU properties, axonal damage, an altered innervation profile and NMJ instability are prominent features of the ageing of the neuromuscular system. These neuromuscular alterations are accompanied by muscle wasting and weakness; however, they appear to precede clinically diagnosed sarcopenia, as they are already detectable in older NS individuals.",
+   "journal": "Journal of cachexia, sarcopenia and muscle",
+   "year": "2024",
+   "doi": "10.1002/jcsm.13531",
+   "article_types": [
+    "Journal Article",
+    "Research Support, Non-U.S. Gov't"
+   ]
+  },
+  "39478161": {
+   "pmid": "39478161",
+   "title": "Protocells by spontaneous reaction of cysteine with short-chain thioesters.",
+   "abstract": "All known forms of life are composed of cells, whose boundaries are defined by lipid membranes that separate and protect cell contents from the environment. It is unknown how the earliest forms of life were compartmentalized. Several models have suggested a role for single-chain lipids such as fatty acids, but the membranes formed are often unstable, particularly when made from shorter alkyl chains (&#x2264;C) that were probably more prevalent on prebiotic Earth. Here we show that the amino acid cysteine can spontaneously react with two short-chain (C) thioesters to form diacyl lipids, generating protocell-like membrane vesicles. The three-component reaction takes place rapidly in water using low concentrations of reactants. Silica can catalyse the formation of protocells through a simple electrostatic mechanism. Several simple aminothiols react to form diacyl lipids, including short peptides. The protocells formed are compatible with functional ribozymes, suggesting that coupling of multiple short-chain precursors may have provided membrane building blocks during the early evolution of cells.",
+   "journal": "Nature chemistry",
+   "year": "2024",
+   "doi": "10.1038/s41557-024-01666-y",
+   "article_types": [
+    "Journal Article"
+   ]
+  },
+  "40123866": {
+   "pmid": "40123866",
+   "title": "Chemiosmotic ATP synthesis by minimal protocells.",
+   "abstract": "Energy conservation is crucial to life's origin and evolution. The common ancestor of all cells used ATP synthase to convert proton gradients into ATP. However, pumps generating proton gradients and lipids maintaining proton gradients are not universally conserved across all lineages. A solution to this paradox is that ancestral ATP synthase could harness naturally formed geochemical ion gradients with simpler environmentally provided precursors preceding both proton pumps and biogenic membranes. This runs counter to traditional views that phospholipid bilayers are required to maintain proton gradients. Here, we show that fatty acid membranes can maintain sufficient proton gradients to synthesize ATP by ATP synthase under the steep pH and temperature gradients observed in hydrothermal vent systems. These findings shed substantial light on early membrane bioenergetics, uncovering a functional intermediate in the evolution of chemiosmotic ATP synthesis during protocellular stages postdating the ATP synthase's origin but preceding the advent of enzymatically synthesized cell membranes.",
+   "journal": "Cell reports. Physical science",
+   "year": "2025",
+   "doi": "10.1016/j.xcrp.2025.102461",
+   "article_types": [
+    "Journal Article"
+   ]
+  },
+  "40912653": {
+   "pmid": "40912653",
+   "title": "Hydrogen sulfide-dependent activation of human sulfide quinone oxidoreductase.",
+   "abstract": "Hydrogen sulfide (HS) is a respiratory poison and also a product of our own metabolism. The toxicity of HS is mitigated by the activity of mitochondrial sulfide quinone oxidoreductase (SQOR), which oxidizes HS while concomitantly reducing coenzyme Q. An unusual cysteine trisulfide cofactor distinguishes SQOR from other members of the flavin disulfide reductase superfamily. In the opening step of the catalytic cycle, an estimated 10-fold rate enhancement is afforded by nucleophilic addition of the sulfide anion to the trisulfide versus a disulfide cofactor. The source of the bridging sulfane sulfur in the trisulfide and its mechanism of installation are, however, unknown. We report that HS exposure (100 ppm corresponding to 20 &#x3bc;M dissolved HS, 24 h) increases SQOR activity five- and twofold in human colon adenocarcinoma (HT-29) and transformed endothelial (EA.hy926) cells, respectively. Since activation is not accompanied by a corresponding increase in SQOR protein levels, we conclude that it involves a post-translational mechanism. CRISPR knockdowns of the sulfurtransferases (mercaptopyruvate sulfurtransferase and thiosulfate sulfurtransferase) rule out their involvement in SQOR activation. A combination of pharmacological inhibition and cystine supplementation studies points to the role of HS rather than low molecular weight persulfides in regulating SQOR. We posit that the solvent accessibility and reactivity of the trisulfide make SQOR vulnerable to reversible inhibition. Our study supports a model for trisulfide installation and activation via cysteine oxidation and sulfide addition and reveals a heretofore unrecognized mechanism for autoregulating SQOR by HS on demand.",
+   "journal": "The Journal of biological chemistry",
+   "year": "2025",
+   "doi": "10.1016/j.jbc.2025.110681",
+   "article_types": [
+    "Journal Article",
+    "Research Support, N.I.H., Extramural"
+   ]
+  },
+  "41619083": {
+   "pmid": "41619083",
+   "title": "Neuromuscular Junction as a Molecular Target in Sarcopenia: Mechanisms, Therapeutic Strategies, and Future Directions.",
+   "abstract": "Sarcopenia is a progressive loss of skeletal muscle mass and strength that significantly contributes to frailty and disability in older adults. Traditionally considered a consequence of myofiber atrophy and impaired protein turnover, recent evidence highlights neuromuscular junction (NMJ) degeneration as an early and critical event in the pathogenesis of this condition. Structural and functional changes at the NMJ, including fragmentation of acetylcholine receptor clusters, motor neuron loss, and disruption of agrin-muscle-specific kinase (MuSK) signaling, impair neuromuscular transmission and accelerate muscle decline. This review synthesizes current understanding of NMJ biology, its age-related deterioration, and emerging therapeutic strategies aimed at preserving synaptic integrity. We discuss pharmacological approaches that target presynaptic neurotransmitter synthesis, stabilize the synaptic cleft, and enhance postsynaptic receptor clustering, as well as interventions that activate Schwann and satellite cells to restore regenerative capacity. Adjunctive therapies such as antioxidants, mitochondrial protectants, and metabolic modulators complement NMJ-specific drugs by mitigating oxidative stress and inflammation. Translational insights underscore the importance of NMJ-specific biomarkers, such as circulating c-terminal agrin fragment-22 (CAF22), and advanced imaging modalities to facilitate early detection and personalized interventions. Future directions focus on multimodal regimens that combine NMJ-targeted agents with exercise, nutrition, and digital health tools, supported by computational analytics for precision care. By integrating molecular, systemic, and lifestyle strategies, NMJ-focused therapies offer a promising approach to delaying the progression of sarcopenia and improving functional independence in aging populations. Continued interdisciplinary research and mechanistically informed clinical trials are crucial for translating these advances into effective treatments.",
+   "journal": "Molecular diagnosis & therapy",
+   "year": "2026",
+   "doi": "10.1007/s40291-026-00833-w",
+   "article_types": [
+    "Journal Article",
+    "Review"
+   ]
+  },
+  "42153453": {
+   "pmid": "42153453",
+   "title": "First-in-Human Dose Selection and Safety, Tolerability, Pharmacokinetics, and Immunogenicity of the Muscle-Specific Kinase Agonist Adimanebart (ARGX-119).",
+   "abstract": "Adimanebart (ARGX-119), a first-in-class, humanized, agonistic monoclonal antibody, specifically targets and activates muscle-specific kinase, stabilizing the neuromuscular junction, increasing muscle strength, and decreasing muscle weakness and fatigability in nonclinical, proof-of-concept studies. Adimanebart may have broad therapeutic potential in neuromuscular junction disorders. This Phase I, first-in-human, double-blinded, placebo-controlled study assessed the safety, tolerability, pharmacokinetics, and immunogenicity of adimanebart in healthy participants. With no pharmacodynamic marker for muscle-specific kinase dimerization by adimanebart, human dose predictions were based on the minimum anticipated biological effect level in nonclinical studies. In this two-part study, 112 healthy participants were randomized to receive adimanebart or placebo in single ascending intravenous doses (0.005-15 mg/kg) or a single subcutaneous dose (5 mg/kg; Part A; n = 76), or weekly multiple ascending intravenous doses (0.3-5 mg/kg; Part B; n = 36). Adimanebart was well tolerated with a favorable safety profile. In single-ascending dose (SAD) cohorts, adimanebart demonstrated nonlinear pharmacokinetics at low concentrations, a dose-proportional increase in maximum concentration (mean range: 0.1-343 &#xb5;g/mL), and a &#x2248;6-fold increase in area under the concentration-time curve (0 to infinity) following a single intravenous dose, indicating target-mediated drug disposition. Incidence and prevalence of adimanebart anti-drug antibodies were comparable between treatment groups in SAD cohorts (adimanebart: 16.0% and 18.0%, placebo: 16.7% and 22.2%, respectively) and were not detected in multiple-ascending-dose cohorts. There was no apparent impact of anti-drug antibodies on adimanebart pharmacokinetics or safety. This study supports investigation of adimanebart as an agonistic muscle-specific kinase monoclonal antibody treatment for neuromuscular junction disorders.",
+   "journal": "Journal of clinical pharmacology",
+   "year": "2026",
+   "doi": "10.1002/jcph.70208",
+   "article_types": [
+    "Journal Article",
+    "Randomized Controlled Trial",
+    "Clinical Trial, Phase I"
+   ]
+  },
+  "24288333": {
+   "pmid": "24288333",
+   "title": "Nonenzymatic template-directed RNA synthesis inside model protocells.",
+   "abstract": "Efforts to recreate a prebiotically plausible protocell, in which RNA replication occurs within a fatty acid vesicle, have been stalled by the destabilizing effect of Mg(2+) on fatty acid membranes. Here we report that the presence of citrate protects fatty acid membranes from the disruptive effects of high Mg(2+) ion concentrations while allowing RNA copying to proceed, while also protecting single-stranded RNA from Mg(2+)-catalyzed degradation. This combination of properties has allowed us to demonstrate the chemical copying of RNA templates inside fatty acid vesicles, which in turn allows for an increase in copying efficiency by bathing the vesicles in a continuously refreshed solution of activated nucleotides.",
+   "journal": "Science (New York, N.Y.)",
+   "year": "2013",
+   "doi": "10.1126/science.1241888",
+   "article_types": [
+    "Journal Article",
+    "Research Support, Non-U.S. Gov't",
+    "Research Support, U.S. Gov't, Non-P.H.S."
+   ]
+  },
+  "30700721": {
+   "pmid": "30700721",
+   "title": "Template-directed RNA polymerization and enhanced ribozyme catalysis inside membraneless compartments formed by coacervates.",
+   "abstract": "Membraneless compartments, such as complex coacervates, have been hypothesized as plausible prebiotic micro-compartments due to their ability to sequester RNA; however, their compatibility with essential RNA World chemistries is unclear. We show that such compartments can enhance key prebiotically-relevant RNA chemistries. We demonstrate that template-directed RNA polymerization is sensitive to polycation identity, with polydiallyldimethylammonium chloride (PDAC) outperforming poly(allylamine), poly(lysine), and poly(arginine) in polycation/RNA coacervates. Differences in RNA diffusion rates between PDAC/RNA and oligoarginine/RNA coacervates imply distinct biophysical environments. Template-directed RNA polymerization is relatively insensitive to Mgconcentration when performed in PDAC/RNA coacervates as compared to buffer, even enabling partial rescue of the reaction in the absence of magnesium. Finally, we show enhanced activities of multiple nucleic acid enzymes including two ribozymes and a deoxyribozyme, underscoring the generality of this approach, in which functional nucleic acids like aptamers and ribozymes, and in some cases key cosolutes localize within the coacervate microenvironments.",
+   "journal": "Nature communications",
+   "year": "2019",
+   "doi": "10.1038/s41467-019-08353-4",
+   "article_types": [
+    "Journal Article",
+    "Research Support, Non-U.S. Gov't"
+   ]
+  },
+  "30045888": {
+   "pmid": "30045888",
+   "title": "Systems protobiology: origin of life in lipid catalytic networks.",
+   "abstract": "Life is that which replicates and evolves, but there is no consensus on how life emerged. We advocate a systems protobiology view, whereby the first replicators were assemblies of spontaneously accreting, heterogeneous and mostly non-canonical amphiphiles. This view is substantiated by rigorous chemical kinetics simulations of the graded autocatalysis replication domain (GARD) model, based on the notion that the replication or reproduction of compositional information predated that of sequence information. GARD reveals the emergence of privileged non-equilibrium assemblies (composomes), which portray catalysis-based homeostatic (concentration-preserving) growth. Such a process, along with occasional assembly fission, embodies cell-like reproduction. GARD pre-RNA evolution is evidenced in the selection of different composomes within a sparse fitness landscape, in response to environmental chemical changes. These observations refute claims that GARD assemblies (or other mutually catalytic networks in the metabolism first scenario) cannot evolve. Composomes represent both a genotype and a selectable phenotype, anteceding present-day biology in which the two are mostly separated. Detailed GARD analyses show attractor-like transitions from random assemblies to self-organized composomes, with negative entropy change, thus establishing composomes as dissipative systems-hallmarks of life. We show a preliminary new version of our model, metabolic GARD (M-GARD), in which lipid covalent modifications are orchestrated by non-enzymatic lipid catalysts, themselves compositionally reproduced. M-GARD fills the gap of the lack of true metabolism in basic GARD, and is rewardingly supported by a published experimental instance of a lipid-based mutually catalytic network. Anticipating near-future far-reaching progress of molecular dynamics, M-GARD is slated to quantitatively depict elaborate protocells, with orchestrated reproduction of both lipid bilayer and lumenal content. Finally, a GARD analysis in a whole-planet context offers the potential for estimating the probability of life's emergence. The invigorated GARD scrutiny presented in this review enhances the validity of autocatalytic sets as aearly evolution scenario and provides essential infrastructure for a paradigm shift towards a systems protobiology view of life's origin.",
+   "journal": "Journal of the Royal Society, Interface",
+   "year": "2018",
+   "doi": "10.1098/rsif.2018.0159",
+   "article_types": [
+    "Journal Article",
+    "Research Support, Non-U.S. Gov't",
+    "Review"
+   ]
+  },
+  "31841362": {
+   "pmid": "31841362",
+   "title": "The Hot Spring Hypothesis for an Origin of Life.",
+   "abstract": "We present a testable hypothesis related to an origin of life on land in which fluctuating volcanic hot spring pools play a central role. The hypothesis is based on experimental evidence that lipid-encapsulated polymers can be synthesized by cycles of hydration and dehydration to form protocells. Drawing on metaphors from the bootstrapping of a simple computer operating system, we show how protocells cycling through wet, dry, and moist phases will subject polymers to combinatorial selection and draw structural and catalytic functions out of initially random sequences, including structural stabilization, pore formation, and primitive metabolic activity. We propose that protocells aggregating into a hydrogel in the intermediate moist phase of wet-dry cycles represent a primitive progenote system. Progenote populations can undergo selection and distribution, construct niches in new environments, and enable a sharing network effect that can collectively evolve them into the first microbial communities. Laboratory and field experiments testing the first steps of the scenario are summarized. The scenario is then placed in a geological setting on the early Earth to suggest a plausible pathway from life's origin in chemically optimal freshwater hot spring pools to the emergence of microbial communities tolerant to more extreme conditions in dilute lakes and salty conditions in marine environments. A continuity is observed for biogenesis beginning with simple protocell aggregates, through the transitional form of the progenote, to robust microbial mats that leave the fossil imprints of stromatolites so representative in the rock record. A roadmap to future testing of the hypothesis is presented. We compare the oceanic vent with land-based pool scenarios for an origin of life and explore their implications for subsequent evolution to multicellular life such as plants. We conclude by utilizing the hypothesis to posit where life might also have emerged in habitats such as Mars or Saturn's icy moon Enceladus. \"To postulate one fortuitously catalyzed reaction, perhaps catalyzed by a metal ion, might be reasonable, but to postulate a suite of them is to appeal to magic.\" -Leslie Orgel.",
+   "journal": "Astrobiology",
+   "year": "2019",
+   "doi": "10.1089/ast.2019.2045",
+   "article_types": [
+    "Journal Article",
+    "Review"
+   ]
+  },
+  "39167649": {
+   "pmid": "39167649",
+   "title": "Did the exposure of coacervate droplets to rain make them the first stable protocells?",
+   "abstract": "Membraneless coacervate microdroplets have long been proposed as model protocells as they can grow, divide, and concentrate RNA by natural partitioning. However, the rapid exchange of RNA between these compartments, along with their rapid fusion, both within minutes, means that individual droplets would be unable to maintain their separate genetic identities. Hence, Darwinian evolution would not be possible, and the population would be vulnerable to collapse due to the rapid spread of parasitic RNAs. In this study, we show that distilled water, mimicking rain/freshwater, leads to the formation of electrostatic crosslinks on the interface of coacervate droplets that not only suppress droplet fusion indefinitely but also allow the spatiotemporal compartmentalization of RNA on a timescale of days depending on the length and structure of RNA. We suggest that these nonfusing membraneless droplets could potentially act as protocells with the capacity to evolve compartmentalized ribozymes in prebiotic environments.",
+   "journal": "Science advances",
+   "year": "2024",
+   "doi": "10.1126/sciadv.adn9657",
+   "article_types": [
+    "Journal Article",
+    "Research Support, U.S. Gov't, Non-P.H.S.",
+    "Research Support, Non-U.S. Gov't"
+   ]
+  },
+  "40430152": {
+   "pmid": "40430152",
+   "title": "Protocell Dynamics: Modelling Growth and Division of Lipid Vesicles Driven by an Autocatalytic Reaction.",
+   "abstract": "We study a computational model of a protocell, in which an autocatalytic reaction sustains itself inside a lipid vesicle. The autocatalytic reaction drives volume growth via osmosis. Membrane area grows due to addition of lipids from the environment. The membrane growth rate depends on the external lipid concentration and on the tension in the membrane. In the absence of division, a cell either reaches a state of homeostasis or grows to a point where the internal reaction collapses. If a cell becomes elongated, it can divide into two smaller spherical vesicles, conserving the total volume and area. We determine when it is energetically favorable for a large vesicle to divide. Division requires the buildup of a difference between the lipid areas on the outer and inner leaflets of the membrane. Division occurs most easily when the rate of flipping of lipids between leaflets is relatively slow. If the flipping is too fast, the parent cell grows large without dividing. There is a typical size at which division occurs, producing two daughter cells of unequal sizes. The smaller and larger daughters regrow to the same typical size before the next division. Protocells with an active metabolism reach a stable state where the internal autocatalytic reaction and the membrane growth are well balanced. Active protocells can grow and divide in conditions where an inactive vesicle without an internal reaction cannot.",
+   "journal": "Life (Basel, Switzerland)",
+   "year": "2025",
+   "doi": "10.3390/life15050724",
+   "article_types": [
+    "Journal Article"
+   ]
+  },
+  "30194374": {
+   "pmid": "30194374",
+   "title": "Compartmentalised RNA catalysis in membrane-free coacervate protocells.",
+   "abstract": "Phase separation of mixtures of oppositely charged polymers provides a simple and direct route to compartmentalisation via complex coacervation, which may have been important for driving primitive reactions as part of the RNA world hypothesis. However, to date, RNA catalysis has not been reconciled with coacervation. Here we demonstrate that RNA catalysis is viable within coacervate microdroplets and further show that these membrane-free droplets can selectively retain longer length RNAs while permitting transfer of lower molecular weight oligonucleotides.",
+   "journal": "Nature communications",
+   "year": "2018",
+   "doi": "10.1038/s41467-018-06072-w",
+   "article_types": [
+    "Journal Article",
+    "Research Support, Non-U.S. Gov't"
+   ]
+  },
+  "17494767": {
+   "pmid": "17494767",
+   "title": "Extreme accumulation of nucleotides in simulated hydrothermal pore systems.",
+   "abstract": "We simulate molecular transport in elongated hydrothermal pore systems influenced by a thermal gradient. We find extreme accumulation of molecules in a wide variety of plugged pores. The mechanism is able to provide highly concentrated single nucleotides, suitable for operations of an RNA world at the origin of life. It is driven solely by the thermal gradient across a pore. On the one hand, the fluid is shuttled by thermal convection along the pore, whereas on the other hand, the molecules drift across the pore, driven by thermodiffusion. As a result, millimeter-sized pores accumulate even single nucleotides more than 10(8)-fold into micrometer-sized regions. The enhanced concentration of molecules is found in the bulk water near the closed bottom end of the pore. Because the accumulation depends exponentially on the pore length and temperature difference, it is considerably robust with respect to changes in the cleft geometry and the molecular dimensions. Whereas thin pores can concentrate only long polynucleotides, thicker pores accumulate short and long polynucleotides equally well and allow various molecular compositions. This setting also provides a temperature oscillation, shown previously to exponentially replicate DNA in the protein-assisted PCR. Our results indicate that, for life to evolve, complicated active membrane transport is not required for the initial steps. We find that interlinked mineral pores in a thermal gradient provide a compelling high-concentration starting point for the molecular evolution of life.",
+   "journal": "Proceedings of the National Academy of Sciences of the United States of America",
+   "year": "2007",
+   "doi": "10.1073/pnas.0609592104",
+   "article_types": [
+    "Journal Article",
+    "Research Support, Non-U.S. Gov't",
+    "Research Support, U.S. Gov't, Non-P.H.S."
+   ]
+  },
+  "31043728": {
+   "pmid": "31043728",
+   "title": "Synthesis and breakdown of universal metabolic precursors promoted by iron.",
+   "abstract": "Life builds its molecules from carbon dioxide (CO) and breaks them back down again through the intermediacy of just five metabolites, which are the universal hubs of biochemistry. However, it is unclear how core biological metabolism began and why it uses the intermediates, reactions and pathways that it does. Here we describe a purely chemical reaction network promoted by ferrous iron, in which aqueous pyruvate and glyoxylate-two products of abiotic COreduction-build up 9 of the 11 intermediates of the biological Krebs (or tricarboxylic acid) cycle, including all 5 universal metabolic precursors. The intermediates simultaneously break down to COin a life-like regime that resembles biological anabolism and catabolism. Adding hydroxylamineand metallic iron into the system produces four biological amino acids in a manner that parallels biosynthesis. The observed network overlaps substantially with the Krebs and glyoxylate cycles, and may represent a prebiotic precursor to these core metabolic pathways.",
+   "journal": "Nature",
+   "year": "2019",
+   "doi": "10.1038/s41586-019-1151-1",
+   "article_types": [
+    "Journal Article",
+    "Research Support, Non-U.S. Gov't"
+   ]
+  },
+  "25752840": {
+   "pmid": "25752840",
+   "title": "Abiotic ligation of DNA oligomers templated by their liquid crystal ordering.",
+   "abstract": "It has been observed that concentrated solutions of short DNA oligomers develop liquid crystal ordering as the result of a hierarchically structured supramolecular self-assembly. In mixtures of oligomers with various degree of complementarity, liquid crystal microdomains are formed via the selective aggregation of those oligomers that have a sufficient degree of duplexing and propensity for physical polymerization. Here we show that such domains act as fluid and permeable microreactors in which the order-stabilized molecular contacts between duplex terminals serve as physical templates for their chemical ligation. In the presence of abiotic condensing agents, liquid crystal ordering markedly enhances ligation efficacy, thereby enhancing its own phase stability. The coupling between order-templated ligation and selectivity provided by supramolecular ordering enables an autocatalytic cycle favouring the growth of DNA chains, up to biologically relevant lengths, from few-base long oligomers. This finding suggests a novel scenario for the abiotic origin of nucleic acids.",
+   "journal": "Nature communications",
+   "year": "2015",
+   "doi": "10.1038/ncomms7424",
+   "article_types": [
+    "Journal Article",
+    "Research Support, Non-U.S. Gov't"
+   ]
+  },
+  "33547911": {
+   "pmid": "33547911",
+   "title": "Cofactors are Remnants of Life's Origin and Early Evolution.",
+   "abstract": "The RNA World is one of the most widely accepted hypotheses explaining the origin of the genetic system used by all organisms today. It proposes that the tripartite system of DNA, RNA, and proteins was preceded by one consisting solely of RNA, which both stored genetic information and performed the molecular functions encoded by that genetic information. Current research into a potential RNA World revolves around the catalytic properties of RNA-based enzymes, or ribozymes. Well before the discovery of ribozymes, Harold White proposed that evidence for a precursor RNA world could be found within modern proteins in the form of coenzymes, the majority of which contain nucleobases or nucleoside moieties, such as Coenzyme A and S-adenosyl methionine, or are themselves nucleotides, such as ATP and NADH (a dinucleotide). These coenzymes, White suggested, had been the catalytic active sites of ancient ribozymes, which transitioned to their current forms after the surrounding ribozyme scaffolds had been replaced by protein apoenzymes during the evolution of translation. Since its proposal four decades ago, this groundbreaking hypothesis has garnered support from several different research disciplines and motivated similar hypotheses about other classes of cofactors, most notably iron-sulfur cluster cofactors as remnants of the geochemical setting of the origin of life. Evidence from prebiotic geochemistry, ribozyme biochemistry, and evolutionary biology, increasingly supports these hypotheses. Certain coenzymes and cofactors may bridge modern biology with the past and can thus provide insights into the elusive and poorly-recorded period of the origin and early evolution of life.",
+   "journal": "Journal of molecular evolution",
+   "year": "2021",
+   "doi": "10.1007/s00239-020-09988-4",
+   "article_types": [
+    "Journal Article",
+    "Research Support, Non-U.S. Gov't",
+    "Research Support, U.S. Gov't, Non-P.H.S."
+   ]
+  },
+  "32494078": {
+   "pmid": "32494078",
+   "title": "Selective prebiotic formation of RNA pyrimidine and DNA purine nucleosides.",
+   "abstract": "The nature of the first genetic polymer is the subject of major debate. Although the 'RNA world' theory suggests that RNA was the first replicable information carrier of the prebiotic era-that is, prior to the dawn of life-other evidence implies that life may have started with a heterogeneous nucleic acid genetic system that included both RNA and DNA. Such a theory streamlines the eventual 'genetic takeover' of homogeneous DNA from RNA as the principal information-storage molecule, but requires a selective abiotic synthesis of both RNA and DNA building blocks in the same local primordial geochemical scenario. Here we demonstrate a high-yielding, completely stereo-, regio- and furanosyl-selective prebiotic synthesis of the purine deoxyribonucleosides: deoxyadenosine and deoxyinosine. Our synthesis uses key intermediates in the prebiotic synthesis of the canonical pyrimidine ribonucleosides (cytidine and uridine), and we show that, once generated, the pyrimidines persist throughout the synthesis of the purine deoxyribonucleosides, leading to a mixture of deoxyadenosine, deoxyinosine, cytidine and uridine. These results support the notion that purine deoxyribonucleosides and pyrimidine ribonucleosides may have coexisted before the emergence of life.",
+   "journal": "Nature",
+   "year": "2020",
+   "doi": "10.1038/s41586-020-2330-9",
+   "article_types": [
+    "Journal Article",
+    "Research Support, Non-U.S. Gov't"
+   ]
+  },
+  "34155210": {
+   "pmid": "34155210",
+   "title": "Active coacervate droplets are protocells that grow and resist Ostwald ripening.",
+   "abstract": "Active coacervate droplets are liquid condensates coupled to a chemical reaction that turns over their components, keeping the droplets out of equilibrium. This turnover can be used to drive active processes such as growth, and provide an insight into the chemical requirements underlying (proto)cellular behaviour. Moreover, controlled growth is a key requirement to achieve population fitness and survival. Here we present a minimal, nucleotide-based coacervate model for active droplets, and report three key findings that make these droplets into evolvable protocells. First, we show that coacervate droplets form and grow by the fuel-driven synthesis of new coacervate material. Second, we find that these droplets do not undergo Ostwald ripening, which we attribute to the attractive electrostatic interactions and translational entropy within complex coacervates, active or passive. Finally, we show that the droplet growth rate reflects experimental conditions such as substrate, enzyme and protein concentration, and that a different droplet composition (addition of RNA) leads to altered growth rates and droplet fitness. These findings together make active coacervate droplets a powerful platform to mimic cellular growth at a single-droplet level, and to study fitness at a population level.",
+   "journal": "Nature communications",
+   "year": "2021",
+   "doi": "10.1038/s41467-021-24111-x",
+   "article_types": [
+    "Journal Article",
+    "Research Support, Non-U.S. Gov't"
+   ]
+  },
+  "12594918": {
+   "pmid": "12594918",
+   "title": "On the origins of cells: a hypothesis for the evolutionary transitions from abiotic geochemistry to chemoautotrophic prokaryotes, and from prokaryotes to nucleated cells.",
+   "abstract": "All life is organized as cells. Physical compartmentation from the environment and self-organization of self-contained redox reactions are the most conserved attributes of living things, hence inorganic matter with such attributes would be life's most likely forebear. We propose that life evolved in structured iron monosulphide precipitates in a seepage site hydrothermal mound at a redox, pH and temperature gradient between sulphide-rich hydrothermal fluid and iron(II)-containing waters of the Hadean ocean floor. The naturally arising, three-dimensional compartmentation observed within fossilized seepage-site metal sulphide precipitates indicates that these inorganic compartments were the precursors of cell walls and membranes found in free-living prokaryotes. The known capability of FeS and NiS to catalyse the synthesis of the acetyl-methylsulphide from carbon monoxide and methylsulphide, constituents of hydrothermal fluid, indicates that pre-biotic syntheses occurred at the inner surfaces of these metal-sulphide-walled compartments, which furthermore restrained reacted products from diffusion into the ocean, providing sufficient concentrations of reactants to forge the transition from geochemistry to biochemistry. The chemistry of what is known as the RNA-world could have taken place within these naturally forming, catalyticwalled compartments to give rise to replicating systems. Sufficient concentrations of precursors to support replication would have been synthesized in situ geochemically and biogeochemically, with FeS (and NiS) centres playing the central catalytic role. The universal ancestor we infer was not a free-living cell, but rather was confined to the naturally chemiosmotic, FeS compartments within which the synthesis of its constituents occurred. The first free-living cells are suggested to have been eubacterial and archaebacterial chemoautotrophs that emerged more than 3.8 Gyr ago from their inorganic confines. We propose that the emergence of these prokaryotic lineages from inorganic confines occurred independently, facilitated by the independent origins of membrane-lipid biosynthesis: isoprenoid ether membranes in the archaebacterial and fatty acid ester membranes in the eubacterial lineage. The eukaryotes, all of which are ancestrally heterotrophs and possess eubacterial lipids, are suggested to have arisen ca. 2 Gyr ago through symbiosis involving an autotrophic archaebacterial host and a heterotrophic eubacterial symbiont, the common ancestor of mitochondria and hydrogenosomes. The attributes shared by all prokaryotes are viewed as inheritances from their confined universal ancestor. The attributes that distinguish eubacteria and archaebacteria, yet are uniform within the groups, are viewed as relics of their phase of differentiation after divergence from the non-free-living universal ancestor and before the origin of the free-living chemoautotrophic lifestyle. The attributes shared by eukaryotes with eubacteria and archaebacteria, respectively, are viewed as inheritances via symbiosis. The attributes unique to eukaryotes are viewed as inventions specific to their lineage. The origin of the eukaryotic endomembrane system and nuclear membrane are suggested to be the fortuitous result of the expression of genes for eubacterial membrane lipid synthesis by an archaebacterial genetic apparatus in a compartment that was not fully prepared to accommodate such compounds, resulting in vesicles of eubacterial lipids that accumulated in the cytosol around their site of synthesis. Under these premises, the most ancient divide in the living world is that between eubacteria and archaebacteria, yet the steepest evolutionary grade is that between prokaryotes and eukaryotes.",
+   "journal": "Philosophical transactions of the Royal Society of London. Series B, Biological sciences",
+   "year": "2003",
+   "doi": "10.1098/rstb.2002.1183",
+   "article_types": [
+    "Journal Article",
+    "Research Support, Non-U.S. Gov't"
+   ]
+  },
+  "32655499": {
+   "pmid": "32655499",
+   "title": "Older Than Genes: The Acetyl CoA Pathway and Origins.",
+   "abstract": "For decades, microbiologists have viewed the acetyl CoA pathway and organisms that use it for H-dependent carbon and energy metabolism, acetogens and methanogens, as ancient. Classical evidence and newer evidence indicating the antiquity of the acetyl CoA pathway are summarized here. The acetyl CoA pathway requires approximately 10 enzymes, roughly as many organic cofactors, and more than 500 kDa of combined subunit molecular mass to catalyze the conversion of Hand COto formate, acetate, and pyruvate in acetogens and methanogens. However, a single hydrothermal vent alloy, awaruite (NiFe), can convert Hand COto formate, acetate, and pyruvate under mild hydrothermal conditions on its own. The chemical reactions of Hand COto pyruvate thus have a natural tendency to occur without enzymes, given suitable inorganic catalysts. This suggests that the evolution of the enzymatic acetyl CoA pathway was preceded by-and patterned along-a route of naturally occurring exergonic reactions catalyzed by transition metal minerals that could activate Hand COby chemisorption. The principle of forward (autotrophic) pathway evolution from preexisting non-enzymatic reactions is generalized to the concept of patterned evolution of pathways. In acetogens, exergonic reduction of COby Hgenerates acyl phosphates by highly reactive carbonyl groups undergoing attack by inert inorganic phosphate. In that ancient reaction of biochemical energy conservation, the energy behind formation of the acyl phosphate bond resides in the carbonyl, not in phosphate. The antiquity of the acetyl CoA pathway is usually seen in light of COfixation; its role in primordial energy coupling via acyl phosphates and substrate-level phosphorylation is emphasized here.",
+   "journal": "Frontiers in microbiology",
+   "year": "2020",
+   "doi": "10.3389/fmicb.2020.00817",
+   "article_types": [
+    "Journal Article",
+    "Review"
+   ]
+  },
+  "36697522": {
+   "pmid": "36697522",
+   "title": "Thioester synthesis through geoelectrochemical COfixation on Ni sulfides.",
+   "abstract": "A prevailing scenario of the origin of life postulates thioesters as key intermediates in protometabolism, but there is no experimental support for the prebiotic COfixation routes to thioesters. Here we demonstrate that, under a simulated geoelectrochemical condition in primordial ocean hydrothermal systems (-0.6 to -1.0&#x2009;V versus the standard hydrogen electrode), nickel sulfide (NiS) gradually reduces to Ni, while accumulating surface-bound carbon monoxide (CO) due to COelectroreduction. The resultant partially reduced NiS realizes thioester (S-methyl thioacetate) formation from CO and methanethiol even at room temperature and neutral pH with the yield up to 35% based on CO. This thioester formation is not inhibited, or even improved, by 50:50 coprecipitation of NiS with FeS or CoS (the maximum yields; 27 or 56%, respectively). Such a simple thioester synthesis likely occurred in Hadean deep-sea vent environments, setting a stage for the autotrophic origin of life.",
+   "journal": "Communications chemistry",
+   "year": "2021",
+   "doi": "10.1038/s42004-021-00475-5",
+   "article_types": [
+    "Journal Article"
+   ]
+  },
+  "29168482": {
+   "pmid": "29168482",
+   "title": "UV-light-driven prebiotic synthesis of iron-sulfur clusters.",
+   "abstract": "Iron-sulfur clusters are ancient cofactors that play a fundamental role in metabolism and may have impacted the prebiotic chemistry that led to life. However, it is unclear whether iron-sulfur clusters could have been synthesized on prebiotic Earth. Dissolved iron on early Earth was predominantly in the reduced ferrous state, but ferrous ions alone cannot form polynuclear iron-sulfur clusters. Similarly, free sulfide may not have been readily available. Here we show that UV light drives the synthesis of [2Fe-2S] and [4Fe-4S] clusters through the photooxidation of ferrous ions and the photolysis of organic thiols. Iron-sulfur clusters coordinate to and are stabilized by a wide range of cysteine-containing peptides and the assembly of iron-sulfur cluster-peptide complexes can take place within model protocells in a process that parallels extant pathways. Our experiments suggest that iron-sulfur clusters may have formed easily on early Earth, facilitating the emergence of an iron-sulfur-cluster-dependent metabolism.",
+   "journal": "Nature chemistry",
+   "year": "2017",
+   "doi": "10.1038/nchem.2817",
+   "article_types": [
+    "Journal Article",
+    "Research Support, Non-U.S. Gov't"
+   ]
+  }
+ },
+ "doi2pmid": {
+  "10.1007/s00239-020-09988-4": "33547911",
+  "10.1038/nchem.2817": "29168482",
+  "10.1038/ncomms7424": "25752840",
+  "10.1038/s41467-018-06072-w": "30194374",
+  "10.1038/s41467-019-08353-4": "30700721",
+  "10.1038/s41467-021-24111-x": "34155210",
+  "10.1038/s41586-019-1151-1": "31043728",
+  "10.1038/s41586-020-2330-9": "32494078",
+  "10.1038/s42004-021-00475-5": "36697522",
+  "10.1073/pnas.0609592104": "17494767",
+  "10.1073/pnas.0912628107": "20080693",
+  "10.1073/pnas.97.8.4112": "10760281",
+  "10.1089/ast.2019.2045": "31841362",
+  "10.1098/rsif.2018.0159": "30045888",
+  "10.1098/rstb.2002.1183": "12594918",
+  "10.1126/sciadv.adn9657": "39167649",
+  "10.1126/science.1241888": "24288333",
+  "10.3389/fmicb.2020.00817": "32655499",
+  "10.3390/life15050724": "40430152"
+ },
+ "doi_crossref": {
+  "10.1002/bies.200900131": {
+   "exists": true,
+   "title": "How did LUCA make a living? Chemiosmosis in the origin of life",
+   "venue": "BioEssays",
+   "type": "journal-article",
+   "year": 2010
+  },
+  "10.1007/bf00623322": {
+   "exists": true,
+   "title": "Selforganization of matter and the evolution of biological macromolecules",
+   "venue": "Die Naturwissenschaften",
+   "type": "journal-article",
+   "year": 1971
+  },
+  "10.1007/bf01732468": {
+   "exists": true,
+   "title": "Coenzymes as fossils of an earlier metabolic state",
+   "venue": "Journal of Molecular Evolution",
+   "type": "journal-article",
+   "year": 1976
+  },
+  "10.1016/j.cmet.2024.12.008": {
+   "exists": true,
+   "title": "Ergothioneine improves healthspan of aged animals by enhancing cGPDH activity through CSE-dependent persulfidation",
+   "venue": "Cell Metabolism",
+   "type": "journal-article",
+   "year": 2025
+  },
+  "10.1016/j.cmet.2025.01.024": {
+   "exists": true,
+   "title": "Ergothioneine controls mitochondrial function and exercise performance via direct activation of MPST",
+   "venue": "Cell Metabolism",
+   "type": "journal-article",
+   "year": 2025
+  },
+  "10.1038/319618a0": {
+   "exists": true,
+   "title": "Origin of life: The RNA world",
+   "venue": "Nature",
+   "type": "journal-article",
+   "year": 1986
+  },
+  "10.1038/nature08013": {
+   "exists": true,
+   "title": "Synthesis of activated pyrimidine ribonucleotides in prebiotically plausible conditions",
+   "venue": "Nature",
+   "type": "journal-article",
+   "year": 2009
+  },
+  "10.1038/nphys3984": {
+   "exists": true,
+   "title": "Growth and division of active droplets provides a model for protocells",
+   "venue": "Nature Physics",
+   "type": "journal-article",
+   "year": 2016
+  },
+  "10.1038/nrmicro1991": {
+   "exists": true,
+   "title": "Hydrothermal vents and the origin of life",
+   "venue": "Nature Reviews Microbiology",
+   "type": "journal-article",
+   "year": 2008
+  },
+  "10.1038/s41559-019-1015-y": {
+   "exists": true,
+   "title": "Promotion of protocell self-assembly from mixed amphiphiles at the origin of life",
+   "venue": "Nature Ecology &amp; Evolution",
+   "type": "journal-article",
+   "year": 2019
+  },
+  "10.1038/s41559-020-1125-6": {
+   "exists": true,
+   "title": "A hydrogen-dependent geochemical analogue of primordial carbon and energy metabolism",
+   "venue": "Nature Ecology &amp; Evolution",
+   "type": "journal-article",
+   "year": 2020
+  },
+  "10.1101/2021.07.08.451414": {
+   "exists": true,
+   "title": "Non-equilibrium conditions inside rock pores drive fission, maintenance and selection of coacervate protocells",
+   "venue": null,
+   "type": "posted-content",
+   "year": 2021
+  },
+  "10.1144/gsjgs.154.3.0377": {
+   "exists": true,
+   "title": "The emergence of life from iron monosulphide bubbles at a submarine hydrothermal redox and pH front",
+   "venue": "Journal of the Geological Society",
+   "type": "journal-article",
+   "year": 1997
+  },
+  "10.3390/cryst10110964": {
+   "exists": true,
+   "title": "Liquid Crystal Peptide/DNA Coacervates in the Context of Prebiotic Molecular Evolution",
+   "venue": "Crystals",
+   "type": "journal-article",
+   "year": 2020
+  }
+ },
+ "novelty": {
+  "ergothioneine exercise": {
+   "hits": 16,
+   "neighbours": [
+    "PROMETHEUS clinical trial protocol: tailoring healthy ageing with lifestyle and nutraceuticals.. The d emographic shift toward an older population is accelerating the prevalence of age-related diseases. Precision geromedicine represents a paradigm shift in targeting the biological processes of ageing to optimise health and healthspan, which likely requires multimodal tailored interventions. PROMETHEUS, as part of the XPRIZE healthspan semi-finalist competition, is an 8-week feasibility and exploratory study including 20 middle-aged-to-older participants who received a multimodal intervention comprising fundamental and augmented interventions. The fundamental interventions include sleep and dietary recommendations; supplementation with whey protein, creatine, and fucoidan; supervised exercise with an exergaming component (dual-task cognitive-physical training); motivational interviewing; and cognitive behavioural therapy. The augmented intervention is further personalised based on predefined gerotypes, reflecting individual ageing patterns beyond chronological age. At baseline, urolithin A, nicotinamide mononucleotide, and/or multivitamin-multimineral were prescribed to participants",
+    "Remodeling of the Mouse Liver and Skeletal Muscle Metabolome in Response to Continuous Acute Exercise and Disruption of AMPK-Glycogen Interactions.. : Acute exercise remodels many interconnected biochemical pathways in metabolically active tissues. This remodeling involves the activation of the energy-sensing AMP-activated protein kinase (AMPK) to maintain cellular energy homeostasis. Critical energy reserves of glycogen, primarily stored in liver and skeletal muscle and known to interact with AMPK, are utilized to help meet increased energy demands with exercise. However, the breadth of metabolic pathways regulated by acute exercise and AMPK's interactive roles with glycogen remain incompletely understood. This study therefore aimed to map mouse liver and skeletal muscle metabolite responses to continuous acute exercise and disruption of AMPK-glycogen interactions.: Liquid chromatography-mass spectrometry-based untargeted metabolomics was used to measure the relative abundance of liver and gastrocnemius muscle metabolites at rest and following an acute bout of continuous treadmill running in wild type (WT) and AMPK transgenic mice with double knock-in (DKI) mutations in the &#x3b2",
+    "Current Evidence of Ergogenic and Post-Exercise Recovery Effects of Dietary Supplementation within Humans-A Narrative Review.. is an entomopathogenic fungus traditionally used in Asian ethnomedicine and increasingly investigated for its potential health-promoting properties, including immunomodulatory and anti-inflammatory activities. In recent years, it has gained attention as a dietary supplement with possible applications in sports nutrition. This narrative review summarizes and critically evaluates the current human evidence regarding the ergogenic and post-exercise recovery effects ofsupplementation in healthy individuals. A structured database search was conducted using predefined eligibility criteria, and the methodological quality of included studies was appraised through domain-based risk-of-bias assessment. Five intervention studies published between 2017 and 2024, comprising 321 participants aged 16-35 years, were identified. Supplementation protocols ranged from 1 to 16 weeks, with daily doses of 1-12 g administered either as isolated fungal material or as a part of multi-ingredient formulations. Assessed outcomes included indices of aerobic performance and exercise cap",
+    "Ergothioneine and exercise: A match made in (cognitive) heaven?. Cognitive decline is one of the key challenges with aging, with significant implications for independence, quality of life, and healthcare burden. As pharmacological treatments remain limited in efficacy and often carry adverse effects, there is growing interest in safe, accessible, non-pharmacological strategies to preserve cognitive function. This Short Review explores the potential of combining two approaches that, individually, have shown beneficial effects on cognitive function: ergothioneine, a naturally occurring amino acid with antioxidant and anti-inflammatory properties, and physical exercise. Ergothioneine accumulates in the brain and other high-stress organs, where it modulates the redox balance, dampens chronic inflammation and supports mitochondrial function. Meanwhile, physical exercise has well-documented benefits for neuroplasticity, cerebral perfusion, and cognitive performance. Preclinical studies suggest ergothioneine supports exercise performance and muscle recovery without attenuating adaptive responses. Despite their distinct and complementary mechanisms, currently there are no available studies",
+    "Effects of ergothioneine on oxidative DNA damage and immune response induced by circadian rhythm disturbance in mice.. Ergothioneine has antioxidant, anti-inflammatory, and cell-protective properties. Circadian rhythm disruption can lead to health issues, such as insomnia, mental illness, chronic diseases, and cancer. However, the impact of ergothioneine, as an antioxidant, on oxidative DNA damage and immune variations caused by circadian rhythm disruptions remains unclear. To investigate the effect of ergothioneine on oxidative DNA damage and immune responses caused by circadian rhythm disruption, 8-week-old mice were subjected to night time feeding and exercise restrictions for 14 days. Body weight, daytime running wheel activity, and anxiety-like behavior showed no significant differences between the night-restricted groups, regardless of ergothioneine administration. Serum interleukin-6 levels, 8-hydroxy-2'-deoxyguanosine levels in urine and nuclear DNA of the liver, testes, lungs, and pancreas were significantly reduced in the night-restricted group receiving ergothioneine compared with that of the group without ergothioneine, with no significant differences observed when comp",
+    "Anserine, Balenine, and Ergothioneine: Impact of Histidine-Containing Compounds on Exercise Performance-A Narrative Review.. Histidine is an amino acid which plays a critical role in protein synthesis, muscle buffering during anaerobic exercise, and antioxidation. It also acts as a precursor to carnosine, a dipeptide that enhances physical performance by being present in fast-contracting muscle fibers and contributing to buffering capacity. Recent studies have examined other histidine-containing compounds, such as anserine, balenine, and ergothioneine, to assess their potential benefits for physical activity. This narrative review focuses on the literature about the effects of dietary supplementation with these histidine-containing compounds on exercise capacity in animals and humans. The findings indicate that anserine may improve physical performance and reduce fatigue, particularly in quick, repetitive activities. Although balenine has been less extensively studied, it has shown promise in enhancing muscle regeneration and antioxidative defense in animal models. Ergothioneine, a sulfur-containing histidine derivative, displayed antioxidant and anti-inflammatory properties in bot"
+   ],
+   "query": "ergothioneine exercise",
+   "qid": "Q_ERGO"
+  },
+  "origin of life self-replication": {
+   "hits": 127,
+   "neighbours": [
+    "A GTP synthase ribozyme with increased GTP turnover.. Before the invention of encoded protein translation, early stages of life likely relied on catalytic RNAs (ribozymes). To test how such a system could have functioned, researchers have developed ribozymes that could have provided central functions. The central function of self-replication would have required templated RNA polymerization of nucleotides, which is energetically driven in today's life forms by the use of nucleoside 5'-triphosphates (NTPs). We previously showed that ribozymes can catalyze the formation of guanosine 5'-triphosphate (GTP) from guanosine and the prebiotically plausible polyphosphorylation reagent cyclic trimetaphosphate (cTmp) by generating a guanosine triphosphorylation ribozyme (GTR) using an in vitro selection in emulsion. This ribozyme (GTR1) had a catalytic rate enhancement of about 18,000-fold but a turnover of only about 1.7. Here, we improved this ribozyme by emulsion selection from a doped library of GTR1 that was metabolically coupled to a polymerase ribozyme. High-throughput sequencing and biochemical analysis identified the most efficient variant of GTR1 with 19 mutations, which increased th",
+    "The origin and development of life in an informational dissipative perspective.. This paper re-examines the definition of life, critiquing and building upon Plante's recently proposed symbiotic, holistic, and gradualist framework. Plante's model integrates symbiosis across biological scales, holism to unify hierarchical complexity, and gradualism to address the continuum between non-living and living entities. While innovative, the model omits two critical factors underpinning life: information and water. These elements form the foundation for a novel approach based on informational dissipative dynamics and Prigogine-like structures. Water is posited as a dynamic, topological medium capable of encoding and transferring information via transient hydrogen-bond networks. This phenomenon creates \"informational topologies\" that guide the organization of molecules, bridging the gap between physical randomness and biological order. The proposed framework explores how water properties drive the emergence of autopoietic systems through the interplay of thermodynamic, informational, and quantum dynamics. The model introduces the concept of informational entropy gradients within water-molecul",
+    "A small polymerase ribozyme that can synthesize itself and its complementary strand.. The emergence of a chemical system capable of self-replication and evolution is a critical event in the origin of life. RNA polymerase ribozymes can replicate RNA, but their large size and structural complexity impede self-replication and preclude their spontaneous emergence. Here, we describe QT45, a 45-nucleotide polymerase ribozyme, discovered from random sequence pools, that catalyzes general RNA-templated RNA synthesis using trinucleotide triphosphate (triplet) substrates in mildly alkaline eutectic ice. QT45 can synthesize both its complementary strand using a random triplet pool at 94.1% per-nucleotide fidelity and a copy of itself using defined substrates, both with yields of ~0.2% in 72 days. The discovery of polymerase activity in a small RNA motif suggests that polymerase ribozymes are more abundant in RNA sequence space than previously thought.",
+    "The origin and evolution of life as continuing expansion of viral hosts.. The emergence of life on Earth likely involved a complicated evolution of the primeval residues via basic intermediate forms capable of self-replication. These primordial replicators could have further evolved into archaic virus-like structures, which in turn became the precursors of the cellular life forms. If viruses were indeed the predecessors of the first cellular life forms as suggested by the 'primordial virus world' and 'virus-first' scenarios, could their hosts themselves emerged and evolved predominantly as factories and reservoirs for virus production and dissemination? In other words, is that hypothetically possible that viruses were not only the originators of cellular life forms and the selfish driving force behind their evolution, but the fundamental reason for both their existence and biological heterogeneity? A short note presented here deliberates on this not entirely unfeasible course of events.",
+    "Autocatalytic Reaction between HCN and Cysteamine Produces Hydrophobic, Catalytic, Liquid Compartments.. Although HCN has been explored extensively as a precursor in the prebiotic synthesis of biological molecules, macroscopic system-level phenomena, originating from reactions of HCN, such as autocatalysis, oscillations, pattern formation, and phase separation have attracted less attention. Autocatalysis and phase separation are particularly interesting in the context of the origin of life because they are sources of self-replication and compartmentalization. In this work, we investigate the reaction between HCN and cysteamine in water, which exhibits both sigmoidal reaction kinetics and the formation of a distinct liquid phase. We studied the origin of the sigmoidal kinetics using NMR spectroscopy and other techniques, investigated the chemical composition of the products using single-crystal X-ray diffraction and mass spectrometry, and probed the absorption of inert additives into the second liquid phase. Our studies show that the sigmoidal kinetics arise from an autocatalytic feedback loop driven by both an increase in pH and the catalytic nature of the newly formed phase itself",
+    "The Evolution of Functional Amyloids and Their Impact on Host-Microbe Interactions.. Amyloids are highly ordered &#x3b2;-sheet-rich structures that are well conserved across the domains of life. Amyloids have a unique repetitive structure that enables autocatalytic self-replication. This property is most well-known in the context of neurodegeneration, in which proteins misfold into amyloid and begin an amyloid cascade resulting in the deposition of large amyloid aggregates characteristic of various diseases such as Alzheimer's disease and Parkinson's disease. The amyloid fold, however, can be pathological or functional. The repetitive nature of amyloids positions self-replicating amyloids as a potential key player in the origin of life. This may explain why, despite the pathogenic potential of amyloids, the amyloid fold is readily found. Many amyloids are not pathogenic and instead they contribute positively to the overall fitness of the cell. Bacteria, for example, use functional amyloids to facilitate biofilm formation, dissemination, storage, adhesion to cells or surfaces, and virulence. Interestingly, the high conservation of the amyloid fold and its ability to self-replicate e"
+   ],
+   "query": "origin of life self-replication",
+   "qid": "Q2"
+  },
+  "exercise mimetic sarcopenia": {
+   "hits": 32,
+   "neighbours": [
+    "Metabolic rebound and weight cycling following incretin mimetic drug withdrawal: a cause for concern?. Incretin mimetic drugs (IMDs) induce rapid weight loss and improve cardiometabolic health. However, over 50% of users discontinue and then reinitiate therapy within two years. This drug cycling drives weight loss-regain cycling, which adversely affects body composition and metabolic health.\n\nCessation of IMD therapy leads to a rapid and near-complete reversal of weight loss and cardiometabolic improvement within one year and early IMD discontinuation is associated with increased cardiometabolic risk. Concerningly, up to 40% of the weight lost on these therapies is attributed to lean mass loss. Weight cycling compounds these effects and may worsen body composition and metabolic profiles beyond baseline. Supervised exercise programmes attenuate weight regain and may have a lasting 'legacy' effect on metabolic markers.\n\nThe benefits of IMDs are short-lived following drug cessation and the loss of lean mass that occurs with IMDs may increase the risk of sarcopenia. Incorporating supervised exercise programmes during and after therapy may preserve lean mass, promote healthier body comp",
+    "Exercise in a Pill: Emerging Therapeutics for Age-Related Orthopedic Diseases.. The global aging population has led to an increasing burden of age-related orthopedic diseases, seriously imposing social and economic pressures. Although exercise has been proven to have a protective effect on the musculoskeletal system, diseases themselves often restrict patients from engaging in physical activity. Exercise mimetics, as a pharmacological intervention that can simulate or enhance the benefits of exercise, offer new treatment options for such patients.\n\nExercise mimetics modulate oxidative stress, inflammatory responses, and apoptosis to enhance bone mineral density, improve trabecular microarchitecture, facilitate cartilage nourishment, and augment muscular strength and endurance. They have shown promising therapeutic potential in disease models such as osteoarthritis, intervertebral disc degeneration, osteoporosis, and sarcopenia. Some compounds such as metformin and resveratrol have been used in clinical research.\n\nThis review summarizes the mechanism of action and the latest research progress on exercise mimetics in degenerative orthopedic diseases and analyzes the current translati",
+    "Sarcopenia: An overview of emerging therapies and pathophysiological insights in age-related skeletal muscle decline.. Sarcopenia is characterized by an age-associated decline of skeletal muscle mass and function. It has been recognized as a clinical disease by the World Health Organization since 2016. This condition is commonly linked with signs of physical frailty, functional limitations, higher frequency of falls, increased hospitalization, and a rise in mortality rates, and it is gaining recognition as a crucial geriatric syndrome considering the increasing life expectancy and the growing elderly population worldwide. A few pathological mechanisms of sarcopenia have been identified, even though its etiologies are still unclear. These mechanisms include cellular senescence, oxidative stress, and apoptosis along with \"inflammaging. It also involves changes in the types of muscle fibers, satellite cells, mitochondrial function, myokines, and inflammatory cytokines in aged sarcopenic muscle as compared with young or healthy aged muscles. Ultimately, this review explores new therapeutic avenues for the management of sarcopenia. There is not a well-recognized treatment for sarcopenia",
+    "In silico transcriptome-based drug screening identifies celastrol as a multi-species therapeutic agent against aging-related sarcopenia and mitochondrial dysfunction.. Sarcopenia, characterized by the progressive age-related loss of skeletal muscle mass and function, is a primary driver of ambulatory dysfunction in older adults and lacks approved therapeutics. Although exercise has been shown to mitigate muscle aging through activation of peroxisome proliferator-activated receptor &#x3b3; co-activator 1&#x3b1; (PGC-1&#x3b1;)-dependent mitochondrial biogenesis and oxidative metabolism, the practical implementation of exercise regimens is often constrained by age-related physical frailty and declining mobility. This limitation underscores the need for pharmacological approaches to replicate these advantageous adaptations.\n\nThis study aimed to identify a potential therapeutic candidate that mimic the beneficial effects of PGC-1&#x3b1; overexpression and exercise intervention on aging-related sarcopenia and mitochondrial dysfunction.\n\nWe analyzed age-stratified muscle transcriptome datafrom various species and assessed the effects of muscle-specific PGC-1&#x3b1; overexpression on muscl",
+    "Fibre Type-Specific Proteomics Reveals Shared and Distinct Skeletal Muscle Adaptations to Resistance Training and Beta-Adrenergic Agonist.. Skeletal muscle is essential for metabolic health and physical function. While resistance training promotes muscle hypertrophy, alternative therapeutic strategies are needed for individuals unable to engage in physical activity. Because beta-adrenergic stimulation induces muscle growth without mechanical load, we assessed muscle fibre type-specific proteomic adaptations to prolonged beta-adrenergic stimulation and resistance training to decipher shared and distinct remodelling patterns.\n\nWe collected vastus lateralis biopsies from 21 moderately trained young males (mean&#x2009;&#xb1;&#x2009;SD, age: 24&#x2009;&#xb1;&#x2009;3) before and after 4-week whole-body resistance training (three sessions/week) or daily inhalation of beta-adrenergic agonist terbutaline (4&#x2009;mg/day). From each biopsy, we isolated 40 muscle fibres and typified them using myosin-heavy-chain markers. Fibre pools were analysed using LC-MS/MS-based proteomics.\n\nBeta-adrenergic stimulation and resistance training both increased peak-power output during bike-ergometer sprin",
+    "An orally active estrogen receptor-related receptor agonist, SLU-PP-915, enhances aerobic exercise capacity.. Estrogen receptor-related receptors (ERR&#x3b1;, ERR&#x3b2;, and ERR&#x3b3;) are orphan nuclear receptors that regulate genes involved in mitochondrial biogenesis, oxidative phosphorylation, fatty acid oxidation, and the Krebs cycle. ERRs are essential for skeletal muscle adaptation to aerobic exercise and represent promising targets for exercise mimetic therapeutics. We previously developed an ERR pan-agonist, SLU-PP-332 (332), which improves aerobic performance in mice but lacks oral bioavailability. Here, we characterize SLU-PP-915 (915), a chemically distinct ERR pan-agonist that is orally bioavailable and exhibits potent in vivo exercise mimetic activity. Compound 915 enhances aerobic exercise performance (distance and duration) to a similar extent as 332 when administered intraperitoneally and maintains comparable efficacy when administered orally, adjusted for systemic exposure. Both compounds robustly induce the expression of DNA damage-inducible transcript 4 (Ddit4), a gene induced by acute aerobic exercise, with levels matching or exceeding levels induced by tread"
+   ],
+   "query": "exercise mimetic sarcopenia",
+   "qid": "Q3"
+  }
+ },
+ "broad_queries": {
+  "Q_ERGO": "ergothioneine exercise",
+  "Q2": "origin of life self-replication",
+  "Q3": "exercise mimetic sarcopenia"
+ },
+ "dataset": {
+  "PDB:7SUS": {
+   "exists": true
+  },
+  "UniProt:P35414": {
+   "exists": true,
+   "name": "Apelin receptor"
+  },
+  "UniProt:Q9H015": {
+   "exists": true,
+   "name": "Solute carrier family 22 member 4"
+  },
+  "UniProt:P25325": {
+   "exists": true,
+   "name": "3-mercaptopyruvate sulfurtransferase"
+  },
+  "UniProt:P32929": {
+   "exists": true,
+   "name": "Cystathionine gamma-lyase"
+  },
+  "UniProt:P21695": {
+   "exists": true,
+   "name": "Glycerol-3-phosphate dehydrogenase [NAD(+)], cytoplasmic"
+  },
+  "UniProt:Q9Y6N5": {
+   "exists": true,
+   "name": "Sulfide:quinone oxidoreductase, mitochondrial"
+  },
+  "UniProt:P0A9M8": {
+   "exists": true,
+   "name": "Phosphate acetyltransferase"
+  },
+  "UniProt:P0A6A3": {
+   "exists": true,
+   "name": "Acetate kinase"
+  },
+  "UniProt:P27988": {
+   "exists": true,
+   "name": "Carbon monoxide dehydrogenase/acetyl-CoA synthase subunit alpha"
+  },
+  "GEO:GSE167186": {
+   "exists": true
+  },
+  "GEO:GSE151066": {
+   "exists": true
+  },
+  "GEO:GSE163356": {
+   "exists": true
+  },
+  "GEO:GSE157585": {
+   "exists": true
+  },
+  "PDB:8S9P": {
+   "exists": true
+  },
+  "UniProt:O15146": {
+   "exists": true,
+   "name": "Muscle, skeletal receptor tyrosine-protein kinase"
+  }
+ },
+ "meta": {
+  "built": "2026-07-11",
+  "sources": "PubMed (host.mcp) + CrossRef (DOI existence) + UniProt/RCSB/NCBI-GEO (dataset existence)",
+  "n_pmid": 46,
+  "n_doi2pmid": 19,
+  "n_doi_crossref": 14,
+  "n_dataset": 16
+ }
+}

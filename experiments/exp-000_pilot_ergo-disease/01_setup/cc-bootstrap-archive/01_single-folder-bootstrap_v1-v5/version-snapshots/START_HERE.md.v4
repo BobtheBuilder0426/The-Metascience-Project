@@ -1,0 +1,65 @@
+# START HERE — run the Agentic Loop on a blank Claude Code (2 steps)
+
+You are about to let a **blank Claude Code (CC)** answer a research question by driving a
+**Claude Science (CS)** browser tab through a research loop. You need: a blank Claude Code
+open **in this folder**, and a Claude Science tab open in Chrome that the CC can control.
+
+> ### ⚠ Before you start — do this one thing (privacy)
+> The CC drives **your personal, logged-in Chrome**. To keep it away from your private Claude
+> chats/projects, give it a **known, safe way into Claude Science**. Easiest, do **either**:
+> - **Open Claude Science yourself in a Chrome tab and leave it in front** (simplest), **and/or**
+> - **Bookmark Claude Science** in that Chrome (add it to the bookmarks/favorites bar, name it
+>   clearly e.g. "Claude Science"). A bookmark is the most reliable target — the CC will look for
+>   it and click it directly, so it never has to guess a URL or browse your account.
+>
+> The CC is instructed to reach Claude Science **only** via an open tab, that bookmark, or the
+> address bar — and to treat everything else in your account as strictly off-limits (it must never
+> open your chats, Projects, or Claude Code/the assistant sessions). If it can't find Science it will
+> **stop and ask you** — it will **not** go looking through your account.
+
+Everything the CC needs is already in this folder. You only do two things.
+
+---
+
+## STEP 1 — start the CC (copy-paste this one line)
+
+> **Read CLAUDE.md and bootstrap your workspace.**
+
+That's it — this is your **only** required action until the question. The CC will, on its own:
+**pre-flight its environment** (what system it's on, whether it can control Chrome, where Claude
+Science is, and whether other AI models like Codex are available), create a fresh Claude Science
+project (`AL-exp000-QDIS-L1` — see `project-naming-convention.md`), pre-grant the permissions
+so it won't stall, upload the two PDFs from `materials/`, and then **hand you back a short "start
+prompt"** and wait. If it's missing something essential (no Chrome control, can't find CS) it will
+write `NEEDS_HUMAN.md` telling you exactly what to fix.
+
+*(No special launcher needed. If your CC didn't auto-read CLAUDE.md, the line above tells it to.
+The only clicks you may need: approving a permission card if one pops up.)*
+
+---
+
+## STEP 2 — give it the question
+
+When the CC says it's ready, it will show you a **start prompt** to paste into it. That start
+prompt contains a blank you fill with the research question — **paste the question exactly as a
+curious scientist would type it**, no editing. For this pilot the question is:
+
+> **Which disease is the best target for treating it with ergothioneine?**
+
+Paste that, send it, and the CC runs the loop on its own. It checks the CS tab every ~10 minutes
+(that's normal — not stuck). **When a permission card pops up in the CS tab, click approve.**
+
+---
+
+## What you get at the end
+A folder `OUTPUT/QDIS_arm_L_run1/` containing the final answer (`answer.md`), any figures, and the
+full step-by-step of what happened (`process_trace.json`). Plus `run_log.md` and `RUN_REPORT.md` at
+the top of this folder.
+
+**This is a first try — we just want to see how far one blank CC gets.** No baseline, no scoring
+yet. If the CC gets stuck it will write `NEEDS_HUMAN.md` telling you exactly what to do.
+
+## If something goes wrong
+Give the whole folder (whatever it managed to produce) back to us, or ask your helper (the assistant) to
+write a short **blackbox report** — what happened, where it stalled, what CS produced — and hand
+that back. A partial result is useful; that's the point of a pilot.

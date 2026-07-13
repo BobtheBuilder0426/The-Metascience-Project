@@ -1,0 +1,185 @@
+{
+  "task": "Generate a NOVEL method (distinct from the attached 1C-MIM paper) to identify a different skeletal-muscle-rejuvenating metabolite cocktail, and design the first pilot experiment.",
+  "source_paper": {
+    "citation": "Hernandez-Benitez et al., Cell Reports Medicine 5:101449 (2024)",
+    "doi": "10.1016/j.xcrm.2024.101449",
+    "their_method": "FORWARD: track transient metabolite waves during early cell differentiation across 3 progenitor systems -> intersect enriched pathways -> methionine/1-carbon + polyamine network -> hand-picked 1C-MIM (methionine, threonine, glycine, putrescine, SAM, cysteine)",
+    "their_validated_mechanism": "Acetylation + cell-cycle re-entry / regenerative competence (NOT global methylation-clock reversal, which they call 'minor')"
+  },
+  "my_method": {
+    "name": "CoRe \u2014 Cofactor-Reversal inversion of the muscle aging axis",
+    "principle": "REVERSE direction: measure the muscle aging axis directly, then invert it through COFACTOR-LIMITED chromatin/metabolic enzymes to find FEEDABLE metabolites, selected by a combinatorial axis-coverage objective (not pathway hand-picking).",
+    "why_novel": "Opposite starting point (aging state vs differentiation dynamics); mechanism-anchored enzyme layer vs pathway enrichment; combinatorial optimization vs manual selection; yields ZERO-overlap cocktail."
+  },
+  "steps": [
+    {
+      "step": 1,
+      "title": "Aging axis",
+      "action": "DESeq2 old-vs-young in Tabula Muris Senis bulk limb muscle (GSE132040), sex-adjusted",
+      "result": {
+        "contrast": "old {21,24,27 mo} vs young {3 mo}, sex-adjusted",
+        "n_old": 13,
+        "n_young": 6,
+        "genes_tested": 16248,
+        "sig_padj05": 1813,
+        "up_old": 1006,
+        "down_old": 807,
+        "validation": "Canonical aged-muscle program: denervation/NMJ (Chrng +3.6, Sln +2.6), embryonic myosin (Myh3 +1.3), stress (Gadd45a, Runx1, Ampd3)"
+      }
+    },
+    {
+      "step": 2,
+      "title": "1C-MIM signature",
+      "action": "DESeq2 1C-MIM-vs-control in the paper's own GSE229533 aged quadriceps",
+      "result": {
+        "n": "5 vs 5",
+        "genes_tested": 14483,
+        "sig_padj05": 3641,
+        "markers_reproduced": "Saa3 -2.8, Timp1 -2.8, Clu -0.8, Mt1 -1.9, Mt2 -2.3 (DOWN); Lep +1.4, Gdf5 +1.4 (UP) \u2014 all match the paper"
+      }
+    },
+    {
+      "step": 3,
+      "title": "Premise test",
+      "action": "Correlate 1C-MIM effect with aging axis (global + per module)",
+      "result": {
+        "global_pearson_r_age_sig_genes": 0.265,
+        "verdict": "1C-MIM does NOT globally reverse the aging transcriptome (weakly POSITIVE corr).",
+        "module_finding": "1C-MIM reverses the age-ELEVATED oxidative-stress/metallothionein module (reversal +0.42) and drives a satellite/regeneration program (+0.34); it does not touch mito/senescence.",
+        "reconciliation": "Consistent with the paper: DNA-methylation-clock reversal was 'minor'; mechanism is REGENERATIVE COMPETENCE (cell-cycle re-entry, satellite activation, acetylation), not global age reversal.",
+        "method_implication": "The correct optimization target is NOT the global old-vs-young vector. It is the cofactor-limited epigenetic/metabolic ENZYME layer that gates regenerative competence and is dysregulated with age. This motivates the cofactor-reversal method."
+      }
+    },
+    {
+      "step": 4,
+      "title": "Cofactor map",
+      "action": "Map 6 chromatin/metabolic enzyme axes, each gated by a feedable cofactor; ground supply genes in Reactome",
+      "result": {
+        "axes": [
+          "Acetyl-CoA/HAT",
+          "NAD+/Sirtuin",
+          "aKG-dioxygenase",
+          "Polyamine/hypusine",
+          "FAD/LSD",
+          "SAM/methylation(reference)"
+        ],
+        "n_enzyme_genes": 94,
+        "reactome_grounding": "each axis maps to its canonical cofactor-metabolism pathway (Coenzyme A biosynthesis, Nicotinate metabolism, TCA cycle, Metabolism of polyamines, Riboflavin metabolism, Methylation)"
+      }
+    },
+    {
+      "step": 5,
+      "title": "Rank levers",
+      "action": "Composite score = 0.20*tx-dysregulation + 0.30*metabolite-age-decline + 0.25*feedability + 0.25*regen-gate",
+      "result": {
+        "ranking": {
+          "NAD+": 0.903,
+          "Spermidine": 0.814,
+          "alpha-Ketoglutarate": 0.784,
+          "Acetyl-CoA": 0.701,
+          "SAM": 0.677,
+          "FAD": 0.371
+        },
+        "positive_control": "Method ranks Acetyl-CoA (0.70) ABOVE the SAM/methylation reference (0.68), independently recovering the paper's validated acetylation mechanism from an orthogonal direction."
+      }
+    },
+    {
+      "step": 6,
+      "title": "Select cocktail",
+      "action": "Submodular axis-coverage optimizer (maximize score, penalize inter-axis redundancy, lambda=1.2)",
+      "result": {
+        "selected": [
+          "NAD_Sirtuin",
+          "Polyamine_hypusine",
+          "alphaKG_dioxygenase",
+          "AcetylCoA_HAT"
+        ],
+        "F": 2.381,
+        "key_result": "SAM/methionine (1C-MIM's defining axis) is NEVER selected even when allowed to compete \u2014 redundant/conflicting with aKG-demethylation (R=0.60) and acetyl-CoA (R=0.55).",
+        "cocktail": "NR + Spermidine + Ca-AKG (core) + Acetate (optional 4th)"
+      }
+    },
+    {
+      "step": 7,
+      "title": "Pilot + power",
+      "action": "4-arm CTX regeneration assay in aged mice; power from paper's effect sizes",
+      "result": {
+        "arms": [
+          "vehicle",
+          "CoRe",
+          "1C-MIM benchmark",
+          "scramble"
+        ],
+        "n_per_arm_pilot": 12,
+        "power": "80% for CoRe-vs-vehicle at d=1.2 (paper's reported regeneration effect)",
+        "superiority_vs_1CMIM": "deferred to n=26/arm follow-on",
+        "differentiator": "cofactor + chromatin target-engagement readouts (NAD+, spermidine, aKG, 5hmC, H3ac)"
+      }
+    }
+  ],
+  "final_cocktail": {
+    "core": [
+      "Nicotinamide riboside (NR)",
+      "Spermidine",
+      "Calcium alpha-ketoglutarate"
+    ],
+    "optional_4th": "Acetate",
+    "overlap_with_1CMIM": "zero shared metabolites (putrescine->spermidine is precursor->product in the shared polyamine family)"
+  },
+  "key_datasets": {
+    "aging_reference": "GSE132040 (Tabula Muris Senis bulk)",
+    "mim_validation": "GSE229533 (paper's own)"
+  },
+  "references_confirmed": {
+    "Zhang2016_Science_NAD": {
+      "doi": "10.1126/science.aaf2693",
+      "journal": "Science",
+      "year": 2016,
+      "vol": "352",
+      "page": "1436-1443"
+    },
+    "Eisenberg2016_NatMed_spermidine": {
+      "doi": "10.1038/nm.4222",
+      "journal": "Nature Medicine",
+      "year": 2016,
+      "vol": "22",
+      "page": "1428-1438"
+    },
+    "AsadiShahmirzadi2020_CellMetab_AKG": {
+      "doi": "10.1016/j.cmet.2020.08.004",
+      "journal": "Cell Metabolism",
+      "year": 2020,
+      "vol": "32",
+      "page": "447-456.e6"
+    },
+    "Elhassan2019_CellRep_NR": {
+      "doi": "10.1016/j.celrep.2019.07.043",
+      "journal": "Cell Reports",
+      "year": 2019,
+      "vol": "28",
+      "page": "1717-1728.e6"
+    },
+    "Schaum2020_Nature_TMS": {
+      "doi": "10.1038/s41586-020-2499-y",
+      "journal": "Nature",
+      "year": 2020,
+      "vol": "583",
+      "page": "596-602"
+    },
+    "Paper_HernandezBenitez2024": {
+      "doi": "10.1016/j.xcrm.2024.101449",
+      "journal": "Cell Reports Medicine",
+      "year": 2024,
+      "vol": "5",
+      "page": "101449"
+    }
+  },
+  "tools": [
+    "pydeseq2 (DESeq2)",
+    "statsmodels power",
+    "Reactome via genes-ontologies MCP",
+    "GEO via omics-archives MCP",
+    "CrossRef DOI verification"
+  ],
+  "_dose_note": "Cocktail doses are representative starting values anchored to the cited primary studies (DOIs under references_confirmed), to confirm per protocol and titrate in the pilot; not lifted verbatim."
+}

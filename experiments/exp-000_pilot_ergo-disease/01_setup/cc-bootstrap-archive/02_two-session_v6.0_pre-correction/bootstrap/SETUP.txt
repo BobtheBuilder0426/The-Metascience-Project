@@ -1,0 +1,24 @@
+# SETUP.txt — one-time answers the blank Claude Code needs to run the loop.
+# OPTIONAL fast-path: fill these in to skip the questions. If you leave a field as
+# its PASTE_... placeholder, the CC will simply ASK you for it in the Claude Code
+# chat during setup (and then save your answer back here for next time). Either works.
+#
+# Put the VALUE on the same line after the "=", e.g.:
+#     CLAUDE_SCIENCE_URL = http://localhost:8000/
+
+# 1) The URL of your Claude Science (the app that opens in a Chrome tab).
+#    Open Claude Science, copy its tab's address bar, paste it here.
+CLAUDE_SCIENCE_URL = PASTE_CLAUDE_SCIENCE_URL_HERE
+
+# 2) A workspace folder for this run — the shared folder you and Claude Science
+#    exchange files through (your input files in, the results out). The browser
+#    can't upload files directly, so this shared folder is the data channel.
+#      - Make an EMPTY folder on the machine where Claude Science runs (one per run).
+#      - Put its path / name+location here. THAT'S ALL YOU DO.
+#      - The CC itself builds the connection, stages the files, and attaches the
+#        folder to its OWN Claude Science project. You do NOT add it in Science.
+#    (Optional: drop any starting papers/data into an  inputs/  subfolder inside it;
+#     the CC will otherwise create  inputs/  and  OUTPUT/ .)
+WORKSPACE_FOLDER = PASTE_WORKSPACE_FOLDER_PATH_HERE
+
+# (Future one-time inputs, if any, get added here as item 3, 4, ... and asked together.)

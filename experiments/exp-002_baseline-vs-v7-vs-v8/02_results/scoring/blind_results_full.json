@@ -1,0 +1,685 @@
+{
+  "model": "claude-opus-4-8",
+  "rubric": "v2 (5 dims equal 0.20)",
+  "blind": "arm==code==R-code (Key-1 operator-held)",
+  "creativity_refix": "LB-098 (panel-aware coda; pre-fix rows in blind_scores_opus_pre_creativity_refix/)",
+  "by_code": {
+    "R1": {
+      "question": "Q3",
+      "composite": 3.069,
+      "dimensions": {
+        "grounding": 1,
+        "reasoning": 4,
+        "completeness": 4.667,
+        "usefulness": 3.333,
+        "creativity": 2.347
+      },
+      "grounding_cap": 3,
+      "effective_grounding_cap": 1,
+      "overclaim_count": 0,
+      "citation_verification_rate": 0.2,
+      "n_citations": 5,
+      "citation_quality": {
+        "n_citations": 5,
+        "n_primary": 5,
+        "n_review": 0,
+        "n_preprint": 0,
+        "n_other": 0,
+        "n_retracted": 0,
+        "primary_ratio": 1.0,
+        "mean_venue_quality": 0.92,
+        "usage": 0.068,
+        "quality_composite": 0.96,
+        "flags": []
+      },
+      "creativity_detail": {
+        "creativity_index": 0.3367,
+        "novelty": 0.449,
+        "plausibility_gate": 0.75,
+        "reasoning_trace_gate": 1.0,
+        "creativity_dim_score_1to5": 2.347,
+        "hallucination_flag": false
+      },
+      "novelty": {
+        "novelty": 0.449,
+        "N_freq": 0.288,
+        "hits": 296,
+        "semantic": {
+          "value": 0.934,
+          "method": "tfidf_cosine",
+          "max_sim": 0.066,
+          "note": "model-dependent; under-discriminates on shared domain vocab (LB-018)"
+        },
+        "n_neighbours": 7,
+        "method": "0.75*retrieval_freq + 0.25*semantic_distance"
+      },
+      "redflags": [
+        "Core biophysical leap unproven: a static point mutation biasing conformation does not guarantee an inducible, druggable pocket a reversible ligand can engage \u2014 author acknowledges this as the central risk but it remains the make-or-break assumption.",
+        "CI-PAM-1f is a computational design only \u2014 no binding affinity, no target-engagement data, no ADMET; the 'G60D-mimetic hydroxyl arm' rationale is a plausibility story, not a modeled interaction (no docking performed).",
+        "Property values (CNS MPO, QED, cLogP, TPSA) are quoted from RDKit/computation but not independently verifiable here; the comparative table's reference-drug figures (e.g., CoQ10 cLogP ~18) should be checked against the saved artifact rather than trusted as typed.",
+        "The 'first-in-class / no activator in ChEMBL' novelty claim rests on absence-of-evidence in one database snapshot; genuine but should not be overstated as proof no such chemotype has ever been reported.",
+        "Efficacy is explicitly restricted to hypomorphic matrix-arm genotypes; framing it as a therapy for 'complex I mitochondrial disease' broadly overstates the addressable population (null and N-module/assembly genotypes likely excluded).",
+        "Central feasibility assumption (that the G60D activating conformation is inducible by a small-molecule binder) is unproven; no binding, affinity, docking, or pocket model supports CI-PAM-1f \u2014 authors disclose this but it remains the make-or-break unknown.",
+        "CI-PAM-1f is selected purely on computed physicochemical/CNS-MPO/QED metrics; no evidence it engages the NDUFA6/NDUFS2/NDUFS7 interface at all, so property-fit does not imply mechanism.",
+        "One future source is dated 2026 (Garg et al., Nature Metabolism, '08 Jul 2026') \u2014 a citation that could not exist at a normal authoring time; flagged as a possible fabricated/hallucinated reference, though it is explicitly labeled non-load-bearing.",
+        "Quantitative property values in the table (e.g., CoQ10 cLogP ~17.9/18, EPI-743 cLogP ~7.5, MPO scores) are plausible but unverifiable here and should be independently recomputed before use.",
+        "Positive allosteric modulation raising flux of a partially defective enzyme is mechanistically attractive but has essentially no precedent for complex I; absence of any activator in ChEMBL is used as a novelty argument but is also weak evidence that the pocket may not be tractable."
+      ],
+      "inter_judge_absdiff": {
+        "grounding": 0.667,
+        "reasoning": 0.0,
+        "completeness": 0.667,
+        "usefulness": 0.667,
+        "creativity": 0.667
+      }
+    },
+    "R2": {
+      "question": "Q2",
+      "composite": 3.261,
+      "dimensions": {
+        "grounding": 1,
+        "reasoning": 4,
+        "completeness": 5.0,
+        "usefulness": 4,
+        "creativity": 2.307
+      },
+      "grounding_cap": 3,
+      "effective_grounding_cap": 1,
+      "overclaim_count": 0,
+      "citation_verification_rate": 0.429,
+      "n_citations": 49,
+      "citation_quality": {
+        "n_citations": 49,
+        "n_primary": 34,
+        "n_review": 8,
+        "n_preprint": 0,
+        "n_other": 1,
+        "n_retracted": 1,
+        "primary_ratio": 0.791,
+        "mean_venue_quality": 0.958,
+        "usage": 0.7,
+        "quality_composite": 0.716,
+        "flags": [
+          "cites_1_retracted_work"
+        ]
+      },
+      "creativity_detail": {
+        "creativity_index": 0.3268,
+        "novelty": 0.498,
+        "plausibility_gate": 0.75,
+        "reasoning_trace_gate": 0.875,
+        "creativity_dim_score_1to5": 2.307,
+        "hallucination_flag": false
+      },
+      "novelty": {
+        "novelty": 0.498,
+        "N_freq": 0.349,
+        "hits": 72,
+        "semantic": {
+          "value": 0.943,
+          "method": "tfidf_cosine",
+          "max_sim": 0.057,
+          "note": "model-dependent; under-discriminates on shared domain vocab (LB-018)"
+        },
+        "n_neighbours": 7,
+        "method": "0.75*retrieval_freq + 0.25*semantic_distance"
+      },
+      "redflags": [
+        "The 'missing set-point' / 'reference error' is treated as a distinct causal variable separable from mTOR activity, but it is not demonstrated to be a physically well-defined, independently measurable/manipulable quantity -- risk of a control-theory metaphor being reified as mechanism.",
+        "Cross-species correlations (age-at-maturity vs lifespan) are used to support a causal 'developmental tempo sets aging rate' claim; both traits are plausibly joint downstream products of a slow life-history strategy, so direction is not established by correlation.",
+        "Phylogenetic non-independence is only partially addressed (order-level aggregation); the very high MRDT partial r=+0.85 rests on n=17, which is fragile.",
+        "The key discriminating experiment assumes maintenance allocation can be shifted while holding BOTH bulk mTORC1 readouts and damage markers constant -- experimental feasibility of that clamp is asserted, not shown, and if unachievable the theory is not actually testable as framed.",
+        "The claim that ROS/telomere/epigenetic hallmarks are 'permitted downstream' rather than partly causal is a strong demotion presented with less evidentiary support than the mTOR-centric core.",
+        "The core novel variable ('absence of a held reference' vs signal level) may be non-operational: it is not shown why a high-but-constant adult mTOR reference would fail to hold state, so the level-vs-error distinction driving the entire discriminator is asserted rather than mechanized.",
+        "Proposed key experiment may be physically unrealizable: 'maintenance allocation' is largely downstream of mTORC1, so clamping bulk mTOR activity (p-S6K, p-4E-BP1) AND damage while independently shifting allocation may not be achievable, weakening falsifiability in practice.",
+        "Comparative wager is confounded by life-history covariation: age-at-maturity, growth rate, and lifespan are mutually entangled; a mass-corrected partial correlation does not establish the claimed causal direction (controller tempo \u2192 aging rate).",
+        "Strongest direct-aging-rate result (MRDT partial r=+0.85) rests on n=17 with only order-level aggregation for phylogeny; no formal PGLS, and the author concedes phylogenetic non-independence is only partly addressed.",
+        "Author's own pre-registered null (nutrient-sensing genes NOT more network-central; top hub is TP53, p=0.45) undercuts a topological reading of 'primacy'; the causal-hierarchy figure should not be over-read as network-supported (author does acknowledge this).",
+        "Bird growth-rate channel vanishes after mass correction (r=-0.04), so the 'universal scaling law' is mammal-weighted; universality is argued structurally rather than demonstrated across clades."
+      ],
+      "inter_judge_absdiff": {
+        "grounding": 0.0,
+        "reasoning": 0.0,
+        "completeness": 0.0,
+        "usefulness": 0.0,
+        "creativity": 0.0
+      }
+    },
+    "R3": {
+      "question": "Q1",
+      "composite": 4.12,
+      "dimensions": {
+        "grounding": 3,
+        "reasoning": 4.667,
+        "completeness": 5.0,
+        "usefulness": 4.333,
+        "creativity": 3.6
+      },
+      "grounding_cap": 3,
+      "effective_grounding_cap": 3,
+      "overclaim_count": 2,
+      "citation_verification_rate": 0.36,
+      "n_citations": 25,
+      "citation_quality": {
+        "n_citations": 25,
+        "n_primary": 23,
+        "n_review": 2,
+        "n_preprint": 0,
+        "n_other": 0,
+        "n_retracted": 0,
+        "primary_ratio": 0.92,
+        "mean_venue_quality": 1.0,
+        "usage": 0.347,
+        "quality_composite": 0.976,
+        "flags": []
+      },
+      "creativity_detail": {
+        "creativity_index": 0.65,
+        "novelty": 0.65,
+        "plausibility_gate": 1.0,
+        "reasoning_trace_gate": 1.0,
+        "creativity_dim_score_1to5": 3.6,
+        "hallucination_flag": false
+      },
+      "novelty": {
+        "novelty": 0.65,
+        "N_freq": 0.562,
+        "hits": 5,
+        "semantic": {
+          "value": 0.914,
+          "method": "tfidf_cosine",
+          "max_sim": 0.086,
+          "note": "model-dependent; under-discriminates on shared domain vocab (LB-018)"
+        },
+        "n_neighbours": 6,
+        "method": "0.75*retrieval_freq + 0.25*semantic_distance"
+      },
+      "redflags": [
+        "Expression-level gene associations in GTEx are used as proxies for metabolite abundance and pathway flux; the spermidine rejection rests on synthesis-gene expression, which need not reflect actual spermidine levels \u2014 the author flags this but the rejection is weaker than presented.",
+        "Composition confounding is acknowledged but not resolved: fibrosis/composition genes (COL1A1/PDGFRA) rise with age and pathology-gating 'attenuates, does not deconvolve' within-cell from composition change, so some panel signals may be cell-mix artifacts.",
+        "Sex validation is asymmetric: 543/543 male calls matched but all 260 labelled-female samples are uncalled, so the female-sample signal is not independently validated by the expression-based sex gate.",
+        "The 56-gene panel is curated, not transcriptome-wide/deconvolved/replicated; all 'strongest/cleanest' claims are panel-internal and could shift with a full-transcriptome analysis.",
+        "Taurine mechanism-to-panel mapping (senescence -> p16/IL6) is an inference the cited paper does not make at the gene level; correctly labeled [inference] but is a soft link in the chain.",
+        "The benchmark is a small self-scored consistency check (3 positives from their own literature, 1 negative) with no blinded held-out validation and no baseline-method comparison, so recovery of taurine/UA/NR is near-circular.",
+        "Gene-EXPRESSION associations in GTEx are used as the target signature for METABOLITE selection; expression is not metabolite abundance or pathway flux \u2014 the author discloses this (Section 5 item 1) but the inferential gap remains.",
+        "S2 (signed causal) is largely NOT satisfied for non-taurine members: candidate-specific MR is absent for NR/urolithin A (scored E2=1), so the 'signed causal' governing principle is genuinely met only for taurine; the cocktail's headline logic is stronger for one member than the pair.",
+        "Taurine's mapping onto the panel senescence axis (p16/IL6) is an inference the source paper does not make \u2014 correctly labeled [inference], but it is the link that ties taurine to the computed S1 target.",
+        "The 'benchmark' scores three positives from their own literature and one negative \u2014 the author explicitly calls it a consistency check, not held-out validation; no baseline (differential-abundance/source-method) comparison was run, so discriminative performance is unestablished.",
+        "Urolithin A's cited RCT missed its pre-registered primary endpoint (peak power); the ~12% strength gain was a secondary outcome \u2014 disclosed, but the mechanistic credit rests on a secondary result.",
+        "Effect-size assumption for power (cocktail closes >=50% of young-old force gap, d~1.0) is an optimistic prior with no direct precedent for this specific combination; the author commits to re-running power on Stage-1 SD, which mitigates but does not remove the assumption."
+      ],
+      "inter_judge_absdiff": {
+        "grounding": 0.667,
+        "reasoning": 0.667,
+        "completeness": 0.0,
+        "usefulness": 0.667,
+        "creativity": 0.0
+      }
+    },
+    "R4": {
+      "question": "Q2",
+      "composite": 3.697,
+      "dimensions": {
+        "grounding": 3,
+        "reasoning": 4,
+        "completeness": 5.0,
+        "usefulness": 4,
+        "creativity": 2.485
+      },
+      "grounding_cap": 3,
+      "effective_grounding_cap": 3,
+      "overclaim_count": 0,
+      "citation_verification_rate": 0.036,
+      "n_citations": 28,
+      "citation_quality": {
+        "n_citations": 28,
+        "n_primary": 21,
+        "n_review": 4,
+        "n_preprint": 0,
+        "n_other": 0,
+        "n_retracted": 0,
+        "primary_ratio": 0.84,
+        "mean_venue_quality": 1.0,
+        "usage": 1.0,
+        "quality_composite": 0.952,
+        "flags": []
+      },
+      "creativity_detail": {
+        "creativity_index": 0.3712,
+        "novelty": 0.495,
+        "plausibility_gate": 0.75,
+        "reasoning_trace_gate": 1.0,
+        "creativity_dim_score_1to5": 2.485,
+        "hallucination_flag": false
+      },
+      "novelty": {
+        "novelty": 0.495,
+        "N_freq": 0.349,
+        "hits": 72,
+        "semantic": {
+          "value": 0.931,
+          "method": "tfidf_cosine",
+          "max_sim": 0.069,
+          "note": "model-dependent; under-discriminates on shared domain vocab (LB-018)"
+        },
+        "n_neighbours": 7,
+        "method": "0.75*retrieval_freq + 0.25*semantic_distance"
+      },
+      "redflags": [
+        "Toy model demonstrates sufficiency only; Gompertz and AR(1) signatures are generically producible from many models, so their 'non-tuned' emergence is weak evidence for this specific mechanism rather than a distinguishing test.",
+        "Soma-vs-germline dichotomy is idealized: germline/parental-age epigenetic drift and de novo mutation accumulation exist, so 'the germline does not drift without bound' is stronger than the biology strictly supports.",
+        "x* is treated as a fixed target, but the physiological optimum is context- and age-dependent; a shifting optimum could mimic or mask 'reference drift' and is not distinguished.",
+        "Citation identifiers are self-attested via a claimed Crossref pass (doi_verification.json) that this reviewer cannot execute; reference #3's DOI was reportedly corrected, and the arXiv IDs in source #10 (2504.13044, 2605.16781) are not verifiable here and one has an implausible future-style number \u2014 treat all identifiers as unverified.",
+        "Predictions #1 and #4 (measurable shifted set-points; clocks as distance-from-optimum) require operationalizing an admittedly unobservable x*, so the headline falsifier may be difficult to execute as stated.",
+        "Sufficiency-vs-necessity gap: the toy model shows the four aging signatures CAN emerge from reference decay, but Gompertz mortality, rising variance, and critical slowing down are recoverable from many competing models, so they do not discriminate this hypothesis from damage/network theories despite being presented as strong confirmation.",
+        "Overstated 'unobservability by construction': many real homeostatic loops have partially external/physical references (mechanical load, nutrient/oxygen sensing, damage signaling), so reference drift is not strictly a hidden common-mode error in all cases \u2014 the strong universal claim is weaker than stated.",
+        "Model fit statistics (Gompertz R\u00b2=0.94, autocorrelation 0.75->0.90, recovery ~2.3x, lifespan 66 vs 97) come from a self-authored toy simulation, not from fitting real data; these numbers are illustrative and should not be read as empirical validation.",
+        "Citation identifiers are asserted as Crossref-verified via a saved doi_verification.json that I cannot inspect here; reference #10 preprint arXiv IDs (2504.13044; 2605.16781) and reference #3 supersession claim are unverifiable from this text and one arXiv ID (2605.16781) has an implausible future-style number \u2014 treat provenance claims as unconfirmed.",
+        "Central constructs (x*, 'true optimum', 'reference') remain operationally undefined at the molecular level, so the falsifiers, while well-posed conceptually, may not be executable until x* is made measurable \u2014 a gap the authors acknowledge but which limits near-term testability."
+      ],
+      "inter_judge_absdiff": {
+        "grounding": 0.667,
+        "reasoning": 0.0,
+        "completeness": 0.0,
+        "usefulness": 0.0,
+        "creativity": 0.0
+      }
+    },
+    "R5": {
+      "question": "Q3",
+      "composite": 3.337,
+      "dimensions": {
+        "grounding": 1,
+        "reasoning": 4.5,
+        "completeness": 4.833,
+        "usefulness": 4,
+        "creativity": 2.35
+      },
+      "grounding_cap": 4,
+      "effective_grounding_cap": 1,
+      "overclaim_count": 1,
+      "citation_verification_rate": 0.615,
+      "n_citations": 26,
+      "citation_quality": {
+        "n_citations": 26,
+        "n_primary": 24,
+        "n_review": 2,
+        "n_preprint": 0,
+        "n_other": 0,
+        "n_retracted": 1,
+        "primary_ratio": 0.923,
+        "mean_venue_quality": 0.963,
+        "usage": 0.277,
+        "quality_composite": 0.758,
+        "flags": [
+          "cites_1_retracted_work"
+        ]
+      },
+      "creativity_detail": {
+        "creativity_index": 0.3375,
+        "novelty": 0.45,
+        "plausibility_gate": 0.75,
+        "reasoning_trace_gate": 1.0,
+        "creativity_dim_score_1to5": 2.35,
+        "hallucination_flag": false
+      },
+      "novelty": {
+        "novelty": 0.45,
+        "N_freq": 0.288,
+        "hits": 296,
+        "semantic": {
+          "value": 0.935,
+          "method": "tfidf_cosine",
+          "max_sim": 0.065,
+          "note": "model-dependent; under-discriminates on shared domain vocab (LB-018)"
+        },
+        "n_neighbours": 7,
+        "method": "0.75*retrieval_freq + 0.25*semantic_distance"
+      },
+      "redflags": [
+        "Asymmetric interpretation of the transcriptomic signature: down-regulation of detox enzymes (AKR1B1/1B10/1E1) is read as vulnerability while down-regulation of pro-ferroptotic ACSL4/6 is read as adaptive/protective; low ACSL4 would blunt ferroptosis, partially undercutting the net vulnerability argument (author discloses but does not fully resolve this).",
+        "Death-mode conflation: edaravone's evidence against the complex-I poison MPP+ (PMID 18643790) is via the mitochondrial APOPTOTIC pathway, a distinct mechanism from the anti-ferroptosis/lipid-peroxidation claim, which rests on a single non-CI-disease neuronal model (PMID 36333599).",
+        "Strongest precedent is negative: vatiquinone rescued cells at this exact node but failed to extend survival in the Ndufs4 Leigh mouse (PMID 38883711, a preprint) -- empirical doubt on in-vivo druggability of the whole node, honestly flagged by the author.",
+        "Discovery signature is mouse-brain bulk RNA-seq with a cell-composition confound; human support rests on a single fibroblast dataset (GSE27041).",
+        "Cross-lab signature correlation is statistically strong but modest in effect size (Spearman rho = 0.29); directional agreement (77% of 605 shared-significant genes) is the more meaningful support and should be weighted over the low rho.",
+        "PMIDs, accessions, and quantitative claims (ClinVar counts, GTEx TPM, Open Targets drug count = 0) are asserted from a self-reported run log and were not independently verified within this review.",
+        "Direct anti-ferroptosis evidence for edaravone rests on a single non-CI model (PMID 36333599); the other cited edaravone/complex-I paper (PMID 18643790) is an apoptotic mechanism, not ferroptosis, so the 'acts exactly at the convergent node' claim is partly extrapolated.",
+        "The closest in-vivo precedent at the same node (vatiquinone, PMID 38883711) failed to extend survival in the Ndufs4 Leigh mouse \u2014 a real strike against the node itself, not just one molecule; author discloses this but it materially lowers prior probability of in-vivo success.",
+        "Transcriptomic signature is mouse-brain bulk RNA-seq with a cell-composition confound; human validation rests on a single fibroblast dataset (GSE27041).",
+        "PMID 38883711 and PMID 40731203 are cited partly as preprint/recent-publication sources; some accession/PMID and ClinVar release details (release 2026-06-06) should be independently re-verified against live databases before relying on exact counts.",
+        "Novelty '0 publications' negative-search results are inherently sensitive to query phrasing and indexing lag; absence of publications is weak evidence and should not be over-weighted."
+      ],
+      "inter_judge_absdiff": {
+        "grounding": 0.0,
+        "reasoning": 1.0,
+        "completeness": 0.667,
+        "usefulness": 0.0,
+        "creativity": 0.0
+      }
+    },
+    "R6": {
+      "question": "Q2",
+      "composite": 3.436,
+      "dimensions": {
+        "grounding": 1,
+        "reasoning": 4.667,
+        "completeness": 5.0,
+        "usefulness": 4,
+        "creativity": 2.512
+      },
+      "grounding_cap": 3,
+      "effective_grounding_cap": 1,
+      "overclaim_count": 14,
+      "citation_verification_rate": 0.284,
+      "n_citations": 95,
+      "citation_quality": {
+        "n_citations": 95,
+        "n_primary": 86,
+        "n_review": 7,
+        "n_preprint": 0,
+        "n_other": 1,
+        "n_retracted": 0,
+        "primary_ratio": 0.915,
+        "mean_venue_quality": 0.976,
+        "usage": 1.0,
+        "quality_composite": 0.962,
+        "flags": []
+      },
+      "creativity_detail": {
+        "creativity_index": 0.378,
+        "novelty": 0.504,
+        "plausibility_gate": 0.75,
+        "reasoning_trace_gate": 1.0,
+        "creativity_dim_score_1to5": 2.512,
+        "hallucination_flag": false
+      },
+      "novelty": {
+        "novelty": 0.504,
+        "N_freq": 0.349,
+        "hits": 72,
+        "semantic": {
+          "value": 0.969,
+          "method": "tfidf_cosine",
+          "max_sim": 0.031,
+          "note": "model-dependent; under-discriminates on shared domain vocab (LB-018)"
+        },
+        "n_neighbours": 7,
+        "method": "0.75*retrieval_freq + 0.25*semantic_distance"
+      },
+      "redflags": [
+        "Central mechanism (a homeostatic controller 'losing its reference' yet continuing to extrapolate the developmental trajectory) has no identified molecular substrate; it is a control-theoretic metaphor whose physical realization is asserted, not demonstrated.",
+        "The load-bearing empirical result rests on N=17 ITP compounds; the 94% held-out accuracy and permutation p=4e-4 are computed on a very small, hand-curated set where mechanism-direction coding is a subjective step (author acknowledges this and attempts blind re-coding, but small-N overfitting risk remains).",
+        "The decisive prediction (rescue at fixed clock AND fixed damage) admittedly does NOT discriminate the hypothesis from hyperfunction, so the claimed fit-score advantage (8 vs 4) rests on breadth/unification rather than a unique discriminating test \u2014 a self-serving scoring the author partially flags.",
+        "Claim that youthful function is recoverable within 'hours-days' with damage markers unchanged is in tension with irreversible damage classes (senescent-cell accumulation, somatic mutation) and is presented as the exciting result while being the least evidenced.",
+        "Mortality-kinetics support (C2) is explicitly a simulation that ASSUMES exponential individual hazard, so it cannot count as evidence that drift produces Gompertz kinetics \u2014 correctly downgraded by the author to 'sufficiency', but readers could misread Fig 2 as a derivation.",
+        "Cross-species (C3) and hallmark (C4) accounts are admittedly post-hoc / non-discriminating (consistent with multiple rival theories), so their inclusion inflates the apparent explanatory scope.",
+        "C1 posits P1-P3 are the load-bearing causal claims but are asserted, not grounded; declining selection force does not entail an actively decaying set-point that drifts along the developmental vector rather than degrading stochastically.",
+        "C2 is explicitly circular: the Gompertz law and late-life plateau are not derived \u2014 an exponential individual hazard is assumed as an input to the simulation, so it demonstrates only sufficiency (author concedes this, but the abstract phrasing 'generates the Gompertz curve' overstates it).",
+        "C5 statistical claims (94% leave-one-out accuracy, permutation p=4e-4) rest on N=17 with hand-assigned mechanism labels; held-out accuracy on such a small hand-partitioned set is fragile and the p-values likely overstate evidential strength despite the blind re-labeling check.",
+        "The metformin-alone null and the non-replicated aspirin case are genuine counterexamples to the C5 rule; robustness analyses are shown but the rule's apparent cleanliness partly depends on mechanism-coding choices the author controls.",
+        "Central discriminating prediction is unrun and, by the author's own admission, does not discriminate the hypothesis from hyperfunction \u2014 the claimed 'unification' edge is conceptual reframing rather than new discriminating evidence.",
+        "Naming a bottom line of 'fit = 8 vs rival 4' uses a self-defined scoring scheme applied by the proponent to their own candidate, which is not an independent metric."
+      ],
+      "inter_judge_absdiff": {
+        "grounding": 0.0,
+        "reasoning": 0.667,
+        "completeness": 0.0,
+        "usefulness": 0.0,
+        "creativity": 0.667
+      }
+    },
+    "R7": {
+      "question": "Q3",
+      "composite": 3.461,
+      "dimensions": {
+        "grounding": 1,
+        "reasoning": 4.5,
+        "completeness": 5.0,
+        "usefulness": 4,
+        "creativity": 2.804
+      },
+      "grounding_cap": 3,
+      "effective_grounding_cap": 1,
+      "overclaim_count": 3,
+      "citation_verification_rate": 0.475,
+      "n_citations": 40,
+      "citation_quality": {
+        "n_citations": 40,
+        "n_primary": 39,
+        "n_review": 1,
+        "n_preprint": 0,
+        "n_other": 0,
+        "n_retracted": 0,
+        "primary_ratio": 0.975,
+        "mean_venue_quality": 1.0,
+        "usage": 0.374,
+        "quality_composite": 0.992,
+        "flags": []
+      },
+      "creativity_detail": {
+        "creativity_index": 0.451,
+        "novelty": 0.451,
+        "plausibility_gate": 1.0,
+        "reasoning_trace_gate": 1.0,
+        "creativity_dim_score_1to5": 2.804,
+        "hallucination_flag": false
+      },
+      "novelty": {
+        "novelty": 0.451,
+        "N_freq": 0.288,
+        "hits": 296,
+        "semantic": {
+          "value": 0.939,
+          "method": "tfidf_cosine",
+          "max_sim": 0.061,
+          "note": "model-dependent; under-discriminates on shared domain vocab (LB-018)"
+        },
+        "n_neighbours": 7,
+        "method": "0.75*retrieval_freq + 0.25*semantic_distance"
+      },
+      "redflags": [
+        "Central causal anchor (To et al. 2019 CRISPR screen) does NOT show GPX4 synthetic-lethality under ISOLATED Complex I inhibition (piericidin); the GPX4 partners were CIII/CV/mtDNA lesions, so the Complex-I-specific mechanism is inferred by analogy through the shared NADPH-defense arm rather than directly demonstrated (author flags this as PARTIAL, but it is the load-bearing gap).",
+        "Rung 5 (functional rescue in any Complex I model) is entirely UNTESTED; all supporting rescue evidence is cross-disease (Friedreich, Parkinson, AMD, INAD) \u2014 the core disease-specific efficacy claim rests on extrapolation.",
+        "Patient-cell evidence is extremely thin: the MT-ND4 LHON iPSC-RGC resource is effectively n=1 patient + 1 carrier + 1 control, limiting the statistical foundation of the proposed pilot.",
+        "Tissue-access argument leans on bulk GTEx mRNA (low SLC7A11 in nerve/muscle/heart) which does not capture cysteine flux, alternative import (EAAT3), or vulnerable-vs-spared cell resolution \u2014 author concedes it is 'suggestive, not dispositive'.",
+        "Some cited identifiers should be independently verified (e.g., a 2025 JACS PMID and specific GTEx TPM values are asserted as live-verified but not checkable within this review); reviewer cannot confirm citation accuracy from the text alone.",
+        "Rung 1 anchor is partially mismatched: the GPX4 synthetic-lethal signal in To et al. 2019 was strongest for CIII/CV/mtDNA (antimycin, oligomycin, EtBr) lesions, not isolated Complex I inhibition (piericidin); the Complex-I-specific hit was the NADPH/pentose-phosphate arm. The author discloses this, but it weakens the direct genetic grounding for the Complex-I-specific claim.",
+        "Rung 5 (disease-relevant functional rescue in a Complex I model) is UNTESTED; all supporting rescue data are cross-disease (Friedreich, Parkinson, AMD-like retinal degeneration). The central claim rests on analogy pending the proposed pilot.",
+        "Tissue-access argument relies on bulk GTEx mRNA (low SLC7A11 in nerve/muscle/heart) as a proxy for limited GSH-defence headroom; the author correctly notes this is suggestive not dispositive (no cysteine-flux measurement, no vulnerable-vs-spared single-cell contrast, no optic-nerve/RGC coverage in GTEx).",
+        "The patient iPSC-RGC resource is extremely thin (one patient + one carrier + one control, GSE103619), limiting the statistical power and generalizability of the proposed pilot's isogenic contrast.",
+        "Citation identifiers (PMIDs, patent numbers, GEO/ChEMBL accessions) were not independently verifiable within this review; assessment assumes the claims attributed to them are as described, and any misattribution would lower grounding.",
+        "Dietary PUFA dilution of the deuterated membrane pool is a real pharmacological caveat (acknowledged) that could blunt in vivo efficacy despite favorable in vitro results."
+      ],
+      "inter_judge_absdiff": {
+        "grounding": 0.667,
+        "reasoning": 1.0,
+        "completeness": 0.0,
+        "usefulness": 0.0,
+        "creativity": 0.0
+      }
+    },
+    "R8": {
+      "question": "Q1",
+      "composite": 3.879,
+      "dimensions": {
+        "grounding": 3,
+        "reasoning": 4.667,
+        "completeness": 5.0,
+        "usefulness": 4,
+        "creativity": 2.727
+      },
+      "grounding_cap": 3,
+      "effective_grounding_cap": 3,
+      "overclaim_count": 0,
+      "citation_verification_rate": 0.167,
+      "n_citations": 6,
+      "citation_quality": {
+        "n_citations": 6,
+        "n_primary": 6,
+        "n_review": 0,
+        "n_preprint": 0,
+        "n_other": 0,
+        "n_retracted": 0,
+        "primary_ratio": 1.0,
+        "mean_venue_quality": 1.0,
+        "usage": 0.167,
+        "quality_composite": 1.0,
+        "flags": []
+      },
+      "creativity_detail": {
+        "creativity_index": 0.4318,
+        "novelty": 0.658,
+        "plausibility_gate": 0.75,
+        "reasoning_trace_gate": 0.875,
+        "creativity_dim_score_1to5": 2.727,
+        "hallucination_flag": false
+      },
+      "novelty": {
+        "novelty": 0.658,
+        "N_freq": 0.562,
+        "hits": 5,
+        "semantic": {
+          "value": 0.943,
+          "method": "tfidf_cosine",
+          "max_sim": 0.057,
+          "note": "model-dependent; under-discriminates on shared domain vocab (LB-018)"
+        },
+        "n_neighbours": 6,
+        "method": "0.75*retrieval_freq + 0.25*semantic_distance"
+      },
+      "redflags": [
+        "NAD+/acetylation coupling is under-argued: sirtuins are NAD+-dependent DEacetylases, so raising NAD+ tends to REMOVE acetyl marks, creating a potential tension with the report's claim that the cocktail should raise histone acetylation; the acetylation lever is really carried by acetate/acetyl-CoA, not NAD+.",
+        "The 'positive control' (method ranks acetylation above methylation, matching the paper) is partly circular: expert-set lever weights were assigned by an author who already knew the paper's validated mechanism, so the recovery is not fully independent.",
+        "Lever weights are hand-set rather than fit, so the numeric ranking (0.90/0.81/0.78...) is not reproducible from the stated data alone -- acknowledged as a limitation but limits verifiability of the selection.",
+        "Cofactor abundance is inferred from literature, not measured in the analyzed transcriptomes; the metabolite-age-decline component is expert judgment, so a key input to the ranking is not data-derived here.",
+        "After the premise test refuted the crude 'reverse the aging vector' claim (r=+0.27), the method was re-anchored post hoc to the 'enzyme layer'; this course-correction is honest but reduces the pre-registered falsifiability of the original central assumption.",
+        "Composite lever scores (0.90, 0.81, 0.78...) blend data-derived and expert-set weights; the 'positive control' recovering acetyl-CoA>SAM is partly a consequence of hand-set weights rather than a fully independent validation, so its confirmatory value is weaker than presented.",
+        "Redundancy/antagonism between alpha-KG demethylation and SAM methylation, and dcSAM consumption by spermidine synthesis, are chemically real but their in-vivo quantitative magnitude is asserted, not demonstrated; the submodular penalty terms are therefore not empirically calibrated.",
+        "Multi-agent PK/toxicity interactions of concurrent NR + spermidine + high-dose Ca-AKG (2% w/w diet) are not modeled; author acknowledges this but it is a real safety/interpretability risk for the pilot.",
+        "n=12/arm is powered only for the large CoRe-vs-vehicle effect (d~1.2 borrowed from the paper); assuming the paper's effect size transfers to a different cocktail is optimistic and the superiority-vs-1C-MIM comparison is underpowered (deferred, but this limits mechanistic differentiation in the pilot).",
+        "Cofactor levels are inferred from literature rather than measured in the author's own aging axis, so a key input to the ranking is not independently grounded in this analysis (disclosed by author)."
+      ],
+      "inter_judge_absdiff": {
+        "grounding": 0.0,
+        "reasoning": 0.667,
+        "completeness": 0.0,
+        "usefulness": 0.0,
+        "creativity": 0.667
+      }
+    },
+    "R9": {
+      "question": "Q1",
+      "composite": 3.593,
+      "dimensions": {
+        "grounding": 1,
+        "reasoning": 4.667,
+        "completeness": 5.0,
+        "usefulness": 4.333,
+        "creativity": 2.965
+      },
+      "grounding_cap": 3,
+      "effective_grounding_cap": 1,
+      "overclaim_count": 4,
+      "citation_verification_rate": 0.429,
+      "n_citations": 14,
+      "citation_quality": {
+        "n_citations": 14,
+        "n_primary": 12,
+        "n_review": 2,
+        "n_preprint": 0,
+        "n_other": 0,
+        "n_retracted": 0,
+        "primary_ratio": 0.857,
+        "mean_venue_quality": 0.9,
+        "usage": 0.203,
+        "quality_composite": 0.907,
+        "flags": []
+      },
+      "creativity_detail": {
+        "creativity_index": 0.4913,
+        "novelty": 0.655,
+        "plausibility_gate": 0.75,
+        "reasoning_trace_gate": 1.0,
+        "creativity_dim_score_1to5": 2.965,
+        "hallucination_flag": false
+      },
+      "novelty": {
+        "novelty": 0.655,
+        "N_freq": 0.562,
+        "hits": 5,
+        "semantic": {
+          "value": 0.932,
+          "method": "tfidf_cosine",
+          "max_sim": 0.068,
+          "note": "model-dependent; under-discriminates on shared domain vocab (LB-018)"
+        },
+        "n_neighbours": 6,
+        "method": "0.75*retrieval_freq + 0.25*semantic_distance"
+      },
+      "redflags": [
+        "Free-carnitine mQTL did NOT colocalize at OCTN2 (EFO_0021612 maps only SLC22A16); carnitine's causal weight rests on substrate identity + mechanism + RCTs, not formal colocalization \u2014 the acylcarnitine QTLs are transport QTLs, not evidence that raising free carnitine raises muscle mass.",
+        "OCTN1/SLC22A4 muscle expression is low (3.5 TPM, highest in blood), so the ergothioneine muscle-GWAS association and any MuSC-intrinsic effect may be systemic/indirect rather than muscle-autonomous.",
+        "Ergothioneine lifespan/velocity benefit was male-only (PMID 38446314); efficacy in females is unestablished and the both-sexes pilot may be underpowered per-sex.",
+        "Both 5q31 loci (SLC22A4/SLC22A5) are pleiotropic (platelet/immune/leukocyte traits), so muscle associations are not muscle-exclusive and could reflect confounded shared causal variants.",
+        "Age-related depletion of carnitine/ergothioneine specifically in aged muscle is asserted from plasma/tissue trend literature; no muscle-aging metabolomics dataset was analyzed (author flags this honestly but it is a load-bearing assumption for the 'under-fueled aged MuSC' premise).",
+        "Lifelong genetic effect on a phenotype (GWAS) does not license the inference that acute oral supplementation reproduces that effect \u2014 the genetics motivates but does not test the intervention, as the author acknowledges.",
+        "SLC22A5 has zero significant skeletal-muscle cis-eQTLs, so the mechanism by which the muscle-GWAS signal acts is unspecified (not necessarily via transporter expression level).",
+        "Central synergy claim is an explicitly-labeled untested inference (author flags it), not a published result \u2014 the 'super-additive' framing risks overstating a hypothesis that could resolve as mere additivity or a ceiling effect.",
+        "Free-carnitine mQTL colocalization did NOT close (EFO_0021612 under-powered, maps only SLC22A16); carnitine's 'causal' anchor is substituted with acylcarnitine QTLs, which index transport/flux imbalance rather than a benefit from raising free carnitine \u2014 a subtle inferential substitution to watch.",
+        "OCTN1/SLC22A4 muscle expression is low (3.5 TPM, highest in blood), so ergothioneine's aged-muscle effect may be systemic/indirect rather than the local mitochondrial-protection mechanism the hypothesis requires.",
+        "5q31 pleiotropy (platelet/immune/monocyte traits) undermines muscle-specific causal attribution of both lead SNPs.",
+        "Genetic set-point (lifelong exposure) is used to nominate an ACUTE supplementation intervention; human carnitine supplementation RCTs are mixed, and the genetics do not license the acute-dosing prediction \u2014 correctly acknowledged but remains the key external-validity gap.",
+        "Ergothioneine lifespan/velocity benefit was reported male-specific; carried into a both-sexes design, but a null in females would partially undercut the nomination.",
+        "Aged-muscle depletion magnitudes for both metabolites rest on cited plasma/tissue literature, not a re-analyzed muscle-aging metabolomics accession (author states no accession was fabricated) \u2014 an unclosed empirical premise."
+      ],
+      "inter_judge_absdiff": {
+        "grounding": 0.0,
+        "reasoning": 0.667,
+        "completeness": 0.0,
+        "usefulness": 0.667,
+        "creativity": 0.667
+      }
+    }
+  },
+  "elo_by_question": {
+    "Q3_exp002": {
+      "ratings": {
+        "R1": 1032.8,
+        "R5": 966.4,
+        "R7": 1000.8
+      },
+      "ranking": [
+        "R1",
+        "R7",
+        "R5"
+      ],
+      "n_comparisons": 6
+    },
+    "Q2_exp002": {
+      "ratings": {
+        "R2": 980.0,
+        "R4": 1020.4,
+        "R6": 999.6
+      },
+      "ranking": [
+        "R4",
+        "R6",
+        "R2"
+      ],
+      "n_comparisons": 6
+    },
+    "Q1_exp002": {
+      "ratings": {
+        "R3": 979.2,
+        "R8": 997.2,
+        "R9": 1023.6
+      },
+      "ranking": [
+        "R9",
+        "R8",
+        "R3"
+      ],
+      "n_comparisons": 6
+    }
+  }
+}

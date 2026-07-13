@@ -1,0 +1,9 @@
+{
+ "_note": "KEY-1 (operator-held). Fill each R-code with its arm: 'B' (baseline blank-CS) or 'L' (v0-loop). CS never sees this until unblinding.",
+ "R1": "B_or_L",
+ "R2": "B_or_L",
+ "R3": "B_or_L",
+ "R4": "B_or_L",
+ "R5": "B_or_L",
+ "R6": "B_or_L"
+}

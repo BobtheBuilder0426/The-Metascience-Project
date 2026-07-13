@@ -1,0 +1,96 @@
+{
+ "test_set_version": "aging-v1",
+ "test_set_source": "test-sets/2026-07-09_testset_aging-v1",
+ "human_confirmation_status": "LOCKED by operator: Q_ERGO (cat1, must-have) + Q3 (cat3) locked 2026-07-09 (LB-026); Q2 (cat2, big-think origin-of-life) added + all three question texts refined & locked by operator 2026-07-10 (LB-076)",
+ "pinned_for": "exp-001_baseline-vs-v0-loop",
+ "run_flag": "RUN THESE",
+ "runs_per_arm": 1,
+ "design": "3 questions (Q_ERGO cat1, Q2 cat2, Q3 cat3) x 2 arms (B,L) x 1 run = 6 answer-runs (2 per question)",
+ "shared_materials": {
+  "note": "Q_ERGO provides two publications that MUST be made available, identical, to BOTH arms of Q_ERGO (blank CS baseline AND the CC/CS loop). They are the starting point of the question.",
+  "files": [
+   "resources/papers/Ergothioneine CSE Filipovic.pdf  (S-015: Petrovic et al. 2025, Cell Metab 37:542-556, DOI 10.1016/j.cmet.2024.12.008)",
+   "resources/papers/Ergothioneine MPST Sprenger.pdf  (S-016: Sprenger et al. 2025, Cell Metab 37:857-869, DOI 10.1016/j.cmet.2025.01.024)"
+  ],
+  "delivery": "copied verbatim into 01_setup/test-set/materials/ so the setup is self-contained; both arms of Q_ERGO receive the same two PDFs and nothing more."
+ },
+ "questions": [
+  {
+   "id": "Q_ERGO",
+   "tier": "T2-applied",
+   "must_have": true,
+   "provides_materials": true,
+   "text": "Starting from the two provided publications about ergothioneine, come up with a new rationale/hypothesis of how ergothioneine makes those mice and rats run faster / increases their exercise performance. What would be your first pilot experiment to test this hypothesis?",
+   "materials": [
+    "Ergothioneine CSE Filipovic.pdf (S-015)",
+    "Ergothioneine MPST Sprenger.pdf (S-016)"
+   ],
+   "prior_art_anchor": "Two 2025 Cell Metabolism papers give competing/complementary mechanisms (CSE-persulfidation-cGPDH-NAD+ vs EGT-MPST-mito); novelty = a NEW rationale beyond what the two papers state, that is falsifiable + wet-lab testable",
+   "connectors_invited": [
+    "PubMed",
+    "OpenAlex",
+    "Open Targets",
+    "ChEMBL",
+    "UniProt",
+    "Reactome",
+    "STRING",
+    "GEO",
+    "AlphaFold"
+   ],
+   "why_this_question": "Operator must-have. Tests deep reasoning FROM given evidence (not just retrieval): synthesize two mechanisms, propose a novel testable link, and produce a concrete first experiment. Strong the operator fit (his exact domain). Papers shared identically to both arms so the ONLY difference is the loop.",
+   "arms": [
+    "B_baseline_raw_CS",
+    "L_v7_loop"
+   ],
+   "fairness_rule": "byte-identical wording + identical two PDFs for both arms; Arm B gets the question + the two PDFs and nothing else (no loop framing)",
+   "category": 1,
+   "category_name": "day-in-the-lab: ingest given publications -> analyse -> follow-up hypothesis + design test experiment"
+  },
+  {
+   "id": "Q2",
+   "tier": "T3-bigthink",
+   "category": 2,
+   "category_name": "maximum-creativity big-think: a big unanswered biological question -> generate + argue a genuinely new hypothesis",
+   "provides_materials": false,
+   "text": "Generate a novel, plausible hypothesis for: How did a soup of lifeless organic molecules spontaneously organize into the first self-replicating cell?",
+   "prior_art_anchor": "Origin-of-life / abiogenesis is a foundational unsolved question with a vast but non-converged literature (RNA-world, metabolism-first, lipid-world, hydrothermal-vent, etc.). Novelty = a specific, mechanistically plausible hypothesis that goes beyond restating an existing school — scored on reasoning quality, not on a proposed wet-lab test (the rubric's test clause is conditional).",
+   "connectors_invited": [
+    "PubMed",
+    "OpenAlex",
+    "bioRxiv",
+    "UniProt",
+    "Reactome"
+   ],
+   "why_this_question": "Operator-chosen category-2 slot. Maximum creativity / novelty 'big-think' test: no given materials, no expected experiment — pure hypothesis generation + argument, exactly where the loop's reframe + reasoning phases should show the largest gain over a cold answer. Deliberately outside the aging-metabolism comfort zone so novelty isn't just retrieval.",
+   "arms": [
+    "B_baseline_raw_CS",
+    "L_v7_loop"
+   ],
+   "fairness_rule": "byte-identical wording for both arms; Arm B gets this and nothing else (no materials)"
+  },
+  {
+   "id": "Q3",
+   "tier": "T2",
+   "text": "Starting from publicly available datasets, propose a not-thought-of-yet or new compound that acts as an exercise mimetic to treat patients against age-related muscle loss and sarcopenia.",
+   "prior_art_anchor": "exercise-mimetic is sparse (~87 papers, S-011) -> high novelty headroom + strong the operator fit",
+   "connectors_invited": [
+    "ChEMBL",
+    "openFDA",
+    "Open Targets",
+    "PubMed",
+    "ClinicalTrials",
+    "Reactome"
+   ],
+   "why_this_question": "Operator-selected. Sparse prior-art = high novelty headroom; open-ended retrieval+reasoning; different connector mix (drug-repurposing) than Q_ERGO.",
+   "arms": [
+    "B_baseline_raw_CS",
+    "L_v7_loop"
+   ],
+   "fairness_rule": "byte-identical wording for both arms; Arm B gets this and nothing else",
+   "category": 3,
+   "category_name": "translational data breakthrough: pull literature+datasets -> analyse -> predict + argue a new treatment"
+  }
+ ],
+ "output_format_instruction": "How to present your results. Please hand back your answer as a small presentation folder containing: result.md — open with a \"Bottom line\" box of 150 words or fewer (your single main answer, and — if you propose one — the first experiment, in plain language a busy reader grasps in 30 seconds), then give your full answer and the case for it. Keep result.md to about 1,800 words or fewer (about 4 pages), excluding figures and the bottom-line box — be complete but concise; length earns no credit, clarity does. reasoning.md — the line of thought that got you there, written as structured bullet points or short sections (not long prose); no length limit, but keep it scannable. a figures/ folder with any plots, tables, or other artefacts you produced, each clearly labelled; sources.md — every source you drew on, with identifiers; and process_trace.json — a step-by-step record of what you actually did to reach the answer.",
+ "output_format_rule": "This is THE delivered output-format string (plain-prose delivery form). It is appended to the end of every question's text — identical for BOTH arms — as: delivered_prompt = question.text + '\\n\\n' + output_format_instruction. Its WORDING is identical to loop-design/current/output-format-instruction.md (the human-readable spec, which adds markdown ** / ` emphasis for reading); this JSON field is the canonical machine copy actually delivered. The format lives in the question, not the loop (exp-002 update: added ~1,800-word cap on result.md + mandatory ≤150-word bottom-line box + bulleted reasoning.md; byte-identical to both arms)."
+}

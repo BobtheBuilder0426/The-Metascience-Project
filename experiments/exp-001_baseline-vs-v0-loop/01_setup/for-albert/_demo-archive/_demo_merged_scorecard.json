@@ -1,0 +1,149 @@
+{
+  "experiment": "exp-001",
+  "evaluator_human": "the operator",
+  "mode": "DEMO (dry-run machine scoring)",
+  "questions": {
+    "Q_ERGO": {
+      "answers": [
+        {
+          "arm": "L",
+          "run": 2,
+          "shown_as": "A",
+          "human_mean": 1.75,
+          "human_scores": {
+            "correctness": 1,
+            "completeness": 1,
+            "usefulness": 3,
+            "creativity": 2
+          },
+          "human_redflags": [
+            "overclaim"
+          ],
+          "human_qualitative": "Weak: asserts a mechanism as established without support; correctness and completeness both low.",
+          "human_honesty": {
+            "novel_to_you": "Yes, novel",
+            "reasoning_followable": "Partly",
+            "hallucination_flag": "No",
+            "one_line_fix": "Frame the mechanism as a hypothesis and cite the primary source, or drop the claim."
+          },
+          "machine_composite": 1.666,
+          "machine_grounding_cap": 1,
+          "machine_cite_verify": 0.0,
+          "machine_creativity_idx": 0.0549
+        },
+        {
+          "arm": "B",
+          "run": 1,
+          "shown_as": "B",
+          "human_mean": 2.5,
+          "human_scores": {
+            "correctness": 2,
+            "completeness": 1,
+            "usefulness": 2,
+            "creativity": 5
+          },
+          "human_redflags": [
+            "overclaim"
+          ],
+          "human_qualitative": "",
+          "human_honesty": {
+            "novel_to_you": "No, known",
+            "reasoning_followable": "Partly",
+            "hallucination_flag": "No",
+            "one_line_fix": "antioxidants barely work in humans"
+          },
+          "machine_composite": 1.716,
+          "machine_grounding_cap": 2,
+          "machine_cite_verify": null,
+          "machine_creativity_idx": 0.0549
+        },
+        {
+          "arm": "L",
+          "run": 1,
+          "shown_as": "C",
+          "human_mean": 2.75,
+          "human_scores": {
+            "correctness": 3,
+            "completeness": 2,
+            "usefulness": 4,
+            "creativity": 2
+          },
+          "human_redflags": [
+            "vague"
+          ],
+          "human_qualitative": "",
+          "human_honesty": {
+            "novel_to_you": "Yes, novel",
+            "reasoning_followable": "No chain",
+            "hallucination_flag": "Maybe",
+            "one_line_fix": "no evidence for persulfidation feeding into complex II"
+          },
+          "machine_composite": 3.549,
+          "machine_grounding_cap": 5,
+          "machine_cite_verify": 1.0,
+          "machine_creativity_idx": 0.1646
+        }
+      ],
+      "human_best_arm": "L#1",
+      "human_best_why": "actual data presented"
+    },
+    "Q3": {
+      "answers": [
+        {
+          "arm": "B",
+          "run": 1,
+          "shown_as": "A",
+          "human_mean": 2.25,
+          "human_scores": {
+            "correctness": 4,
+            "completeness": 1,
+            "usefulness": 2,
+            "creativity": 2
+          },
+          "human_redflags": [
+            "vague"
+          ],
+          "human_qualitative": "",
+          "human_honesty": {
+            "novel_to_you": "No, known",
+            "reasoning_followable": "No chain",
+            "hallucination_flag": "Maybe",
+            "one_line_fix": ""
+          },
+          "machine_composite": 1.818,
+          "machine_grounding_cap": 2,
+          "machine_cite_verify": null,
+          "machine_creativity_idx": 0.0569
+        },
+        {
+          "arm": "L",
+          "run": 1,
+          "shown_as": "B",
+          "human_mean": 3.0,
+          "human_scores": {
+            "correctness": 4,
+            "completeness": 4,
+            "usefulness": 1,
+            "creativity": 3
+          },
+          "human_redflags": [
+            "slop"
+          ],
+          "human_qualitative": "Solid on correctness/completeness but low usefulness; one claim is unsupported and flagged.",
+          "human_honesty": {
+            "novel_to_you": "No, known",
+            "reasoning_followable": "Partly",
+            "hallucination_flag": "Yes \u2014 flag",
+            "one_line_fix": "Remove or substantiate the flagged claim; make the protocol actually actionable."
+          },
+          "machine_composite": 2.452,
+          "machine_grounding_cap": 2,
+          "machine_cite_verify": null,
+          "machine_creativity_idx": 0.1706
+        }
+      ],
+      "human_best_arm": "B#1",
+      "human_best_why": ""
+    }
+  }
+}

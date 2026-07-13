@@ -1,0 +1,53 @@
+{
+ "experiment": "exp-002",
+ "composed": "Key-1 (operator R->arm) o Key-2 (CS E->R)",
+ "arms": {
+  "B": "baseline (blank Claude Science)",
+  "L7": "v7 agentic loop",
+  "L8": "v8 agentic loop"
+ },
+ "Ecode_to_Rcode": {
+  "E1": "R2",
+  "E2": "R9",
+  "E3": "R8",
+  "E4": "R7",
+  "E5": "R4",
+  "E6": "R5",
+  "E7": "R1",
+  "E8": "R6",
+  "E9": "R3"
+ },
+ "Rcode_to_arm": {
+  "R8": "B",
+  "R1": "B",
+  "R4": "B",
+  "R9": "L7",
+  "R5": "L7",
+  "R2": "L7",
+  "R3": "L8",
+  "R7": "L8",
+  "R6": "L8"
+ },
+ "Rcode_to_question": {
+  "R3": "Q1",
+  "R8": "Q1",
+  "R9": "Q1",
+  "R2": "Q2",
+  "R4": "Q2",
+  "R6": "Q2",
+  "R1": "Q3",
+  "R5": "Q3",
+  "R7": "Q3"
+ },
+ "Ecode_to_arm": {
+  "E1": "L7",
+  "E2": "L7",
+  "E3": "B",
+  "E4": "L8",
+  "E5": "B",
+  "E6": "L7",
+  "E7": "B",
+  "E8": "L8",
+  "E9": "L8"
+ }
+}

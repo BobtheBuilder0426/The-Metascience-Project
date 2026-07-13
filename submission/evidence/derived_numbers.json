@@ -1,0 +1,341 @@
+{
+  "_meta": {
+    "generated_by": "submission/evidence/build_spine.py",
+    "inputs_checksummed": 22,
+    "estimand": "per-dimension 1-5 ordinal rubric; unit=one answer per (question,arm) cell; RCB design, block=question",
+    "combined_is": "DERIVED per-dimension mean of CS-panel and human-expert; NOT a third scorer or independent replicate",
+    "inference_scope": "sign-consistency of within-question deltas; Friedman p reported for completeness only (n=3 blocks, underpowered)"
+  },
+  "exp001": {
+    "design": "randomized complete block; block=question; n=3 questions; arms B/L (loop=v7); 1 answer per cell",
+    "note": "folder slug says 'v0-loop' but the loop under test was v7_cc-bootstrap (hash 6bbd94a13d13e462)",
+    "arms": {
+      "B": "baseline (blank Claude Science)",
+      "L": "v7 agentic loop"
+    },
+    "endpoint_combined_composite": {
+      "per_question": {
+        "Q_ERGO": 0.421,
+        "Q2": -0.232,
+        "Q3": 1.24
+      },
+      "mean_delta": 0.476,
+      "k_wins": 2,
+      "k_total": 3
+    },
+    "cs_composite_arm_means": {
+      "B": 3.624,
+      "L": 3.644
+    },
+    "human_mean4_arm_means": {
+      "B": 2.5,
+      "L": 3.5
+    },
+    "questions": {
+      "Q_ERGO": "ergothioneine exercise-performance mechanism (+wet-lab protocol)",
+      "Q2": "exercise-mimetic drug repurposing",
+      "Q3": "complex-I / mito compound"
+    },
+    "head_to_head_human": {
+      "Q_ERGO": "L (loop) preferred (medium confidence)"
+    }
+  },
+  "exp002": {
+    "design": "randomized complete block; block=question; n=3 questions; arms B/L7/L8; 1 answer per cell",
+    "arms": {
+      "B": "baseline (blank Claude Science)",
+      "L7": "v7 agentic loop",
+      "L8": "v8 agentic loop"
+    },
+    "arm_means": {
+      "B": {
+        "cs_composite": 3.5483,
+        "cs_mean4": 3.8522,
+        "human_mean4": 2.75,
+        "combined_raw4": 3.3011
+      },
+      "L7": {
+        "cs_composite": 3.397,
+        "cs_mean4": 3.9962,
+        "human_mean4": 2.6667,
+        "combined_raw4": 3.3315
+      },
+      "L8": {
+        "cs_composite": 3.6723,
+        "cs_mean4": 4.1736,
+        "human_mean4": 3.25,
+        "combined_raw4": 3.7118
+      }
+    },
+    "deltas": {
+      "cs_composite": {
+        "L8-L7": {
+          "per_question": {
+            "Q1": 0.527,
+            "Q2": 0.175,
+            "Q3": 0.124
+          },
+          "mean": 0.2753,
+          "n_positive": 3
+        },
+        "L8-B": {
+          "per_question": {
+            "Q1": 0.241,
+            "Q2": -0.261,
+            "Q3": 0.392
+          },
+          "mean": 0.124,
+          "n_positive": 2
+        },
+        "L7-B": {
+          "per_question": {
+            "Q1": -0.286,
+            "Q2": -0.436,
+            "Q3": 0.268
+          },
+          "mean": -0.1513,
+          "n_positive": 1
+        }
+      },
+      "cs_mean4": {
+        "L8-L7": {
+          "per_question": {
+            "Q1": 0.1588,
+            "Q2": 0.218,
+            "Q3": 0.1552
+          },
+          "mean": 0.1773,
+          "n_positive": 3
+        },
+        "L8-B": {
+          "per_question": {
+            "Q1": 0.3015,
+            "Q2": 0.1735,
+            "Q3": 0.4892
+          },
+          "mean": 0.3214,
+          "n_positive": 3
+        },
+        "L7-B": {
+          "per_question": {
+            "Q1": 0.1428,
+            "Q2": -0.0445,
+            "Q3": 0.334
+          },
+          "mean": 0.1441,
+          "n_positive": 2
+        }
+      },
+      "human_mean4": {
+        "L8-L7": {
+          "per_question": {
+            "Q1": 0.25,
+            "Q2": 0.75,
+            "Q3": 0.75
+          },
+          "mean": 0.5833,
+          "n_positive": 3
+        },
+        "L8-B": {
+          "per_question": {
+            "Q1": 1.5,
+            "Q2": -0.5,
+            "Q3": 0.5
+          },
+          "mean": 0.5,
+          "n_positive": 2
+        },
+        "L7-B": {
+          "per_question": {
+            "Q1": 1.25,
+            "Q2": -1.25,
+            "Q3": -0.25
+          },
+          "mean": -0.0833,
+          "n_positive": 1
+        }
+      },
+      "combined_raw4": {
+        "L8-L7": {
+          "per_question": {
+            "Q1": 0.2044,
+            "Q2": 0.484,
+            "Q3": 0.4526
+          },
+          "mean": 0.3803,
+          "n_positive": 3
+        },
+        "L8-B": {
+          "per_question": {
+            "Q1": 0.9007,
+            "Q2": -0.1632,
+            "Q3": 0.4946
+          },
+          "mean": 0.4107,
+          "n_positive": 2
+        },
+        "L7-B": {
+          "per_question": {
+            "Q1": 0.6964,
+            "Q2": -0.6472,
+            "Q3": 0.042
+          },
+          "mean": 0.0304,
+          "n_positive": 2
+        }
+      }
+    },
+    "per_dimension": {
+      "CS_harness": {
+        "grounding": {
+          "B": 2.333,
+          "L7": 1.0,
+          "L8": 1.667
+        },
+        "reasoning": {
+          "B": 4.222,
+          "L7": 4.389,
+          "L8": 4.611
+        },
+        "completeness": {
+          "B": 4.889,
+          "L7": 4.944,
+          "L8": 5.0
+        },
+        "usefulness": {
+          "B": 3.778,
+          "L7": 4.111,
+          "L8": 4.111
+        },
+        "creativity": {
+          "B": 2.52,
+          "L7": 2.541,
+          "L8": 2.972
+        }
+      },
+      "human_expert": {
+        "reasoning": {
+          "B": 3.0,
+          "L7": 2.667,
+          "L8": 3.667
+        },
+        "completeness": {
+          "B": 3.0,
+          "L7": 3.0,
+          "L8": 3.333
+        },
+        "usefulness": {
+          "B": 2.0,
+          "L7": 2.333,
+          "L8": 2.667
+        },
+        "creativity": {
+          "B": 3.0,
+          "L7": 2.667,
+          "L8": 3.333
+        }
+      }
+    },
+    "head_to_head": {
+      "Q1": {
+        "CS_composite": "L8",
+        "human_mean4": "L8",
+        "Combined": "L8"
+      },
+      "Q2": {
+        "CS_composite": "B",
+        "human_mean4": "B",
+        "Combined": "B"
+      },
+      "Q3": {
+        "CS_composite": "L8",
+        "human_mean4": "L8",
+        "Combined": "L8"
+      }
+    },
+    "friedman": {
+      "cs_mean4": {
+        "chi2": 4.667,
+        "p": 0.097,
+        "n_blocks": 3,
+        "k_arms": 3
+      },
+      "human_mean4": {
+        "chi2": 2.667,
+        "p": 0.264,
+        "n_blocks": 3,
+        "k_arms": 3
+      },
+      "combined_raw4": {
+        "chi2": 2.0,
+        "p": 0.368,
+        "n_blocks": 3,
+        "k_arms": 3
+      }
+    },
+    "primary_endpoint": "within-question Delta(L8-L7); mean + sign-count of 3",
+    "arm_to_Rcode": {
+      "B": [
+        "R8",
+        "R1",
+        "R4"
+      ],
+      "L7": [
+        "R9",
+        "R5",
+        "R2"
+      ],
+      "L8": [
+        "R3",
+        "R7",
+        "R6"
+      ]
+    }
+  },
+  "exp003": {
+    "design": "showcase comparison (NOT scored); n=1 answer per arm; 2 arms B vs L9(v9 loop); 1 question",
+    "arms": {
+      "B": "baseline (blank Claude Science, safety-only guardrail)",
+      "L9": "v9 agentic loop"
+    },
+    "question": "from the genome-scale CD4+ T-cell Perturb-seq dataset, identify a natural metabolite/nutraceutical to treat an autoimmune disease of your choice; give methodology, rationale, and an optimal pilot",
+    "arm_B_answer": {
+      "target": "IMPDH2",
+      "metabolite": "mycophenolic acid (Penicillium metabolite; prodrug mycophenolate mofetil)",
+      "disease": "type-2/eosinophilic asthma"
+    },
+    "arm_L9_answer": {
+      "target": "PKM2",
+      "metabolite": "micheliolide (feverfew guaianolide; covalent PKM2-Cys424 stabiliser; prodrug DMAMCL/ACT001)",
+      "disease": "multiple sclerosis",
+      "key_stats_as_reported": {
+        "GM-CSF_z": -3.66,
+        "GM-CSF_FDR": 0.005,
+        "IFNg_z": -3.3,
+        "IL2_z": -0.05
+      }
+    },
+    "verification": "arm scientific claims NOT re-verified (documentation only, LB-104). Accessions recorded verified during the original run (SOURCES.md S-084, LB-106, NCBI E-utilities 2026-07-13); INDEPENDENT live re-confirmation is pending in this submission's Verification track -> verification_ledger.csv",
+    "caveat": "n=1 per arm, single question; showcase not measured win"
+  },
+  "loop_versions": {
+    "v7": {
+      "hash": "6bbd94a13d13e462",
+      "files": 23,
+      "desc": "bootstrap-once -> drive-many; dedicated isolated per-run CS workspaces"
+    },
+    "v8": {
+      "hash": "331d802b219b4e69",
+      "files": 27,
+      "base": "v7",
+      "desc": "v7 + OPT-1 per-question context-composer skill + Codex cross-vendor multi-lens critique panel (2 gates) + Gate-2 figure-quality add-on",
+      "caveat": "operator ruling LB-081: >1 upgrade at once; L7->L8 delta is the cumulative v8 bundle, NOT single-variable isolation"
+    },
+    "v9": {
+      "hash": "c92973d8a3bbc5e9",
+      "files": 28,
+      "base": "v8",
+      "desc": "v8 + Codex effort high/xhigh + hard multimodal Gate-2 precondition + CS-reconnect doc; inherits v8 cumulative caveat"
+    }
+  }
+}

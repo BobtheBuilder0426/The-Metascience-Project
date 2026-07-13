@@ -1,0 +1,206 @@
+[
+  {
+    "action": "restate_question",
+    "detail": "Framed 'why does biological aging occur' as a search for one upstream cause generating the hallmarks, explaining both universality and >100-fold rate variation",
+    "evidence": "frozen question",
+    "t": 1
+  },
+  {
+    "action": "define_success_criteria",
+    "detail": "Set requirements: one-sentence principle; explain universality+rate variation; order hallmarks; differential vs 7 theories; falsifiable experiment; quantitative grounding; every claim connector-verified",
+    "evidence": "self-imposed rubric",
+    "t": 2
+  },
+  {
+    "action": "select_candidate_principle",
+    "detail": "Considered signal-level (hyperfunction), resource-amount (disposable soma), and control-reference-structure; chose 'developmental reference but no encoded adult set-point' as the new causal variable",
+    "evidence": "anti-collapse reasoning",
+    "t": 3
+  },
+  {
+    "action": "prior_art_audit",
+    "detail": "Searched 'set-point/control-theory/quasi-programmed/developmental theory of aging' to test novelty",
+    "evidence": "PubMed; found Blagosklonny, de Magalhaes 22964300, Kirkwood 18318658, developmental-drift 27490570 as antecedents",
+    "t": 4
+  },
+  {
+    "action": "confirm_anchor_papers",
+    "detail": "Verified hallmarks, hyperfunction, epigenetic-information, rapamycin, clock, disposable-soma, free-radical, naked mole-rat by matching returned title/year/journal",
+    "evidence": "PubMed get_article_metadata: PMIDs 23746838,36599349,36638792,19587680,24138928,593350,13332224,20724817,29364116",
+    "t": 5
+  },
+  {
+    "action": "download_comparative_dataset",
+    "detail": "Pulled AnAge (HAGR) build 14 after requesting network access to genomics.senescence.info; 4,645 species, 31 life-history columns",
+    "evidence": "anage_data.txt (786146 bytes)",
+    "t": 6
+  },
+  {
+    "action": "confirm_controller_accessions",
+    "detail": "Confirmed 12 controller-protein accessions at the protein level; MTOR=P42345 (2549 aa)",
+    "evidence": "UniProt: P42345,P08069,O43524,Q96EB6,P04637,O14746,P31749,Q13131,P06213,P05019,P10912,Q8N122",
+    "t": 7
+  },
+  {
+    "action": "map_pathway_topology",
+    "detail": "Confirmed controller genes form one insulin/IGF->AKT->mTOR/autophagy/FOXO axis",
+    "evidence": "Reactome v97: MTOR->MTOR signalling/Macroautophagy; IGF1R->IGF1R cascade; FOXO/AKT",
+    "t": 8
+  },
+  {
+    "action": "query_tissue_expression",
+    "detail": "Confirmed controller network expressed in all 54 human tissues >1 TPM (universality support)",
+    "evidence": "GTEx gtex_v8: MTOR 54/54 median 14.1 TPM; AKT1 50.2; FOXO3 29.8",
+    "t": 9
+  },
+  {
+    "action": "query_human_genetics",
+    "detail": "Retrieved controller disease associations; top hits are growth/body-size phenotypes",
+    "evidence": "Open Targets: GHR ENSG00000112964->Laron 0.83; MTOR->overgrowth; IGF1R->growth delay; INSR->growth-resistance",
+    "t": 10
+  },
+  {
+    "action": "query_geroprotector_mechanisms",
+    "detail": "Confirmed rapamycin/metformin act on growth controller; senolytics on distinct targets",
+    "evidence": "ChEMBL: rapamycin CHEMBL413->CHEMBL1902 (FKBP1A/mTOR); metformin CHEMBL1431->complex I; dasatinib CHEMBL1421->ABL; navitoclax CHEMBL443684->BCL-2",
+    "t": 11
+  },
+  {
+    "action": "locate_aging_omics",
+    "detail": "Located mouse aging atlas and human aging series for the experiment readout",
+    "evidence": "GEO: GSE132040 (Tabula Muris Senis bulk, n=947); 215 human aging series; 12 rapamycin; 41 CR",
+    "t": 12
+  },
+  {
+    "action": "verify_geroprotector_effect_sizes",
+    "detail": "Pulled exact rapamycin lifespan numbers from abstracts",
+    "evidence": "Harrison 2009 (19587680): +14% F/+9% M; Miller 2014 (24341993, doi:10.1111/acel.12194): +23% M/+26% F at 3x dose, distinct from DR",
+    "t": 13
+  },
+  {
+    "action": "test_shared_pathway",
+    "detail": "Confirmed GHR-KO abolishes DR's further lifespan benefit (non-additive -> one pathway)",
+    "evidence": "Bonkowski/Bartke 2009 PMID 19234595, doi:10.1371/journal.pone.0004567",
+    "t": 14
+  },
+  {
+    "action": "compute_lifespan_range",
+    "detail": "Computed max-lifespan fold-range on quality-filtered AnAge records",
+    "evidence": "mammals 2.1yr(vole)->211yr(bowhead)=100x (n=1003); vertebrates 0.16->392yr=2450x (n=3924)",
+    "t": 15
+  },
+  {
+    "action": "fit_body_mass_allometry",
+    "detail": "Fitted lifespan vs body-mass allometry; mass explains ~50% of variance",
+    "evidence": "log10(ML)=0.159*log10(mass)+0.674, r=0.705, n=997",
+    "t": 16
+  },
+  {
+    "action": "run_partial_correlations",
+    "detail": "Tested developmental tempo vs lifespan/aging-rate controlling body mass (log-log partial correlation, Fisher-z CIs), using lifespan-independent proxies to avoid circularity",
+    "evidence": "mammal maturity r=+0.65[+0.61,+0.69] n=801; growth-rate r=-0.37 n=215; MRDT-vs-maturity r=+0.85[+0.62,+0.94] n=17; bird maturity r=+0.36 n=807",
+    "t": 17
+  },
+  {
+    "action": "report_negative_result",
+    "detail": "Reported that the bird growth-rate signal vanishes after mass correction (honest null, kept as limitation)",
+    "evidence": "partial r=-0.04 [-0.16,+0.07], n=298, p=0.46",
+    "t": 18
+  },
+  {
+    "action": "partial_phylogeny_check",
+    "detail": "Aggregated to order level to partly address phylogenetic non-independence",
+    "evidence": "order-mean partial|mass r=+0.53, 20 orders, p=0.017",
+    "t": 19
+  },
+  {
+    "action": "compute_species_contrast",
+    "detail": "Quantified naked-mole-rat-vs-mouse dissociation",
+    "evidence": "AnAge: 1.7x mass, 5.4x maturity, 7.8x lifespan; NMR lives 3.7x longer than mass predicts",
+    "t": 20
+  },
+  {
+    "action": "pre_register_and_run_network_test",
+    "detail": "Pre-registered STRING betweenness + 10,000x permutation null asking if nutrient-sensing nodes are more central; result was null",
+    "evidence": "NS 0.0147 vs other 0.0177 (ratio 0.83), p=0.45; top hub TP53",
+    "t": 21
+  },
+  {
+    "action": "drop_unsupported_claim",
+    "detail": "Dropped any 'nutrient-sensing is topologically upstream' claim; rested controller primacy on intervention/genetics/comparative evidence instead",
+    "evidence": "STRING null result",
+    "t": 22
+  },
+  {
+    "action": "build_scaling_figure",
+    "detail": "Built Figure 1 (mass-corrected tempo vs aging rate, 3 panels) with 95% CIs; used strict complete-case partial correlation so plotted r matches ledger",
+    "evidence": "fig1_developmental_rate_scaling.png; panel c r=+0.85",
+    "t": 23
+  },
+  {
+    "action": "build_allometry_figure",
+    "detail": "Built Figure 2 (allometry residuals + NMR-vs-mouse lollipop)",
+    "evidence": "fig2_allometry_residual_nmr.png",
+    "t": 24
+  },
+  {
+    "action": "build_causal_dag",
+    "detail": "Built Figure 3 ordering the hallmarks: root set-point -> commission/omission arms -> generated vs permitted hallmarks -> aging",
+    "evidence": "fig3_causal_dag.png",
+    "t": 25
+  },
+  {
+    "action": "build_differential_table",
+    "detail": "Built Figure 4 differential vs the 7 theories with cited attributions",
+    "evidence": "fig4_differential_table.png",
+    "t": 26
+  },
+  {
+    "action": "reverify_all_pmids",
+    "detail": "Re-checked all 19 cited PMIDs by matching title/year/journal; fixed a metadata parser key bug (pmid vs pubmed) that had spuriously shown empties",
+    "evidence": "PubMed get_article_metadata; 19/19 confirmed",
+    "t": 27
+  },
+  {
+    "action": "correct_daf2_citation",
+    "detail": "Corrected daf-2 attribution to Kenyon 1993",
+    "evidence": "PMID 8247153, Nature, doi:10.1038/366461a0 'A C. elegans mutant that lives twice as long as wild type'",
+    "t": 28
+  },
+  {
+    "action": "verify_pre_medline_theories",
+    "detail": "Verified two foundational papers not indexed in PubMed via Crossref",
+    "evidence": "Williams 1957 doi:10.1111/j.1558-5646.1957.tb02911.x; Medawar 1952 flagged (reprint doi:10.4324/9780429299759-3, no native DOI for original)",
+    "t": 29
+  },
+  {
+    "action": "soften_unverifiable_number",
+    "detail": "Removed memorized DR '~40-50%' after finding DR magnitude is genotype-dependent and can shorten life; kept DR qualitative",
+    "evidence": "PMID 24637399 'The fine line between lifespan extension and shortening in response to caloric restriction'",
+    "t": 30
+  },
+  {
+    "action": "verify_telomere_attribution",
+    "detail": "Verified telomere-attrition primary source so every theory in the differential table has ledger backing",
+    "evidence": "Harley 1990 PMID 2342578, Nature, doi:10.1038/345458a0",
+    "t": 31
+  },
+  {
+    "action": "fix_figure_label_occlusion",
+    "detail": "Repositioned the mouse/NMR mass annotation in Figure 2b into clear whitespace (dashed reference line had occluded the '20 g' as '10 g')",
+    "evidence": "fig2 v2; annotation 'mouse 20 g \u00b7 NMR 35 g'",
+    "t": 32
+  },
+  {
+    "action": "correct_figure_caption",
+    "detail": "Corrected Figure 4 caption to state attributions verified via PubMed and (for Williams/Medawar) Crossref; added telomere author/year",
+    "evidence": "fig4 v2",
+    "t": 33
+  },
+  {
+    "action": "assemble_deliverables",
+    "detail": "Wrote result.md, reasoning.md, sources.md, process_trace.json; kept the four figures; ledger 47 entries (35 CITED, 12 INFERENCE)",
+    "evidence": "OUTPUT/run-01/presentation/",
+    "t": 34
+  }
+]

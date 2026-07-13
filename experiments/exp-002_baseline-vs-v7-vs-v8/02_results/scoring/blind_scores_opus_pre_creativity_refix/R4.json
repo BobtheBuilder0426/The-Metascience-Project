@@ -1,0 +1,437 @@
+{
+ "question": "Generate a novel, plausible, unifying hypothesis for: Why does biological aging occur?",
+ "dimensions": {
+  "grounding": 3,
+  "reasoning": 4,
+  "completeness": 5.0,
+  "usefulness": 4,
+  "creativity": 1.0
+ },
+ "weighted_composite": 3.4,
+ "grounding_cap": 3,
+ "integrity_cap": 5,
+ "integrity_reasons": [],
+ "overclaim_count": 0,
+ "overclaim_cap": 5,
+ "effective_grounding_cap": 3,
+ "dataset_resolution": null,
+ "trace_verification": null,
+ "specificity_signal": 5,
+ "creativity_detail": {
+  "creativity_index": 0.0,
+  "novelty": 0.495,
+  "plausibility_gate": 0.0,
+  "reasoning_trace_gate": 0.0,
+  "creativity_dim_score_1to5": 1.0,
+  "hallucination_flag": false
+ },
+ "citation_verification_rate": 0.036,
+ "n_citations": 28,
+ "entity_counts": {
+  "genes": 11,
+  "assays": 0,
+  "quant_predictions": 0,
+  "pathways": 2,
+  "drugs": 0,
+  "total": 13
+ },
+ "redflags": [
+  "Unverifiable provenance claim: SOURCES stakes all identifier correctness on a '14/14 Crossref-confirmed' pass in doi_verification.json, but I cannot inspect that file and several listed arXiv IDs are internally implausible/future-formatted (e.g. arXiv:2605.16781, arXiv:2504.13044), so the confidence narrative should not be trusted at face value; DOIs and PMIDs should be re-resolved before citing.",
+  "Central 'observability' claim is asserted, not proven: that x* is strictly unobservable to the soma is an assumption; slower error channels (selection over generations, damage sensing, redundant/hierarchical sensors) could partially observe it, weakening the 'blind by construction' step.",
+  "Model signatures risk circularity: an unbounded biased random walk with a tolerance-crossing hazard will generically produce rising variance, critical slowing down, and Gompertz-like acceleration, so 'emergent, non-tuned' should be read cautiously \u2014 sufficiency, not evidence of correctness (the author does concede this).",
+  "Numerical results (R^2=0.94, AR(1) 0.75->0.90, lambda*~0.4, 66 vs 97 units) are quoted from a toy model in prose; per result-fidelity these should be read back from model_outputs.npz/intervention.npz rather than trusted from the narrative."
+ ],
+ "inter_judge_absdiff": {
+  "grounding": 0.667,
+  "reasoning": 0.0,
+  "completeness": 0.0,
+  "usefulness": 0.0,
+  "creativity": 0.0
+ },
+ "_novelty": {
+  "novelty": 0.495,
+  "N_freq": 0.349,
+  "hits": 72,
+  "semantic": {
+   "value": 0.931,
+   "method": "tfidf_cosine",
+   "max_sim": 0.069,
+   "note": "model-dependent; under-discriminates on shared domain vocab (LB-018)"
+  },
+  "n_neighbours": 7,
+  "method": "0.75*retrieval_freq + 0.25*semantic_distance"
+ },
+ "citation_quality": {
+  "n_citations": 28,
+  "n_primary": 21,
+  "n_review": 4,
+  "n_preprint": 0,
+  "n_other": 0,
+  "n_retracted": 0,
+  "primary_ratio": 0.84,
+  "mean_venue_quality": 1.0,
+  "usage": 1.0,
+  "quality_composite": 0.952,
+  "flags": []
+ },
+ "_citation_quality_detail": {
+  "n_citations": 28,
+  "n_primary": 21,
+  "n_review": 4,
+  "n_preprint": 0,
+  "n_other": 0,
+  "n_retracted": 0,
+  "primary_ratio": 0.84,
+  "mean_venue_quality": 1.0,
+  "usage": 1.0,
+  "quality_composite": 0.952,
+  "flags": [],
+  "per_citation": [
+   {
+    "citation": {
+     "kind": "pmid",
+     "value": "36599349",
+     "raw": "PMID: 36599349"
+    },
+    "venue": "Cell",
+    "type": "review",
+    "retracted": false,
+    "venue_quality": 1.0,
+    "year": "2023"
+   },
+   {
+    "citation": {
+     "kind": "pmid",
+     "value": "36638792",
+     "raw": "PMID: 36638792"
+    },
+    "venue": "Cell",
+    "type": "primary",
+    "retracted": false,
+    "venue_quality": 1.0,
+    "year": "2023"
+   },
+   {
+    "citation": {
+     "kind": "pmid",
+     "value": "17012837",
+     "raw": "PMID: 17012837"
+    },
+    "venue": "Cell cycle (Georgetown, Tex.)",
+    "type": "review",
+    "retracted": false,
+    "venue_quality": 1.0,
+    "year": "2006"
+   },
+   {
+    "citation": {
+     "kind": "pmid",
+     "value": "27060562",
+     "raw": "PMID: 27060562"
+    },
+    "venue": "Aging cell",
+    "type": "review",
+    "retracted": false,
+    "venue_quality": 1.0,
+    "year": "2016"
+   },
+   {
+    "citation": {
+     "kind": "pmid",
+     "value": "29087299",
+     "raw": "PMID: 29087299"
+    },
+    "venue": "Proceedings of the National Academy of Sciences of the United States of America",
+    "type": "primary",
+    "retracted": false,
+    "venue_quality": 1.0,
+    "year": "2017"
+   },
+   {
+    "citation": {
+     "kind": "pmid",
+     "value": "18318658",
+     "raw": "PMID: 18318658"
+    },
+    "venue": "Annual review of biochemistry",
+    "type": "review",
+    "retracted": false,
+    "venue_quality": null,
+    "year": "2008"
+   },
+   {
+    "citation": {
+     "kind": "pmid",
+     "value": "34035236",
+     "raw": "PMID: 34035236"
+    },
+    "venue": "Nature communications",
+    "type": "primary",
+    "retracted": false,
+    "venue_quality": 1.0,
+    "year": "2021"
+   },
+   {
+    "citation": {
+     "kind": "pmid",
+     "value": "28360329",
+     "raw": "PMID: 28360329"
+    },
+    "venue": "Science (New York, N.Y.)",
+    "type": "primary",
+    "retracted": false,
+    "venue_quality": 1.0,
+    "year": "2017"
+   },
+   {
+    "citation": {
+     "kind": "pmid",
+     "value": "27984723",
+     "raw": "PMID: 27984723"
+    },
+    "venue": "Cell",
+    "type": "primary",
+    "retracted": false,
+    "venue_quality": 1.0,
+    "year": "2016"
+   },
+   {
+    "citation": {
+     "kind": "pmid",
+     "value": "33268865",
+     "raw": "PMID: 33268865"
+    },
+    "venue": "Nature",
+    "type": "primary",
+    "retracted": false,
+    "venue_quality": 1.0,
+    "year": "2020"
+   },
+   {
+    "citation": {
+     "kind": "pmid",
+     "value": "34172448",
+     "raw": "PMID: 34172448"
+    },
+    "venue": "Science advances",
+    "type": "primary",
+    "retracted": false,
+    "venue_quality": 1.0,
+    "year": "2021"
+   },
+   {
+    "citation": {
+     "kind": "doi",
+     "value": "10.1016/j.cell.2024.01.013",
+     "raw": "10.1016/j.cell.2024.01.013"
+    },
+    "venue": "Cell",
+    "type": "primary",
+    "retracted": false,
+    "venue_quality": 1.0,
+    "year": "2024"
+   },
+   {
+    "citation": {
+     "kind": "doi",
+     "value": "10.1016/j.cell.2022.11.001",
+     "raw": "10.1016/j.cell.2022.11.001"
+    },
+    "venue": "Cell",
+    "type": "primary",
+    "retracted": false,
+    "venue_quality": 1.0,
+    "year": "2023"
+   },
+   {
+    "citation": {
+     "kind": "doi",
+     "value": "10.1016/j.cell.2022.12.027",
+     "raw": "10.1016/j.cell.2022.12.027"
+    },
+    "venue": "Cell",
+    "type": "primary",
+    "retracted": false,
+    "venue_quality": 1.0,
+    "year": "2023"
+   },
+   {
+    "citation": {
+     "kind": "doi",
+     "value": "10.4161/cc.5.18.3288",
+     "raw": "10.4161/cc.5.18.3288"
+    },
+    "venue": "Cell Cycle",
+    "type": "primary",
+    "retracted": false,
+    "venue_quality": 1.0,
+    "year": "2006"
+   },
+   {
+    "citation": {
+     "kind": "doi",
+     "value": "10.1038/270301a0",
+     "raw": "10.1038/270301a0"
+    },
+    "venue": "Nature",
+    "type": "primary",
+    "retracted": false,
+    "venue_quality": 1.0,
+    "year": "1977"
+   },
+   {
+    "citation": {
+     "kind": "doi",
+     "value": "10.1111/acel.12480",
+     "raw": "10.1111/acel.12480"
+    },
+    "venue": "Aging Cell",
+    "type": "primary",
+    "retracted": false,
+    "venue_quality": 1.0,
+    "year": "2016"
+   },
+   {
+    "citation": {
+     "kind": "doi",
+     "value": "10.1073/pnas.1618854114",
+     "raw": "10.1073/pnas.1618854114"
+    },
+    "venue": "Proceedings of the National Academy of Sciences",
+    "type": "primary",
+    "retracted": false,
+    "venue_quality": 1.0,
+    "year": "2017"
+   },
+   {
+    "citation": {
+     "kind": "doi",
+     "value": "10.1134/S0005117912050086",
+     "raw": "10.1134/S0005117912050086"
+    },
+    "venue": "Automation and Remote Control",
+    "type": "primary",
+    "retracted": false,
+    "venue_quality": null,
+    "year": "2012"
+   },
+   {
+    "citation": {
+     "kind": "doi",
+     "value": "10.1038/s41467-021-23014-1",
+     "raw": "10.1038/s41467-021-23014-1"
+    },
+    "venue": "Nature Communications",
+    "type": "primary",
+    "retracted": false,
+    "venue_quality": 1.0,
+    "year": "2021"
+   },
+   {
+    "citation": {
+     "kind": "doi",
+     "value": "10.1126/science.aah4115",
+     "raw": "10.1126/science.aah4115"
+    },
+    "venue": "Science",
+    "type": "primary",
+    "retracted": false,
+    "venue_quality": 1.0,
+    "year": "2017"
+   },
+   {
+    "citation": {
+     "kind": "doi",
+     "value": "10.1038/s41467-019-12293-4",
+     "raw": "10.1038/s41467-019-12293-4"
+    },
+    "venue": "Nature Communications",
+    "type": "primary",
+    "retracted": false,
+    "venue_quality": 1.0,
+    "year": "2019"
+   },
+   {
+    "citation": {
+     "kind": "doi",
+     "value": "10.1016/j.cell.2016.11.052",
+     "raw": "10.1016/j.cell.2016.11.052"
+    },
+    "venue": "Cell",
+    "type": "primary",
+    "retracted": false,
+    "venue_quality": 1.0,
+    "year": "2016"
+   },
+   {
+    "citation": {
+     "kind": "doi",
+     "value": "10.1038/s41586-020-2975-4",
+     "raw": "10.1038/s41586-020-2975-4"
+    },
+    "venue": "Nature",
+    "type": "primary",
+    "retracted": false,
+    "venue_quality": 1.0,
+    "year": "2020"
+   },
+   {
+    "citation": {
+     "kind": "doi",
+     "value": "10.1126/sciadv.abg6082",
+     "raw": "10.1126/sciadv.abg6082"
+    },
+    "venue": "Science Advances",
+    "type": "primary",
+    "retracted": false,
+    "venue_quality": 1.0,
+    "year": "2021"
+   },
+   {
+    "citation": {
+     "kind": "authoryear",
+     "value": "Gladyshev 2016",
+     "raw": "(Gladyshev 2016)"
+    },
+    "venue": null,
+    "type": null,
+    "retracted": false,
+    "venue_quality": null,
+    "year": null
+   },
+   {
+    "citation": {
+     "kind": "authoryear",
+     "value": "Kerepesi et al. 2021",
+     "raw": "(Kerepesi et al. 2021)"
+    },
+    "venue": null,
+    "type": null,
+    "retracted": false,
+    "venue_quality": null,
+    "year": null
+   },
+   {
+    "citation": {
+     "kind": "authoryear",
+     "value": "July 2026",
+     "raw": "(July 2026)"
+    },
+    "venue": null,
+    "type": null,
+    "retracted": false,
+    "venue_quality": null,
+    "year": null
+   }
+  ]
+ },
+ "code": "R4",
+ "question_id": "Q2_exp002",
+ "arm": "R4",
+ "run": 1,
+ "_qgroup": "Q2",
+ "_model": "claude-opus-4-8",
+ "_attempts": 1,
+ "_dim_parse_bad": [],
+ "_dim_parse_ok": true
+}

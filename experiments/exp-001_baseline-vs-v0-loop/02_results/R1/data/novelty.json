@@ -1,0 +1,52 @@
+{
+ "D13_aza7_pyz_cbut": {
+  "smiles": "CC(C)C[C@@H](CC(=O)O)NC(=O)c1cnc2c(c1)nc(Cc1cnn(C)c1)n2C1CCC1",
+  "inchikey": "ZDTGLROGDKPRQG-KRWDZBQOSA-N",
+  "chembl_sim80": 0,
+  "zinc_exact": 0,
+  "chembl_sim70": 0,
+  "chembl_sim70_hits": [],
+  "pubchem_exact_cids": [],
+  "pubchem_flat_cids": []
+ },
+ "D10_aza7_pyz_cPent_cPr": {
+  "smiles": "Cn1cc(Cc2nc3cc(C(=O)N[C@H](CC(=O)O)CC4CC4)cnc3n2C2CCCC2)cn1",
+  "inchikey": "HBARLOFZGWXLCB-SFHVURJKSA-N",
+  "chembl_sim80": 0,
+  "chembl_sim70": 0,
+  "chembl_sim70_hits": [],
+  "zinc_exact": 0,
+  "pubchem_exact_cids": [],
+  "pubchem_flat_cids": []
+ },
+ "D06_aza7_pyz_cPent": {
+  "smiles": "CC(C)C[C@@H](CC(=O)O)NC(=O)c1cnc2c(c1)nc(Cc1cnn(C)c1)n2C1CCCC1",
+  "inchikey": "LOMQHOSCLYGTPI-SFHVURJKSA-N",
+  "chembl_sim80": 0,
+  "chembl_sim70": 0,
+  "chembl_sim70_hits": [],
+  "zinc_exact": 0,
+  "pubchem_exact_cids": [],
+  "pubchem_flat_cids": []
+ },
+ "D12_aza7_oxa_cPent": {
+  "smiles": "CC(C)C[C@@H](CC(=O)O)NC(=O)c1cnc2c(c1)nc(Cc1ncco1)n2C1CCCC1",
+  "inchikey": "UBYYEKNSPLIWRI-INIZCTEOSA-N",
+  "chembl_sim80": 0,
+  "chembl_sim70": 0,
+  "chembl_sim70_hits": [],
+  "zinc_exact": 0,
+  "pubchem_exact_cids": [],
+  "pubchem_flat_cids": []
+ },
+ "D05_aza7_pyz_THP": {
+  "smiles": "CC(C)C[C@@H](CC(=O)O)NC(=O)c1cnc2c(c1)nc(Cc1cnn(C)c1)n2C1CCCOC1",
+  "inchikey": "ZSMHFUOOZQXWDM-OYKVQYDMSA-N",
+  "chembl_sim80": 0,
+  "chembl_sim70": 0,
+  "chembl_sim70_hits": [],
+  "zinc_exact": 0,
+  "pubchem_exact_cids": [],
+  "pubchem_flat_cids": []
+ }
+}

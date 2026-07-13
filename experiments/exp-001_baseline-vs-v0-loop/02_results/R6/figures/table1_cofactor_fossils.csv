@@ -1,0 +1,11 @@
+Cofactor,Full_name,Nucleotide-derived_moiety,Chemical_function,Why_it_reads_as_an_RNA-world_fossil
+ATP,adenosine triphosphate,adenosine (RNA nucleotide),phosphoryl transfer / energy currency,Universal energy & phosphorylation; substrate of RNA synthesis
+NAD(H),nicotinamide adenine dinucleotide,adenosine + dinucleotide linkage,hydride (redox) transfer,Central redox carrier; an ADP-ribose bolted to a redox head
+FAD,flavin adenine dinucleotide,adenosine + dinucleotide linkage,2e-/1e- redox transfer,Redox catalysis; again an adenosine handle
+Coenzyme A,CoA,adenosine 3'-phosphate + pantetheine,acyl-group transfer,Acyl/thioester metabolism; carries an intact AMP unit
+SAM,S-adenosylmethionine,adenosine,methyl-group transfer,Methylation (incl. of nucleic acids); built on adenosine
+FMN,flavin mononucleotide,ribityl-phosphate (nucleotide-like),redox transfer,Riboflavin-derived redox cofactor
+THF,tetrahydrofolate,pterin (purine-related) + glutamate,one-carbon transfer,C1 metabolism; pterin ring is purine-adjacent
+Coenzyme B12,cobalamin,dimethylbenzimidazole nucleotide loop,radical / methyl transfer,Carries a lower nucleotide loop coordinating cobalt
+TPP,thiamine pyrophosphate,pyrimidine + thiazole,aldehyde (C-C) transfer,Decarboxylations; contains a pyrimidine ring
+GTP,guanosine triphosphate,guanosine (RNA nucleotide),energy / signalling / translation,Drives translation & signalling; an RNA nucleotide

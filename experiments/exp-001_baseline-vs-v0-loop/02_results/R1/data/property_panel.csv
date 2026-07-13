@@ -1,0 +1,20 @@
+name,class,MW,logP,TPSA,HBD,HBA,RotB,ArRings,Fsp3,QED,heavy,Lipinski_viol,Veber_pass,n_alerts,alerts,InChIKey,canonical
+"CMF-019 (ref, biased)",reference,455.6,5.67,84.2,2,5,11,3,0.48,0.39,32,1,False,0,,VCQKKZXFASLXAH-SFHVURJKSA-N,CCC(CC)n1c(Cc2cccs2)nc2cc(C(=O)N[C@H](CC(=O)O)CC(C)C)ccc21
+AMG 986 (clinical),reference,523.6,3.69,134.0,1,10,9,4,0.32,0.348,37,1,True,0,,DOMQFIFVDIAOOT-ROUUACIJSA-N,COc1cccc(OC)c1-n1c(NS(=O)(=O)[C@@H](C)[C@H](C)c2ncc(C)cn2)nnc1-c1cncc(C)c1
+BMS-986224 (clinical),reference,498.9,3.99,132.6,2,9,9,4,0.25,0.351,35,0,True,0,,AGZKELPIAJYRDT-UHFFFAOYSA-N,CCOCc1[nH]c(=O)c(-c2nnc(Cc3ccc(Cl)cn3)o2)c(O)c1-c1c(OC)cccc1OC
+8EH (7SUS ligand),reference,525.6,2.62,154.2,2,11,9,4,0.29,0.333,37,2,False,0,,HNGYVRSMVVCWGF-KKSFZXQISA-N,COc1cccc(OC)c1-n1c(NS(=O)(=O)[C@@H](C)[C@H](O)c2ncc(C)cn2)nnc1-c1cccc(C)n1
+D01_ref_benzimid,designed,455.6,5.67,84.2,2,5,11,3,0.48,0.39,32,1,False,0,,VCQKKZXFASLXAH-SFHVURJKSA-N,CCC(CC)n1c(Cc2cccs2)nc2cc(C(=O)N[C@H](CC(=O)O)CC(C)C)ccc21
+D02_aza7,designed,456.6,5.06,97.1,2,6,11,3,0.5,0.42,32,1,False,0,,NCWRHLVMJALVLW-KRWDZBQOSA-N,CCC(CC)n1c(Cc2cccs2)nc2cc(C(=O)N[C@H](CC(=O)O)CC(C)C)cnc21
+D03_pyrazole,designed,453.6,4.34,102.0,2,6,11,3,0.52,0.45,33,0,False,0,,LVKJLCPCIGMSGR-IBGZPJMESA-N,CCC(CC)n1c(Cc2cnn(C)c2)nc2cc(C(=O)N[C@H](CC(=O)O)CC(C)C)ccc21
+D04_aza7_pyrazole,designed,454.6,3.74,114.9,2,7,11,3,0.54,0.456,33,0,False,0,,IYNWDCZXPQEEKO-SFHVURJKSA-N,CCC(CC)n1c(Cc2cnn(C)c2)nc2cc(C(=O)N[C@H](CC(=O)O)CC(C)C)cnc21
+D05_aza7_pyz_THP,designed,468.6,2.73,124.2,2,8,9,3,0.54,0.495,34,0,True,0,,ZSMHFUOOZQXWDM-OYKVQYDMSA-N,CC(C)C[C@@H](CC(=O)O)NC(=O)c1cnc2c(c1)nc(Cc1cnn(C)c1)n2C1CCCOC1
+D06_aza7_pyz_cPent,designed,452.6,3.49,114.9,2,7,9,3,0.54,0.514,33,0,True,0,,LOMQHOSCLYGTPI-SFHVURJKSA-N,CC(C)C[C@@H](CC(=O)O)NC(=O)c1cnc2c(c1)nc(Cc1cnn(C)c1)n2C1CCCC1
+D07_4F_cPent,designed,465.6,5.5,84.2,2,4,9,3,0.44,0.437,34,1,True,0,,GETVMPYLDQIKFN-NRFANRHFSA-N,CC(C)C[C@@H](CC(=O)O)NC(=O)c1ccc2c(c1)nc(Cc1ccc(F)cc1)n2C1CCCC1
+D08_aza7_4F_cPent,designed,466.6,4.9,97.1,2,5,9,3,0.46,0.468,34,0,True,0,,RXWBDROFJRUSOE-FQEVSTJZSA-N,CC(C)C[C@@H](CC(=O)O)NC(=O)c1cnc2c(c1)nc(Cc1ccc(F)cc1)n2C1CCCC1
+D09_aza7_pyz_cPr,designed,452.6,3.49,114.9,2,7,11,3,0.54,0.46,33,0,False,0,,VWMUDUFNJFHBGN-SFHVURJKSA-N,CCC(CC)n1c(Cc2cnn(C)c2)nc2cc(C(=O)N[C@H](CC(=O)O)CC3CC3)cnc21
+D10_aza7_pyz_cPent_cPr,designed,450.5,3.24,114.9,2,7,9,3,0.54,0.517,33,0,True,0,,HBARLOFZGWXLCB-SFHVURJKSA-N,Cn1cc(Cc2nc3cc(C(=O)N[C@H](CC(=O)O)CC4CC4)cnc3n2C2CCCC2)cn1
+D11_aza7_pyr_cPent,designed,449.6,4.15,110.0,2,6,9,3,0.48,0.508,33,0,True,0,,OEVDGQJXJJLSDL-IBGZPJMESA-N,CC(C)C[C@@H](CC(=O)O)NC(=O)c1cnc2c(c1)nc(Cc1cccnc1)n2C1CCCC1
+D12_aza7_oxa_cPent,designed,439.5,3.74,123.1,2,7,9,3,0.52,0.52,32,0,True,0,,UBYYEKNSPLIWRI-INIZCTEOSA-N,CC(C)C[C@@H](CC(=O)O)NC(=O)c1cnc2c(c1)nc(Cc1ncco1)n2C1CCCC1
+D13_aza7_pyz_cbut,designed,438.5,3.1,114.9,2,7,9,3,0.52,0.53,32,0,True,0,,ZDTGLROGDKPRQG-KRWDZBQOSA-N,CC(C)C[C@@H](CC(=O)O)NC(=O)c1cnc2c(c1)nc(Cc1cnn(C)c1)n2C1CCC1
+D14_aza7_pyz_cPent_sulf,designed,487.6,2.3,137.8,2,8,9,3,0.57,0.475,34,0,True,0,,LXPWODQTUFFNPL-SFHVURJKSA-N,CC(C)C[C@@H](CS(N)(=O)=O)NC(=O)c1cnc2c(c1)nc(Cc1cnn(C)c1)n2C1CCCC1
+D15_aza7_4F_THP,designed,482.6,4.13,106.3,2,6,9,3,0.46,0.475,35,0,True,0,,MEQNRVGGUUUJBF-BGERDNNASA-N,CC(C)C[C@@H](CC(=O)O)NC(=O)c1cnc2c(c1)nc(Cc1ccc(F)cc1)n2C1CCCOC1

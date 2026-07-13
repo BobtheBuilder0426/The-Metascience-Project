@@ -1,0 +1,48 @@
+claim,tag,connector,method_args,returned_id,returned_value_or_quote
+Hallmarks of aging framework (9 hallmarks),CITED,PubMed,get_article_metadata pmid=23746838,PMID 23746838; doi:10.1016/j.cell.2013.05.039,'The hallmarks of aging' Cell 2013; abstract lists the 9 hallmarks verbatim
+Hallmarks expanded to 12 (2023),CITED,PubMed,pmid=36599349,PMID 36599349; doi:10.1016/j.cell.2022.11.001,'Hallmarks of aging: An expanding universe' Cell 2023
+Epigenetic-information/loss theory of aging,CITED,PubMed,pmid=36638792,PMID 36638792; doi:10.1016/j.cell.2022.12.027,'Loss of epigenetic information as a cause of mammalian aging' Cell 2023
+"Rapamycin extends mouse lifespan (late-life onset): +14% F, +9% M",CITED,PubMed,pmid=19587680,PMID 19587680; doi:10.1038/nature08221,Harrison 2009 Nature; abstract: '14% for females and 9% for males' at 90% mortality
+"Rapamycin lifespan effect dose/sex dependent: +23% M, +26% F at 3x dose; distinct from DR",CITED,PubMed,pmid=24341993,PMID 24341993; doi:10.1111/acel.12194,Miller 2014 Aging Cell; abstract: '23% (males) to 26% (females)'; endocrine changes differ from DR
+Rapamycin slows multiple aging phenotypes not just cancer,CITED,PubMed,pmid=22587563,PMID 22587563; doi:10.1111/j.1474-9726.2012.00832.x,Wilkinson/Miller 2012 Aging Cell 'Rapamycin slows aging in mice'
+Horvath multi-tissue DNA-methylation clock,CITED,PubMed,pmid=24138928,PMID 24138928; doi:10.1186/gb-2013-14-10-r115,Horvath 2013 'DNA methylation age of human tissues and cell types'
+Naked mole-rat mortality does not rise with age (defies Gompertz),CITED,PubMed,pmid=29364116,PMID 29364116; doi:10.7554/eLife.31157,Ruby/Buffenstein 2018 eLife 'NMR mortality rates defy gompertzian laws...'
+Naked mole-rat as healthy-aging model,CITED,PubMed,pmid=36318672,PMID 36318672; doi:10.1146/annurev-animal-050322-074744,Buffenstein 2022 Annu Rev Anim Biosci
+Mutation-accumulation theory / declining force of selection,CITED (reprint DOI; 1952 lecture not in PubMed),Crossref,query.bibliographic='An Unsolved Problem of Biology Medawar',doi:10.4324/9780429299759-3 (reprint); orig. Medawar 1952 H.K. Lewis London,Crossref returns Medawar 'An Unsolved Problem of Biology' (2019 reprint of 1952)
+Antagonistic pleiotropy theory (primary source),CITED,Crossref,query.bibliographic='Pleiotropy natural selection evolution of senescence' filter=1957,doi:10.1111/j.1558-5646.1957.tb02911.x,"Williams GC 1957 Evolution 'Pleiotropy, Natural Selection, and the Evolution of Senescence'"
+Antagonistic pleiotropy — modern worked example (p53),CITED,PubMed,pmid=18639575,PMID 18639575; doi:10.1016/j.mad.2008.06.002,'Antagonistic pleiotropy and p53' Mech Ageing Dev 2008
+Disposable soma theory,CITED,PubMed,pmid=593350,PMID 593350; doi:10.1038/270301a0,Kirkwood 1977 Nature 'Evolution of ageing'
+Free-radical theory of aging,CITED,PubMed,pmid=13332224,PMID 13332224; doi:10.1093/geronj/11.3.298,Harman 1956 J Gerontol
+Hyperfunction/quasi-program theory (TOR-driven),CITED,PubMed,pmid=20724817,PMID 20724817; doi:10.4161/cc.9.16.13120,Blagosklonny 2010 Cell Cycle 'Revisiting the AP theory of aging: TOR-driven program and quasi-program'
+Programmatic/developmental features of aging (prior art),CITED,PubMed,pmid=22964300,PMID 22964300; doi:10.1096/fj.12-210872,de Magalhaes 2012 FASEB J 'Programmatic features of aging originating in development'
+"Control-theory analysis of aging (prior art, damage-centric)",CITED,PubMed,pmid=18318658,PMID 18318658; doi:10.1146/annurev.biochem.77.070606.101605,Kirkwood 2008 Annu Rev Biochem 'Toward a control theory analysis of aging'
+Developmental-drift theory / Wnt (prior art),CITED,PubMed,pmid=27490570,PMID 27490570; doi:10.3390/cancers8080073,'Developmental Drift and the Role of Wnt Signaling in Aging' Cancers 2016
+GHR disruption prevents CR from further extending lifespan (shared pathway; non-additive),CITED,PubMed,pmid=19234595,PMID 19234595; doi:10.1371/journal.pone.0004567,Bonkowski/Bartke 2009 PLoS ONE
+DR effect size is genotype-dependent (can shorten lifespan) -> kept qualitative,CITED,PubMed,pmid=24637399,PMID 24637399,'The fine line between lifespan extension and shortening in response to caloric restriction' 2014
+Serum IGF-1 scales with body size across dog breeds,CITED,PubMed,pmid=20865338,PMID 20865338; doi:10.1007/s11357-010-9182-4,"Greer 2010 Age 'Connecting serum IGF-1, body size, and age in the domestic dog'"
+daf-2 (IIS receptor) pathway mutation doubles C. elegans lifespan,CITED (corrected to Kenyon 1993),PubMed,pmid=8247153,PMID 8247153; doi:10.1038/366461a0,Kenyon 1993 Nature 'A C. elegans mutant that lives twice as long as wild type'
+Controller-network accessions (12) confirmed at protein level,CITED,UniProt (genes-ontologies),get_uniprot_entries,"P42345 MTOR(2549aa),P08069 IGF1R,O43524 FOXO3,Q96EB6 SIRT1,P04637 TP53,O14746 TERT,P31749 AKT1,Q13131 PRKAA1,P06213 INSR,P05019 IGF1,P10912 GHR,Q8N122 RPTOR",all 12 returned as *_HUMAN
+Controller genes wire into one insulin/IGF->AKT->mTOR/autophagy/FOXO axis,CITED,Reactome (genes-ontologies),map_reactome_pathways,Reactome v97,MTOR->MTOR signalling/Macroautophagy; IGF1R->IGF1R cascade; FOXO->AKT-nucleus; PRKAA1->Macroautophagy
+Controller network expressed in all 54 human tissues (>1 TPM),CITED,GTEx (expression),gtex_expression_summary,gtex_v8 (GENCODE v26),MTOR 54/54 median 14.1 TPM; AKT1 median 50.2; FOXO3 29.8; INSR 21.2; TP53 14.8
+Rapamycin MoA = FKBP1A/mTOR inhibition,CITED,ChEMBL,get_mechanisms CHEMBL413,CHEMBL413 -> CHEMBL1902,FK506-binding protein 1A / mTOR inhibitor; sirolimus phase 4
+Metformin MoA = mitochondrial complex I inhibition (->AMPK),CITED,ChEMBL,get_mechanisms CHEMBL1431,CHEMBL1431 -> CHEMBL2363065,mito complex I inhibitor
+"Senolytics (dasatinib/navitoclax) act on kinase/BCL-2, NOT growth controller",CITED,ChEMBL,"get_mechanisms CHEMBL1421,CHEMBL443684",CHEMBL1421->CHEMBL1862(ABL); CHEMBL443684->CHEMBL4860(BCL-2),distinct target class from mTOR
+MTOR top human genetic assoc = overgrowth/cortical dysplasia,CITED,Open Targets (clinical-genomics),open_targets_graphql ENSG00000198793,n=2599,Macrocephaly/overgrowth syndromes top-ranked (0.83/0.69)
+GHR top human assoc = Laron syndrome/short stature,CITED,Open Targets,ENSG00000112964,n=1358,Laron syndrome score 0.83; short stature 0.76
+IGF1R/INSR/IGF1 top assoc = growth delay/growth-resistance/dwarfism,CITED,Open Targets,"ENSG00000140443,ENSG00000171105,ENSG00000017427",n=1407/1353/3944,growth delay 0.81; leprechaunism 0.84; growth delay/dwarfism 0.76
+Tabula Muris Senis mouse aging atlas (empirical rate readout),CITED,GEO (omics-archives),geo_search_series 'Tabula Muris Senis',GSE132040,"bulk RNA-seq, n=947 samples across ages/tissues"
+Human tissue aging transcriptomes available (n=215 series),CITED,GEO,geo_search_series aging Homo sapiens,215 series,real human aging omics exist
+AnAge maximum-longevity / life-history source,CITED,AnAge/HAGR (genomics.senescence.info),dataset.zip build 14,"anage_data.txt (4645 species, 31 cols)",de Magalhaes HAGR; downloaded this session
+Mammalian max lifespan spans 100-fold (quality-filtered),INFERENCE(from CITED AnAge),pandas analysis,min/max on acceptable+high quality,n=1003,2.10 yr (N. red-backed vole) -> 211 yr (bowhead whale)
+Vertebrate max lifespan spans 2450-fold,INFERENCE(from CITED AnAge),pandas analysis,min/max,n=3924,0.16 yr (pygmy goby) -> 392 yr (Greenland shark)
+Body-mass allometry explains ~50% of mammalian lifespan variance,INFERENCE(from CITED AnAge),linregress log-log,OLS,n=997,"log10(ML)=0.159*log10(mass)+0.674, r=0.705"
+Age-at-maturity predicts lifespan after mass correction (mammals),INFERENCE(from CITED AnAge),partial correlation (Fisher-z CI),control log adult weight,n=801,"partial r=+0.65, p=3e-97"
+Growth-rate constant predicts lifespan after mass correction (mammals),INFERENCE(from CITED AnAge),partial correlation,control mass,n=215,"partial r=-0.37, p=2e-8"
+Age-at-maturity predicts lifespan after mass correction (birds),INFERENCE(from CITED AnAge),partial correlation,control mass,n=807,"partial r=+0.36, p=7e-26"
+Bird growth-rate signal VANISHES after mass correction (honest null),INFERENCE(from CITED AnAge),partial correlation,control mass,n=298,"partial r=-0.04, p=0.46"
+MRDT (direct aging-rate) tracks age-at-maturity after mass correction,INFERENCE(from CITED AnAge),partial correlation,control mass,n=17,"partial r=+0.85, p=2e-5 (MRDT available n=42 total)"
+Relationship partly survives phylogeny (order-level aggregation),INFERENCE(from CITED AnAge),order-mean partial correlation,control mass,n=20 orders,"partial r=+0.53, p=0.017"
+Naked mole-rat lives 3.7x longer than mass-allometry predicts; mouse 0.5x,INFERENCE(from CITED AnAge),allometric residual,residual,NMR +0.57 log10; mouse -0.28,obs NMR 31 yr vs pred 8.3; mouse 4 vs 7.6
+NMR vs mouse: 1.7x mass but 5.4x maturity and 7.8x lifespan,INFERENCE(from CITED AnAge),ratio,-,-,mouse 20g/42d/4yr; NMR 35g/228d/31yr
+Nutrient-sensing nodes NOT more network-central than other hallmark genes (pre-registered NULL),INFERENCE(from CITED STRING),"betweenness + 10,000x permutation null","required_score=400, 35 genes/336 edges",p=0.45,NS 0.0147 vs other 0.0177 (ratio 0.83); top hub TP53 (senescence)
+Telomere-attrition theory (primary source),CITED,PubMed,get_article_metadata pmid=2342578,PMID 2342578; doi:10.1038/345458a0,Harley 1990 Nature 'Telomeres shorten during ageing of human fibroblasts'

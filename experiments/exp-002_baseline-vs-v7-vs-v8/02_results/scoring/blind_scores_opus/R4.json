@@ -1,0 +1,457 @@
+{
+ "question": "Generate a novel, plausible, unifying hypothesis for: Why does biological aging occur?",
+ "dimensions": {
+  "grounding": 3,
+  "reasoning": 4,
+  "completeness": 5.0,
+  "usefulness": 4,
+  "creativity": 2.485
+ },
+ "weighted_composite": 3.697,
+ "grounding_cap": 3,
+ "integrity_cap": 5,
+ "integrity_reasons": [],
+ "overclaim_count": 0,
+ "overclaim_cap": 5,
+ "effective_grounding_cap": 3,
+ "dataset_resolution": null,
+ "trace_verification": null,
+ "specificity_signal": 5,
+ "creativity_detail": {
+  "creativity_index": 0.3712,
+  "novelty": 0.495,
+  "plausibility_gate": 0.75,
+  "reasoning_trace_gate": 1.0,
+  "creativity_dim_score_1to5": 2.485,
+  "hallucination_flag": false
+ },
+ "citation_verification_rate": 0.036,
+ "n_citations": 28,
+ "entity_counts": {
+  "genes": 11,
+  "assays": 0,
+  "quant_predictions": 0,
+  "pathways": 2,
+  "drugs": 0,
+  "total": 13
+ },
+ "redflags": [
+  "Toy model demonstrates sufficiency only; Gompertz and AR(1) signatures are generically producible from many models, so their 'non-tuned' emergence is weak evidence for this specific mechanism rather than a distinguishing test.",
+  "Soma-vs-germline dichotomy is idealized: germline/parental-age epigenetic drift and de novo mutation accumulation exist, so 'the germline does not drift without bound' is stronger than the biology strictly supports.",
+  "x* is treated as a fixed target, but the physiological optimum is context- and age-dependent; a shifting optimum could mimic or mask 'reference drift' and is not distinguished.",
+  "Citation identifiers are self-attested via a claimed Crossref pass (doi_verification.json) that this reviewer cannot execute; reference #3's DOI was reportedly corrected, and the arXiv IDs in source #10 (2504.13044, 2605.16781) are not verifiable here and one has an implausible future-style number \u2014 treat all identifiers as unverified.",
+  "Predictions #1 and #4 (measurable shifted set-points; clocks as distance-from-optimum) require operationalizing an admittedly unobservable x*, so the headline falsifier may be difficult to execute as stated.",
+  "Sufficiency-vs-necessity gap: the toy model shows the four aging signatures CAN emerge from reference decay, but Gompertz mortality, rising variance, and critical slowing down are recoverable from many competing models, so they do not discriminate this hypothesis from damage/network theories despite being presented as strong confirmation.",
+  "Overstated 'unobservability by construction': many real homeostatic loops have partially external/physical references (mechanical load, nutrient/oxygen sensing, damage signaling), so reference drift is not strictly a hidden common-mode error in all cases \u2014 the strong universal claim is weaker than stated.",
+  "Model fit statistics (Gompertz R\u00b2=0.94, autocorrelation 0.75->0.90, recovery ~2.3x, lifespan 66 vs 97) come from a self-authored toy simulation, not from fitting real data; these numbers are illustrative and should not be read as empirical validation.",
+  "Citation identifiers are asserted as Crossref-verified via a saved doi_verification.json that I cannot inspect here; reference #10 preprint arXiv IDs (2504.13044; 2605.16781) and reference #3 supersession claim are unverifiable from this text and one arXiv ID (2605.16781) has an implausible future-style number \u2014 treat provenance claims as unconfirmed.",
+  "Central constructs (x*, 'true optimum', 'reference') remain operationally undefined at the molecular level, so the falsifiers, while well-posed conceptually, may not be executable until x* is made measurable \u2014 a gap the authors acknowledge but which limits near-term testability."
+ ],
+ "inter_judge_absdiff": {
+  "grounding": 0.667,
+  "reasoning": 0.0,
+  "completeness": 0.0,
+  "usefulness": 0.0,
+  "creativity": 0.0
+ },
+ "_novelty": {
+  "novelty": 0.495,
+  "N_freq": 0.349,
+  "hits": 72,
+  "semantic": {
+   "value": 0.931,
+   "method": "tfidf_cosine",
+   "max_sim": 0.069,
+   "note": "model-dependent; under-discriminates on shared domain vocab (LB-018)"
+  },
+  "n_neighbours": 7,
+  "method": "0.75*retrieval_freq + 0.25*semantic_distance"
+ },
+ "citation_quality": {
+  "n_citations": 28,
+  "n_primary": 21,
+  "n_review": 4,
+  "n_preprint": 0,
+  "n_other": 0,
+  "n_retracted": 0,
+  "primary_ratio": 0.84,
+  "mean_venue_quality": 1.0,
+  "usage": 1.0,
+  "quality_composite": 0.952,
+  "flags": []
+ },
+ "_citation_quality_detail": {
+  "n_citations": 28,
+  "n_primary": 21,
+  "n_review": 4,
+  "n_preprint": 0,
+  "n_other": 0,
+  "n_retracted": 0,
+  "primary_ratio": 0.84,
+  "mean_venue_quality": 1.0,
+  "usage": 1.0,
+  "quality_composite": 0.952,
+  "flags": [],
+  "per_citation": [
+   {
+    "citation": {
+     "kind": "pmid",
+     "value": "36599349",
+     "raw": "PMID: 36599349"
+    },
+    "venue": "Cell",
+    "type": "review",
+    "retracted": false,
+    "venue_quality": 1.0,
+    "year": "2023"
+   },
+   {
+    "citation": {
+     "kind": "pmid",
+     "value": "36638792",
+     "raw": "PMID: 36638792"
+    },
+    "venue": "Cell",
+    "type": "primary",
+    "retracted": false,
+    "venue_quality": 1.0,
+    "year": "2023"
+   },
+   {
+    "citation": {
+     "kind": "pmid",
+     "value": "17012837",
+     "raw": "PMID: 17012837"
+    },
+    "venue": "Cell cycle (Georgetown, Tex.)",
+    "type": "review",
+    "retracted": false,
+    "venue_quality": 1.0,
+    "year": "2006"
+   },
+   {
+    "citation": {
+     "kind": "pmid",
+     "value": "27060562",
+     "raw": "PMID: 27060562"
+    },
+    "venue": "Aging cell",
+    "type": "review",
+    "retracted": false,
+    "venue_quality": 1.0,
+    "year": "2016"
+   },
+   {
+    "citation": {
+     "kind": "pmid",
+     "value": "29087299",
+     "raw": "PMID: 29087299"
+    },
+    "venue": "Proceedings of the National Academy of Sciences of the United States of America",
+    "type": "primary",
+    "retracted": false,
+    "venue_quality": 1.0,
+    "year": "2017"
+   },
+   {
+    "citation": {
+     "kind": "pmid",
+     "value": "18318658",
+     "raw": "PMID: 18318658"
+    },
+    "venue": "Annual review of biochemistry",
+    "type": "review",
+    "retracted": false,
+    "venue_quality": null,
+    "year": "2008"
+   },
+   {
+    "citation": {
+     "kind": "pmid",
+     "value": "34035236",
+     "raw": "PMID: 34035236"
+    },
+    "venue": "Nature communications",
+    "type": "primary",
+    "retracted": false,
+    "venue_quality": 1.0,
+    "year": "2021"
+   },
+   {
+    "citation": {
+     "kind": "pmid",
+     "value": "28360329",
+     "raw": "PMID: 28360329"
+    },
+    "venue": "Science (New York, N.Y.)",
+    "type": "primary",
+    "retracted": false,
+    "venue_quality": 1.0,
+    "year": "2017"
+   },
+   {
+    "citation": {
+     "kind": "pmid",
+     "value": "27984723",
+     "raw": "PMID: 27984723"
+    },
+    "venue": "Cell",
+    "type": "primary",
+    "retracted": false,
+    "venue_quality": 1.0,
+    "year": "2016"
+   },
+   {
+    "citation": {
+     "kind": "pmid",
+     "value": "33268865",
+     "raw": "PMID: 33268865"
+    },
+    "venue": "Nature",
+    "type": "primary",
+    "retracted": false,
+    "venue_quality": 1.0,
+    "year": "2020"
+   },
+   {
+    "citation": {
+     "kind": "pmid",
+     "value": "34172448",
+     "raw": "PMID: 34172448"
+    },
+    "venue": "Science advances",
+    "type": "primary",
+    "retracted": false,
+    "venue_quality": 1.0,
+    "year": "2021"
+   },
+   {
+    "citation": {
+     "kind": "doi",
+     "value": "10.1016/j.cell.2024.01.013",
+     "raw": "10.1016/j.cell.2024.01.013"
+    },
+    "venue": "Cell",
+    "type": "primary",
+    "retracted": false,
+    "venue_quality": 1.0,
+    "year": "2024"
+   },
+   {
+    "citation": {
+     "kind": "doi",
+     "value": "10.1016/j.cell.2022.11.001",
+     "raw": "10.1016/j.cell.2022.11.001"
+    },
+    "venue": "Cell",
+    "type": "primary",
+    "retracted": false,
+    "venue_quality": 1.0,
+    "year": "2023"
+   },
+   {
+    "citation": {
+     "kind": "doi",
+     "value": "10.1016/j.cell.2022.12.027",
+     "raw": "10.1016/j.cell.2022.12.027"
+    },
+    "venue": "Cell",
+    "type": "primary",
+    "retracted": false,
+    "venue_quality": 1.0,
+    "year": "2023"
+   },
+   {
+    "citation": {
+     "kind": "doi",
+     "value": "10.4161/cc.5.18.3288",
+     "raw": "10.4161/cc.5.18.3288"
+    },
+    "venue": "Cell Cycle",
+    "type": "primary",
+    "retracted": false,
+    "venue_quality": 1.0,
+    "year": "2006"
+   },
+   {
+    "citation": {
+     "kind": "doi",
+     "value": "10.1038/270301a0",
+     "raw": "10.1038/270301a0"
+    },
+    "venue": "Nature",
+    "type": "primary",
+    "retracted": false,
+    "venue_quality": 1.0,
+    "year": "1977"
+   },
+   {
+    "citation": {
+     "kind": "doi",
+     "value": "10.1111/acel.12480",
+     "raw": "10.1111/acel.12480"
+    },
+    "venue": "Aging Cell",
+    "type": "primary",
+    "retracted": false,
+    "venue_quality": 1.0,
+    "year": "2016"
+   },
+   {
+    "citation": {
+     "kind": "doi",
+     "value": "10.1073/pnas.1618854114",
+     "raw": "10.1073/pnas.1618854114"
+    },
+    "venue": "Proceedings of the National Academy of Sciences",
+    "type": "primary",
+    "retracted": false,
+    "venue_quality": 1.0,
+    "year": "2017"
+   },
+   {
+    "citation": {
+     "kind": "doi",
+     "value": "10.1134/S0005117912050086",
+     "raw": "10.1134/S0005117912050086"
+    },
+    "venue": "Automation and Remote Control",
+    "type": "primary",
+    "retracted": false,
+    "venue_quality": null,
+    "year": "2012"
+   },
+   {
+    "citation": {
+     "kind": "doi",
+     "value": "10.1038/s41467-021-23014-1",
+     "raw": "10.1038/s41467-021-23014-1"
+    },
+    "venue": "Nature Communications",
+    "type": "primary",
+    "retracted": false,
+    "venue_quality": 1.0,
+    "year": "2021"
+   },
+   {
+    "citation": {
+     "kind": "doi",
+     "value": "10.1126/science.aah4115",
+     "raw": "10.1126/science.aah4115"
+    },
+    "venue": "Science",
+    "type": "primary",
+    "retracted": false,
+    "venue_quality": 1.0,
+    "year": "2017"
+   },
+   {
+    "citation": {
+     "kind": "doi",
+     "value": "10.1038/s41467-019-12293-4",
+     "raw": "10.1038/s41467-019-12293-4"
+    },
+    "venue": "Nature Communications",
+    "type": "primary",
+    "retracted": false,
+    "venue_quality": 1.0,
+    "year": "2019"
+   },
+   {
+    "citation": {
+     "kind": "doi",
+     "value": "10.1016/j.cell.2016.11.052",
+     "raw": "10.1016/j.cell.2016.11.052"
+    },
+    "venue": "Cell",
+    "type": "primary",
+    "retracted": false,
+    "venue_quality": 1.0,
+    "year": "2016"
+   },
+   {
+    "citation": {
+     "kind": "doi",
+     "value": "10.1038/s41586-020-2975-4",
+     "raw": "10.1038/s41586-020-2975-4"
+    },
+    "venue": "Nature",
+    "type": "primary",
+    "retracted": false,
+    "venue_quality": 1.0,
+    "year": "2020"
+   },
+   {
+    "citation": {
+     "kind": "doi",
+     "value": "10.1126/sciadv.abg6082",
+     "raw": "10.1126/sciadv.abg6082"
+    },
+    "venue": "Science Advances",
+    "type": "primary",
+    "retracted": false,
+    "venue_quality": 1.0,
+    "year": "2021"
+   },
+   {
+    "citation": {
+     "kind": "authoryear",
+     "value": "Gladyshev 2016",
+     "raw": "(Gladyshev 2016)"
+    },
+    "venue": null,
+    "type": null,
+    "retracted": false,
+    "venue_quality": null,
+    "year": null
+   },
+   {
+    "citation": {
+     "kind": "authoryear",
+     "value": "Kerepesi et al. 2021",
+     "raw": "(Kerepesi et al. 2021)"
+    },
+    "venue": null,
+    "type": null,
+    "retracted": false,
+    "venue_quality": null,
+    "year": null
+   },
+   {
+    "citation": {
+     "kind": "authoryear",
+     "value": "July 2026",
+     "raw": "(July 2026)"
+    },
+    "venue": null,
+    "type": null,
+    "retracted": false,
+    "venue_quality": null,
+    "year": null
+   }
+  ]
+ },
+ "code": "R4",
+ "question_id": "Q2_exp002",
+ "arm": "R4",
+ "run": 1,
+ "_qgroup": "Q2",
+ "_model": "claude-opus-4-8",
+ "_attempts": 1,
+ "_dim_parse_bad": [],
+ "_dim_parse_ok": true,
+ "_creativity_chain_quotes": [
+  "The loop's only measurement is the error e = x - r. Crucially, x* never enters e. ... Because e is blind to x*, the loop nulls x to a reference that is itself sliding away from optimal. ... a cell's reference is the sum of a legitimate differentiated set-point (its identity) and the accumulated drift. A reset of depth lambda removes a fraction lambda of the drift (good) but also a fraction lambda of the identity (bad). ... The total deviation from optimum is then sqrt[(1-lambda)^2 sigma^2_drift + lambda^2 sigma^2_id], a convex function with an interior minimum ... Falsifier: if aged loops are simply noisier around the correct set-point (loss of precision, not accuracy), the hypothesis is wrong.",
+  "The loop's only measurement is the error `e = x \u2212 r`. Crucially, **`x*` never enters `e`.** Two forces move `r`: 1. Stochastic drift... 2. Directional bias... Because `e` is blind to `x*`, the loop nulls `x` to a reference that is itself sliding away from optimal. ... The total deviation from optimum is then `\u221a[(1\u2212\u03bb)\u00b2\u03c3\u00b2_drift + \u03bb\u00b2\u03c3\u00b2_id]`, a convex function with an interior minimum ... Median lifespan peaks at partial reset (\u03bb*\u22480.4 ...) and then declines; at full erasure it falls below untreated. ... **Falsifier:** if aged loops are simply noisier around the *correct* set-point (loss of precision, not accuracy), the hypothesis is wrong."
+ ],
+ "_creativity_refix": {
+  "applied": true,
+  "reason": "LB-098 format-coda schema bug",
+  "plausibility": 4,
+  "reasoning_trace": 5,
+  "old_creativity_dim": 1.0,
+  "new_creativity_dim": 2.485,
+  "old_composite": 3.4,
+  "new_composite": 3.697
+ }
+}

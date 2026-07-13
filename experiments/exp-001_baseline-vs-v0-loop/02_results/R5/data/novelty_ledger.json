@@ -1,0 +1,63 @@
+{
+ "claim_under_test": "ARGX-119 (MuSK agonist antibody) as an exercise mimetic for age-related sarcopenia is a not-yet-proposed connection.",
+ "zero_hit_queries": [
+  {
+   "db": "PubMed",
+   "query": "MuSK/\"muscle-specific kinase\" + \"exercise mimetic\"",
+   "n": 0
+  },
+  {
+   "db": "PubMed",
+   "query": "\"neuromuscular junction\" + \"exercise mimetic\" + aging/sarcopenia",
+   "n": 0
+  },
+  {
+   "db": "PubMed",
+   "query": "MuSK agonist + aging/sarcopenia/age-related",
+   "n": 0
+  },
+  {
+   "db": "PubMed",
+   "query": "ARGX-119/adimanebart + sarcopenia/aging/muscle-loss",
+   "n": 0
+  },
+  {
+   "db": "OpenAlex",
+   "query": "adimanebart/ARGX-119 + sarcopenia (full text)",
+   "n": 0
+  }
+ ],
+ "near_misses_vetted": [
+  {
+   "pmid": "41619083",
+   "doi": "10.1007/s40291-026-00833-w",
+   "year": 2026,
+   "what": "Review: NMJ as a molecular target in sarcopenia; discusses agrin-MuSK disruption.",
+   "why_not_this": "Shares the PREMISE but names NO specific MuSK agonist and no ARGX-119; frames exercise as an ADJUNCT to combine with NMJ agents, not a pharmacological MIMIC of exercise. My increment: a specific real clinical-stage agonist + exercise-mimetic framing + signature-reversal grounding."
+  },
+  {
+   "pmid": "28825343",
+   "doi": "10.1080/14728222.2017.1369960",
+   "year": 2017,
+   "what": "Review: agrin-LRP4-MuSK as therapeutic target; lists sarcopenia among NMJ diseases.",
+   "why_not_this": "Predates ARGX-119; explicitly states enhancing postsynaptic NMJ signaling is desirable but 'no currently available drug has this functionality' \u2014 i.e. names the gap I now fill with a real compound."
+  },
+  {
+   "pmid": "39024975",
+   "doi": "10.1016/j.bbrc.2024.150400",
+   "year": 2024,
+   "what": "Cell screen: small molecules enhancing MuSK phosphorylation / AChR clustering (4 hits, 8-30x, > disulfiram).",
+   "why_not_this": "Supports feasibility of the NEXT-GEN small-molecule extension; mentions sarcopenia only in passing; no in vivo aging model, no exercise-mimetic framing, no named clinical compound."
+  },
+  {
+   "pmid": "24520420",
+   "doi": "10.1371/journal.pone.0088739",
+   "year": 2014,
+   "what": "NT-1654 soluble neural agrin fragment improves NMJ-disassembly muscle pathology.",
+   "why_not_this": "Acts UPSTREAM (supplies agrin ligand), still susceptible to neurotrypsin cleavage; preclinical only; framed for muscle-wasting disease, not aging exercise-mimicry."
+  }
+ ],
+ "adjacent_but_distinct": "MuSK agonist antibodies (ARGX-119) are in clinical development for CMS/ALS/SMA (all rare NMJ diseases); CAF is an established sarcopenia biomarker. The target biology and the compound both exist \u2014 only the CONNECTION (this compound, this indication, this framing) is unclaimed.",
+ "independent_confirmation": "Open Targets: MuSK's disease-association landscape (1417 diseases) is dominated by NMJ disease (the only non-neuromuscular top association is diabetes mellitus, 0.280); sarcopenia/age-related muscle loss are ABSENT \u2014 the target-disease edge I propose is not in the world's largest target-disease resource.",
+ "t": "2026-07-11T21:11:03.932086Z"
+}

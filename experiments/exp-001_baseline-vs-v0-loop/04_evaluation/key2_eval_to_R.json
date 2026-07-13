@@ -1,0 +1,31 @@
+{
+ "experiment": "exp-001",
+ "role": "KEY-2 (CS-held) \u2014 blinds the OPERATOR/the operator",
+ "WARNING": "CS holds this. It maps each eval-site display label (A/B per question) back to the R-code. WITHHELD from the operator until the operator's evaluation is submitted. Unblinding to arm ALSO needs Key-1 (operator-held R-code\u2192arm). Neither key alone reveals arm.",
+ "seed": 42,
+ "display_label_to_Rcode": {
+  "Q_ERGO": {
+   "A": "R3",
+   "B": "R2"
+  },
+  "Q2": {
+   "A": "R6",
+   "B": "R4"
+  },
+  "Q3": {
+   "A": "R1",
+   "B": "R5"
+  }
+ },
+ "Rcode_to_question": {
+  "R2": "Q_ERGO",
+  "R3": "Q_ERGO",
+  "R4": "Q2",
+  "R6": "Q2",
+  "R1": "Q3",
+  "R5": "Q3"
+ },
+ "eval_site": "eval_site.html",
+ "generated": "2026-07-11",
+ "unblinding": "Final unblind = compose Key-1 (operator: Rcode\u2192arm) \u2218 this Key-2 (label\u2192Rcode) \u2192 label\u2192arm. Produces blinding_key_FULL.json. Only then does make_analysis.py compute L\u2212B."
+}

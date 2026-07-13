@@ -1,0 +1,31 @@
+{
+ "hand": {
+  "AB": [
+   8,
+   1
+  ],
+  "C": [
+   0,
+   8
+  ],
+  "fisher_p": 0.00037021801727684083,
+  "loo": 0.9411764705882353,
+  "perm_p": 0.0004
+ },
+ "independent": {
+  "AB": [
+   8,
+   2
+  ],
+  "C": [
+   0,
+   7
+  ],
+  "fisher_p": 0.0018510900863842042,
+  "loo": 0.8823529411764706,
+  "perm_p": 0.0029
+ },
+ "exact_concordance": 0.9411764705882353,
+ "binary_concordance": 0.9411764705882353,
+ "disagreement": "resveratrol: hand=C(antioxidant) vs indep=B(hormetic/SIRT1); resveratrol is a lifespan NEGATIVE so under indep coding it is a hormetic-class miss"
+}

@@ -1,0 +1,35 @@
+{
+ "note": "FULL unblind = Key-1 \u2218 Key-2. code->arm+question.",
+ "key": {
+  "R3": {
+   "arm": "B",
+   "question_id": "Q_ERGO",
+   "eval_label": "A"
+  },
+  "R2": {
+   "arm": "L",
+   "question_id": "Q_ERGO",
+   "eval_label": "B"
+  },
+  "R6": {
+   "arm": "B",
+   "question_id": "Q2",
+   "eval_label": "A"
+  },
+  "R4": {
+   "arm": "L",
+   "question_id": "Q2",
+   "eval_label": "B"
+  },
+  "R1": {
+   "arm": "B",
+   "question_id": "Q3",
+   "eval_label": "A"
+  },
+  "R5": {
+   "arm": "L",
+   "question_id": "Q3",
+   "eval_label": "B"
+  }
+ }
+}

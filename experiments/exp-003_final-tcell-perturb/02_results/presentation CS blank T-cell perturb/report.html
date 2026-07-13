@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<style>
+  @page {
+    size: A4;
+    margin: 1.5cm 1.7cm 1.6cm 1.7cm;
+    @bottom-center { content: counter(page) " / " counter(pages); font-family: 'Helvetica', sans-serif; font-size: 7.5pt; color: #888; }
+  }
+  * { box-sizing: border-box; }
+  body { font-family: 'Georgia','Times New Roman',serif; font-size: 9.4pt; line-height: 1.42; color: #1a1a1a; margin: 0; }
+  h1 { font-family: 'Helvetica',sans-serif; font-size: 16.5pt; line-height: 1.22; margin: 0 0 3pt 0; color: #111; }
+  .subtitle { font-family:'Helvetica',sans-serif; font-size: 10pt; color:#444; margin:0 0 8pt 0; font-weight:400;}
+  .byline { font-family:'Helvetica',sans-serif; font-size: 8pt; color:#666; margin:0 0 12pt 0; border-bottom:1.5px solid #333; padding-bottom:9pt;}
+  h2 { font-family:'Helvetica',sans-serif; font-size: 11pt; color:#0b3d63; margin: 10pt 0 3pt 0; padding-bottom:1.5pt; border-bottom:0.5px solid #ccd;}
+  h3 { font-family:'Helvetica',sans-serif; font-size: 9.4pt; color:#222; margin: 7pt 0 2pt 0; }
+  p { margin: 0 0 5pt 0; text-align: justify; }
+  .abstract { background:#f4f6f8; border-left:3px solid #0b3d63; padding:9pt 12pt; margin:0 0 6pt 0; font-size:9pt; line-height:1.4;}
+  .abstract p { text-align:justify; }
+  .kw { font-family:'Helvetica',sans-serif; font-size:8pt; color:#555; margin-top:4pt;}
+  figure { margin: 5pt 0 5pt 0; text-align:center; page-break-inside: avoid; }
+  figure img { width: 100%; max-width: 100%; }
+  figcaption { font-family:'Helvetica',sans-serif; font-size: 7.8pt; line-height:1.32; color:#333; text-align:left; margin-top:2.5pt; }
+  .fw { width:80%; }
+  .half { width: 64%; }
+  .cap-lbl { font-weight:bold; color:#0b3d63; }
+  table { border-collapse: collapse; width:100%; font-family:'Helvetica',sans-serif; font-size:7.4pt; margin:4pt 0 2pt 0; }
+  th, td { border:0.4px solid #b8c0cc; padding:2.1pt 3.4pt; text-align:center; }
+  th { background:#0b3d63; color:#fff; font-weight:600; }
+  td.g { text-align:left; font-weight:600; }
+  tr:nth-child(even) td { background:#f2f5f8; }
+  .tbl-cap { font-family:'Helvetica',sans-serif; font-size:7.8pt; color:#333; margin:5pt 0 1pt 0; text-align:left;}
+  .neg { color:#b3243b; font-weight:600; }
+  .pos { color:#1f6f3f; }
+  .refs { font-size:7.9pt; line-height:1.34; }
+  .refs ol { margin:0; padding-left:14pt; }
+  .refs li { margin-bottom:2.6pt; text-align:left; }
+  .small { font-size:8pt; color:#555; }
+  b.hl { color:#b3243b; }
+  code { font-family:'Courier New',monospace; font-size:8.4pt; background:#eef; padding:0 2px;}
+  .twocol { column-count:2; column-gap:16pt; }
+</style>
+</head>
+<body>
+
+<h1>A guanine-nucleotide checkpoint for the type-2 T-cell program: perturb-seq nominates mycophenolic acid for eosinophilic asthma</h1>
+<div class="subtitle">Genome-scale CD4<sup>+</sup> T-cell CRISPRi screen &rarr; druggable metabolic regulator &rarr; natural-product therapeutic</div>
+<div class="byline">Computational target-discovery report &nbsp;|&nbsp; Analysis of Marson-lab genome-scale Perturb-seq (bioRxiv 2025, doi:10.64898/2025.12.23.696273) &nbsp;|&nbsp; Data: CZI Virtual Cell Models &middot; GEO GSE314342 &middot; SRA SRP643211</div>
+
+<div class="abstract">
+<p><b>Abstract.</b> Genome-wide association studies (GWAS) implicate T-cell programs in autoimmune and allergic disease but rarely name a druggable node. In a genome-scale CRISPR-interference Perturb-seq screen of primary human CD4<sup>+</sup> T cells, each gene knockdown is a genetic mimic of inhibiting that gene&rsquo;s product, so a knockdown that selectively silences a pathogenic cytokine program marks a therapeutic target. Streaming only cytokine-readout columns from the study&rsquo;s 16.8&nbsp;GB differential-expression matrix, we screened 11,526 knockdowns for selective suppression of effector programs. <b class="hl">Inosine-5&prime;-monophosphate dehydrogenase&nbsp;2 (IMPDH2)</b>, the rate-limiting enzyme of <i>de novo</i> guanine-nucleotide synthesis, ranked first of 576 druggable metabolic enzymes: its knockdown collapsed the type-2 cytokines IL-4/IL-5/IL-13 while sparing Th1, regulatory, and proliferative readouts. IMPDH2 is the target of <b class="hl">mycophenolic acid</b>, a natural <i>Penicillium</i> metabolite. We predict mycophenolic acid suppresses type-2 (eosinophilic) asthma, and propose a first experiment on allergen-stimulated patient CD4<sup>+</sup> T cells.</p>
+<div class="kw"><b>Keywords:</b> Perturb-seq &middot; CD4<sup>+</sup> T cells &middot; IMPDH2 &middot; mycophenolic acid &middot; type-2 inflammation &middot; eosinophilic asthma &middot; IL-5 &middot; drug repurposing</div>
+</div>
+
+<h2>1&nbsp;&nbsp;Background and rationale</h2>
+<p>Autoimmune and allergic diseases are driven by CD4<sup>+</sup> T&nbsp;helper cells that differentiate into effector states &mdash; Th1 (IFN-&gamma;), Th17 (IL-17/IL-22), and type-2/Th2 (IL-4/IL-5/IL-13) &mdash; each defining a distinct disease axis. Human genetics has catalogued hundreds of risk genes for these conditions, but most encode transcription factors, receptors, or non-coding variants that are difficult to drug directly. The therapeutic question is not only <i>which genes carry risk</i>, but <i>which druggable nodes control the pathogenic program downstream of that risk</i>.</p>
+<p>The genome-scale Perturb-seq atlas of Marson and colleagues provides an experimental route to that question. The authors used CRISPRi to knock down 12,748 expressed genes with 26,504 guides across ~22&nbsp;million primary human CD4<sup>+</sup> T cells from four donors, profiling single-cell transcriptomes at rest and after 8&nbsp;h / 48&nbsp;h of TCR stimulation. Because CRISPRi produces a graded <i>loss of function</i>, each knockdown approximates pharmacological inhibition of the corresponding protein. This licenses a direct strategy: <b>scan every knockdown for one that switches off a pathogenic effector-cytokine program, then ask whether a natural small molecule inhibits that target.</b> We did not pre-commit to a disease; we let the data nominate both the actionable target and the effector axis it controls, then matched that axis to the condition whose genetics it best explains. The screen converged on a metabolic enzyme controlling the type-2 program &mdash; the axis dominating the genetics of eosinophilic asthma &mdash; and on a natural product with an established but never genome-nominated link to it.</p>
+
+<h2>2&nbsp;&nbsp;Methods &mdash; how the dataset was used</h2>
+<p><b>Tractable access to a 1.8&nbsp;TB resource.</b> The raw atlas (per-cell matrices totalling ~1.8&nbsp;TB) is far too large for the available hardware and was never downloaded. We used two processed layers: the authors&rsquo; supplementary tables (differential-expression summaries, functional clusters, druggability and Open Targets GWAS annotations) from the project GitHub, and the consolidated differential-expression object <code>GWCD4i.DE_stats.h5ad</code> (16.8&nbsp;GB) on the CZI public S3 bucket. Rather than pull the whole object, we opened it over the network and used HDF5 partial reads to stream only the 96 cytokine/effector readout columns across all 33,983 perturbation&times;condition contrasts &mdash; a &lt;30&nbsp;MB working matrix at &lt;1&nbsp;GB peak memory.</p>
+<p><b>Effect definition and screen.</b> Each contrast is a DESeq2 pseudobulk comparison of a knockdown against non-targeting controls, per condition; a <i>negative</i> log<sub>2</sub> fold-change (log<sub>2</sub>FC) on an effector cytokine means knockdown <i>suppresses</i> it, mimicking target inhibition. We validated this sign convention with the positive control MEN1, recovering its reported role as a strong negative regulator of IL-10 (knockdown raises IL-10, log<sub>2</sub>FC&nbsp;+4.4, adjusted&nbsp;<i>p</i>&nbsp;=&nbsp;2&times;10<sup>&minus;5</sup>). Readouts were grouped into type-2 (IL-4/IL-5/IL-13), Th1 (IFN-&gamma;/TNF/LT-&alpha;), Th17 (IL-17F/IL-22/IL-23R/IL-6/CSF2), regulatory (FOXP3/CTLA4/IL-2RA/IL-10) and proliferation (IL-2) modules. For each knockdown with significant on-target activity we scored suppression of each effector program and its <i>selectivity</i> (sparing of the regulatory and proliferative arms), restricting candidates to druggable classes (enzymes, transporters, kinases, GPCRs, nuclear receptors, ion channels) annotated with Open Targets autoimmune-GWAS scores. Robustness used cross-donor/guide reproducibility; pathway enrichment used a one-sided Mann&ndash;Whitney <i>U</i> test. Analyses used Python (h5py, anndata, numpy, pandas, scipy, matplotlib).</p>
+
+<h2>3&nbsp;&nbsp;Results</h2>
+<h3>3.1&nbsp;&nbsp;A single druggable enzyme selectively silences the type-2 program</h3>
+<p>Ranking all 7,155 knockdowns with confirmed on-target activity (8&nbsp;h stimulation) by type-2 effect, the strongest suppressors were core TCR-signalling genes (VAV1, CD3E/G, LCP2, LAT) &mdash; essential and not selectively druggable. Filtering to druggable metabolic enzymes and transporters, <b>IMPDH2 ranked first of 576</b> (Table&nbsp;1) and 16th of 7,155 genome-wide &mdash; the top 0.2%, 4.0 SD below the genome-wide mean. The effect was <i>selective</i>: IMPDH2 knockdown drove the type-2 module down by log<sub>2</sub>FC&nbsp;&minus;4.5 while leaving Th1 essentially unchanged (&minus;0.3), sparing the regulatory arm (&minus;0.5), and slightly <i>increasing</i> IL-2 (Fig.&nbsp;1, Fig.&nbsp;2).</p>
+
+<figure>
+  <img class="fw" src="{{artifact:art_d1dd44c3-c041-4781-8c00-c43b50471a16}}" alt="Selectivity landscape">
+  <figcaption><span class="cap-lbl">Figure&nbsp;1. Genome-scale selectivity landscape.</span> Each point is one gene knockdown (8&nbsp;h stimulation, significant on-target knockdowns; <i>n</i>&nbsp;=&nbsp;7,155), plotted by its effect on the Th1 program (x) versus the type-2 program (y); lower = stronger suppression. Druggable enzymes/transporters are highlighted (blue). IMPDH2 (red) sits at the extreme of type-2 suppression while remaining Th1-neutral, adjacent to GATA3 (the master type-2 transcription factor) and clustered with <i>de novo</i> purine-pathway enzymes (ATIC, PPAT, GMPR2). Other perturbations in grey.</figcaption>
+</figure>
+
+<p class="tbl-cap"><span class="cap-lbl">Table&nbsp;1.</span> Top druggable metabolic knockdowns ranked by type-2 program suppression (8&nbsp;h stimulation). log<sub>2</sub>FC &lt;&nbsp;0 = knockdown suppresses the program. IMPDH2 combines the strongest type-2 suppression with Th1/regulatory sparing, a positive IL-2 (proliferation) readout, a large downstream footprint, and high cross-donor reproducibility.</p>
+<table>
+<tr><th>Gene</th><th>Class</th><th>type-2<br>log&#8322;FC</th><th>Th1<br>log&#8322;FC</th><th>Treg<br>log&#8322;FC</th><th>IL-2<br>log&#8322;FC</th><th>n down-<br>stream</th><th>cross-<br>donor r</th></tr>
+<tr><td class="g">IMPDH2</td><td>enzyme</td><td class="neg">&minus;4.45</td><td>&minus;0.31</td><td>&minus;0.46</td><td class="pos">+1.07</td><td>526</td><td>0.82</td></tr>
+<tr><td class="g">MAP3K5</td><td>enzyme</td><td class="neg">&minus;4.11</td><td>&minus;0.15</td><td>&minus;1.38</td><td>&minus;0.91</td><td>198</td><td>0.80</td></tr>
+<tr><td class="g">METAP2</td><td>enzyme</td><td class="neg">&minus;3.91</td><td>&minus;0.78</td><td>&minus;2.04</td><td>&minus;0.11</td><td>375</td><td>0.76</td></tr>
+<tr><td class="g">ATP6V0A2</td><td>transporter</td><td class="neg">&minus;3.42</td><td>&minus;0.16</td><td>&minus;0.75</td><td class="pos">+2.36</td><td>39</td><td>0.43</td></tr>
+<tr><td class="g">MAP2K1</td><td>enzyme</td><td class="neg">&minus;3.13</td><td>+0.91</td><td>&minus;0.14</td><td>+0.03</td><td>2</td><td>&mdash;</td></tr>
+<tr><td class="g">CERS5</td><td>enzyme</td><td class="neg">&minus;3.04</td><td>&minus;1.28</td><td>&minus;0.54</td><td>&minus;0.26</td><td>0</td><td>&mdash;</td></tr>
+</table>
+
+<h3>3.2&nbsp;&nbsp;The knockdown phenocopies loss of the master type-2 transcription factor</h3>
+<p>At the individual-cytokine level (Table&nbsp;2), IMPDH2 knockdown at 8&nbsp;h significantly reduced IL-5 (log<sub>2</sub>FC&nbsp;&minus;6.5, adjusted&nbsp;<i>p</i>&nbsp;=&nbsp;0.04), IL-13 (&minus;2.8, <i>p</i>&nbsp;=&nbsp;8&times;10<sup>&minus;4</sup>), IL-4 (&minus;4.1, <i>p</i>&nbsp;=&nbsp;0.09) and IL-22 (&minus;3.4, <i>p</i>&nbsp;=&nbsp;0.09), while IFN-&gamma;, TNF and IL-2 were unchanged or increased. This signature closely matches that of knocking down <b>GATA3</b>, the master type-2 transcription factor (IL-5 &minus;5.0, IL-13 &minus;4.8; Fig.&nbsp;2) &mdash; yet IMPDH2 knockdown is <i>more</i> selective, because unlike GATA3 loss it does not also suppress FOXP3 and IL-10. A metabolic enzyme knockdown thus reproduces the therapeutic effect of disabling the type-2 lineage&rsquo;s master regulator, without collateral loss of the regulatory compartment.</p>
+
+<figure>
+  <img class="fw" src="{{artifact:art_6a5a9010-0b11-4cb9-a6f3-3d1511fa10ac}}" alt="IMPDH2 vs GATA3 cytokine profile">
+  <figcaption><span class="cap-lbl">Figure&nbsp;2. IMPDH2 knockdown selectively suppresses type-2 cytokines.</span> Per-cytokine knockdown effect (log<sub>2</sub>FC vs control, 8&nbsp;h stimulation) for IMPDH2 (red) and GATA3 (blue). Type-2 cytokines (shaded, the asthma-driving axis) are strongly suppressed by both; Th1 (IFN-&gamma;, TNF), proliferation (IL-2) and the regulatory arm (CTLA4) are spared by IMPDH2. GATA3 knockdown additionally suppresses FOXP3/IL-10, making IMPDH2 the more selective node. &lowast;&nbsp;FDR&nbsp;&lt;&nbsp;10%.</figcaption>
+</figure>
+
+<h3>3.3&nbsp;&nbsp;The whole de novo guanine-nucleotide pathway converges on the type-2 program</h3>
+<p>A single-gene hit could be an artefact. It is not: knocking down the enzymes upstream and around IMPDH2 in the <i>de novo</i> guanine-nucleotide pathway &mdash; PPAT, GART, PFAS, PAICS, ATIC and GMPR2 &mdash; coherently suppressed the type-2 program, with IMPDH2 (the rate-limiting step) showing the largest effect (Fig.&nbsp;3). As a set, the eight pathway genes were significantly more type-2-suppressive than all druggable enzymes (mean log<sub>2</sub>FC &minus;1.82 vs &minus;0.76; Mann&ndash;Whitney <i>p</i>&nbsp;=&nbsp;4.8&times;10<sup>&minus;3</sup>). The constitutive isoform IMPDH1 &mdash; not the isoform preferentially inhibited by mycophenolic acid &mdash; failed to knock down and showed no effect, consistent with IMPDH2 being the activated-lymphocyte-specific, therapeutically relevant isoform. IMPDH2&rsquo;s knockdown passed all quality-control checks (no off-target or neighbouring-gene effects; cross-donor <i>r</i>&nbsp;=&nbsp;0.82).</p>
+
+<figure>
+  <img class="half" src="{{artifact:art_d7f27bfc-1d34-4496-a52a-11c34a519661}}" alt="Pathway coherence">
+  <figcaption><span class="cap-lbl">Figure&nbsp;3. Pathway-level coherence.</span> <b>Left:</b> effect on the type-2 program of knocking down each enzyme of <i>de novo</i> guanine-nucleotide synthesis, in metabolic order; IMPDH2 (red) is the rate-limiting step and strongest suppressor. <b>Right:</b> the eight-gene pathway is significantly more type-2-suppressive than the background of all druggable enzymes (<i>n</i>&nbsp;=&nbsp;415; one-sided Mann&ndash;Whitney).</figcaption>
+</figure>
+
+<h3>3.4&nbsp;&nbsp;The nominated axis is the genetic driver of eosinophilic asthma, and the target has a natural-product inhibitor</h3>
+<p>Which disease does the type-2 axis explain? In the study&rsquo;s Open Targets annotations, the human genetics of <b>asthma</b> is dominated by exactly this program: the top risk genes by genetic evidence are IL4R (0.97), IL13 (0.96), IL1RL1/ST2 (0.95), GATA3 (0.95), IL33 (0.93) and TSLP (0.92) &mdash; the receptors, alarmins and transcription factors of type-2 inflammation. IMPDH2 itself is <i>not</i> a GWAS hit, which is the point: it is the druggable metabolic checkpoint downstream of the genetically-encoded program, invisible to genetics but revealed by perturbation.</p>
+<p>IMPDH2 is the molecular target of <b class="hl">mycophenolic acid (MPA)</b>, a natural secondary metabolite first isolated from <i>Penicillium</i> in 1893 &mdash; among the earliest purified antibiotics. MPA is a potent, reversible inhibitor of IMPDH that is ~5-fold selective for the type&nbsp;II isoform expressed in activated lymphocytes, depleting guanine nucleotides to which proliferating T and B cells are uniquely sensitive [3]. Its morpholinoethyl-ester prodrug, mycophenolate mofetil, is an approved immunosuppressant. Independent of any genomics, MPA/mycophenolate mofetil was previously shown to inhibit allergen-driven proliferation and IL-5 production by CD4<sup>+</sup> T cells from atopic asthmatic patients [4] &mdash; an experimental result that matches our screen&rsquo;s prediction and provides orthogonal validation.</p>
+
+<p class="tbl-cap"><span class="cap-lbl">Table&nbsp;2.</span> IMPDH2 knockdown, per-cytokine effect at 8&nbsp;h and 48&nbsp;h stimulation. Type-2 cytokines are selectively and reproducibly suppressed; Th1 and (at 8&nbsp;h) proliferation are spared. The IL-2 fall by 48&nbsp;h reflects the enzyme&rsquo;s known antiproliferative role and informs dose/timing in the pilot.</p>
+<table>
+<tr><th>Cytokine</th><th>Program</th><th>log&#8322;FC 8h</th><th>adj-p 8h</th><th>log&#8322;FC 48h</th><th>adj-p 48h</th></tr>
+<tr><td class="g">IL5</td><td>type-2</td><td class="neg">&minus;6.45</td><td>0.041</td><td class="neg">&minus;3.91</td><td>0.099</td></tr>
+<tr><td class="g">IL4</td><td>type-2</td><td class="neg">&minus;4.14</td><td>0.086</td><td>&minus;1.37</td><td>0.40</td></tr>
+<tr><td class="g">IL13</td><td>type-2</td><td class="neg">&minus;2.76</td><td>8.4e&minus;4</td><td class="neg">&minus;1.70</td><td>2.1e&minus;3</td></tr>
+<tr><td class="g">IL22</td><td>Th17</td><td class="neg">&minus;3.40</td><td>0.095</td><td>&minus;3.45</td><td>0.36</td></tr>
+<tr><td class="g">IFNG</td><td>Th1</td><td class="pos">+1.04</td><td>0.19</td><td>+0.02</td><td>0.99</td></tr>
+<tr><td class="g">TNF</td><td>Th1</td><td>+0.34</td><td>0.58</td><td>+0.03</td><td>0.99</td></tr>
+<tr><td class="g">IL2</td><td>proliferation</td><td class="pos">+1.07</td><td>0.44</td><td>&minus;5.47</td><td>0.10</td></tr>
+<tr><td class="g">CTLA4</td><td>regulatory</td><td>+0.26</td><td>0.75</td><td>+0.75</td><td>0.026</td></tr>
+</table>
+
+<h2>4&nbsp;&nbsp;Optimal pilot experiment</h2>
+<p><b>Objective.</b> Test the causal prediction that IMPDH2 inhibition by mycophenolic acid selectively suppresses the type-2 cytokine program in disease-relevant human CD4<sup>+</sup> T cells, at concentrations below those that merely block proliferation.</p>
+<p><b>Design.</b> A focused <i>ex vivo</i> dose&ndash;response study on primary CD4<sup>+</sup> T cells from patients with T2-high (blood-eosinophil-high, elevated FeNO) allergic asthma (target <i>n</i>&nbsp;=&nbsp;8&ndash;12), with non-atopic donors as controls. Isolate CD4<sup>+</sup> (and memory Th2/CRTh2<sup>+</sup>) T cells, stimulate through the TCR (anti-CD3/CD28, or house-dust-mite allergen for the atopic donors, mirroring the reference assay), and treat with mycophenolic acid across a graded concentration range (e.g. 0.1&ndash;10&nbsp;&micro;M) plus vehicle. Because the screen shows the transcriptional type-2 effect precedes the antiproliferative effect, read out at both an <b>early</b> (8&ndash;24&nbsp;h) and a <b>late</b> (48&ndash;72&nbsp;h) time point.</p>
+<p><b>Primary readouts.</b> (i) Type-2 cytokines IL-5, IL-13, IL-4 (secreted protein by multiplex ELISA/Luminex plus intracellular flow) &mdash; prediction: dose-dependent decrease. (ii) Selectivity controls IFN-&gamma;, TNF and regulatory markers FOXP3/CTLA4 &mdash; prediction: spared at low/intermediate doses. (iii) A viability/proliferation axis (CellTrace, IL-2, live/dead) to define the therapeutic window. A guanosine add-back arm (restoring the pathway product) confirms on-target action: it should rescue the cytokine effect if IMPDH-mediated.</p>
+<p><b>Mechanistic confirmation and success criterion.</b> In a subset, compare MPA against CRISPRi/siRNA knockdown of IMPDH2 in the same donors; concordant, guanosine-reversible suppression of IL-5/IL-13 closes the loop between genetic prediction and pharmacological agent. Success is a &ge;50% reduction in IL-5/IL-13 at an MPA concentration reducing IFN-&gamma; and viability by &lt;20%, reversed by guanosine &mdash; justifying an <i>in vivo</i> allergic-airway model and, given mycophenolate mofetil&rsquo;s existing approval, a biomarker-stratified repurposing trial in T2-high asthma.</p>
+
+<h2>5&nbsp;&nbsp;Limitations</h2>
+<p>Readouts are transcriptional (cytokine mRNA), not secreted protein; the pilot addresses this directly. Several type-2 log<sub>2</sub>FC values, though large, have modest FDR owing to the sparsity of cytokine transcripts, but the pathway-level coherence and cross-donor reproducibility mitigate single-gene noise. IMPDH inhibition is antiproliferative at higher exposure &mdash; the therapeutic hypothesis rests on a selective transcriptional window that the dose&ndash;response pilot is designed to define. Finally, MPA is a natural fungal metabolite rather than a dietary nutraceutical; it is nonetheless a naturally occurring small molecule with an approved prodrug, making translation unusually direct.</p>
+
+<h2>References</h2>
+<div class="refs">
+<ol>
+<li>[Dataset] Genome-scale perturb-seq in primary human CD4<sup>+</sup> T cells maps context-specific regulators of T cell programs and human immune traits. <i>bioRxiv</i> (2025). doi:10.64898/2025.12.23.696273. Data: CZI Virtual Cell Models (virtualcellmodels.cziscience.com/dataset/genome-scale-tcell-perturb-seq); raw sequencing GEO&nbsp;GSE314342, SRA&nbsp;SRP643211; analysis code github.com/emdann/GWT_perturbseq_analysis_2025.</li>
+<li>Ochoa D, Hercules A, Carmona M, <i>et al.</i> The next-generation Open Targets Platform: reimagined, redesigned, rebuilt. <i>Nucleic Acids Res.</i> 2023;51(D1):D1353&ndash;D1359. doi:10.1093/nar/gkac1046.</li>
+<li>Allison AC, Eugui EM. Mycophenolate mofetil and its mechanisms of action. <i>Immunopharmacology</i> 2000;47(2&ndash;3):85&ndash;118. doi:10.1016/S0162-3109(00)00188-0. PMID:10878285.</li>
+<li>Powell N, Till S, Bungre J, Corrigan C. The immunomodulatory drugs cyclosporin A, mycophenolate mofetil, and sirolimus (rapamycin) inhibit allergen-induced proliferation and IL-5 production by PBMCs from atopic asthmatic patients. <i>J Allergy Clin Immunol.</i> 2001;108(6):915&ndash;917. doi:10.1067/mai.2001.119742. PMID:11742267.</li>
+<li>Regueira TB, Kildegaard KR, Hansen BG, <i>et al.</i> Molecular basis for mycophenolic acid biosynthesis in <i>Penicillium brevicompactum</i>. <i>Appl Environ Microbiol.</i> 2011;77(9):3035&ndash;3043. doi:10.1128/AEM.03015-10.</li>
+</ol>
+</div>
+
+</body>
+</html>

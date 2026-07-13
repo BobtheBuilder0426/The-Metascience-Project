@@ -1,0 +1,158 @@
+[
+  {
+    "action": "retrieve_paper",
+    "detail": "Fetched full text of the CD4+ T-cell Perturb-seq study",
+    "evidence": "doi:10.64898/2025.12.23.696273 (bioRxiv; GEO GSE314342; SRA SRP643211)",
+    "t": 1
+  },
+  {
+    "action": "read_data_availability",
+    "detail": "Located processed differential-expression matrices and code repository from the paper's data-availability section",
+    "evidence": "CZI Virtual Cell Models; github.com/emdann/GWT_perturbseq_analysis_2025",
+    "t": 2
+  },
+  {
+    "action": "download_supplementary_tables",
+    "detail": "Downloaded processed supplementary tables (DE stats, cluster annotations, autoimmune-enrichment, guide knockdown efficiency, polarization coefficients) from the study repository",
+    "evidence": "GWT_perturbseq_analysis_2025 (master branch)",
+    "t": 3
+  },
+  {
+    "action": "enumerate_disease_enrichment",
+    "detail": "Filtered the cluster autoimmune-enrichment table to multiple sclerosis; 13 regulator clusters significant at FDR<0.05, including a Th17-differentiation cluster",
+    "evidence": "cluster_autoimmune_enrichment_results.suppl_table.csv (disease='multiple sclerosis')",
+    "t": 4
+  },
+  {
+    "action": "locate_processed_DE_tensor",
+    "detail": "Located the deposited pseudobulk DE tensor in the dataset S3 bucket (33,983 perturbation-conditions x 10,282 genes; layers zscore, log_fc, adj_p_value)",
+    "evidence": "s3://genome-scale-tcell-perturb-seq/marson2025_data/GWCD4i.DE_stats.h5ad (16.8 GB)",
+    "t": 5
+  },
+  {
+    "action": "extract_cytokine_columns_byte_range",
+    "detail": "Read only the eight measured-cytokine columns from the 16.8 GB HDF5 tensor by HTTP byte-range requests (no raw counts downloaded, honoring the compute-light constraint); assembled per-perturbation z and adjusted-p for CSF2, IFNG, IL2, TNF, GZMB, FOXP3, IL10, IL21",
+    "evidence": "cytokine_effects.parquet (33,983 x 44)",
+    "t": 6
+  },
+  {
+    "action": "confirm_measured_cytokines",
+    "detail": "Confirmed IL-17A is not measured in this atlas (stimulation is not Th17-polarizing), fixing the encephalitogenic readout as GM-CSF + IFN-gamma",
+    "evidence": "DE tensor var index: IL17A absent; CSF2/IFNG present",
+    "t": 7
+  },
+  {
+    "action": "lock_scoring_scheme",
+    "detail": "Fixed the pathogenic-effector set (core CSF2, IFNG) and confound sets (IL2/activation, proliferation, stress) from independent references before ranking",
+    "evidence": "LOCKED_SCORES.json",
+    "t": 8
+  },
+  {
+    "action": "validate_sign_convention",
+    "detail": "Verified negative z = knockdown lowers the cytokine, using canonical positive regulators (TBX21, STAT3, LAT/LCP2/ZAP70) whose knockdown gave strongly negative cytokine z-scores",
+    "evidence": "DATASET (this screen), Stim8hr",
+    "t": 9
+  },
+  {
+    "action": "rank_knockdowns_two_axis",
+    "detail": "Scored all 11,526 knockdowns on effector suppression (GM-CSF+IFN-gamma) versus activation (IL-2) to separate pan-activation hits from effector-selective hits",
+    "evidence": "cytokine_effects.parquet; Figure 1a",
+    "t": 10
+  },
+  {
+    "action": "apply_confound_filters",
+    "detail": "Excluded TCR-proximal/pan-activation, general-transcription/chromatin, essential genes, and the cytokines themselves; 195 rows (166 genes) passed the significance+reproducibility gate, 143 survived confound filters",
+    "evidence": "Table1_shortlist.csv",
+    "t": 11
+  },
+  {
+    "action": "nominate_target",
+    "detail": "Nominated PKM (PKM2): effector-selective (GM-CSF z=-3.66, IFN-gamma z=-3.30, IL-2 z=-0.05), selectivity 3.4, on-target -32.2, cross-donor 0.78, specific to 8 h; among glycolytic genes only PKM and PGK1 show the effect",
+    "evidence": "DATASET; ENSG00000067225; Figure 1b,c",
+    "t": 12
+  },
+  {
+    "action": "check_disease_genetics",
+    "detail": "Queried the GWAS Catalog for PKM associations; found no genome-wide-significant PKM-locus association with MS or CNS autoimmunity (hits are metabolic/anthropometric)",
+    "evidence": "GWAS Catalog, gene=PKM (9 associations, none MS/CNS)",
+    "t": 13
+  },
+  {
+    "action": "establish_mechanism",
+    "detail": "Established that nuclear PKM2 dimer binds STAT3 to amplify effector cytokines, and that T-cell PKM2 deletion ameliorates EAE without impairing proliferation \u2014 explaining the observed effector-selectivity",
+    "evidence": "PMID 32697823 (doi:10.1084/jem.20190613)",
+    "t": 14
+  },
+  {
+    "action": "corroborate_mechanism",
+    "detail": "Confirmed PKM2 is requisite for Th1/Th17 differentiation, is bound/activated by CaMK4 downstream of the TCR, and that a PKM2 inhibitor ameliorates EAE",
+    "evidence": "PMID 31217348 (doi:10.1172/jci.insight.127395)",
+    "t": 15
+  },
+  {
+    "action": "resolve_direction_of_effect",
+    "detail": "Determined the corrective direction is to stabilize the PKM2 tetramer and block nuclear translocation, using the tetramer activator TEPP-46 which limits Th1/Th17 and suppresses EAE in vivo",
+    "evidence": "PMID 31761564 (doi:10.1016/j.cmet.2019.10.015)",
+    "t": 16
+  },
+  {
+    "action": "identify_matched_metabolite",
+    "detail": "Identified micheliolide as the natural metabolite that covalently binds PKM2 at Cys424 (absent in PKM1), promotes the tetramer, inhibits K433 acetylation and blocks nuclear translocation \u2014 direction-matched to the required move",
+    "evidence": "PMID 29641204 (doi:10.1021/acs.jmedchem.8b00241)",
+    "t": 17
+  },
+  {
+    "action": "establish_compound_class_efficacy",
+    "detail": "Confirmed the parent sesquiterpene-lactone parthenolide suppresses Th17 and alleviates EAE, and that micheliolide is more stable in vivo than parthenolide",
+    "evidence": "PMID 35514960 (doi:10.3389/fimmu.2022.856694); PMID 25068660 (doi:10.1038/labinvest.2014.89)",
+    "t": 18
+  },
+  {
+    "action": "verify_compound_identity",
+    "detail": "Verified the feverfew parent parthenolide is a natural product that reached clinical Phase 2 and anchors the covalent alpha-methylene-gamma-butyrolactone chemistry",
+    "evidence": "ChEMBL CHEMBL540445 (natural_product=true, max_phase=2)",
+    "t": 19
+  },
+  {
+    "action": "appraise_exposure",
+    "detail": "Established the oral prodrug ACT001 has ~51% bioavailability and crosses the blood-brain barrier in rats; flagged that unbound CNS-available immunomodulatory concentration at tolerated human doses is unestablished",
+    "evidence": "PMID 30423524 (doi:10.1016/j.jchromb.2018.11.004)",
+    "t": 20
+  },
+  {
+    "action": "verify_clinical_status",
+    "detail": "Checked ClinicalTrials.gov for the prodrug: one Phase 1b/2a glioblastoma trial active/not-recruiting and one STAT3-high glioblastoma Phase 2 trial suspended, both with no results posted (tolerability context only)",
+    "evidence": "NCT05053880 (active, not recruiting); NCT06894225 (suspended)",
+    "t": 21
+  },
+  {
+    "action": "verify_human_disease_evidence",
+    "detail": "Confirmed a human MS study showing effector/memory T cells over-express PKM2, MS PBMCs carry more PKM2 monomer, and PKM2 targeting preferentially inhibits IFN-gamma/IL-5/IL-13/IL-17; full text confirms the compound used is TEPP-46, not micheliolide",
+    "evidence": "PMID 42208151 (doi:10.1016/j.ebiom.2026.106314)",
+    "t": 22
+  },
+  {
+    "action": "construct_modality_matrix",
+    "detail": "Resolved direction-of-effect across perturbation modalities (gene CRISPRi, genetic deletion, reversible activator, covalent activator, clinical prodrug) rather than merging them, to make explicit what the pilot must still establish",
+    "evidence": "result.md Table 2",
+    "t": 23
+  },
+  {
+    "action": "design_decisive_pilot",
+    "detail": "Designed a 2x2 compound x CRISPRi-PKM2 factorial epistasis pilot in primary human CD4+ T cells; primary endpoint GM-CSF+IFN-gamma+ frequency at 8 h; mechanism-defining result is a drug x genotype interaction; added isoform-attribution/rescue, a multi-day polarization arm, target-engagement and off-target controls, and a donor-as-unit mixed-effects analysis",
+    "evidence": "result.md Section 4; Figure 3",
+    "t": 24
+  },
+  {
+    "action": "verify_citations",
+    "detail": "Resolved every PMID to its DOI via NCBI and read each abstract to confirm the paper supports the exact claim attached to it; reconciled all dataset numbers against the extracted source table",
+    "evidence": "NCBI ID conversion + article metadata; cytokine_effects.parquet",
+    "t": 25
+  },
+  {
+    "action": "render_deliverable",
+    "detail": "Rendered the publication PDF with the three figures and two tables embedded, and assembled the presentation folder",
+    "evidence": "presentation/report.pdf (9 pp)",
+    "t": 26
+  }
+]

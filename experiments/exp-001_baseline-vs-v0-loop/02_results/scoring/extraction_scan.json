@@ -1,0 +1,170 @@
+{
+ "note": "Blind pre-scoring extraction. Codes R1-R6 only; arm unknown (operator holds Key-1). tight_query per question is topic-level (identical for both codes under a question).",
+ "questions": {
+  "Q_ERGO": {
+   "tight_query": "ergothioneine exercise performance endurance mechanism",
+   "category": 1
+  },
+  "Q2": {
+   "tight_query": "origin of life protocell self-replication abiogenesis hypothesis",
+   "category": 2
+  },
+  "Q3": {
+   "tight_query": "exercise mimetic compound sarcopenia age-related muscle loss",
+   "category": 3
+  }
+ },
+ "per_code": {
+  "R1": {
+   "question_id": "Q3",
+   "answer_bytes": 17672,
+   "n_citations": 0,
+   "citation_kinds": {
+    "pmid": 0,
+    "doi": 0,
+    "authoryear": 0
+   },
+   "n_dataset_ids": 2,
+   "n_entities": 64,
+   "has_process_trace": true
+  },
+  "R2": {
+   "question_id": "Q_ERGO",
+   "answer_bytes": 23117,
+   "n_citations": 5,
+   "citation_kinds": {
+    "pmid": 3,
+    "doi": 2,
+    "authoryear": 0
+   },
+   "n_dataset_ids": 5,
+   "n_entities": 89,
+   "has_process_trace": true
+  },
+  "R3": {
+   "question_id": "Q_ERGO",
+   "answer_bytes": 16321,
+   "n_citations": 0,
+   "citation_kinds": {
+    "pmid": 0,
+    "doi": 0,
+    "authoryear": 0
+   },
+   "n_dataset_ids": 0,
+   "n_entities": 46,
+   "has_process_trace": true
+  },
+  "R4": {
+   "question_id": "Q2",
+   "answer_bytes": 30182,
+   "n_citations": 33,
+   "citation_kinds": {
+    "pmid": 17,
+    "doi": 13,
+    "authoryear": 3
+   },
+   "n_dataset_ids": 3,
+   "n_entities": 16,
+   "has_process_trace": true
+  },
+  "R5": {
+   "question_id": "Q3",
+   "answer_bytes": 18422,
+   "n_citations": 9,
+   "citation_kinds": {
+    "pmid": 9,
+    "doi": 0,
+    "authoryear": 0
+   },
+   "n_dataset_ids": 6,
+   "n_entities": 62,
+   "has_process_trace": true
+  },
+  "R6": {
+   "question_id": "Q2",
+   "answer_bytes": 29118,
+   "n_citations": 18,
+   "citation_kinds": {
+    "pmid": 0,
+    "doi": 18,
+    "authoryear": 0
+   },
+   "n_dataset_ids": 0,
+   "n_entities": 9,
+   "has_process_trace": true
+  }
+ },
+ "unique_targets": {
+  "pmids": [
+   "10760281",
+   "14601926",
+   "15353806",
+   "17008219",
+   "19323552",
+   "19444213",
+   "20080693",
+   "23991830",
+   "24520420",
+   "25725524",
+   "26841066",
+   "26870889",
+   "27562259",
+   "28825343",
+   "29061892",
+   "29359747",
+   "29502283",
+   "31641438",
+   "31980607",
+   "3323479",
+   "36194581",
+   "36516485",
+   "39024975",
+   "39236304",
+   "39478161",
+   "40123866",
+   "40912653",
+   "41619083",
+   "42153453"
+  ],
+  "dois": [
+   "10.1002/bies.200900131",
+   "10.1007/bf00623322",
+   "10.1007/bf01732468",
+   "10.1007/s00239-020-09988-4",
+   "10.1016/j.cmet.2024.12.008",
+   "10.1016/j.cmet.2025.01.024",
+   "10.1038/319618a0",
+   "10.1038/nature08013",
+   "10.1038/nchem.2817",
+   "10.1038/ncomms7424",
+   "10.1038/nphys3984",
+   "10.1038/nrmicro1991",
+   "10.1038/s41467-018-06072-w",
+   "10.1038/s41467-019-08353-4",
+   "10.1038/s41467-021-24111-x",
+   "10.1038/s41559-019-1015-y",
+   "10.1038/s41559-020-1125-6",
+   "10.1038/s41586-019-1151-1",
+   "10.1038/s41586-020-2330-9",
+   "10.1038/s42004-021-00475-5",
+   "10.1073/pnas.0609592104",
+   "10.1073/pnas.0912628107",
+   "10.1073/pnas.97.8.4112",
+   "10.1089/ast.2019.2045",
+   "10.1098/rsif.2018.0159",
+   "10.1098/rstb.2002.1183",
+   "10.1101/2021.07.08.451414",
+   "10.1126/sciadv.adn9657",
+   "10.1126/science.1241888",
+   "10.1144/gsjgs.154.3.0377",
+   "10.3389/fmicb.2020.00817",
+   "10.3390/cryst10110964",
+   "10.3390/life15050724"
+  ],
+  "authoryear": [
+   "Cho et al. 2024",
+   "Vasas et al. 2010",
+   "Whicher et al. 2018"
+  ]
+ }
+}

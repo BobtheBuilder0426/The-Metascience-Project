@@ -1,0 +1,523 @@
+{
+  "rows": [
+    {
+      "question": "Starting from the two ergothioneine papers, propose a new falsifiable prediction for how EGT improves exercise performance, ending with a killer wet-lab experiment.",
+      "dimensions": {
+        "grounding": 2,
+        "correctness": 2,
+        "completeness": 1.167,
+        "usefulness": 2,
+        "creativity": 1.22
+      },
+      "weighted_composite": 1.716,
+      "grounding_cap": 2,
+      "specificity_signal": 1,
+      "creativity_detail": {
+        "creativity_index": 0.0549,
+        "novelty": 0.439,
+        "plausibility_gate": 0.5,
+        "reasoning_trace_gate": 0.25,
+        "creativity_dim_score_1to5": 1.22,
+        "hallucination_flag": false
+      },
+      "citation_verification_rate": null,
+      "n_citations": 0,
+      "entity_counts": {
+        "genes": 0,
+        "assays": 0,
+        "quant_predictions": 0,
+        "pathways": 0,
+        "drugs": 0,
+        "total": 0
+      },
+      "redflags": [
+        "no derivable reasoning chain",
+        "no derivable reasoning chain"
+      ],
+      "inter_judge_absdiff": {
+        "grounding": 1.333,
+        "correctness": 1.333,
+        "completeness": 0.667,
+        "usefulness": 1.333,
+        "creativity": 0.667
+      },
+      "_novelty": {
+        "novelty": 0.439,
+        "N_freq": 0.251,
+        "hits": 948,
+        "semantic": {
+          "value": 1.0,
+          "method": "tfidf_cosine",
+          "max_sim": 0.0,
+          "note": "model-dependent; under-discriminates on shared domain vocab (LB-018)"
+        },
+        "n_neighbours": 3,
+        "method": "0.75*retrieval_freq + 0.25*semantic_distance"
+      },
+      "citation_quality": {
+        "n_citations": 0,
+        "n_primary": 0,
+        "n_review": 0,
+        "n_preprint": 0,
+        "n_other": 0,
+        "n_retracted": 0,
+        "primary_ratio": null,
+        "mean_venue_quality": null,
+        "usage": null,
+        "quality_composite": 1.0,
+        "flags": [
+          "no_citations"
+        ]
+      },
+      "_citation_quality_detail": {
+        "n_citations": 0,
+        "n_primary": 0,
+        "n_review": 0,
+        "n_preprint": 0,
+        "n_other": 0,
+        "n_retracted": 0,
+        "primary_ratio": null,
+        "mean_venue_quality": null,
+        "usage": null,
+        "quality_composite": 1.0,
+        "flags": [
+          "no_citations"
+        ],
+        "per_citation": []
+      },
+      "question_id": "Q_ERGO",
+      "arm": "B",
+      "run": 1
+    },
+    {
+      "question": "Starting from the two ergothioneine papers, propose a new falsifiable prediction for how EGT improves exercise performance, ending with a killer wet-lab experiment.",
+      "dimensions": {
+        "grounding": 4,
+        "correctness": 4,
+        "completeness": 3.5,
+        "usefulness": 4,
+        "creativity": 1.658
+      },
+      "weighted_composite": 3.549,
+      "grounding_cap": 5,
+      "specificity_signal": 4,
+      "creativity_detail": {
+        "creativity_index": 0.1646,
+        "novelty": 0.439,
+        "plausibility_gate": 0.5,
+        "reasoning_trace_gate": 0.75,
+        "creativity_dim_score_1to5": 1.658,
+        "hallucination_flag": false
+      },
+      "citation_verification_rate": 1.0,
+      "n_citations": 1,
+      "entity_counts": {
+        "genes": 4,
+        "assays": 1,
+        "quant_predictions": 3,
+        "pathways": 0,
+        "drugs": 0,
+        "total": 8
+      },
+      "redflags": [],
+      "inter_judge_absdiff": {
+        "grounding": 1.333,
+        "correctness": 1.333,
+        "completeness": 1.333,
+        "usefulness": 1.333,
+        "creativity": 1.333
+      },
+      "_novelty": {
+        "novelty": 0.439,
+        "N_freq": 0.251,
+        "hits": 948,
+        "semantic": {
+          "value": 1.0,
+          "method": "tfidf_cosine",
+          "max_sim": 0.0,
+          "note": "model-dependent; under-discriminates on shared domain vocab (LB-018)"
+        },
+        "n_neighbours": 3,
+        "method": "0.75*retrieval_freq + 0.25*semantic_distance"
+      },
+      "citation_quality": {
+        "n_citations": 1,
+        "n_primary": 1,
+        "n_review": 0,
+        "n_preprint": 0,
+        "n_other": 0,
+        "n_retracted": 0,
+        "primary_ratio": 1.0,
+        "mean_venue_quality": 1.0,
+        "usage": 0.125,
+        "quality_composite": 1.0,
+        "flags": []
+      },
+      "_citation_quality_detail": {
+        "n_citations": 1,
+        "n_primary": 1,
+        "n_review": 0,
+        "n_preprint": 0,
+        "n_other": 0,
+        "n_retracted": 0,
+        "primary_ratio": 1.0,
+        "mean_venue_quality": 1.0,
+        "usage": 0.125,
+        "quality_composite": 1.0,
+        "flags": [],
+        "per_citation": [
+          {
+            "citation": {
+              "kind": "authoryear",
+              "value": "Sprenger 2025",
+              "raw": "(Sprenger 2025)"
+            },
+            "venue": "Cell Metabolism",
+            "type": "primary",
+            "retracted": false,
+            "venue_quality": 1.0,
+            "year": 2020
+          }
+        ]
+      },
+      "question_id": "Q_ERGO",
+      "arm": "L",
+      "run": 1
+    },
+    {
+      "question": "Starting from the two ergothioneine papers, propose a new falsifiable prediction for how EGT improves exercise performance, ending with a killer wet-lab experiment.",
+      "dimensions": {
+        "grounding": 1,
+        "correctness": 2,
+        "completeness": 2.167,
+        "usefulness": 2,
+        "creativity": 1.22
+      },
+      "weighted_composite": 1.666,
+      "grounding_cap": 1,
+      "specificity_signal": 3,
+      "creativity_detail": {
+        "creativity_index": 0.0549,
+        "novelty": 0.439,
+        "plausibility_gate": 0.5,
+        "reasoning_trace_gate": 0.25,
+        "creativity_dim_score_1to5": 1.22,
+        "hallucination_flag": false
+      },
+      "citation_verification_rate": 0.0,
+      "n_citations": 1,
+      "entity_counts": {
+        "genes": 2,
+        "assays": 0,
+        "quant_predictions": 1,
+        "pathways": 0,
+        "drugs": 0,
+        "total": 3
+      },
+      "redflags": [
+        "no derivable reasoning chain",
+        "no derivable reasoning chain"
+      ],
+      "inter_judge_absdiff": {
+        "grounding": 1.333,
+        "correctness": 1.333,
+        "completeness": 0.667,
+        "usefulness": 1.333,
+        "creativity": 0.667
+      },
+      "_novelty": {
+        "novelty": 0.439,
+        "N_freq": 0.251,
+        "hits": 948,
+        "semantic": {
+          "value": 1.0,
+          "method": "tfidf_cosine",
+          "max_sim": 0.0,
+          "note": "model-dependent; under-discriminates on shared domain vocab (LB-018)"
+        },
+        "n_neighbours": 3,
+        "method": "0.75*retrieval_freq + 0.25*semantic_distance"
+      },
+      "citation_quality": {
+        "n_citations": 1,
+        "n_primary": 0,
+        "n_review": 0,
+        "n_preprint": 0,
+        "n_other": 0,
+        "n_retracted": 0,
+        "primary_ratio": null,
+        "mean_venue_quality": null,
+        "usage": 0.333,
+        "quality_composite": 1.0,
+        "flags": []
+      },
+      "_citation_quality_detail": {
+        "n_citations": 1,
+        "n_primary": 0,
+        "n_review": 0,
+        "n_preprint": 0,
+        "n_other": 0,
+        "n_retracted": 0,
+        "primary_ratio": null,
+        "mean_venue_quality": null,
+        "usage": 0.333,
+        "quality_composite": 1.0,
+        "flags": [],
+        "per_citation": [
+          {
+            "citation": {
+              "kind": "pmid",
+              "value": "00000001",
+              "raw": "PMID: 00000001"
+            },
+            "venue": null,
+            "type": null,
+            "retracted": false,
+            "venue_quality": null,
+            "year": null
+          }
+        ]
+      },
+      "question_id": "Q_ERGO",
+      "arm": "L",
+      "run": 2
+    },
+    {
+      "question": "Propose a repurposing hypothesis: an approved drug acting as an exercise mimetic on mitochondrial biogenesis, with molecular rationale and a falsifiable prediction.",
+      "dimensions": {
+        "grounding": 2,
+        "correctness": 2,
+        "completeness": 1.667,
+        "usefulness": 2,
+        "creativity": 1.228
+      },
+      "weighted_composite": 1.818,
+      "grounding_cap": 2,
+      "specificity_signal": 2,
+      "creativity_detail": {
+        "creativity_index": 0.0569,
+        "novelty": 0.455,
+        "plausibility_gate": 0.5,
+        "reasoning_trace_gate": 0.25,
+        "creativity_dim_score_1to5": 1.228,
+        "hallucination_flag": false
+      },
+      "citation_verification_rate": null,
+      "n_citations": 0,
+      "entity_counts": {
+        "genes": 0,
+        "assays": 0,
+        "quant_predictions": 0,
+        "pathways": 0,
+        "drugs": 1,
+        "total": 1
+      },
+      "redflags": [
+        "no derivable reasoning chain",
+        "no derivable reasoning chain"
+      ],
+      "inter_judge_absdiff": {
+        "grounding": 1.333,
+        "correctness": 1.333,
+        "completeness": 0.667,
+        "usefulness": 1.333,
+        "creativity": 0.667
+      },
+      "_novelty": {
+        "novelty": 0.455,
+        "N_freq": 0.274,
+        "hits": 452,
+        "semantic": {
+          "value": 1.0,
+          "method": "tfidf_cosine",
+          "max_sim": 0.0,
+          "note": "model-dependent; under-discriminates on shared domain vocab (LB-018)"
+        },
+        "n_neighbours": 3,
+        "method": "0.75*retrieval_freq + 0.25*semantic_distance"
+      },
+      "citation_quality": {
+        "n_citations": 0,
+        "n_primary": 0,
+        "n_review": 0,
+        "n_preprint": 0,
+        "n_other": 0,
+        "n_retracted": 0,
+        "primary_ratio": null,
+        "mean_venue_quality": null,
+        "usage": 0.0,
+        "quality_composite": 1.0,
+        "flags": [
+          "no_citations"
+        ]
+      },
+      "_citation_quality_detail": {
+        "n_citations": 0,
+        "n_primary": 0,
+        "n_review": 0,
+        "n_preprint": 0,
+        "n_other": 0,
+        "n_retracted": 0,
+        "primary_ratio": null,
+        "mean_venue_quality": null,
+        "usage": 0.0,
+        "quality_composite": 1.0,
+        "flags": [
+          "no_citations"
+        ],
+        "per_citation": []
+      },
+      "question_id": "Q3",
+      "arm": "B",
+      "run": 1
+    },
+    {
+      "question": "Propose a repurposing hypothesis: an approved drug acting as an exercise mimetic on mitochondrial biogenesis, with molecular rationale and a falsifiable prediction.",
+      "dimensions": {
+        "grounding": 2,
+        "correctness": 3,
+        "completeness": 2.5,
+        "usefulness": 3,
+        "creativity": 1.682
+      },
+      "weighted_composite": 2.452,
+      "grounding_cap": 2,
+      "specificity_signal": 3,
+      "creativity_detail": {
+        "creativity_index": 0.1706,
+        "novelty": 0.455,
+        "plausibility_gate": 0.5,
+        "reasoning_trace_gate": 0.75,
+        "creativity_dim_score_1to5": 1.682,
+        "hallucination_flag": false
+      },
+      "citation_verification_rate": null,
+      "n_citations": 0,
+      "entity_counts": {
+        "genes": 2,
+        "assays": 0,
+        "quant_predictions": 1,
+        "pathways": 1,
+        "drugs": 0,
+        "total": 4
+      },
+      "redflags": [],
+      "inter_judge_absdiff": {
+        "grounding": 1.333,
+        "correctness": 1.333,
+        "completeness": 1.333,
+        "usefulness": 1.333,
+        "creativity": 1.333
+      },
+      "_novelty": {
+        "novelty": 0.455,
+        "N_freq": 0.274,
+        "hits": 452,
+        "semantic": {
+          "value": 1.0,
+          "method": "tfidf_cosine",
+          "max_sim": 0.0,
+          "note": "model-dependent; under-discriminates on shared domain vocab (LB-018)"
+        },
+        "n_neighbours": 3,
+        "method": "0.75*retrieval_freq + 0.25*semantic_distance"
+      },
+      "citation_quality": {
+        "n_citations": 0,
+        "n_primary": 0,
+        "n_review": 0,
+        "n_preprint": 0,
+        "n_other": 0,
+        "n_retracted": 0,
+        "primary_ratio": null,
+        "mean_venue_quality": null,
+        "usage": 0.0,
+        "quality_composite": 1.0,
+        "flags": [
+          "no_citations"
+        ]
+      },
+      "_citation_quality_detail": {
+        "n_citations": 0,
+        "n_primary": 0,
+        "n_review": 0,
+        "n_preprint": 0,
+        "n_other": 0,
+        "n_retracted": 0,
+        "primary_ratio": null,
+        "mean_venue_quality": null,
+        "usage": 0.0,
+        "quality_composite": 1.0,
+        "flags": [
+          "no_citations"
+        ],
+        "per_citation": []
+      },
+      "question_id": "Q3",
+      "arm": "L",
+      "run": 1
+    }
+  ],
+  "elo": {
+    "Q_ERGO": {
+      "ratings": {
+        "B#1": 956.0,
+        "L#1": 1044.4,
+        "L#2": 999.6
+      },
+      "ranking": [
+        "L#1",
+        "L#2",
+        "B#1"
+      ],
+      "n_comparisons": 6
+    },
+    "Q3": {
+      "ratings": {
+        "B#1": 976.8,
+        "L#1": 1023.2
+      },
+      "ranking": [
+        "L#1",
+        "B#1"
+      ],
+      "n_comparisons": 2
+    }
+  },
+  "summary": {
+    "Q_ERGO": {
+      "B": {
+        "mean_composite": 1.716,
+        "spread": 0.0,
+        "n": 1
+      },
+      "L": {
+        "mean_composite": 2.607,
+        "spread": 0.942,
+        "n": 2
+      },
+      "delta_L_minus_B": 0.891
+    },
+    "Q3": {
+      "B": {
+        "mean_composite": 1.818,
+        "spread": 0.0,
+        "n": 1
+      },
+      "L": {
+        "mean_composite": 2.452,
+        "spread": 0.0,
+        "n": 1
+      },
+      "delta_L_minus_B": 0.634
+    }
+  },
+  "weights": {
+    "grounding": 0.25,
+    "correctness": 0.25,
+    "completeness": 0.2,
+    "usefulness": 0.15,
+    "creativity": 0.15
+  },
+  "n_answers": 5
+}

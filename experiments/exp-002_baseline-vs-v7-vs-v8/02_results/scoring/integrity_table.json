@@ -1,0 +1,92 @@
+{
+ "R1": {
+  "question": "Q3",
+  "pmid_total": 1,
+  "pmid_exist": 1,
+  "doi_total": 4,
+  "doi_exist": 4,
+  "ds_total": 8,
+  "ds_exist": 8,
+  "fabricated": []
+ },
+ "R2": {
+  "question": "Q2",
+  "pmid_total": 21,
+  "pmid_exist": 21,
+  "doi_total": 22,
+  "doi_exist": 22,
+  "ds_total": 7,
+  "ds_exist": 7,
+  "fabricated": []
+ },
+ "R3": {
+  "question": "Q1",
+  "pmid_total": 12,
+  "pmid_exist": 12,
+  "doi_total": 13,
+  "doi_exist": 13,
+  "ds_total": 5,
+  "ds_exist": 5,
+  "fabricated": []
+ },
+ "R4": {
+  "question": "Q2",
+  "pmid_total": 11,
+  "pmid_exist": 11,
+  "doi_total": 14,
+  "doi_exist": 14,
+  "ds_total": 0,
+  "ds_exist": 0,
+  "fabricated": []
+ },
+ "R5": {
+  "question": "Q3",
+  "pmid_total": 22,
+  "pmid_exist": 22,
+  "doi_total": 4,
+  "doi_exist": 4,
+  "ds_total": 7,
+  "ds_exist": 7,
+  "fabricated": []
+ },
+ "R6": {
+  "question": "Q2",
+  "pmid_total": 47,
+  "pmid_exist": 47,
+  "doi_total": 47,
+  "doi_exist": 47,
+  "ds_total": 3,
+  "ds_exist": 3,
+  "fabricated": []
+ },
+ "R7": {
+  "question": "Q3",
+  "pmid_total": 20,
+  "pmid_exist": 20,
+  "doi_total": 21,
+  "doi_exist": 21,
+  "ds_total": 6,
+  "ds_exist": 6,
+  "fabricated": []
+ },
+ "R8": {
+  "question": "Q1",
+  "pmid_total": 0,
+  "pmid_exist": 0,
+  "doi_total": 6,
+  "doi_exist": 6,
+  "ds_total": 2,
+  "ds_exist": 2,
+  "fabricated": []
+ },
+ "R9": {
+  "question": "Q1",
+  "pmid_total": 8,
+  "pmid_exist": 8,
+  "doi_total": 6,
+  "doi_exist": 6,
+  "ds_total": 2,
+  "ds_exist": 2,
+  "fabricated": []
+ }
+}

@@ -1,0 +1,181 @@
+{
+  "task": "Generate a novel, plausible hypothesis for the origin of the first self-replicating cell, delivered as a presentation folder.",
+  "final_hypothesis": "The Cofactor Ratchet: compartment, metabolism and heredity co-emerge as three faces of one chemically-active coacervate droplet; nucleotide cofactors are the pivot (metabolism + growth + gene-raw-material); sequence heredity is 'handed off' from compositional heredity precisely when the compositional ceiling is reached.",
+  "date": "2026-07-11",
+  "method_notes": "Abstract, transparent simulations chosen to isolate logic (ceiling? handoff breaks it?), not to reproduce specific chemistry. All DOIs verified against OpenAlex; none from memory.",
+  "steps": [
+    {
+      "n": 1,
+      "phase": "grounding",
+      "action": "Literature survey (web search) across 5 subareas: active/proliferating coacervates; compositional inheritance/GARD; coacervate-to-vesicle transition; cofactor molecular-fossils; nucleotide-cofactor world.",
+      "outcome": "Confirmed all building blocks are real and current; two key reframings identified (droplets already have all three 'eggs'; the hard step is growing the heredity channel)."
+    },
+    {
+      "n": 2,
+      "phase": "grounding",
+      "action": "Verified workspace write access to project folder and OpenAlex API key availability.",
+      "outcome": "Folder writable; OPENALEX_API_KEY present; used Python stdlib urllib (requests not installed)."
+    },
+    {
+      "n": 3,
+      "phase": "hypothesis",
+      "action": "Formalized the causal chain (soup -> active coacervate -> cofactor-run metabolism=growth -> compositional inheritance -> compositional ceiling -> ligation handoff -> Eigen ratchet -> membrane last) and the four novel claims.",
+      "outcome": "result.md structure fixed; 'heredity handoff at the ceiling' identified as the single novel transition."
+    },
+    {
+      "n": 4,
+      "phase": "sources",
+      "action": "Queried OpenAlex (search) for ~22 key papers; then direct-DOI-lookup verification for classics that did not surface by search (White 1976, Eigen 1971, Vasas 2010).",
+      "outcome": "Real DOIs obtained. Two guessed DOIs (Oparin, Eschenmoser) returned unrelated papers and were rejected -> confabulation avoided."
+    },
+    {
+      "n": 5,
+      "phase": "sources",
+      "action": "Consolidated 26-source base; programmatically verified all 24 DOIs against OpenAlex by title-overlap.",
+      "outcome": "24/24 verified (1 heuristic false-positive on 'Protocells and RNA Self-Replication' confirmed identical). 2 pre-DOI classics cited as monograph/essay."
+    },
+    {
+      "n": 6,
+      "phase": "simulation",
+      "action": "Built GARD-style compositional-assembly model (mutual-catalysis matrix beta, tau-leaping accretion, binomial division). Ran one tracked lineage.",
+      "outcome": "Composome emerges: consecutive-generation self-similarity H=0.99, vs feedstock H=0.16. Composomes are self-reinforcing attractors."
+    },
+    {
+      "n": 7,
+      "phase": "simulation",
+      "action": "Heritability test: parent->offspring compositional similarity vs random-assembly null.",
+      "outcome": "H_within=0.99 vs H_null=0.12 -> composition transmitted across division far above chance."
+    },
+    {
+      "n": 8,
+      "phase": "debug",
+      "action": "First parallel composome census failed (kernel-defined function not picklable), then module-not-found (cwd != workspace).",
+      "outcome": "Fixed by moving model to importable gard_model.py and adding workspace to sys.path."
+    },
+    {
+      "n": 9,
+      "phase": "simulation",
+      "action": "Composome census across repertoire sizes N=20..200 (distinct attractors via greedy cosine clustering).",
+      "outcome": "Distinct composome count stays single-digit (1-9) and does NOT scale with N -> compositional ceiling ~1-3 bits. Reproduces Vasas & Szathmary 2010 limited-evolvability result."
+    },
+    {
+      "n": 10,
+      "phase": "course_correction",
+      "action": "Built a compositional-information 'channel' model for the handoff; it gave non-monotone, noisy bits.",
+      "outcome": "DISCARDED as the wrong abstraction (independent binary features + BSC capacity misfits weak correlated features). Rebuilt handoff on the census-derived ceiling instead."
+    },
+    {
+      "n": 11,
+      "phase": "simulation",
+      "action": "Temporal ratchet: Wright-Fisher protocell population; adaptation via composome quality (Phase 1) then via a copyable L-site template seeded at handoff time T_h (Phase 2), with per-site copy fidelity q.",
+      "outcome": "Trait plateaus at compositional ceiling (0.470) then breaks through to 1.327 after handoff; heritable info 3 -> 27 bits."
+    },
+    {
+      "n": 12,
+      "phase": "validation",
+      "action": "No-handoff control (T_h beyond run) + 6-seed robustness.",
+      "outcome": "Control stays flat at 0.470 for 1200 gens (confirms a real ceiling, not slow progress). Across seeds: plateau 0.433 tracks ceiling 0.439; breakthrough ~3x above ceiling."
+    },
+    {
+      "n": 13,
+      "phase": "simulation",
+      "action": "Eigen error threshold L_max=ln(sigma)/(1-q) computed across fidelity and superiority; located the ~4-site handoff template.",
+      "outcome": "A 4-site template survives at ~50% error/site (non-enzymatic reach); improving q lengthens L_max -> positive feedback (ratchet escapement)."
+    },
+    {
+      "n": 14,
+      "phase": "tables",
+      "action": "Built Table 1 (10 nucleotide-derived cofactor molecular fossils) and Table 2 (6-framework comparison) as CSV.",
+      "outcome": "Tables written; Cofactor Ratchet row highlighted as the only 'HIGH integration' framework."
+    },
+    {
+      "n": 15,
+      "phase": "figures",
+      "action": "Loaded figure-style skill; rendered Fig1 schematic, Fig2 (heritability+ceiling), Fig3 (ratchet+control), Fig4 (Eigen), plus Table1/Table2 as PNGs. Ran bbox + perceptual checks; fixed fig2 label padding and table2 overflow.",
+      "outcome": "6 publication-grade figure images; all overlaps resolved or confirmed false-positive (cross-panel legend text)."
+    },
+    {
+      "n": 16,
+      "phase": "writing",
+      "action": "Wrote result.md (hypothesis, 8-step mechanism, novelty, 5 predictions, 4 falsifiers, limitations), reasoning.md (line of thought incl. wrong turns), sources.md (26 verified sources).",
+      "outcome": "Prose deliverables complete with inline figure references."
+    },
+    {
+      "n": 17,
+      "phase": "assembly",
+      "action": "Wrote process_trace.json and copied the full presentation folder into the CS Origin of Life project folder.",
+      "outcome": "Deliverable folder assembled."
+    }
+  ],
+  "artifacts_produced": {
+    "prose": [
+      "result.md",
+      "reasoning.md",
+      "sources.md",
+      "process_trace.json"
+    ],
+    "figures": [
+      "figures/fig1_schematic.png",
+      "figures/fig2_compositional_ceiling.png",
+      "figures/fig3_heredity_handoff.png",
+      "figures/fig4_eigen_threshold.png",
+      "figures/table1_cofactor_fossils.png",
+      "figures/table2_framework_comparison.png",
+      "figures/table1_cofactor_fossils.csv",
+      "figures/table2_framework_comparison.csv"
+    ],
+    "code": [
+      "gard_model.py"
+    ]
+  },
+  "key_quantitative_results": {
+    "composome_self_similarity_H": 0.99,
+    "heritability_within_vs_null_H": [
+      0.99,
+      0.12
+    ],
+    "compositional_ceiling_distinct_composomes": "single-digit (1-9), does not scale with repertoire N",
+    "compositional_ceiling_bits": "~1-3 (log2 of #composomes)",
+    "sequence_bits_over_N_sites": "2N (40-400 for N=20-200)",
+    "ratchet_trait_plateau_vs_breakthrough": [
+      0.47,
+      1.327
+    ],
+    "heritable_info_bits_before_after_handoff": [
+      3,
+      27
+    ],
+    "control_flat_generations": 1200,
+    "breakthrough_factor_over_ceiling_6seeds": 3.0,
+    "eigen_first_template_sites": 4,
+    "eigen_first_template_tolerable_error_per_site": "~0.5"
+  },
+  "verification_and_integrity": {
+    "dois_verified_against_openalex": 25,
+    "dois_rejected_as_confabulated": [
+      "guessed Oparin DOI (returned 'Personalia')",
+      "guessed Eschenmoser DOI (returned unrelated Tetrahedron Letters paper)"
+    ],
+    "models_discarded": [
+      "compositional-information BSC-capacity channel model (wrong abstraction, noisy non-monotone output)"
+    ],
+    "controls_run": [
+      "no-handoff control (flat plateau)",
+      "6-seed robustness"
+    ],
+    "post_audit_fixes": [
+      "fig2 Panel B: N=200 (C=1, 0-bit) point was invisible on the log axis; re-rendered as an open floor marker with annotation (reinforces the flat-ceiling claim).",
+      "result.md: corrected Agrawal et al. 2024 DOI prefix 10.1038 -> 10.1126 (Science Advances is AAAS); now consistent with sources.md.",
+      "sources.md: added verified Higgs & Lehman 2014 (RNA World, Nat Rev Genet, 10.1038/nrg3841; year per OpenAlex online-first lookup) to the bibliography \u2014 it was referenced in the Table-2 mapping but missing from the source list."
+    ]
+  },
+  "honest_limitations": [
+    "Hypothesis, not a demonstrated pathway; origin of life remains unsolved.",
+    "Simulations are abstract logic demonstrations, not molecular chemistry.",
+    "Specific first cofactor-catalysed growth reaction is not identified.",
+    "The ligation handoff is the least experimentally-constrained link and is flagged as the key experiment."
+  ],
+  "counts": {
+    "sources_total": 27
+  }
+}

@@ -1,0 +1,34 @@
+claim,evidence_type,support_ids,strength,scope_note
+Force of selection declines to ~0 after reproduction,theory/derivation,Hamilton1966 PMID6015424; Medawar1952; Williams1957 DOI10.1111/j.1558-5646.1957.tb02911.x,strong,Foundational population-genetics result; not disputed
+Aging is not selected FOR but tolerated once selection weakens,theory,Williams1957; Kirkwood1977 PMID593350,strong,Antagonistic pleiotropy + disposable soma
+Human & insect mortality rises ~exponentially then plateaus late,empirical,Carey1992 PMID1411540; Curtsinger1992 PMID1411541; Barbi2018 PMID29954979,moderate,"Barbi plateau disputed: comment PMID30262471 / response PMID30337380; plateau robust in inverts, contested in humans"
+Naked mole-rat hazard does not rise with age (defies Gompertz),empirical,Ruby2018 PMID29364116; 2024 follow-up PMID38773057,moderate,Comment PMID31287058 raised concerns; 2024 doubled-data reanalysis upholds
+Lifespan varies >1000x across species; some show negligible senescence,empirical,Jones2014 PMID24317695,strong,Directly measured demographic trajectories
+Cancer defenses scale with size not predicted by cell number (Peto),empirical,Abegglen2015 PMID26447779,moderate,Elephant TP53 copies; correlational
+Aging shows conserved molecular hallmarks,synthesis-catalog,LopezOtin2013 PMID23746838; LopezOtin2023 PMID36599349; Kennedy2014 PMID25417146,strong-as-catalog,"Hallmarks are a curated catalog, not an independent causal test; open-loop drift scores C4 as EXPLAINS not predicts"
+Caloric restriction extends lifespan,empirical,McCay1935 PMID2520283(reprint),strong,Replicated across taxa
+Reduced insulin/IGF (daf-2) doubles C. elegans lifespan,empirical,Kenyon1993 PMID8247153,strong,"Single-gene, large effect"
+Rapamycin (mTOR inhibition) extends mouse lifespan,empirical-RCT-like,Harrison2009 PMID19587680,strong,"ITP, 3 sites, both sexes"
+Acarbose/17aE2/NDGA extend male mouse lifespan,empirical-ITP,Harrison2014 PMID24245565; Strong2016 PMID27312235,strong,Sex-biased; replicated
+"NDGA acts partly via IGF1R/ERBB2 (growth signaling), not only antioxidant",mechanism-DB,ChEMBL CHEMBL313972 mechanism_of_action,moderate,Curated MoA; reclassifies NDGA as signaling-lowering
+Glycine & canagliflozin extend lifespan (ITP),empirical-ITP,Miller2019 PMID30916479; Miller2020 PMID32990681,strong,canagliflozin male-only
+Aspirin lifespan effect is NOT cleanly replicated,empirical-mixed,positive Strong2008 PMID18631321 (p=0.01 males); null Miller2019 PMID30916479 (no benefit at 2 doses),moderate-mixed,Headline robust — drop-aspirin 7/8vs0/8 Fisher p=7e-4; aspirin-as-negative 7/9vs0/8 Fisher p=1.9e-3; both held-out p<0.01
+Antioxidants/redox agents FAIL to extend lifespan in ITP,empirical-null,"Strong2012 PMID22451473 (resveratrol,GTE,curcumin,oxaloacetate,MCT); Harrison2014 PMID24245565 (methylene blue)",strong,Matched protocol negatives — the key discriminator. Methylene blue: median null but +6% female MAX lifespan P=0.004 (footnoted)
+Metformin alone (0.1%) did NOT extend lifespan; metformin+rapamycin did,empirical-ITP,Strong2016 PMID27312235,strong,HONEST EXCEPTION: a signaling drug that failed alone
+"A-priori signaling-direction predicts ITP outcome (held-out 94%, perm p=4e-4)",computed-this-work,convergence_result.json; aspirin_sensitivity.json; ChEMBL MoA,moderate,N=17 frozen set; small-N; direction assigned before outcome; robust to aspirin (all variants p<0.01)
+PPI network topology does NOT separate lifespan-extenders from failures,computed-this-work,string_compare.json (positive 13 nodes density0.35 max-deg8; negative 4 nodes density0.67),moderate,"Matched-null STRING check — convergence is functional (mechanism direction), not structural (one hub)"
+DNA-methylation age clock tracks chronological age,empirical,Horvath2013 PMID24138928,strong,Multi-tissue
+Partial reprogramming reverses age markers / restores function,empirical,Ocampo2016 PMID27984723; Lu2020 PMID33268865; Gill2022 PMID35390271,strong,Function restored WITHOUT removing prior damage — key for reversibility claim; open-loop drift scores C6 as EXPLAINS (shared with epigenetic-noise theory)
+Epigenetic age is reset to ~0 in early embryo (ground zero),empirical,Kerepesi2021 PMID34172448,moderate,Clock-based inference
+Hyperfunction/quasi-program frames aging as continued programs,theory,Blagosklonny2006 PMID17012837,moderate,Influential but debated framework; strongest rival to open-loop drift
+Free-radical/damage theory predicts antioxidants should slow aging,theory,Harman1956 PMID13332224,strong-as-prediction,This is the prediction the ITP nulls contradict
+Loss of epigenetic information can drive aging (ICE),empirical,Yang2023 DOI10.1016/j.cell.2022.12.027,moderate,2024 author correction (erratum) DOI10.1016/j.cell.2024.01.049 — flagged
+Somatic mutation rate scales inversely with lifespan,empirical,Cagan2022 PMID35418684 DOI10.1038/s41586-022-04618-z,moderate,Cross-species correlation; connector-verified
+Loss of physiological resilience/recovery-rate rises with age & predicts death,empirical-priorart,Pyrkov2021 PMID34035236; Cohen2018 PMID29939206; OldeRikkert2016 PMID26765499,strong,"CLOSEST PRIOR ART to my prediction — credited; they show correlation/extrapolation, not causal necessity"
+Physiological dysregulation is conserved across primates,empirical,Cohen2019 PMID30746836,moderate,Supports 'one drifting control state' readout view
+Evolutionary theory licenses only 'reference unselected'; drift direction + damage-downstream are added posits (P1-P3),logic/model,Hamilton1966 PMID6015424; causal_model_spec.txt,strong,Separates derived step from falsifiable physiological posits
+Mechanism-direction coding reproduced 16/17 by an outcome-blind independent classifier; convergence stays p<0.01,in-silico replication,independent_recode.json; independent_convergence.json,moderate,"Outcome-blind reproducibility check on the mechanism labels; 8/10 vs 0/7 on independent labels, Fisher p=1.9e-3, held-out 88%"
+Information-loss theory ALSO predicts reversible functional restoration (via clock reset/OSK),literature,Yang2023 PMID36638792; Lu2020 PMID33268865,strong,So plain reversibility does NOT discriminate; requires fixed-clock condition
+Discriminating prediction sharpened: rescue at FIXED epigenetic clock + FIXED damage,prediction,rival_prediction_table.csv,strong-as-prediction,Splits drift from lesion + information-loss camps; NOT from hyperfunction (a sibling)
+Mallostasis (mean-reverting set-point) and Dilman elevation model are close prior art for set-point drift,literature,mallostasis2023 PMID38092834; dilman1971 PMID381162; morphostasis2024 PMID38636560,moderate,Credited as precedents; my addition is the causal ordering claim
+"Open-loop drift scores fit 8 (codes P,E,E,E,P,E,E); C2/C3 are 'explains' not 'predicts'",scoring,candidate_scores.json; sensitivity.json,strong,"C2/C3 explain (model assumes the hazard form) rather than predict; 2 predicts (C1,C5), 5 explains, 0 contradictions"

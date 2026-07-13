@@ -1,0 +1,88 @@
+{
+ "positive": {
+  "n": 13,
+  "edges": 27,
+  "mean_degree": 4.153846153846154,
+  "max_degree": 8,
+  "density": 0.34615384615384615,
+  "nodes": [
+   {
+    "name": "ALOX5",
+    "degree": 2
+   },
+   {
+    "name": "ERBB2",
+    "degree": 6
+   },
+   {
+    "name": "ESR1",
+    "degree": 6
+   },
+   {
+    "name": "FKBP1A",
+    "degree": 1
+   },
+   {
+    "name": "IGF1R",
+    "degree": 5
+   },
+   {
+    "name": "KEAP1",
+    "degree": 4
+   },
+   {
+    "name": "MGAM",
+    "degree": 2
+   },
+   {
+    "name": "MTOR",
+    "degree": 7
+   },
+   {
+    "name": "NFE2L2",
+    "degree": 6
+   },
+   {
+    "name": "PTGS1",
+    "degree": 3
+   },
+   {
+    "name": "PTGS2",
+    "degree": 8
+   },
+   {
+    "name": "SI",
+    "degree": 2
+   },
+   {
+    "name": "SLC5A2",
+    "degree": 2
+   }
+  ]
+ },
+ "negative": {
+  "n": 4,
+  "edges": 4,
+  "mean_degree": 2.0,
+  "max_degree": 3,
+  "density": 0.6666666666666666,
+  "nodes": [
+   {
+    "name": "NR1H4",
+    "degree": 1
+   },
+   {
+    "name": "PRKAA1",
+    "degree": 2
+   },
+   {
+    "name": "PRKAA2",
+    "degree": 2
+   },
+   {
+    "name": "SIRT1",
+    "degree": 3
+   }
+  ]
+ }
+}

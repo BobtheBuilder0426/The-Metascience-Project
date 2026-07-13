@@ -1,0 +1,538 @@
+{
+ "mpa_compound": [
+  {
+   "molecule_chembl_id": "CHEMBL866",
+   "pref_name": "MYCOPHENOLIC ACID",
+   "molecule_type": "Small molecule",
+   "max_phase": 4.0,
+   "first_approval": 2004,
+   "oral": true,
+   "parenteral": false,
+   "topical": false,
+   "black_box_warning": true,
+   "therapeutic_flag": true,
+   "natural_product": true,
+   "withdrawn_flag": false,
+   "molecule_properties": {
+    "alogp": 2.73,
+    "aromatic_rings": 1,
+    "full_mwt": 320.34,
+    "hba": 5,
+    "hbd": 2,
+    "heavy_atoms": 23,
+    "psa": 93.06,
+    "rtb": 6,
+    "ro3_pass": "N",
+    "num_ro5_violations": 0,
+    "qed_weighted": 0.62,
+    "molecular_formula": "C17H20O6",
+    "mw_freebase": 320.34,
+    "np_likeness_score": 1.84,
+    "med_chem_friendly": null,
+    "molecular_species": null
+   },
+   "smiles": "COc1c(C)c2c(c(O)c1C/C=C(\\C)CCC(=O)O)C(=O)OC2",
+   "inchi": "InChI=1S/C17H20O6/c1-9(5-7-13(18)19)4-6-11-15(20)14-12(8-23-17(14)21)10(2)16(11)22-3/h4,20H,5-8H2,1-3H3,(H,18,19)/b9-4+",
+   "inchi_key": "HPNSFSBZBAHARI-RUDMXATFSA-N",
+   "synonyms": [
+    "68618",
+    "Acide mycophenolique",
+    "Acido micofenolico",
+    "Mycophenolate",
+    "Mycophenolate mofetil impurity, mycophenolic acid-",
+    "Mycophenolic acid",
+    "Mycophenolic acid",
+    "Mycophenolic acid",
+    "Mycophenolic acid",
+    "Mycophenolic acid",
+    "Mycophenolic acid",
+    "NSC-129185",
+    "RS-61443 [AS MOFETIL]"
+   ],
+   "availability_type": 1,
+   "chirality": 2,
+   "chemical_probe": 0,
+   "dosed_ingredient": true,
+   "first_in_class": 0,
+   "helm_notation": null,
+   "inorganic_flag": 0,
+   "orphan": 0,
+   "polymer_flag": 0,
+   "prodrug": 0,
+   "structure_type": "MOL",
+   "usan_stem": null,
+   "usan_stem_definition": null,
+   "usan_substem": null,
+   "usan_year": 1970,
+   "veterinary": 0,
+   "score": null,
+   "cross_references": null,
+   "atc_classifications": [
+    {
+     "level1": null,
+     "level1_description": null,
+     "level2": null,
+     "level2_description": null,
+     "level3": null,
+     "level3_description": null,
+     "level4": null,
+     "level4_description": null,
+     "level5": "L04AA06"
+    }
+   ],
+   "molecule_hierarchy": {
+    "active_chembl_id": "CHEMBL866",
+    "molecule_chembl_id": "CHEMBL866",
+    "parent_chembl_id": "CHEMBL866"
+   }
+  },
+  {
+   "molecule_chembl_id": "CHEMBL1456",
+   "pref_name": "MYCOPHENOLATE MOFETIL",
+   "molecule_type": "Small molecule",
+   "max_phase": 4.0,
+   "first_approval": 1995,
+   "oral": true,
+   "parenteral": true,
+   "topical": false,
+   "black_box_warning": true,
+   "therapeutic_flag": true,
+   "natural_product": true,
+   "withdrawn_flag": false,
+   "molecule_properties": {
+    "alogp": 2.52,
+    "aromatic_rings": 1,
+    "full_mwt": 433.5,
+    "hba": 8,
+    "hbd": 1,
+    "heavy_atoms": 31,
+    "psa": 94.53,
+    "rtb": 9,
+    "ro3_pass": "N",
+    "num_ro5_violations": 0,
+    "qed_weighted": 0.47,
+    "molecular_formula": "C23H31NO7",
+    "mw_freebase": 433.5,
+    "np_likeness_score": 0.73,
+    "med_chem_friendly": null,
+    "molecular_species": null
+   },
+   "smiles": "COc1c(C)c2c(c(O)c1C/C=C(\\C)CCC(=O)OCCN1CCOCC1)C(=O)OC2",
+   "inchi": "InChI=1S/C23H31NO7/c1-15(5-7-19(25)30-13-10-24-8-11-29-12-9-24)4-6-17-21(26)20-18(14-31-23(20)27)16(2)22(17)28-3/h4,26H,5-14H2,1-3H3/b15-4+",
+   "inchi_key": "RTGDFNSFWBGLEC-SYZQJQIISA-N",
+   "synonyms": [
+    "Arzip",
+    "Cellcept",
+    "Myclausen",
+    "Myclausen",
+    "Mycophenolate mofetil",
+    "Mycophenolate mofetil",
+    "Mycophenolate mofetil",
+    "Mycophenolate mofetil",
+    "Mycophenolate mofetil",
+    "Mycophenolate mofetil",
+    "Mycophenolate mofetil",
+    "Mycophenolate mofetil",
+    "Mycophenolate mofetil teva",
+    "Mycophenolic acid 2-(4-morpholinyl)ethyl ester",
+    "Mycophenylate mofetil",
+    "Myfenax",
+    "Myhibbin",
+    "Myhibbin",
+    "NSC-724229",
+    "NSC-758905",
+    "RS-61443"
+   ],
+   "availability_type": 1,
+   "chirality": 2,
+   "chemical_probe": 0,
+   "dosed_ingredient": true,
+   "first_in_class": 0,
+   "helm_notation": null,
+   "inorganic_flag": 0,
+   "orphan": 0,
+   "polymer_flag": 0,
+   "prodrug": 1,
+   "structure_type": "MOL",
+   "usan_stem": null,
+   "usan_stem_definition": null,
+   "usan_substem": null,
+   "usan_year": 1990,
+   "veterinary": 0,
+   "score": null,
+   "cross_references": [
+    {
+     "xref_id": "human/EPAR/mycophenolate-mofetil-teva",
+     "xref_name": "mycophenolate-mofetil-teva",
+     "xref_src": "EMA"
+    },
+    {
+     "xref_id": "human/EPAR/myclausen",
+     "xref_name": "myclausen",
+     "xref_src": "EMA"
+    },
+    {
+     "xref_id": "human/EPAR/myfenax",
+     "xref_name": "myfenax",
+     "xref_src": "EMA"
+    },
+    {
+     "xref_id": "mycophenolate%20mofetil",
+     "xref_name": "mycophenolate mofetil",
+     "xref_src": "DailyMed"
+    },
+    {
+     "xref_id": "human/EPAR/cellcept",
+     "xref_name": "cellcept",
+     "xref_src": "EMA"
+    }
+   ],
+   "atc_classifications": null,
+   "molecule_hierarchy": {
+    "active_chembl_id": "CHEMBL866",
+    "molecule_chembl_id": "CHEMBL1456",
+    "parent_chembl_id": "CHEMBL1456"
+   }
+  },
+  {
+   "molecule_chembl_id": "CHEMBL2106643",
+   "pref_name": "MYCOPHENOLATE SODIUM",
+   "molecule_type": "Small molecule",
+   "max_phase": 4.0,
+   "first_approval": 2004,
+   "oral": true,
+   "parenteral": false,
+   "topical": false,
+   "black_box_warning": true,
+   "therapeutic_flag": true,
+   "natural_product": false,
+   "withdrawn_flag": false,
+   "molecule_properties": {
+    "alogp": 2.73,
+    "aromatic_rings": 1,
+    "full_mwt": 342.32,
+    "hba": 5,
+    "hbd": 2,
+    "heavy_atoms": 23,
+    "psa": 93.06,
+    "rtb": 6,
+    "ro3_pass": "N",
+    "num_ro5_violations": 0,
+    "qed_weighted": 0.62,
+    "molecular_formula": "C17H19NaO6",
+    "mw_freebase": 320.34,
+    "np_likeness_score": 1.84,
+    "med_chem_friendly": null,
+    "molecular_species": null
+   },
+   "smiles": "COc1c(C)c2c(c(O)c1C/C=C(\\C)CCC(=O)[O-])C(=O)OC2.[Na+]",
+   "inchi": "InChI=1S/C17H20O6.Na/c1-9(5-7-13(18)19)4-6-11-15(20)14-12(8-23-17(14)21)10(2)16(11)22-3;/h4,20H,5-8H2,1-3H3,(H,18,19);/q;+1/p-1/b9-4+;",
+   "inchi_key": "DOZYTHNHLLSNIK-JOKMOOFLSA-M",
+   "synonyms": [
+    "Ceptava",
+    "ERL 080",
+    "ERL-080",
+    "Mycophenolate sodium",
+    "Mycophenolate sodium",
+    "Mycophenolate sodium",
+    "Mycophenolic acid sodium salt",
+    "Mycophenolic sod",
+    "Mycophenolic sodium",
+    "Myfortic",
+    "NSC-116072",
+    "Sodium mycophenalate",
+    "Sodium mycophenolate"
+   ],
+   "availability_type": 1,
+   "chirality": 2,
+   "chemical_probe": 0,
+   "dosed_ingredient": true,
+   "first_in_class": 0,
+   "helm_notation": null,
+   "inorganic_flag": 0,
+   "orphan": 0,
+   "polymer_flag": 0,
+   "prodrug": 0,
+   "structure_type": "MOL",
+   "usan_stem": null,
+   "usan_stem_definition": null,
+   "usan_substem": null,
+   "usan_year": 2002,
+   "veterinary": 0,
+   "score": null,
+   "cross_references": [
+    {
+     "xref_id": "mycophenolic%20sodium",
+     "xref_name": "mycophenolic sodium",
+     "xref_src": "DailyMed"
+    }
+   ],
+   "atc_classifications": null,
+   "molecule_hierarchy": {
+    "active_chembl_id": "CHEMBL866",
+    "molecule_chembl_id": "CHEMBL2106643",
+    "parent_chembl_id": "CHEMBL866"
+   }
+  }
+ ],
+ "mpa_chembl_id": "CHEMBL866",
+ "mpa_mechanism": [
+  {
+   "mec_id": 1224,
+   "molecule_chembl_id": "CHEMBL866",
+   "mechanism_of_action": "Inosine-5'-monophosphate dehydrogenase (IMPDH) inhibitor",
+   "target_chembl_id": "CHEMBL2111369",
+   "action_type": "INHIBITOR",
+   "direct_interaction": true,
+   "disease_efficacy": true,
+   "mechanism_comment": null,
+   "binding_site_comment": null,
+   "selectivity_comment": null,
+   "molecular_mechanism": 1,
+   "max_phase": 4,
+   "parent_molecule_chembl_id": "CHEMBL866",
+   "record_id": 1698048,
+   "site_id": null,
+   "mechanism_refs": [
+    {
+     "ref_id": "setid=eed26501-890d-4ff6-88e7-6dbea4726e53",
+     "ref_type": "DailyMed",
+     "ref_url": "http://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=eed26501-890d-4ff6-88e7-6dbea4726e53"
+    }
+   ],
+   "variant_sequence": null
+  },
+  {
+   "mec_id": 9269,
+   "molecule_chembl_id": "CHEMBL2106643",
+   "mechanism_of_action": "Inosine-5'-monophosphate dehydrogenase (IMPDH) inhibitor",
+   "target_chembl_id": "CHEMBL2111369",
+   "action_type": "INHIBITOR",
+   "direct_interaction": true,
+   "disease_efficacy": true,
+   "mechanism_comment": null,
+   "binding_site_comment": null,
+   "selectivity_comment": null,
+   "molecular_mechanism": 1,
+   "max_phase": 4,
+   "parent_molecule_chembl_id": "CHEMBL866",
+   "record_id": 1704347,
+   "site_id": null,
+   "mechanism_refs": [
+    {
+     "ref_id": "label/2009/050791s007lbl.pdf",
+     "ref_type": "FDA",
+     "ref_url": "https://www.accessdata.fda.gov/drugsatfda_docs/label/2009/050791s007lbl.pdf"
+    }
+   ],
+   "variant_sequence": null
+  }
+ ],
+ "mmf_chembl_id": "CHEMBL1456",
+ "mmf_mechanism": [
+  {
+   "mec_id": 1223,
+   "molecule_chembl_id": "CHEMBL1456",
+   "mechanism_of_action": "Inosine-5'-monophosphate dehydrogenase (IMPDH) inhibitor",
+   "target_chembl_id": "CHEMBL2111369",
+   "action_type": "INHIBITOR",
+   "direct_interaction": true,
+   "disease_efficacy": true,
+   "mechanism_comment": null,
+   "binding_site_comment": null,
+   "selectivity_comment": null,
+   "molecular_mechanism": 1,
+   "max_phase": 4,
+   "parent_molecule_chembl_id": "CHEMBL1456",
+   "record_id": 1344398,
+   "site_id": null,
+   "mechanism_refs": [
+    {
+     "ref_id": "setid=37241e87-4af4-4dc3-a1aa-ea6f20d8dc40",
+     "ref_type": "DailyMed",
+     "ref_url": "http://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=37241e87-4af4-4dc3-a1aa-ea6f20d8dc40"
+    },
+    {
+     "ref_id": "15621150",
+     "ref_type": "PubMed",
+     "ref_url": "http://europepmc.org/abstract/MED/15621150"
+    },
+    {
+     "ref_id": "17463174",
+     "ref_type": "PubMed",
+     "ref_url": "http://europepmc.org/abstract/MED/17463174"
+    },
+    {
+     "ref_id": "17713475",
+     "ref_type": "PubMed",
+     "ref_url": "http://europepmc.org/abstract/MED/17713475"
+    }
+   ],
+   "variant_sequence": null
+  },
+  {
+   "mec_id": 1225,
+   "molecule_chembl_id": "CHEMBL1200955",
+   "mechanism_of_action": "Inosine-5'-monophosphate dehydrogenase (IMPDH) inhibitor",
+   "target_chembl_id": "CHEMBL2111369",
+   "action_type": "INHIBITOR",
+   "direct_interaction": true,
+   "disease_efficacy": true,
+   "mechanism_comment": null,
+   "binding_site_comment": null,
+   "selectivity_comment": null,
+   "molecular_mechanism": 1,
+   "max_phase": 4,
+   "parent_molecule_chembl_id": "CHEMBL1456",
+   "record_id": 1343256,
+   "site_id": null,
+   "mechanism_refs": [
+    {
+     "ref_id": "setid=37241e87-4af4-4dc3-a1aa-ea6f20d8dc40",
+     "ref_type": "DailyMed",
+     "ref_url": "http://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=37241e87-4af4-4dc3-a1aa-ea6f20d8dc40"
+    },
+    {
+     "ref_id": "15621150",
+     "ref_type": "PubMed",
+     "ref_url": "http://europepmc.org/abstract/MED/15621150"
+    },
+    {
+     "ref_id": "17463174",
+     "ref_type": "PubMed",
+     "ref_url": "http://europepmc.org/abstract/MED/17463174"
+    },
+    {
+     "ref_id": "17713475",
+     "ref_type": "PubMed",
+     "ref_url": "http://europepmc.org/abstract/MED/17713475"
+    }
+   ],
+   "variant_sequence": null
+  }
+ ],
+ "mich_compound": [],
+ "mich_chembl_id": null,
+ "prodrug_dimethylaminomicheliolide": [],
+ "prodrug_ACT001": [
+  {
+   "id": "CHEMBL2220079",
+   "pref_name": "ACT-001",
+   "max_phase": 1.0
+  }
+ ],
+ "prodrug_DMAMCL": [],
+ "pubmed_search": {
+  "mpa_impdh": {
+   "query": "mycophenolic acid inhibitor IMPDH inosine monophosphate dehydrogenase",
+   "total": 262,
+   "pmids": [
+    "31924555",
+    "28074661",
+    "25198892",
+    "20418509",
+    "27903231"
+   ]
+  },
+  "micheliolide_pkm2": {
+   "query": "micheliolide PKM2 pyruvate kinase M2",
+   "total": 3,
+   "pmids": [
+    "29641204",
+    "40690808",
+    "41132104"
+   ]
+  },
+  "micheliolide_cys": {
+   "query": "micheliolide PKM2 Cys424 covalent",
+   "total": 0,
+   "pmids": []
+  }
+ },
+ "pubmed_meta": [
+  {
+   "pmid": null,
+   "title": "Effect of mycophenolic acid on inosine monophosphate dehydrogenase (IMPDH) activity in liver transplant patients.",
+   "journal": {
+    "title": "Clinics and research in hepatology and gastroenterology",
+    "iso_abbreviation": "Clin Res Hepatol Gastroenterol"
+   },
+   "year": {
+    "year": "2020",
+    "month": "01",
+    "day": "07"
+   },
+   "doi": "10.1016/j.clinre.2019.12.001"
+  },
+  {
+   "pmid": null,
+   "title": "Inosine-5'-monophosphate dehydrogenase (IMPDH) inhibitors: a patent and scientific literature review (2002-2016).",
+   "journal": {
+    "title": "Expert opinion on therapeutic patents",
+    "iso_abbreviation": "Expert Opin Ther Pat"
+   },
+   "year": {
+    "year": "2017",
+    "month": "01",
+    "day": "27"
+   },
+   "doi": "10.1080/13543776.2017.1280463"
+  },
+  {
+   "pmid": null,
+   "title": "Synthesis of the inosine 5'-monophosphate dehydrogenase (IMPDH) inhibitors.",
+   "journal": {
+    "title": "Journal of enzyme inhibition and medicinal chemistry",
+    "iso_abbreviation": "J Enzyme Inhib Med Chem"
+   },
+   "year": {
+    "year": "2014",
+    "month": "09",
+    "day": "08"
+   },
+   "doi": "10.3109/14756366.2014.951349"
+  },
+  {
+   "pmid": null,
+   "title": "Natural Product Micheliolide (MCL) Irreversibly Activates Pyruvate Kinase M2 and Suppresses Leukemia.",
+   "journal": {
+    "title": "Journal of medicinal chemistry",
+    "iso_abbreviation": "J Med Chem"
+   },
+   "year": {
+    "year": "2018",
+    "month": "04",
+    "day": "29"
+   },
+   "doi": "10.1021/acs.jmedchem.8b00241"
+  },
+  {
+   "pmid": null,
+   "title": "Micheliolide interferes PKM2-P65 interaction and inhibits inflammasome activation in macrophage after ischemic stroke.",
+   "journal": {
+    "title": "International immunopharmacology",
+    "iso_abbreviation": "Int Immunopharmacol"
+   },
+   "year": {
+    "year": "2025",
+    "month": "07",
+    "day": "19"
+   },
+   "doi": "10.1016/j.intimp.2025.115231"
+  },
+  {
+   "pmid": null,
+   "title": "Recent progress in the development of small molecule pyruvate kinase M2 inhibitors: 2020-2025.",
+   "journal": {
+    "title": "Future medicinal chemistry",
+    "iso_abbreviation": "Future Med Chem"
+   },
+   "year": {
+    "year": "2025",
+    "month": "10",
+    "day": "24"
+   },
+   "doi": "10.1080/17568919.2025.2571029"
+  }
+ ]
+}

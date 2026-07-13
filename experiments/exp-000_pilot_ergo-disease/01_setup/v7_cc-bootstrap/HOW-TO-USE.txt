@@ -1,0 +1,47 @@
+========================================================================
+  CC LOOP — START PACKAGE   (copy this whole folder; it is self-contained)
+========================================================================
+
+WHAT THIS IS
+  A ready-to-use workspace for a BLANK Claude Code (CC) session. Give this
+  folder to a fresh CC as its workspace and it will set itself up, read your
+  input papers, build a bridge to Claude Science, and drive a research loop
+  to answer your question. Everything it needs is inside this folder — no
+  internet download, no extra install (the one Python package it uses installs
+  itself on first run).
+
+HOW TO USE IT  (a few simple human steps — one bootstrap, then a run per question)
+  1) COPY this entire folder to the machine where your Claude Science runs,
+     next to your other work (ONE copy total — you reuse it for every question).
+
+  2) START A BLANK CLAUDE CODE with THIS folder as its workspace, and type
+     exactly this as the first message:
+
+         Read CLAUDE.md and bootstrap your workspace.
+
+     The first time, answer two quick one-time questions (your Claude Science
+     URL, and the PARENT location where your CS workspace folders live). Then,
+     per question, it asks your research question, any files, and a short NAME
+     for the run. It creates that run's own dedicated folder (AL-<name>) under
+     your parent location, sets up a fresh Claude Science project (AL-<name>)
+     with only that folder granted, digests your papers, builds a clickable
+     shortcut, and prints a START PROMPT for that question. It then asks if you
+     have another question.
+
+  3) For each prepared question, open a NEW blank Claude Code in the same
+     workspace and paste that run's START PROMPT. That session runs the loop and
+     writes the result into  driver/AL-<name>/OUTPUT/ . You can run several at
+     once (one session per question), and come back later with more questions
+     without redoing setup.
+
+WHERE THINGS ARE
+  CLAUDE.md ............. the router the CC reads first (decides its role)
+  bootstrap/ ............ the setup manual; materials/ holds only a dummy bridge-test
+                         file (your real inputs go in when the CC asks, per question)
+  bootstrap/START_HERE.md  a longer human guide, if you want detail
+  bootstrap/skills/ ..... the CC's built-in tools (PDF-reading, bridge shortcut)
+  driver/ ............... the shared driver manual + one AL-<name>/ subfolder per
+                         prepared question (each holds that run + its output)
+
+You only type the setup answers, then per question your question + a name. The CC does the rest.
+========================================================================

@@ -1,0 +1,64 @@
+{
+ "experiment": "exp-002",
+ "role": "KEY-2 (CS-held) \u2014 blinds the OPERATOR/the operator",
+ "WARNING": "CS holds this. Maps each eval-site E-code back to the R-code. WITHHELD from the operator until the operator's evaluation is submitted. Unblinding to arm ALSO needs Key-1 (operator-held R-code->arm). Neither key alone reveals arm.",
+ "seed": 2002,
+ "Ecode_to_Rcode": {
+  "E1": "R2",
+  "E2": "R9",
+  "E3": "R8",
+  "E4": "R7",
+  "E5": "R4",
+  "E6": "R5",
+  "E7": "R1",
+  "E8": "R6",
+  "E9": "R3"
+ },
+ "Rcode_to_question": {
+  "R3": "Q1",
+  "R8": "Q1",
+  "R9": "Q1",
+  "R2": "Q2",
+  "R4": "Q2",
+  "R6": "Q2",
+  "R1": "Q3",
+  "R5": "Q3",
+  "R7": "Q3"
+ },
+ "eval_site": "eval_site.html",
+ "unblinding": "Final unblind = compose Key-1 (operator: Rcode->arm) o this Key-2 (Ecode->Rcode) -> Ecode->arm. Produces blinding_key_FULL.json. Only then does the 3-arm analysis compute the L8-L7 / L8-B / L7-B deltas.",
+ "display_order_by_question": {
+  "Q1": [
+   "E2",
+   "E3",
+   "E9"
+  ],
+  "Q2": [
+   "E1",
+   "E8",
+   "E5"
+  ],
+  "Q3": [
+   "E7",
+   "E6",
+   "E4"
+  ]
+ },
+ "Ecode_to_Rcode_by_question": {
+  "Q1": {
+   "E2": "R9",
+   "E3": "R8",
+   "E9": "R3"
+  },
+  "Q2": {
+   "E1": "R2",
+   "E8": "R6",
+   "E5": "R4"
+  },
+  "Q3": {
+   "E7": "R1",
+   "E6": "R5",
+   "E4": "R7"
+  }
+ }
+}

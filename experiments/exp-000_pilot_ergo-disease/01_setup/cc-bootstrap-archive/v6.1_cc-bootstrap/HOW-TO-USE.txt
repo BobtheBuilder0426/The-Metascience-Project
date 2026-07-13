@@ -1,0 +1,41 @@
+========================================================================
+  CC LOOP — START PACKAGE   (copy this whole folder; it is self-contained)
+========================================================================
+
+WHAT THIS IS
+  A ready-to-use workspace for a BLANK Claude Code (CC) session. Give this
+  folder to a fresh CC as its workspace and it will set itself up, read your
+  input papers, build a bridge to Claude Science, and drive a research loop
+  to answer your question. Everything it needs is inside this folder — no
+  internet download, no extra install (the one Python package it uses installs
+  itself on first run).
+
+HOW TO USE IT  (2 human steps, that's all)
+  1) COPY this entire folder to the machine where your Claude Science runs,
+     next to your other work (one copy per run). Put your input PDFs/files
+     into  bootstrap/materials/  (two example papers are already there — swap
+     in your own, or leave them for a test run).
+
+  2) START A BLANK CLAUDE CODE with THIS folder as its workspace, and type
+     exactly this as the first message:
+
+         Read CLAUDE.md and bootstrap your workspace.
+
+     Then answer the two quick questions it asks (your Claude Science URL, and
+     the name/location of an empty shared folder for the run). It takes over
+     from there: sets up its own Claude Science project, digests your papers,
+     builds the bridge + a clickable shortcut, and prints a START PROMPT.
+
+  3) When it hands off, open a SECOND blank Claude Code in the same workspace
+     and paste the START PROMPT it gave you. That session runs the loop and
+     writes the result into  driver/OUTPUT/ .
+
+WHERE THINGS ARE
+  CLAUDE.md ............. the router the CC reads first (decides its role)
+  bootstrap/ ............ the setup manual + your input files (materials/)
+  bootstrap/START_HERE.md  a longer human guide, if you want detail
+  bootstrap/skills/ ..... the CC's built-in tools (PDF-reading, bridge shortcut)
+  driver/ ............... filled in during setup; holds the run + its output
+
+You only ever type the two things above. The CC does the rest.
+========================================================================

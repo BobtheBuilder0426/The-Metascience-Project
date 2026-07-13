@@ -1,0 +1,1253 @@
+{
+ "question": "Generate a novel, plausible, unifying hypothesis for: Why does biological aging occur?",
+ "dimensions": {
+  "grounding": 1,
+  "reasoning": 4.667,
+  "completeness": 5.0,
+  "usefulness": 4,
+  "creativity": 1.0
+ },
+ "weighted_composite": 3.133,
+ "grounding_cap": 3,
+ "integrity_cap": 1,
+ "integrity_reasons": [
+  "process_trace names a checkable action that did not resolve -> cap 1"
+ ],
+ "overclaim_count": 14,
+ "overclaim_cap": 3,
+ "effective_grounding_cap": 1,
+ "dataset_resolution": null,
+ "trace_verification": {
+  "n_steps": 15,
+  "n_verified": 0,
+  "n_unverified": 3,
+  "verified_fraction": 0.0,
+  "any_unverified": true
+ },
+ "specificity_signal": 5,
+ "creativity_detail": {
+  "creativity_index": 0.0,
+  "novelty": 0.504,
+  "plausibility_gate": 0.0,
+  "reasoning_trace_gate": 0.0,
+  "creativity_dim_score_1to5": 1.0,
+  "hallucination_flag": false
+ },
+ "citation_verification_rate": 0.284,
+ "n_citations": 95,
+ "entity_counts": {
+  "genes": 21,
+  "assays": 0,
+  "quant_predictions": 5,
+  "pathways": 1,
+  "drugs": 3,
+  "total": 30
+ },
+ "redflags": [
+  "Two load-bearing quantitative claims (94% leave-one-out accuracy and permutation p=4e-4 on N=17; STRING network density 0.35 vs 0.67) are asserted but not independently verifiable from the text, and N=17 with class sizes ~9 vs 8 is small enough that the held-out-accuracy statistic is fragile despite the reported robustness checks.",
+  "C2/C3 mortality kinetics are explicitly acknowledged as assuming an exponential individual hazard rather than deriving it, and were never fit to primary life tables (SSA data not accessed) \u2014 the Gompertz law and late-life plateau are shown only as sufficiency/generic-frailty effects, not derivations, so these constraints support the hypothesis more weakly than the framework's presentation might suggest.",
+  "The central discriminating prediction cannot separate open-loop drift from hyperfunction (the author concedes it is a 'sibling'), so even a successful pilot leaves the hypothesis observationally equivalent to a well-established prior theory on its own decisive test.",
+  "The 'blind re-coding by an independent classifier' that reproduced labels 16/17 is described but its independence cannot be checked here; the same author-controlled mechanism-direction coding is the load-bearing step of the only 'predicts' empirical test.",
+  "Output-contract conflict: the kernel profile requested plausibility/reasoning_trace axes while the user turn's STRICT CONTRACT requested grounding/reasoning/completeness/usefulness/creativity -- I followed the explicit trailing contract but note the two are inconsistent.",
+  "C5 evidential weight is overstated relative to its base: N=17 compounds, mechanism coding is the load-bearing step, and 94% leave-one-out accuracy on N=17 is fragile; the blind re-classification and aspirin-robustness checks mitigate but the permutation p-values should be read as suggestive, not decisive.",
+  "The headline claim 'youthful function is recoverable by restoring the regulatory input alone -- damage and the epigenetic clock left untouched' is presented in the bottom-line summary as an established prediction of the theory, but the body correctly concedes it is UNTESTED and does not discriminate from hyperfunction; the summary reads more confidently than the honest-limits section warrants.",
+  "Several constraint fits (C2, C3) are explicitly 'sufficiency, not derivation' and the Gompertz kinetics are simulated by ASSUMING exponential individual hazard -- the model demonstrates consistency, not that drift generates the law, which slightly undercuts the 'one premise generates the Gompertz curve' framing in the bottom line."
+ ],
+ "inter_judge_absdiff": {
+  "grounding": 0.0,
+  "reasoning": 0.667,
+  "completeness": 0.0,
+  "usefulness": 0.0,
+  "creativity": 0.667
+ },
+ "_novelty": {
+  "novelty": 0.504,
+  "N_freq": 0.349,
+  "hits": 72,
+  "semantic": {
+   "value": 0.969,
+   "method": "tfidf_cosine",
+   "max_sim": 0.031,
+   "note": "model-dependent; under-discriminates on shared domain vocab (LB-018)"
+  },
+  "n_neighbours": 7,
+  "method": "0.75*retrieval_freq + 0.25*semantic_distance"
+ },
+ "citation_quality": {
+  "n_citations": 95,
+  "n_primary": 86,
+  "n_review": 7,
+  "n_preprint": 0,
+  "n_other": 1,
+  "n_retracted": 0,
+  "primary_ratio": 0.915,
+  "mean_venue_quality": 0.976,
+  "usage": 1.0,
+  "quality_composite": 0.962,
+  "flags": []
+ },
+ "_citation_quality_detail": {
+  "n_citations": 95,
+  "n_primary": 86,
+  "n_review": 7,
+  "n_preprint": 0,
+  "n_other": 1,
+  "n_retracted": 0,
+  "primary_ratio": 0.915,
+  "mean_venue_quality": 0.976,
+  "usage": 1.0,
+  "quality_composite": 0.962,
+  "flags": [],
+  "per_citation": [
+   {
+    "citation": {
+     "kind": "pmid",
+     "value": "6015424",
+     "raw": "PMID 6015424"
+    },
+    "venue": "Journal of theoretical biology",
+    "type": "primary",
+    "retracted": false,
+    "venue_quality": null,
+    "year": "1966"
+   },
+   {
+    "citation": {
+     "kind": "pmid",
+     "value": "17012837",
+     "raw": "PMID 17012837"
+    },
+    "venue": "Cell cycle (Georgetown, Tex.)",
+    "type": "review",
+    "retracted": false,
+    "venue_quality": 1.0,
+    "year": "2006"
+   },
+   {
+    "citation": {
+     "kind": "pmid",
+     "value": "1411540",
+     "raw": "PMID 1411540"
+    },
+    "venue": "Science (New York, N.Y.)",
+    "type": "primary",
+    "retracted": false,
+    "venue_quality": 1.0,
+    "year": "1992"
+   },
+   {
+    "citation": {
+     "kind": "pmid",
+     "value": "1411541",
+     "raw": "PMID 1411541"
+    },
+    "venue": "Science (New York, N.Y.)",
+    "type": "primary",
+    "retracted": false,
+    "venue_quality": 1.0,
+    "year": "1992"
+   },
+   {
+    "citation": {
+     "kind": "pmid",
+     "value": "29954979",
+     "raw": "PMID 29954979"
+    },
+    "venue": "Science (New York, N.Y.)",
+    "type": "primary",
+    "retracted": false,
+    "venue_quality": 1.0,
+    "year": "2018"
+   },
+   {
+    "citation": {
+     "kind": "pmid",
+     "value": "30262471",
+     "raw": "PMID 30262471"
+    },
+    "venue": "Science (New York, N.Y.)",
+    "type": "primary",
+    "retracted": false,
+    "venue_quality": 1.0,
+    "year": "2018"
+   },
+   {
+    "citation": {
+     "kind": "pmid",
+     "value": "29364116",
+     "raw": "PMID 29364116"
+    },
+    "venue": "eLife",
+    "type": "primary",
+    "retracted": false,
+    "venue_quality": 0.85,
+    "year": "2018"
+   },
+   {
+    "citation": {
+     "kind": "pmid",
+     "value": "38773057",
+     "raw": "PMID 38773057"
+    },
+    "venue": "GeroScience",
+    "type": "primary",
+    "retracted": false,
+    "venue_quality": 1.0,
+    "year": "2024"
+   },
+   {
+    "citation": {
+     "kind": "pmid",
+     "value": "24317695",
+     "raw": "PMID 24317695"
+    },
+    "venue": "Nature",
+    "type": "primary",
+    "retracted": false,
+    "venue_quality": 1.0,
+    "year": "2014"
+   },
+   {
+    "citation": {
+     "kind": "pmid",
+     "value": "23746838",
+     "raw": "PMID 23746838"
+    },
+    "venue": "Cell",
+    "type": "review",
+    "retracted": false,
+    "venue_quality": 1.0,
+    "year": "2013"
+   },
+   {
+    "citation": {
+     "kind": "pmid",
+     "value": "36599349",
+     "raw": "PMID 36599349"
+    },
+    "venue": "Cell",
+    "type": "review",
+    "retracted": false,
+    "venue_quality": 1.0,
+    "year": "2023"
+   },
+   {
+    "citation": {
+     "kind": "pmid",
+     "value": "30746836",
+     "raw": "PMID 30746836"
+    },
+    "venue": "Aging cell",
+    "type": "primary",
+    "retracted": false,
+    "venue_quality": 1.0,
+    "year": "2019"
+   },
+   {
+    "citation": {
+     "kind": "pmid",
+     "value": "19587680",
+     "raw": "PMID 19587680"
+    },
+    "venue": "Nature",
+    "type": "primary",
+    "retracted": false,
+    "venue_quality": 1.0,
+    "year": "2009"
+   },
+   {
+    "citation": {
+     "kind": "pmid",
+     "value": "24245565",
+     "raw": "PMID 24245565"
+    },
+    "venue": "Aging cell",
+    "type": "primary",
+    "retracted": false,
+    "venue_quality": 1.0,
+    "year": "2014"
+   },
+   {
+    "citation": {
+     "kind": "pmid",
+     "value": "18631321",
+     "raw": "PMID 18631321"
+    },
+    "venue": "Aging cell",
+    "type": "primary",
+    "retracted": false,
+    "venue_quality": 1.0,
+    "year": "2008"
+   },
+   {
+    "citation": {
+     "kind": "pmid",
+     "value": "30916479",
+     "raw": "PMID 30916479"
+    },
+    "venue": "Aging cell",
+    "type": "primary",
+    "retracted": false,
+    "venue_quality": 1.0,
+    "year": "2019"
+   },
+   {
+    "citation": {
+     "kind": "pmid",
+     "value": "32990681",
+     "raw": "PMID 32990681"
+    },
+    "venue": "JCI insight",
+    "type": "primary",
+    "retracted": false,
+    "venue_quality": null,
+    "year": "2020"
+   },
+   {
+    "citation": {
+     "kind": "pmid",
+     "value": "22451473",
+     "raw": "PMID 22451473"
+    },
+    "venue": "The journals of gerontology. Series A, Biological sciences and medical sciences",
+    "type": "primary",
+    "retracted": false,
+    "venue_quality": 1.0,
+    "year": "2013"
+   },
+   {
+    "citation": {
+     "kind": "pmid",
+     "value": "13332224",
+     "raw": "PMID 13332224"
+    },
+    "venue": "Journal of gerontology",
+    "type": "primary",
+    "retracted": false,
+    "venue_quality": null,
+    "year": "1956"
+   },
+   {
+    "citation": {
+     "kind": "pmid",
+     "value": "27312235",
+     "raw": "PMID 27312235"
+    },
+    "venue": "Aging cell",
+    "type": "primary",
+    "retracted": false,
+    "venue_quality": 1.0,
+    "year": "2016"
+   },
+   {
+    "citation": {
+     "kind": "pmid",
+     "value": "33268865",
+     "raw": "PMID 33268865"
+    },
+    "venue": "Nature",
+    "type": "primary",
+    "retracted": false,
+    "venue_quality": 1.0,
+    "year": "2020"
+   },
+   {
+    "citation": {
+     "kind": "pmid",
+     "value": "27984723",
+     "raw": "PMID 27984723"
+    },
+    "venue": "Cell",
+    "type": "primary",
+    "retracted": false,
+    "venue_quality": 1.0,
+    "year": "2016"
+   },
+   {
+    "citation": {
+     "kind": "pmid",
+     "value": "35390271",
+     "raw": "PMID 35390271"
+    },
+    "venue": "eLife",
+    "type": "primary",
+    "retracted": false,
+    "venue_quality": 0.85,
+    "year": "2022"
+   },
+   {
+    "citation": {
+     "kind": "pmid",
+     "value": "34172448",
+     "raw": "PMID 34172448"
+    },
+    "venue": "Science advances",
+    "type": "primary",
+    "retracted": false,
+    "venue_quality": 1.0,
+    "year": "2021"
+   },
+   {
+    "citation": {
+     "kind": "pmid",
+     "value": "24138928",
+     "raw": "PMID 24138928"
+    },
+    "venue": "Genome biology",
+    "type": "primary",
+    "retracted": false,
+    "venue_quality": null,
+    "year": "2013"
+   },
+   {
+    "citation": {
+     "kind": "pmid",
+     "value": "23190075",
+     "raw": "PMID 23190075"
+    },
+    "venue": "Annual review of physiology",
+    "type": "review",
+    "retracted": false,
+    "venue_quality": null,
+    "year": "2013"
+   },
+   {
+    "citation": {
+     "kind": "pmid",
+     "value": "35418684",
+     "raw": "PMID 35418684"
+    },
+    "venue": "Nature",
+    "type": "primary",
+    "retracted": false,
+    "venue_quality": 1.0,
+    "year": "2022"
+   },
+   {
+    "citation": {
+     "kind": "pmid",
+     "value": "593350",
+     "raw": "PMID 593350"
+    },
+    "venue": "Nature",
+    "type": "primary",
+    "retracted": false,
+    "venue_quality": 1.0,
+    "year": "1977"
+   },
+   {
+    "citation": {
+     "kind": "pmid",
+     "value": "36638792",
+     "raw": "PMID 36638792"
+    },
+    "venue": "Cell",
+    "type": "primary",
+    "retracted": false,
+    "venue_quality": 1.0,
+    "year": "2023"
+   },
+   {
+    "citation": {
+     "kind": "pmid",
+     "value": "34035236",
+     "raw": "PMID 34035236"
+    },
+    "venue": "Nature communications",
+    "type": "primary",
+    "retracted": false,
+    "venue_quality": 1.0,
+    "year": "2021"
+   },
+   {
+    "citation": {
+     "kind": "pmid",
+     "value": "29939206",
+     "raw": "PMID 29939206"
+    },
+    "venue": "The journals of gerontology. Series A, Biological sciences and medical sciences",
+    "type": "primary",
+    "retracted": false,
+    "venue_quality": 1.0,
+    "year": "2019"
+   },
+   {
+    "citation": {
+     "kind": "pmid",
+     "value": "26765499",
+     "raw": "PMID 26765499"
+    },
+    "venue": "Critical care medicine",
+    "type": "primary",
+    "retracted": false,
+    "venue_quality": null,
+    "year": "2016"
+   },
+   {
+    "citation": {
+     "kind": "pmid",
+     "value": "38092834",
+     "raw": "PMID 38092834"
+    },
+    "venue": "Scientific reports",
+    "type": "primary",
+    "retracted": false,
+    "venue_quality": 0.6,
+    "year": "2023"
+   },
+   {
+    "citation": {
+     "kind": "pmid",
+     "value": "381162",
+     "raw": "PMID 381162"
+    },
+    "venue": "Human physiology",
+    "type": "review",
+    "retracted": false,
+    "venue_quality": null,
+    "year": "1978"
+   },
+   {
+    "citation": {
+     "kind": "pmid",
+     "value": "30337380",
+     "raw": "PMID 30337380"
+    },
+    "venue": "Science (New York, N.Y.)",
+    "type": "primary",
+    "retracted": false,
+    "venue_quality": 1.0,
+    "year": "2018"
+   },
+   {
+    "citation": {
+     "kind": "pmid",
+     "value": "11742523",
+     "raw": "PMID 11742523"
+    },
+    "venue": "Journal of theoretical biology",
+    "type": "review",
+    "retracted": false,
+    "venue_quality": null,
+    "year": "2001"
+   },
+   {
+    "citation": {
+     "kind": "pmid",
+     "value": "31287058",
+     "raw": "PMID 31287058"
+    },
+    "venue": "eLife",
+    "type": "primary",
+    "retracted": false,
+    "venue_quality": 0.85,
+    "year": "2019"
+   },
+   {
+    "citation": {
+     "kind": "pmid",
+     "value": "26447779",
+     "raw": "PMID 26447779"
+    },
+    "venue": "JAMA",
+    "type": "primary",
+    "retracted": false,
+    "venue_quality": null,
+    "year": "2015"
+   },
+   {
+    "citation": {
+     "kind": "pmid",
+     "value": "25417146",
+     "raw": "PMID 25417146"
+    },
+    "venue": "Cell",
+    "type": "primary",
+    "retracted": false,
+    "venue_quality": 1.0,
+    "year": "2014"
+   },
+   {
+    "citation": {
+     "kind": "pmid",
+     "value": "2520283",
+     "raw": "PMID 2520283"
+    },
+    "venue": "Nutrition (Burbank, Los Angeles County, Calif.)",
+    "type": "primary",
+    "retracted": false,
+    "venue_quality": null,
+    "year": "1989"
+   },
+   {
+    "citation": {
+     "kind": "pmid",
+     "value": "8247153",
+     "raw": "PMID 8247153"
+    },
+    "venue": "Nature",
+    "type": "primary",
+    "retracted": false,
+    "venue_quality": 1.0,
+    "year": "1993"
+   },
+   {
+    "citation": {
+     "kind": "pmid",
+     "value": "17578509",
+     "raw": "PMID 17578509"
+    },
+    "venue": "Aging cell",
+    "type": "primary",
+    "retracted": false,
+    "venue_quality": 1.0,
+    "year": "2007"
+   },
+   {
+    "citation": {
+     "kind": "pmid",
+     "value": "22048312",
+     "raw": "PMID 22048312"
+    },
+    "venue": "Nature",
+    "type": "primary",
+    "retracted": false,
+    "venue_quality": 1.0,
+    "year": "2011"
+   },
+   {
+    "citation": {
+     "kind": "pmid",
+     "value": "26840489",
+     "raw": "PMID 26840489"
+    },
+    "venue": "Nature",
+    "type": "primary",
+    "retracted": false,
+    "venue_quality": 1.0,
+    "year": "2016"
+   },
+   {
+    "citation": {
+     "kind": "pmid",
+     "value": "15716955",
+     "raw": "PMID 15716955"
+    },
+    "venue": "Nature",
+    "type": "primary",
+    "retracted": false,
+    "venue_quality": 1.0,
+    "year": "2005"
+   },
+   {
+    "citation": {
+     "kind": "pmid",
+     "value": "38428398",
+     "raw": "PMID 38428398"
+    },
+    "venue": "Cell",
+    "type": "other",
+    "retracted": false,
+    "venue_quality": 1.0,
+    "year": "2024"
+   },
+   {
+    "citation": {
+     "kind": "pmid",
+     "value": "38636560",
+     "raw": "PMID 38636560"
+    },
+    "venue": "Ageing research reviews",
+    "type": "review",
+    "retracted": false,
+    "venue_quality": null,
+    "year": "2024"
+   },
+   {
+    "citation": {
+     "kind": "doi",
+     "value": "10.1111/j.1558-5646.1957.tb02911.x",
+     "raw": "10.1111/j.1558-5646.1957.tb02911.x"
+    },
+    "venue": "Evolution",
+    "type": "primary",
+    "retracted": false,
+    "venue_quality": null,
+    "year": "1957"
+   },
+   {
+    "citation": {
+     "kind": "doi",
+     "value": "10.1016/j.tig.2013.05.004",
+     "raw": "10.1016/j.tig.2013.05.004"
+    },
+    "venue": "Trends in Genetics",
+    "type": "primary",
+    "retracted": false,
+    "venue_quality": null,
+    "year": "2013"
+   },
+   {
+    "citation": {
+     "kind": "doi",
+     "value": "10.1016/j.cell.2024.01.049",
+     "raw": "10.1016/j.cell.2024.01.049"
+    },
+    "venue": "Cell",
+    "type": "primary",
+    "retracted": false,
+    "venue_quality": 1.0,
+    "year": "2024"
+   },
+   {
+    "citation": {
+     "kind": "doi",
+     "value": "10.1016/0022-5193(66)90184-6",
+     "raw": "10.1016/0022-5193(66)90184-6"
+    },
+    "venue": "Journal of Theoretical Biology",
+    "type": "primary",
+    "retracted": false,
+    "venue_quality": null,
+    "year": "1966"
+   },
+   {
+    "citation": {
+     "kind": "doi",
+     "value": "10.1038/270301a0",
+     "raw": "10.1038/270301a0"
+    },
+    "venue": "Nature",
+    "type": "primary",
+    "retracted": false,
+    "venue_quality": 1.0,
+    "year": "1977"
+   },
+   {
+    "citation": {
+     "kind": "doi",
+     "value": "10.1126/science.1411540",
+     "raw": "10.1126/science.1411540"
+    },
+    "venue": "Science",
+    "type": "primary",
+    "retracted": false,
+    "venue_quality": 1.0,
+    "year": "1992"
+   },
+   {
+    "citation": {
+     "kind": "doi",
+     "value": "10.1126/science.1411541",
+     "raw": "10.1126/science.1411541"
+    },
+    "venue": "Science",
+    "type": "primary",
+    "retracted": false,
+    "venue_quality": 1.0,
+    "year": "1992"
+   },
+   {
+    "citation": {
+     "kind": "doi",
+     "value": "10.1126/science.aat3119",
+     "raw": "10.1126/science.aat3119"
+    },
+    "venue": "Science",
+    "type": "primary",
+    "retracted": false,
+    "venue_quality": 1.0,
+    "year": "2018"
+   },
+   {
+    "citation": {
+     "kind": "doi",
+     "value": "10.1126/science.aav1200",
+     "raw": "10.1126/science.aav1200"
+    },
+    "venue": "Science",
+    "type": "primary",
+    "retracted": false,
+    "venue_quality": 1.0,
+    "year": "2018"
+   },
+   {
+    "citation": {
+     "kind": "doi",
+     "value": "10.1126/science.aav3229",
+     "raw": "10.1126/science.aav3229"
+    },
+    "venue": "Science",
+    "type": "primary",
+    "retracted": false,
+    "venue_quality": 1.0,
+    "year": "2018"
+   },
+   {
+    "citation": {
+     "kind": "doi",
+     "value": "10.1006/jtbi.2001.2430",
+     "raw": "10.1006/jtbi.2001.2430"
+    },
+    "venue": "Journal of Theoretical Biology",
+    "type": "primary",
+    "retracted": false,
+    "venue_quality": null,
+    "year": "2001"
+   },
+   {
+    "citation": {
+     "kind": "doi",
+     "value": "10.7554/eLife.31157",
+     "raw": "10.7554/eLife.31157"
+    },
+    "venue": "eLife",
+    "type": "primary",
+    "retracted": false,
+    "venue_quality": 0.85,
+    "year": "2018"
+   },
+   {
+    "citation": {
+     "kind": "doi",
+     "value": "10.7554/eLife.45415",
+     "raw": "10.7554/eLife.45415"
+    },
+    "venue": "eLife",
+    "type": "primary",
+    "retracted": false,
+    "venue_quality": 0.85,
+    "year": "2019"
+   },
+   {
+    "citation": {
+     "kind": "doi",
+     "value": "10.1007/s11357-024-01201-4",
+     "raw": "10.1007/s11357-024-01201-4"
+    },
+    "venue": "GeroScience",
+    "type": "primary",
+    "retracted": false,
+    "venue_quality": 1.0,
+    "year": "2024"
+   },
+   {
+    "citation": {
+     "kind": "doi",
+     "value": "10.1038/nature12789",
+     "raw": "10.1038/nature12789"
+    },
+    "venue": "Nature",
+    "type": "primary",
+    "retracted": false,
+    "venue_quality": 1.0,
+    "year": "2013"
+   },
+   {
+    "citation": {
+     "kind": "doi",
+     "value": "10.1001/jama.2015.13134",
+     "raw": "10.1001/jama.2015.13134"
+    },
+    "venue": "JAMA",
+    "type": "primary",
+    "retracted": false,
+    "venue_quality": null,
+    "year": "2015"
+   },
+   {
+    "citation": {
+     "kind": "doi",
+     "value": "10.1016/j.cell.2013.05.039",
+     "raw": "10.1016/j.cell.2013.05.039"
+    },
+    "venue": "Cell",
+    "type": "primary",
+    "retracted": false,
+    "venue_quality": 1.0,
+    "year": "2013"
+   },
+   {
+    "citation": {
+     "kind": "doi",
+     "value": "10.1016/j.cell.2022.11.001",
+     "raw": "10.1016/j.cell.2022.11.001"
+    },
+    "venue": "Cell",
+    "type": "primary",
+    "retracted": false,
+    "venue_quality": 1.0,
+    "year": "2023"
+   },
+   {
+    "citation": {
+     "kind": "doi",
+     "value": "10.1016/j.cell.2014.10.039",
+     "raw": "10.1016/j.cell.2014.10.039"
+    },
+    "venue": "Cell",
+    "type": "primary",
+    "retracted": false,
+    "venue_quality": 1.0,
+    "year": "2014"
+   },
+   {
+    "citation": {
+     "kind": "doi",
+     "value": "10.1038/366461a0",
+     "raw": "10.1038/366461a0"
+    },
+    "venue": "Nature",
+    "type": "primary",
+    "retracted": false,
+    "venue_quality": 1.0,
+    "year": "1993"
+   },
+   {
+    "citation": {
+     "kind": "doi",
+     "value": "10.1038/nature08221",
+     "raw": "10.1038/nature08221"
+    },
+    "venue": "Nature",
+    "type": "primary",
+    "retracted": false,
+    "venue_quality": 1.0,
+    "year": "2009"
+   },
+   {
+    "citation": {
+     "kind": "doi",
+     "value": "10.1111/j.1474-9726.2008.00414.x",
+     "raw": "10.1111/j.1474-9726.2008.00414.x"
+    },
+    "venue": "Aging Cell",
+    "type": "primary",
+    "retracted": false,
+    "venue_quality": 1.0,
+    "year": "2008"
+   },
+   {
+    "citation": {
+     "kind": "doi",
+     "value": "10.1111/acel.12170",
+     "raw": "10.1111/acel.12170"
+    },
+    "venue": "Aging Cell",
+    "type": "primary",
+    "retracted": false,
+    "venue_quality": 1.0,
+    "year": "2013"
+   },
+   {
+    "citation": {
+     "kind": "doi",
+     "value": "10.1111/acel.12496",
+     "raw": "10.1111/acel.12496"
+    },
+    "venue": "Aging Cell",
+    "type": "primary",
+    "retracted": false,
+    "venue_quality": 1.0,
+    "year": "2016"
+   },
+   {
+    "citation": {
+     "kind": "doi",
+     "value": "10.1093/gerona/gls070",
+     "raw": "10.1093/gerona/gls070"
+    },
+    "venue": "The Journals of Gerontology Series A: Biological Sciences and Medical Sciences",
+    "type": "primary",
+    "retracted": false,
+    "venue_quality": 1.0,
+    "year": "2012"
+   },
+   {
+    "citation": {
+     "kind": "doi",
+     "value": "10.1172/jci.insight.140019",
+     "raw": "10.1172/jci.insight.140019"
+    },
+    "venue": "JCI Insight",
+    "type": "primary",
+    "retracted": false,
+    "venue_quality": null,
+    "year": "2020"
+   },
+   {
+    "citation": {
+     "kind": "doi",
+     "value": "10.1111/acel.12953",
+     "raw": "10.1111/acel.12953"
+    },
+    "venue": "Aging Cell",
+    "type": "primary",
+    "retracted": false,
+    "venue_quality": 1.0,
+    "year": "2019"
+   },
+   {
+    "citation": {
+     "kind": "doi",
+     "value": "10.1111/j.1474-9726.2007.00311.x",
+     "raw": "10.1111/j.1474-9726.2007.00311.x"
+    },
+    "venue": "Aging Cell",
+    "type": "primary",
+    "retracted": false,
+    "venue_quality": 1.0,
+    "year": "2007"
+   },
+   {
+    "citation": {
+     "kind": "doi",
+     "value": "10.1038/nature10600",
+     "raw": "10.1038/nature10600"
+    },
+    "venue": "Nature",
+    "type": "primary",
+    "retracted": false,
+    "venue_quality": 1.0,
+    "year": "2011"
+   },
+   {
+    "citation": {
+     "kind": "doi",
+     "value": "10.1038/nature16932",
+     "raw": "10.1038/nature16932"
+    },
+    "venue": "Nature",
+    "type": "primary",
+    "retracted": false,
+    "venue_quality": 1.0,
+    "year": "2016"
+   },
+   {
+    "citation": {
+     "kind": "doi",
+     "value": "10.1038/nature03260",
+     "raw": "10.1038/nature03260"
+    },
+    "venue": "Nature",
+    "type": "primary",
+    "retracted": false,
+    "venue_quality": 1.0,
+    "year": "2005"
+   },
+   {
+    "citation": {
+     "kind": "doi",
+     "value": "10.1186/gb-2013-14-10-r115",
+     "raw": "10.1186/gb-2013-14-10-r115"
+    },
+    "venue": "Genome Biology",
+    "type": "primary",
+    "retracted": false,
+    "venue_quality": null,
+    "year": "2013"
+   },
+   {
+    "citation": {
+     "kind": "doi",
+     "value": "10.1038/s41586-020-2975-4",
+     "raw": "10.1038/s41586-020-2975-4"
+    },
+    "venue": "Nature",
+    "type": "primary",
+    "retracted": false,
+    "venue_quality": 1.0,
+    "year": "2020"
+   },
+   {
+    "citation": {
+     "kind": "doi",
+     "value": "10.7554/eLife.71624",
+     "raw": "10.7554/eLife.71624"
+    },
+    "venue": "eLife",
+    "type": "primary",
+    "retracted": false,
+    "venue_quality": 0.85,
+    "year": "2022"
+   },
+   {
+    "citation": {
+     "kind": "doi",
+     "value": "10.1126/sciadv.abg6082",
+     "raw": "10.1126/sciadv.abg6082"
+    },
+    "venue": "Science Advances",
+    "type": "primary",
+    "retracted": false,
+    "venue_quality": 1.0,
+    "year": "2021"
+   },
+   {
+    "citation": {
+     "kind": "doi",
+     "value": "10.1016/j.cell.2016.11.052",
+     "raw": "10.1016/j.cell.2016.11.052"
+    },
+    "venue": "Cell",
+    "type": "primary",
+    "retracted": false,
+    "venue_quality": 1.0,
+    "year": "2016"
+   },
+   {
+    "citation": {
+     "kind": "doi",
+     "value": "10.4161/cc.5.18.3288",
+     "raw": "10.4161/cc.5.18.3288"
+    },
+    "venue": "Cell Cycle",
+    "type": "primary",
+    "retracted": false,
+    "venue_quality": 1.0,
+    "year": "2006"
+   },
+   {
+    "citation": {
+     "kind": "doi",
+     "value": "10.1093/geronj/11.3.298",
+     "raw": "10.1093/geronj/11.3.298"
+    },
+    "venue": "Journal of Gerontology",
+    "type": "primary",
+    "retracted": false,
+    "venue_quality": null,
+    "year": "1956"
+   },
+   {
+    "citation": {
+     "kind": "doi",
+     "value": "10.1016/j.cell.2022.12.027",
+     "raw": "10.1016/j.cell.2022.12.027"
+    },
+    "venue": "Cell",
+    "type": "primary",
+    "retracted": false,
+    "venue_quality": 1.0,
+    "year": "2023"
+   },
+   {
+    "citation": {
+     "kind": "doi",
+     "value": "10.1146/annurev-physiol-030212-183712",
+     "raw": "10.1146/annurev-physiol-030212-183712"
+    },
+    "venue": "Annual Review of Physiology",
+    "type": "primary",
+    "retracted": false,
+    "venue_quality": null,
+    "year": "2013"
+   },
+   {
+    "citation": {
+     "kind": "doi",
+     "value": "10.1038/s41467-021-23014-1",
+     "raw": "10.1038/s41467-021-23014-1"
+    },
+    "venue": "Nature Communications",
+    "type": "primary",
+    "retracted": false,
+    "venue_quality": 1.0,
+    "year": "2021"
+   },
+   {
+    "citation": {
+     "kind": "doi",
+     "value": "10.1093/gerona/gly136",
+     "raw": "10.1093/gerona/gly136"
+    },
+    "venue": "The Journals of Gerontology: Series A",
+    "type": "primary",
+    "retracted": false,
+    "venue_quality": null,
+    "year": "2018"
+   },
+   {
+    "citation": {
+     "kind": "doi",
+     "value": "10.1111/acel.12925",
+     "raw": "10.1111/acel.12925"
+    },
+    "venue": "Aging Cell",
+    "type": "primary",
+    "retracted": false,
+    "venue_quality": 1.0,
+    "year": "2019"
+   },
+   {
+    "citation": {
+     "kind": "doi",
+     "value": "10.1097/CCM.0000000000001564",
+     "raw": "10.1097/CCM.0000000000001564"
+    },
+    "venue": "Critical Care Medicine",
+    "type": "primary",
+    "retracted": false,
+    "venue_quality": null,
+    "year": "2016"
+   },
+   {
+    "citation": {
+     "kind": "doi",
+     "value": "10.1038/s41586-022-04618-z",
+     "raw": "10.1038/s41586-022-04618-z"
+    },
+    "venue": "Nature",
+    "type": "primary",
+    "retracted": false,
+    "venue_quality": 1.0,
+    "year": "2022"
+   },
+   {
+    "citation": {
+     "kind": "doi",
+     "value": "10.1038/s41598-023-49129-7",
+     "raw": "10.1038/s41598-023-49129-7"
+    },
+    "venue": "Scientific Reports",
+    "type": "primary",
+    "retracted": false,
+    "venue_quality": 0.6,
+    "year": "2023"
+   },
+   {
+    "citation": {
+     "kind": "doi",
+     "value": "10.1016/j.arr.2024.102310",
+     "raw": "10.1016/j.arr.2024.102310"
+    },
+    "venue": "Ageing Research Reviews",
+    "type": "primary",
+    "retracted": false,
+    "venue_quality": null,
+    "year": "2024"
+   },
+   {
+    "citation": {
+     "kind": "authoryear",
+     "value": "Harman 1956",
+     "raw": "(Harman 1956)"
+    },
+    "venue": null,
+    "type": null,
+    "retracted": false,
+    "venue_quality": null,
+    "year": null
+   }
+  ]
+ },
+ "code": "R6",
+ "question_id": "Q2_exp002",
+ "arm": "R6",
+ "run": 1,
+ "_qgroup": "Q2",
+ "_model": "claude-opus-4-8",
+ "_attempts": 1,
+ "_dim_parse_bad": [],
+ "_dim_parse_ok": true
+}

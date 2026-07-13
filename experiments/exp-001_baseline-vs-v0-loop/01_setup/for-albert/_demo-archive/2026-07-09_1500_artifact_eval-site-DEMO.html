@@ -1,0 +1,134 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>the Metascience Project — Expert Evaluation</title>
+<style>
+:root{--bg:#0f1216;--card:#171b21;--ink:#e8ecf1;--mut:#9aa4b2;--acc:#4ea1ff;--good:#37c871;--line:#262c35;--warn:#ffb020}
+*{box-sizing:border-box}body{margin:0;font:16px/1.55 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;background:var(--bg);color:var(--ink)}
+.wrap{max-width:920px;margin:0 auto;padding:28px 20px 140px}
+h1{font-size:24px;margin:0 0 4px}h2{font-size:19px;margin:30px 0 6px;color:var(--acc)}
+.sub{color:var(--mut);margin:0 0 18px}
+.note{background:#12202e;border:1px solid #24405c;border-radius:10px;padding:12px 14px;margin:14px 0;color:#cfe4ff}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px 18px 8px;margin:16px 0;box-shadow:0 1px 0 #0006}
+.qtext{background:#10141a;border-left:3px solid var(--acc);border-radius:6px;padding:10px 12px;margin:6px 0 14px;color:#dce3ec}
+.answers{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+@media(max-width:760px){.answers{grid-template-columns:1fr}}
+.ans{background:#10141a;border:1px solid var(--line);border-radius:10px;padding:12px}
+.ans h3{margin:0 0 8px;font-size:16px}.badge{display:inline-block;background:#1d2530;color:var(--acc);border:1px solid #2b3644;border-radius:6px;padding:1px 8px;font-size:13px;margin-left:6px}
+.answtext{white-space:pre-wrap;font-size:14px;color:#d3dae3;max-height:340px;overflow:auto;border-top:1px solid var(--line);padding-top:8px;margin-top:6px}
+.form{margin-top:12px;border-top:1px dashed var(--line);padding-top:10px}
+.row{margin:10px 0}.row label.q{display:block;font-weight:600;margin-bottom:3px}
+.help{color:var(--mut);font-size:13px;margin:0 0 6px}
+.scale{display:flex;gap:6px;flex-wrap:wrap}
+.scale label{cursor:pointer;border:1px solid var(--line);border-radius:8px;padding:6px 11px;background:#0d1117;font-variant-numeric:tabular-nums}
+.scale input{display:none}.scale input:checked+span{color:#001;}
+.scale label:has(input:checked){background:var(--acc);border-color:var(--acc);color:#001;font-weight:700}
+select,textarea,input[type=text]{width:100%;background:#0d1117;color:var(--ink);border:1px solid var(--line);border-radius:8px;padding:8px}
+textarea{min-height:64px;resize:vertical}
+.flags label{display:block;cursor:pointer;color:#d3dae3;font-size:14px;margin:2px 0}
+.h2h{background:#141a22;border:1px solid var(--line);border-radius:10px;padding:12px;margin-top:12px}
+.bar{position:fixed;left:0;right:0;bottom:0;background:#0c0f13ee;border-top:1px solid var(--line);padding:12px 20px;backdrop-filter:blur(6px)}
+.bar .inner{max-width:920px;margin:0 auto;display:flex;gap:12px;align-items:center;flex-wrap:wrap}
+button{background:var(--acc);color:#001;border:0;border-radius:9px;padding:11px 16px;font-weight:700;cursor:pointer;font-size:15px}
+button.ghost{background:#1a212b;color:var(--ink);border:1px solid var(--line)}
+#status{color:var(--good);font-size:14px}#warn{color:var(--warn);font-size:14px}
+#exportbox{width:100%;margin-top:10px;font-family:ui-monospace,Menlo,Consolas,monospace;font-size:12px;display:none}
+.steps{background:#12202e;border:1px solid #24405c;border-radius:10px;padding:12px 16px;margin:16px 0}
+.steps code{background:#0d1117;padding:1px 6px;border-radius:5px;color:#cfe4ff}
+.kbd{font-family:ui-monospace,monospace;background:#0d1117;border:1px solid var(--line);border-radius:5px;padding:0 5px}
+</style></head><body><div class="wrap">
+<h1>the Metascience Project — Independent Expert Evaluation</h1>
+<p class="sub" id="subhead"></p>
+
+<div class="note"><b>You are the human expert.</b> You are shown two answers to each question, <b>blinded</b> — you are
+<u>not</u> told which came from the automated loop and which from the plain baseline. Score each on its own merits as a
+working scientist. Be candid; a low score with a reason is the most useful thing here. Nothing you enter is sent
+anywhere — it stays in your browser until you click <b>Download</b> at the bottom.</div>
+
+<div id="content"></div>
+
+<div class="steps"><b>When finished — 2 steps (idiot-proof):</b>
+<ol>
+<li>Click <b>“⬇ Download my evaluation”</b> at the bottom. Your browser saves a file named
+<code>exp-001_human-eval_FILLED.json</code> (check your <b>Downloads</b> folder).</li>
+<li>Move that file into this exact folder of the shared project:<br>
+<code>Claude Science Hackathon/experiments/exp-001_baseline-vs-v0-loop/04_evaluation/</code><br>
+(If the <span class="kbd">04_evaluation</span> folder isn't there yet, create it.) Then tell CS “eval is in”. That's it.</li>
+</ol>
+<div style="color:var(--mut);font-size:13px">Download not working? Click <b>“Copy instead”</b>, paste the text back to CS in chat. Same result.</div>
+</div>
+
+<div class="bar"><div class="inner">
+  <button onclick="doDownload()">⬇ Download my evaluation</button>
+  <button class="ghost" onclick="doCopy()">Copy instead</button>
+  <span id="status"></span><span id="warn"></span>
+  <textarea id="exportbox" rows="6" readonly></textarea>
+</div></div>
+
+<script>
+const D = {"experiment": "exp-001 (DEMO \u2014 placeholder answers)", "cats": [{"key": "grounding", "type": "score", "label": "Grounding", "help": "1 = claims uncited/unsupported \u00b7 5 = every key claim backed by a real, correctly-used citation"}, {"key": "correctness", "type": "score", "label": "Correctness", "help": "1 = contains biology that is wrong \u00b7 5 = nothing you disagree with, mechanism is sound"}, {"key": "completeness", "type": "score", "label": "Completeness", "help": "1 = vague/generic \u00b7 5 = specific (named genes/pathways/assays/doses), covers what matters"}, {"key": "usefulness", "type": "score", "label": "Usefulness", "help": "1 = you couldn't act on it \u00b7 5 = you could take this to the bench / write a grant aim from it"}, {"key": "creativity", "type": "score", "label": "Creativity", "help": "1 = textbook recombination \u00b7 5 = genuinely novel AND plausible AND clearly reasoned"}], "honesty": [{"key": "novel_real", "type": "choice", "label": "Is the novel idea actually novel to you?", "options": ["genuinely novel", "sounds-new-but-known", "not novel"]}, {"key": "reasoning_followable", "type": "choice", "label": "Can you follow a clear line of reasoning from known biology to the novel claim?", "options": ["yes, clear", "partial/gappy", "no \u2014 it's asserted"]}, {"key": "hallucination_flag", "type": "choice", "label": "Flag as a possible confident-but-unfounded claim (hallucination)?", "options": ["flag", "ok"]}], "redflags": ["wrong-direction effect", "implausible dose/route", "ignores a known contraindication", "mechanism contradicts established biology", "correlation stated as causation", "citation doesn't say what it's claimed to", "confident claim with no mechanism"], "questions": [{"id": "Q_ERGO", "question": "Starting from the two provided publications about ergothioneine, come up with a new rationale and falsifiable prediction of how ergothioneine makes those mice and rats run faster / increases their exercise performance. End with a ready-to-use short protocol for a first killer experiment doable by a PhD wet-lab scientist.", "answers": [{"label": "A", "text": "Ergothioneine is an antioxidant that accumulates in muscle. It probably reduces oxidative stress during exercise, which would improve endurance. A good experiment would be to give mice ergothioneine and run them on a treadmill. (No citations.)"}, {"label": "B", "text": "PREMISE: Sprenger 2025 shows EGT binds+activates MPST in muscle mitochondria (PMID pending); Petrovic 2025 shows EGT feeds CSE persulfidation raising NAD+. NEW PREDICTION: the two axes converge on mitochondrial H2S/persulfidation tone \u2014 EGT's performance effect requires MPST specifically in oxidative fibers, and will be abolished in muscle-specific Mpst-KO but preserved by an NAD+ precursor only if CSE is intact. FALSIFIABLE: Mpst-mKO mice lose the EGT run-time gain; wildtype keep it. KILLER EXPERIMENT: 8-wk aged C57BL/6 \u00b1 muscle-Mpst-KO, \u00b1EGT (mg/kg/d oral, 4 wk), treadmill VO2max + time-to-exhaustion, gastroc persulfidation (dimedone switch), mito respirometry (Oroboros). Predicts EGT raises time-to-exhaustion in WT only."}]}, {"id": "Q3", "question": "Propose a repurposing hypothesis: an approved drug (not currently used for aging) that could act as an exercise mimetic on mitochondrial biogenesis, with the molecular rationale and a falsifiable prediction.", "answers": [{"label": "A", "text": "CANDIDATE: the approved SGLT2 inhibitor empagliflozin. RATIONALE: ketone-body elevation + AMPK/PGC-1a activation drives mitochondrial biogenesis independent of training (cite). FALSIFIABLE: empagliflozin raises muscle citrate-synthase activity + PGC-1a target genes in sedentary aged mice, and the effect is lost under muscle-specific Ppargc1a knockdown."}, {"label": "B", "text": "Metformin could work as an exercise mimetic because it affects metabolism and AMPK. It is safe and widely used. Prediction: metformin-treated mice will have better endurance. (No mechanism detail, no citation.)"}]}]};
+document.getElementById('subhead').textContent = D.experiment + " · " + D.questions.length + " questions · blinded · v1 (draft categories)";
+const C = document.getElementById('content');
+
+function scale(name){let h='<div class="scale">';for(let i=1;i<=5;i++){h+=`<label><input type="radio" name="${name}" value="${i}"><span>${i}</span></label>`;}return h+'</div>';}
+
+D.questions.forEach(q=>{
+  const card=document.createElement('div');card.className='card';
+  let h=`<h2>${q.id}</h2><div class="qtext">${q.question}</div><div class="answers">`;
+  q.answers.forEach(a=>{
+    h+=`<div class="ans"><h3>Answer ${a.label}<span class="badge">blinded</span></h3>
+        <div class="answtext">${a.text.replace(/</g,'&lt;')}</div>
+        <div class="form" data-q="${q.id}" data-a="${a.label}">`;
+    D.cats.forEach(c=>{h+=`<div class="row"><label class="q">${c.label}</label><p class="help">${c.help}</p>${scale(`${q.id}__${a.label}__${c.key}`)}</div>`;});
+    h+=`<div class="row"><label class="q">Comment on this answer (optional)</label><textarea name="${q.id}__${a.label}__comment"></textarea></div>`;
+    h+=`</div></div>`;
+  });
+  h+=`</div>`;
+  // creativity honesty (per question, about the higher-creativity answer)
+  h+=`<div class="h2h"><b>Creativity honesty check</b> — for whichever answer you scored higher on creativity:`;
+  D.honesty.forEach(x=>{let o=x.options.map(op=>`<option>${op}</option>`).join('');h+=`<div class="row"><label class="q">${x.label}</label><select name="${q.id}__honesty__${x.key}"><option value="">— pick —</option>${o}</select></div>`;});
+  h+=`<div class="row"><label class="q">What would make it genuinely creative <i>and</i> trustworthy? (1 sentence)</label><input type="text" name="${q.id}__honesty__fix"></div></div>`;
+  // red flags
+  h+=`<div class="h2h"><b>Red flags</b> — tick anything you saw in EITHER answer:<div class="flags">`;
+  D.redflags.forEach((f,i)=>{h+=`<label><input type="checkbox" name="${q.id}__redflag" value="${f.replace(/"/g,'')}"> ${f}</label>`;});
+  h+=`<div class="row"><label class="q">Other red flag:</label><input type="text" name="${q.id}__redflag_other"></div></div></div>`;
+  // head to head
+  h+=`<div class="h2h"><b>Head-to-head</b><div class="row"><label class="q">Which answer is better overall, as a working scientist?</label>
+      <select name="${q.id}__h2h__better"><option value="">— pick —</option><option>Answer A</option><option>Answer B</option><option>genuinely tied</option></select></div>
+      <div class="row"><label class="q">Why? (1–3 sentences)</label><textarea name="${q.id}__h2h__why"></textarea></div>
+      <div class="row"><label class="q">Confidence</label><select name="${q.id}__h2h__conf"><option value="">— pick —</option><option>low</option><option>medium</option><option>high</option></select></div></div>`;
+  card.innerHTML=h;C.appendChild(card);
+});
+
+function collect(){
+  const out={evaluator:"the operator",experiment:D.experiment,blinded:true,generated_local:new Date().toString(),questions:{}};
+  let missing=0, total=0;
+  D.questions.forEach(q=>{
+    const qo={answers:{}};
+    q.answers.forEach(a=>{
+      const ao={};
+      D.cats.forEach(c=>{total++;const el=document.querySelector(`input[name="${q.id}__${a.label}__${c.key}"]:checked`);if(el)ao[c.key]=+el.value;else missing++;});
+      const cm=document.querySelector(`textarea[name="${q.id}__${a.label}__comment"]`);ao.comment=cm?cm.value:"";
+      qo.answers["Answer "+a.label]=ao;
+    });
+    qo.honesty={};D.honesty.forEach(x=>{const el=document.querySelector(`select[name="${q.id}__honesty__${x.key}"]`);qo.honesty[x.key]=el?el.value:"";});
+    qo.honesty.fix=(document.querySelector(`input[name="${q.id}__honesty__fix"]`)||{}).value||"";
+    qo.redflags=[...document.querySelectorAll(`input[name="${q.id}__redflag"]:checked`)].map(e=>e.value);
+    const ro=(document.querySelector(`input[name="${q.id}__redflag_other"]`)||{}).value;if(ro)qo.redflags.push("OTHER: "+ro);
+    qo.head_to_head={better:(document.querySelector(`select[name="${q.id}__h2h__better"]`)||{}).value||"",
+                     why:(document.querySelector(`textarea[name="${q.id}__h2h__why"]`)||{}).value||"",
+                     confidence:(document.querySelector(`select[name="${q.id}__h2h__conf"]`)||{}).value||""};
+    out.questions[q.id]=qo;
+  });
+  return {out,missing,total};
+}
+function payload(){const {out,missing,total}=collect();
+  document.getElementById('warn').textContent = missing? `note: ${missing}/${total} score boxes still empty (you can still submit)` : "";
+  return JSON.stringify(out,null,2);}
+function doDownload(){const txt=payload();const b=new Blob([txt],{type:"application/json"});
+  const a=document.createElement('a');a.href=URL.createObjectURL(b);a.download="exp-001_human-eval_FILLED.json";
+  document.body.appendChild(a);a.click();a.remove();
+  document.getElementById('status').textContent="✔ downloaded exp-001_human-eval_FILLED.json — now move it to 04_evaluation/";}
+function doCopy(){const txt=payload();const box=document.getElementById('exportbox');box.style.display="block";box.value=txt;box.select();
+  try{navigator.clipboard.writeText(txt);document.getElementById('status').textContent="✔ copied to clipboard — paste it back to CS";}
+  catch(e){document.getElementById('status').textContent="select the text above (Ctrl/Cmd-A) and copy it";}}
+</script></div></body></html>

@@ -1,0 +1,138 @@
+[
+ {
+  "name": "Rapamycin",
+  "pos": 1,
+  "pmid": "19587680",
+  "doi": "10.1038/nature08221",
+  "mech": "A",
+  "rationale": "mTORC1 inhibitor (FKBP1A) \u2014 lowers growth/anabolic signaling"
+ },
+ {
+  "name": "Acarbose",
+  "pos": 1,
+  "pmid": "24245565",
+  "doi": "10.1111/acel.12170",
+  "mech": "A",
+  "rationale": "alpha-glucosidase inhibitor \u2014 blunts postprandial glucose/insulin"
+ },
+ {
+  "name": "Canagliflozin",
+  "pos": 1,
+  "pmid": "32990681",
+  "doi": "10.1172/jci.insight.140019",
+  "mech": "A",
+  "rationale": "SGLT2 inhibitor \u2014 lowers glucose/nutrient signaling"
+ },
+ {
+  "name": "NDGA",
+  "pos": 1,
+  "pmid": "18631321",
+  "doi": "10.1111/j.1474-9726.2008.00414.x",
+  "mech": "A",
+  "rationale": "IGF1R/ERBB2 + 5-LOX inhibitor \u2014 lowers growth+inflammatory signaling"
+ },
+ {
+  "name": "Aspirin",
+  "pos": 1,
+  "pmid": "18631321",
+  "doi": "10.1111/j.1474-9726.2008.00414.x",
+  "mech": "A",
+  "rationale": "COX (PTGS1/2) inhibitor \u2014 lowers inflammatory signaling"
+ },
+ {
+  "name": "17a-estradiol",
+  "pos": 1,
+  "pmid": "24245565",
+  "doi": "10.1111/acel.12170",
+  "mech": "A",
+  "rationale": "ERalpha agonist via metabolic axis \u2014 insulin sensitising (male-specific)"
+ },
+ {
+  "name": "Protandim",
+  "pos": 1,
+  "pmid": "27312235",
+  "doi": "10.1111/acel.12496",
+  "mech": "B",
+  "rationale": "Nrf2 (NFE2L2) activator \u2014 adaptive/hormetic stress response"
+ },
+ {
+  "name": "Glycine",
+  "pos": 1,
+  "pmid": "30916479",
+  "doi": "10.1111/acel.12953",
+  "mech": "B",
+  "rationale": "1C/methionine metabolism \u2014 putative methionine-restriction mimetic"
+ },
+ {
+  "name": "Metformin-alone",
+  "pos": 0,
+  "pmid": "27312235",
+  "doi": "10.1111/acel.12496",
+  "mech": "A",
+  "rationale": "AMPK activator / complex-I inhibitor \u2014 FAILED at 0.1% alone (honest exception)"
+ },
+ {
+  "name": "Resveratrol",
+  "pos": 0,
+  "pmid": "22451473",
+  "doi": "10.1093/gerona/gls070",
+  "mech": "C",
+  "rationale": "polyphenol antioxidant / putative SIRT1 activator"
+ },
+ {
+  "name": "Curcumin",
+  "pos": 0,
+  "pmid": "22451473",
+  "doi": "10.1093/gerona/gls070",
+  "mech": "C",
+  "rationale": "polyphenol antioxidant"
+ },
+ {
+  "name": "GreenTeaExtract",
+  "pos": 0,
+  "pmid": "22451473",
+  "doi": "10.1093/gerona/gls070",
+  "mech": "C",
+  "rationale": "catechin antioxidant"
+ },
+ {
+  "name": "OxaloaceticAcid",
+  "pos": 0,
+  "pmid": "22451473",
+  "doi": "10.1093/gerona/gls070",
+  "mech": "C",
+  "rationale": "TCA metabolite / redox buffer"
+ },
+ {
+  "name": "MCT-oil",
+  "pos": 0,
+  "pmid": "22451473",
+  "doi": "10.1093/gerona/gls070",
+  "mech": "C",
+  "rationale": "dietary medium-chain lipid"
+ },
+ {
+  "name": "MethyleneBlue",
+  "pos": 0,
+  "pmid": "24245565",
+  "doi": "10.1111/acel.12170",
+  "mech": "C",
+  "rationale": "mitochondrial redox cycler / antioxidant"
+ },
+ {
+  "name": "FishOil",
+  "pos": 0,
+  "pmid": "27312235",
+  "doi": "10.1111/acel.12496",
+  "mech": "C",
+  "rationale": "dietary omega-3 lipid"
+ },
+ {
+  "name": "UDCA",
+  "pos": 0,
+  "pmid": "27312235",
+  "doi": "10.1111/acel.12496",
+  "mech": "C",
+  "rationale": "bile acid / FXR agonist (cytoprotective)"
+ }
+]

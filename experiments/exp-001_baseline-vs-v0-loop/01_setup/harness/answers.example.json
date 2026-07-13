@@ -1,0 +1,41 @@
+{
+  "questions": [
+    {
+      "id": "Q1",
+      "text": "Propose a novel, testable hypothesis for pharmacologically inducing mitophagy to slow skeletal-muscle aging, name a candidate and the assay.",
+      "tight_query": "pharmacological mitophagy induction skeletal muscle aging"
+    }
+  ],
+  "answers": [
+    {
+      "question_id": "Q1",
+      "arm": "B",
+      "run": 1,
+      "text": "Mitochondrial dysfunction is important in aging. Inducing mitophagy could help muscle. More research is needed to find drugs that do this."
+    },
+    {
+      "question_id": "Q1",
+      "arm": "B",
+      "run": 2,
+      "text": "Aging muscle has bad mitochondria. A drug that improves mitophagy might slow aging. This should be tested in mice."
+    },
+    {
+      "question_id": "Q1",
+      "arm": "L",
+      "run": 1,
+      "text": "PREMISE: Urolithin A induces mitophagy via PINK1/BNIP3 (PMID: 31133716). Because aged skeletal muscle shows blunted mitophagy flux, we hypothesize that timing urolithin A to the muscle active-phase onset will raise mitophagy more than constant dosing. PREDICTION: phase-timed urolithin A increases spare respiratory capacity by 20% measured by Seahorse OCR, and this advantage disappears in Bmal1 muscle-knockout mice (the control distinguishing timing from dose). Established circadian control of autophagy supports this mechanism (PMID: 28215842)."
+    },
+    {
+      "question_id": "Q1",
+      "arm": "L",
+      "run": 2,
+      "text": "We propose PGC-1alpha induction via low-dose AICAR (AMPK agonist) to drive mitochondrial biogenesis and mitophagy in aged muscle (PMID: 22560223). Because AMPK activates ULK1, therefore mitophagy flux rises; PREDICTION: a 15% increase in citrate synthase activity and reduced p62, tested by immunoblot and Seahorse respirometry over 8 weeks."
+    },
+    {
+      "question_id": "Q1",
+      "arm": "L",
+      "run": 3,
+      "text": "Quantum mitochondrial resonance therapy cures all muscle aging instantly (PMID: 00000001). This fake-doi 10.1234/fake.novel breakthrough works."
+    }
+  ]
+}
